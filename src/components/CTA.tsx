@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
+import { RequestAccessPopup } from "./RequestAccessPopup";
 
 export const CTA = () => {
   return (
@@ -21,12 +21,12 @@ export const CTA = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Link to="/book-demo">
+            <RequestAccessPopup>
               <Button variant="glass" size="xl" className="group">
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Consultation
               </Button>
-            </Link>
+            </RequestAccessPopup>
           </div>
           
           <div className="text-sm text-muted-foreground">

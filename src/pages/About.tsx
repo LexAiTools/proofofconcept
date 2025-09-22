@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, MapPin, Globe, Users, Lightbulb } from "lucide-react";
+import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 
 const About = () => {
   return (
@@ -224,14 +225,16 @@ const About = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's discuss how our combined expertise can bring your AI and blockchain projects to life.
           </p>
-          <Button 
-            variant="glass" 
-            size="lg"
-            className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
-          >
-            Get in Touch
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <RequestAccessPopup>
+            <Button 
+              variant="glass" 
+              size="lg"
+              className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
+            >
+              Get in Touch
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </RequestAccessPopup>
         </div>
       </section>
 
