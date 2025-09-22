@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play, Calendar, User } from "lucide-react";
 
 const Podcast = () => {
@@ -86,12 +87,13 @@ const Podcast = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Meet <span className="text-primary">NestAi.tools</span> podcast
+            Meet <span className="text-primary">Proof of Concept</span> podcast
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Join NestAi.tools co-founders Emil and Finn as they interview forward-thinking developer community 
-            builders, machine learning experts, and NestAi.tools customers.
+            Join industry leaders as they interview forward-thinking developer community 
+            builders, machine learning experts, and innovators from across our portfolio of brands - 
+            all united under the <span className="text-primary font-semibold">Proof of Concept</span> vision.
           </p>
         </div>
       </section>
@@ -164,10 +166,25 @@ const Podcast = () => {
                       {episode.description}
                     </p>
 
-                    <Button variant="default" className="group">
-                      <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                      Watch Episode
-                    </Button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="default" className="group">
+                          <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                          Watch Episode
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl w-full p-0 overflow-hidden">
+                        <div className="aspect-video">
+                          <iframe
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title={episode.title}
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
               </Card>
