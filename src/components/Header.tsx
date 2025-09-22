@@ -40,7 +40,9 @@ export const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost">Sign In</Button>
-            <Button variant="default">Book Demo</Button>
+            <Link to="/book-demo">
+              <Button variant="default">Book Demo</Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -73,7 +75,9 @@ export const Header = () => {
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" className="justify-start">Sign In</Button>
-                <Button variant="default" className="justify-start">Book Demo</Button>
+                <Link to="/book-demo">
+                  <Button variant="default" className="justify-start">Book Demo</Button>
+                </Link>
               </div>
             </nav>
           </div>
