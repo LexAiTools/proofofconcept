@@ -159,10 +159,12 @@ const UseCases = () => {
 
             {/* CTA Section */}
             <div className="text-center mt-16">
-              <Button variant="default" size="lg">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link to="/contact">
+                <Button variant="default" size="lg">
+                  Start Free Trial
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
