@@ -29,11 +29,11 @@ const Engine = () => {
           <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto mb-16">
             <div>
               <div className="text-4xl font-bold text-primary mb-2">+250k</div>
-              <p className="text-muted-foreground">AI answers generated per month by kapa.ai.</p>
+              <p className="text-muted-foreground">AI answers generated per month by NestAi.tools.</p>
             </div>
             <div>
               <div className="text-4xl font-bold text-primary mb-2">+100</div>
-              <p className="text-muted-foreground">Companies trust kapa.ai in production.</p>
+              <p className="text-muted-foreground">Companies trust NestAi.tools in production.</p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Engine = () => {
                   <span className="font-semibold">Sonatype</span>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Kapa.ai is the <span className="text-foreground font-semibold">only LLM-based system I trust</span> to put in front of our customers"
+                  "NestAi.tools is the <span className="text-foreground font-semibold">only LLM-based system I trust</span> to put in front of our customers"
                 </p>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-muted rounded-full mr-3"></div>
@@ -73,7 +73,7 @@ const Engine = () => {
                   <span className="font-semibold">Ionic</span>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Our team did its best to stump kapa.ai, and time and time again, it <span className="text-foreground font-semibold">delivered helpful, accurate responses</span>."
+                  "Our team did its best to stump NestAi.tools, and time and time again, it <span className="text-foreground font-semibold">delivered helpful, accurate responses</span>."
                 </p>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-muted rounded-full mr-3"></div>
@@ -94,7 +94,7 @@ const Engine = () => {
                   <span className="font-semibold">Prisma</span>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Kapa.ai is much <span className="text-foreground font-semibold">better at answering questions about Prisma than ChatGPT is</span>"
+                  "NestAi.tools is much <span className="text-foreground font-semibold">better at answering questions about Prisma than ChatGPT is</span>"
                 </p>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-muted rounded-full mr-3"></div>
@@ -121,7 +121,7 @@ const Engine = () => {
           <div className="grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
             <div>
               <p className="text-muted-foreground">
-                You need <span className="text-foreground font-semibold">custom evaluations</span> to align AI models. And at <span className="text-primary">kapa.ai</span>, our mission is to help companies to deploy reliable AI assistants to <span className="text-foreground font-semibold">answer technical product questions</span>.
+                You need <span className="text-foreground font-semibold">custom evaluations</span> to align AI models. And at <span className="text-primary">NestAi.tools</span>, our mission is to help companies to deploy reliable AI assistants to <span className="text-foreground font-semibold">answer technical product questions</span>.
               </p>
             </div>
             <div>
@@ -131,7 +131,7 @@ const Engine = () => {
             </div>
             <div>
               <p className="text-muted-foreground">
-                This approach allows us to <span className="text-foreground font-semibold">continuously refine our system and deploy latest research and models</span>, only when it improves accuracy for all users of kapa.ai.
+                This approach allows us to <span className="text-foreground font-semibold">continuously refine our system and deploy latest research and models</span>, only when it improves accuracy for all users of NestAi.tools.
               </p>
             </div>
           </div>
@@ -318,7 +318,7 @@ const Engine = () => {
             Turn your knowledge base into a production-ready AI assistant
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Request a demo to try kapa.ai on your data sources today
+            Request a demo to try NestAi.tools on your data sources today
           </p>
           <Link to="/book-demo">
             <Button variant="secondary" size="lg">
