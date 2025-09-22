@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   Accordion,
   AccordionContent,
@@ -319,9 +320,11 @@ const Engine = () => {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Request a demo to try kapa.ai on your data sources today
           </p>
-          <Button variant="secondary" size="lg">
-            Request Demo →
-          </Button>
+          <Link to="/book-demo">
+            <Button variant="secondary" size="lg">
+              Request Demo →
+            </Button>
+          </Link>
         </div>
       </section>
 

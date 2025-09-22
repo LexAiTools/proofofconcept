@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Ticket, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const UseCases = () => {
   const trustedLogos = [
@@ -78,14 +79,16 @@ const UseCases = () => {
               practitioners.
             </h2>
             
-            <Button 
-              variant="secondary" 
-              size="lg"
-              className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
-            >
-              Book Demo
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link to="/book-demo">
+              <Button 
+                variant="secondary" 
+                size="lg"
+                className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
+              >
+                Book Demo
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </section>
 
