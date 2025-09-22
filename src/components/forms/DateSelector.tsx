@@ -17,13 +17,13 @@ interface DateSelectorProps {
 
 // Mock available dates - you can replace this with API data
 const availableDates = [
-  new Date(2024, 8, 25), // September 25, 2024
-  new Date(2024, 8, 26), // September 26, 2024
-  new Date(2024, 8, 27), // September 27, 2024
-  new Date(2024, 8, 30), // September 30, 2024
-  new Date(2024, 9, 1),  // October 1, 2024
-  new Date(2024, 9, 2),  // October 2, 2024
-  new Date(2024, 9, 3),  // October 3, 2024
+  new Date(2025, 8, 25), // September 25, 2025
+  new Date(2025, 8, 26), // September 26, 2025
+  new Date(2025, 8, 27), // September 27, 2025
+  new Date(2025, 8, 30), // September 30, 2025
+  new Date(2025, 9, 1),  // October 1, 2025
+  new Date(2025, 9, 2),  // October 2, 2025
+  new Date(2025, 9, 3),  // October 3, 2025
 ];
 
 export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorProps) => {
@@ -59,9 +59,15 @@ export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorP
             mode="single"
             selected={selectedDate}
             onSelect={setSelectedDate}
-            disabled={(date) => 
-              date < new Date() || !isDateAvailable(date)
-            }
+            disabled={(date) => {
+              const today = new Date();
+              today.setHours(0, 0, 0, 0);
+              const checkDate = new Date(date);
+              checkDate.setHours(0, 0, 0, 0);
+              
+              // Allow selection if date is available and not in the past
+              return checkDate < today || !isDateAvailable(date);
+            }}
             className="p-3 pointer-events-auto rounded-lg border border-border"
             modifiers={{
               available: availableDates,
