@@ -22,11 +22,11 @@ export const Header = () => {
             <a href="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
               Use Cases
             </a>
+            <a href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
+            </a>
             <a href="#solutions" className="text-muted-foreground hover:text-foreground transition-colors">
               Solutions
-            </a>
-            <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
-              Services
             </a>
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
@@ -58,11 +58,11 @@ export const Header = () => {
               <a href="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
                 Use Cases
               </a>
+              <a href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+                Pricing
+              </a>
               <a href="#solutions" className="text-muted-foreground hover:text-foreground transition-colors">
                 Solutions
-              </a>
-              <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
-                Services
               </a>
               <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
                 About
