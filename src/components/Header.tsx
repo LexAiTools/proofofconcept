@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,21 +20,21 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
               Use Cases
-            </a>
-            <a href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
               Pricing
-            </a>
-            <a href="/engine" className="text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/engine" className="text-muted-foreground hover:text-foreground transition-colors">
               Engine
-            </a>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
-            </a>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -55,21 +56,21 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 mt-4">
-              <a href="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
                 Use Cases
-              </a>
-              <a href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
-              </a>
-              <a href="/engine" className="text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/engine" className="text-muted-foreground hover:text-foreground transition-colors">
                 Engine
-              </a>
-              <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
                 About
-              </a>
-              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
                 Contact
-              </a>
+              </Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" className="justify-start">Sign In</Button>
                 <Button variant="default" className="justify-start">Book Demo</Button>
