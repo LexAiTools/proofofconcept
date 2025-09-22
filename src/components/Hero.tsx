@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
+import { useState } from "react";
 
 export const Hero = () => {
   return (
@@ -46,12 +48,28 @@ export const Hero = () => {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           
-          <Link to="/book-demo">
-            <Button variant="glass" size="xl" className="group">
-              <PlayCircle className="w-5 h-5 mr-2" />
-              Watch Demo
-            </Button>
-          </Link>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="glass" size="xl" className="group">
+                <PlayCircle className="w-5 h-5 mr-2" />
+                Watch Demo
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl w-full">
+              <div className="aspect-video w-full">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Product Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
 
         {/* Stats */}
