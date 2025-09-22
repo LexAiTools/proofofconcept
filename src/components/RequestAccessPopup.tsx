@@ -73,13 +73,6 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
         {children}
       </DialogTrigger>
       <DialogContent className="max-w-5xl w-full p-0 overflow-hidden bg-background border-border">
-        <button
-          onClick={handleClose}
-          className="absolute right-4 top-4 z-50 p-2 rounded-full bg-muted/20 hover:bg-muted/40 transition-colors"
-        >
-          <X className="w-4 h-4 text-foreground" />
-        </button>
-
         <div className="grid lg:grid-cols-2 min-h-[700px]">
           {/* Left sidebar */}
           <div className="bg-gray-50 p-8 text-gray-900 flex flex-col justify-between relative">
