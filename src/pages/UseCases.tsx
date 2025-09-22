@@ -13,29 +13,29 @@ const UseCases = () => {
   const useCases = [
     {
       icon: MessageCircle,
-      title: "Zapytaj AI",
-      subtitle: "Dane zewnętrzne",
-      description: "Osadź czat AI w dokumentach i produktach",
-      details: "Gotowe, konfigurowalne widżety witryn internetowych, boty Slack/Discord i zestawy API SDK umożliwiające tworzenie niestandardowych rozwiązań",
-      stat: "+90% szybsze wdrażanie użytkowników CSAT, mniejsza rotacja użytkowników",
+      title: "Ask AI",
+      subtitle: "External Data",
+      description: "Embed AI chat in docs and products",
+      details: "Ready-made, configurable website widgets, Slack/Discord bots, and API SDKs for building custom solutions",
+      stat: "+90% faster user onboarding, higher CSAT, lower user churn",
       gradient: "from-primary/20 to-primary-glow/20"
     },
     {
       icon: Ticket,
-      title: "Deflektor biletów",
-      subtitle: "Dane wewnętrzne", 
-      description: "Natychmiast zmniejsz liczbę zgłoszeń pomocy technicznej",
-      details: "Prosta integracja skryptu składającego się z 1 wiersza z istniejącym formularzem pomocy technicznej",
-      stat: "20-40% zgłoszeń przychodzących do pomocy technicznej jest odrzucanych",
+      title: "Ticket Deflector",
+      subtitle: "Internal Data", 
+      description: "Instantly reduce support tickets",
+      details: "Simple 1-line script integration with existing support form",
+      stat: "20-40% of incoming support tickets are deflected",
       gradient: "from-accent/20 to-primary/20"
     },
     {
       icon: Users,
-      title: "Wewnętrzny asystent techniczny",
-      subtitle: "Dane wewnętrzne",
-      description: "Wewnętrzny czat zoptymalizowany dla zespołów",
-      details: "Bezpieczna aplikacja do czatów, która ma dostęp do Twoich wewnętrznych źródeł",
-      stat: "6 godzin zaoszczędzonych na AE, SDR-ach, wsparciu i CSM-ach",
+      title: "Internal Technical Assistant",
+      subtitle: "Internal Data",
+      description: "Internal chat optimized for teams",
+      details: "Secure chat app that has access to your internal sources",
+      stat: "6 hours saved per AE, SDRs, Support, and CSMs",
       gradient: "from-primary-glow/20 to-accent/20"
     }
   ];
@@ -52,9 +52,9 @@ const UseCases = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Zaufało nam ponad <br />
-                200 wiodących <br />
-                zespołów
+                Trusted by over <br />
+                200 leading <br />
+                teams
               </h1>
             </div>
             
@@ -73,9 +73,9 @@ const UseCases = () => {
           <div className="absolute inset-0 bg-gradient-hero opacity-50"></div>
           <div className="container mx-auto px-6 relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 max-w-4xl mx-auto leading-tight">
-              Ten sam chatbot RAG, z którego <br />
-              korzystają najlepsi specjaliści w <br />
-              dziedzinie sztucznej inteligencji.
+              The same RAG chatbot <br />
+              used by top AI <br />
+              practitioners.
             </h2>
             
             <Button 
@@ -83,7 +83,7 @@ const UseCases = () => {
               size="lg"
               className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
             >
-              Zarezerwuj demo
+              Book Demo
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -94,12 +94,12 @@ const UseCases = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 max-w-4xl mx-auto">
-                Wdróż CorballyConcepts, gdzie Twoi <br />
-                klienci i członkowie zespołu <br />
-                będą zadawać pytania
+                Deploy CorballyConcepts where your <br />
+                customers and team members <br />
+                will ask questions
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Natychmiastowe odpowiedzi techniczne zwiększające wartość Twojej firmy.
+                Instant technical answers that increase your company's value.
               </p>
             </div>
 
@@ -157,7 +157,7 @@ const UseCases = () => {
             {/* CTA Section */}
             <div className="text-center mt-16">
               <Button variant="default" size="lg">
-                Rozpocznij bezpłatną wersję próbną
+                Start Free Trial
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
