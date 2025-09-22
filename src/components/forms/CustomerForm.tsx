@@ -38,26 +38,26 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1">
-        <h3 className="text-2xl font-bold text-foreground mb-2">Tell us about yourself</h3>
-        <p className="text-muted-foreground mb-8">
-          We'll use this information to prepare a personalized demo for you.
+        <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2">Dane kontaktowe</h3>
+        <p className="text-muted-foreground mb-6 text-sm md:text-base">
+          Podaj dane do kontaktu.
         </p>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="firstName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-foreground font-medium">First Name</FormLabel>
+                    <FormLabel className="text-foreground font-medium text-sm">Imię</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input 
-                          placeholder="John" 
-                          className="pl-10 bg-input border-border focus:border-primary focus:ring-primary"
+                          placeholder="Jan" 
+                          className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                           {...field} 
                         />
                       </div>
@@ -72,13 +72,13 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                 name="lastName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-foreground font-medium">Last Name</FormLabel>
+                    <FormLabel className="text-foreground font-medium text-sm">Nazwisko</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input 
-                          placeholder="Doe" 
-                          className="pl-10 bg-input border-border focus:border-primary focus:ring-primary"
+                          placeholder="Kowalski" 
+                          className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                           {...field} 
                         />
                       </div>
@@ -94,7 +94,7 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-foreground font-medium">Phone Number</FormLabel>
+                  <FormLabel className="text-foreground font-medium text-sm">Telefon</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2 text-muted-foreground">
@@ -102,8 +102,8 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                         <span className="text-sm">🇺🇸</span>
                       </div>
                       <Input 
-                        placeholder="+1 (555) 123-4567" 
-                        className="pl-16 bg-input border-border focus:border-primary focus:ring-primary"
+                        placeholder="+48 123 456 789" 
+                        className="pl-16 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                         {...field} 
                       />
                     </div>
@@ -118,14 +118,14 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-foreground font-medium">Email Address</FormLabel>
+                  <FormLabel className="text-foreground font-medium text-sm">Email</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input 
-                        placeholder="john@company.com" 
+                        placeholder="jan@firma.pl" 
                         type="email"
-                        className="pl-10 bg-input border-border focus:border-primary focus:ring-primary"
+                        className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                         {...field} 
                       />
                     </div>
@@ -140,13 +140,13 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
               name="comments"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-foreground font-medium">Additional Comments</FormLabel>
+                  <FormLabel className="text-foreground font-medium text-sm">Dodatkowe uwagi</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                       <Textarea 
-                        placeholder="Tell us about your specific needs or questions..."
-                        className="pl-10 bg-input border-border focus:border-primary focus:ring-primary min-h-[100px] resize-none"
+                        placeholder="Opisz swoje potrzeby..."
+                        className="pl-10 bg-input border-border focus:border-primary focus:ring-primary min-h-[80px] md:min-h-[100px] resize-none"
                         {...field} 
                       />
                     </div>
@@ -156,24 +156,24 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
               )}
             />
 
-            <div className="flex justify-between pt-6">
+            <div className="flex justify-between pt-4 md:pt-6">
               <Button
                 type="button"
                 variant="ghost"
                 onClick={onBack}
                 disabled={!showBackButton}
-                className={showBackButton ? "text-muted-foreground hover:text-foreground" : "invisible"}
+                className={showBackButton ? "text-muted-foreground hover:text-foreground h-9 md:h-10" : "invisible"}
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back
+                Wstecz
               </Button>
               
               <Button
                 type="submit"
                 variant="default"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 md:px-8 h-9 md:h-10"
               >
-                Next Step
+                Wyślij
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>

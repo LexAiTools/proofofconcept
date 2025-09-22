@@ -46,11 +46,11 @@ export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorP
     <div className="flex flex-col h-full">
       <div className="flex-1">
         <div className="mb-8">
-          <h3 className="text-2xl font-bold text-foreground mb-2">
+          <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2">
             Wybierz datę
           </h3>
-          <p className="text-muted-foreground">
-            Wybierz dostępną datę spotkania
+          <p className="text-muted-foreground text-sm md:text-base">
+            Wybierz dostępną datę
           </p>
         </div>
 

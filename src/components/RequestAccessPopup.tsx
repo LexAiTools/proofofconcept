@@ -72,21 +72,21 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-5xl w-full p-0 overflow-hidden bg-background border-border">
-        <div className="grid lg:grid-cols-2 min-h-[700px]">
+      <DialogContent className="max-w-5xl w-full p-0 overflow-hidden bg-background border-border max-h-[90vh] md:max-h-[80vh]">
+        <div className="grid lg:grid-cols-2 h-full max-h-[90vh] md:max-h-[80vh] overflow-hidden">
           {/* Left sidebar */}
-          <div className="bg-gray-50 p-8 text-gray-900 flex flex-col justify-between relative">
+          <div className="bg-gray-50 p-4 md:p-8 text-gray-900 flex flex-col justify-between relative lg:flex hidden">
             <div>
               {/* Logo */}
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-8">
                 <span className="text-white font-bold text-xl">N</span>
               </div>
 
-              <h2 className="text-3xl font-bold mb-4 text-gray-900">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                 Umów spotkanie
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Skonfiguruj personalizowane demo naszych rozwiązań AI. Sprawdź jak możemy transformować Twój biznes.
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                Demo naszych rozwiązań AI.
               </p>
             </div>
 
@@ -150,7 +150,30 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
           </div>
 
           {/* Right content */}
-          <div className="p-8 flex flex-col">
+          <div className="p-4 md:p-8 flex flex-col overflow-y-auto lg:col-span-1 col-span-2 max-h-[90vh] md:max-h-[80vh]">
+            {/* Mobile header */}
+            <div className="lg:hidden mb-4 pb-4 border-b border-border">
+              <h2 className="text-xl font-bold text-foreground mb-2">
+                Umów spotkanie
+              </h2>
+              <div className="flex items-center space-x-1">
+                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
+                  currentStep >= 1 ? 'bg-primary text-white' : 'bg-muted text-muted-foreground'
+                }`}>1</div>
+                <div className={`flex-1 h-0.5 ${currentStep >= 2 ? 'bg-primary' : 'bg-muted'}`} />
+                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
+                  currentStep >= 2 ? 'bg-primary text-white' : 'bg-muted text-muted-foreground'
+                }`}>2</div>
+                <div className={`flex-1 h-0.5 ${currentStep >= 3 ? 'bg-primary' : 'bg-muted'}`} />
+                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
+                  currentStep >= 3 ? 'bg-primary text-white' : 'bg-muted text-muted-foreground'
+                }`}>3</div>
+                <div className={`flex-1 h-0.5 ${currentStep >= 4 ? 'bg-primary' : 'bg-muted'}`} />
+                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
+                  currentStep >= 4 ? 'bg-primary text-white' : 'bg-muted text-muted-foreground'
+                }`}>4</div>
+              </div>
+            </div>
             {currentStep === 1 && (
               <ServiceSelector 
                 onSubmit={handleServiceSubmit}
