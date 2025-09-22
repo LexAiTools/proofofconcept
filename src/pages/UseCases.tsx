@@ -74,7 +74,7 @@ const UseCases = () => {
           <div className="absolute inset-0 bg-gradient-hero opacity-50"></div>
           <div className="container mx-auto px-6 relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 max-w-4xl mx-auto leading-tight">
-              The same RAG chatbot <br />
+              The same RAG <br />
               used by top AI <br />
               practitioners.
             </h2>
