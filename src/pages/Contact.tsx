@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Mail, MapPin, Phone, ArrowRight } from "lucide-react";
+import { Check, Mail, MapPin, Phone, ArrowRight, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -203,6 +203,17 @@ const Contact = () => {
                       <div className="font-medium text-foreground">Poland Office</div>
                       <div className="text-sm text-muted-foreground">Cieszyn, Poland</div>
                       <div className="text-sm text-muted-foreground">NestAI - Engine Development</div>
+                      <div className="flex items-center gap-2 mt-1">
+                        <MessageCircle className="h-4 w-4 text-primary" />
+                        <a 
+                          href="https://t.me/bartekblicharski" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sm text-primary hover:underline"
+                        >
+                          @bartekblicharski
+                        </a>
+                      </div>
                     </div>
                   </div>
                   
@@ -212,6 +223,17 @@ const Contact = () => {
                       <div className="font-medium text-foreground">Ireland Office</div>
                       <div className="text-sm text-muted-foreground">Dublin, Ireland</div>
                       <div className="text-sm text-muted-foreground">CorballyConcepts - Interface & PoCs</div>
+                      <div className="flex items-center gap-2 mt-1">
+                        <MessageCircle className="h-4 w-4 text-primary" />
+                        <a 
+                          href="https://t.me/DecArtTom" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sm text-primary hover:underline"
+                        >
+                          @DecArtTom
+                        </a>
+                      </div>
                     </div>
                   </div>
                   
