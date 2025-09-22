@@ -218,8 +218,16 @@ const Contact = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <div className="font-medium text-foreground">Email</div>
-                      <div className="text-sm text-muted-foreground">contact@consortium.ai</div>
+                      <div className="font-medium text-foreground">NestAI Email</div>
+                      <div className="text-sm text-muted-foreground">info@nestai.tools</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5 text-primary" />
+                    <div>
+                      <div className="font-medium text-foreground">CorballyConcepts Email</div>
+                      <div className="text-sm text-muted-foreground">contact@corballyconcepts.com</div>
                     </div>
                   </div>
                 </div>
