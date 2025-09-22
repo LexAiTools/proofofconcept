@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 import { Play, Calendar, User } from "lucide-react";
 
 const Podcast = () => {
@@ -205,10 +206,12 @@ const Podcast = () => {
             Explore NestAi.tools with the founding team and spin up a demo 
             environment in less than 24 hours.
           </p>
-          <Button variant="hero" size="xl" className="group">
-            Request Access
-            <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-          </Button>
+          <RequestAccessPopup>
+            <Button variant="hero" size="xl" className="group">
+              Request Access
+              <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+            </Button>
+          </RequestAccessPopup>
         </div>
       </section>
 

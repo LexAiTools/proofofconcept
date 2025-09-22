@@ -1,0 +1,185 @@
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { ArrowLeft, ArrowRight, Phone, Mail, User, MessageSquare } from "lucide-react";
+
+const customerFormSchema = z.object({
+  firstName: z.string().min(2, "First name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+  email: z.string().email("Please enter a valid email address"),
+  comments: z.string().optional(),
+});
+
+export type CustomerFormData = z.infer<typeof customerFormSchema>;
+
+interface CustomerFormProps {
+  onSubmit: (data: CustomerFormData) => void;
+  onBack: () => void;
+  showBackButton: boolean;
+}
+
+export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormProps) => {
+  const form = useForm<CustomerFormData>({
+    resolver: zodResolver(customerFormSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      comments: "",
+    },
+  });
+
+  return (
+    <div className="flex flex-col h-full">
+      <div className="flex-1">
+        <h3 className="text-2xl font-bold text-foreground mb-2">Tell us about yourself</h3>
+        <p className="text-muted-foreground mb-8">
+          We'll use this information to prepare a personalized demo for you.
+        </p>
+
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-foreground font-medium">First Name</FormLabel>
+                    <FormControl>
+                      <div className="relative">
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                        <Input 
+                          placeholder="John" 
+                          className="pl-10 bg-input border-border focus:border-primary focus:ring-primary"
+                          {...field} 
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-foreground font-medium">Last Name</FormLabel>
+                    <FormControl>
+                      <div className="relative">
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                        <Input 
+                          placeholder="Doe" 
+                          className="pl-10 bg-input border-border focus:border-primary focus:ring-primary"
+                          {...field} 
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-foreground font-medium">Phone Number</FormLabel>
+                  <FormControl>
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2 text-muted-foreground">
+                        <Phone className="w-4 h-4" />
+                        <span className="text-sm">🇺🇸</span>
+                      </div>
+                      <Input 
+                        placeholder="+1 (555) 123-4567" 
+                        className="pl-16 bg-input border-border focus:border-primary focus:ring-primary"
+                        {...field} 
+                      />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-foreground font-medium">Email Address</FormLabel>
+                  <FormControl>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                      <Input 
+                        placeholder="john@company.com" 
+                        type="email"
+                        className="pl-10 bg-input border-border focus:border-primary focus:ring-primary"
+                        {...field} 
+                      />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="comments"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-foreground font-medium">Additional Comments</FormLabel>
+                  <FormControl>
+                    <div className="relative">
+                      <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
+                      <Textarea 
+                        placeholder="Tell us about your specific needs or questions..."
+                        className="pl-10 bg-input border-border focus:border-primary focus:ring-primary min-h-[100px] resize-none"
+                        {...field} 
+                      />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <div className="flex justify-between pt-6">
+              <Button
+                type="button"
+                variant="ghost"
+                onClick={onBack}
+                disabled={!showBackButton}
+                className={showBackButton ? "text-muted-foreground hover:text-foreground" : "invisible"}
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back
+              </Button>
+              
+              <Button
+                type="submit"
+                variant="default"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
+              >
+                Next Step
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </div>
+  );
+};
