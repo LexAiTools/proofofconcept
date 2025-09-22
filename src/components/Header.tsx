@@ -19,6 +19,9 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            <a href="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
+              Use Cases
+            </a>
             <a href="#solutions" className="text-muted-foreground hover:text-foreground transition-colors">
               Solutions
             </a>
@@ -52,6 +55,9 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 mt-4">
+              <a href="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
+                Use Cases
+              </a>
               <a href="#solutions" className="text-muted-foreground hover:text-foreground transition-colors">
                 Solutions
               </a>
