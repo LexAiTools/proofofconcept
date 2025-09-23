@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Ticket, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 
 const UseCases = () => {
   const trustedLogos = [
@@ -80,7 +79,7 @@ const UseCases = () => {
               practitioners.
             </h2>
             
-            <RequestAccessPopup>
+            <Link to="/book-demo">
               <Button 
                 variant="secondary" 
                 size="lg"
@@ -89,7 +88,7 @@ const UseCases = () => {
                 Book Demo
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </RequestAccessPopup>
+            </Link>
           </div>
         </section>
 
