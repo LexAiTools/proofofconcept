@@ -17,24 +17,26 @@ const Engine = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Accuracy is everything.
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-12">
-            We optimize kapa for one thing: providing the <span className="text-foreground font-semibold">most accurate answers</span> about your product. That system is what we call the <span className="text-foreground font-semibold">Answer Engine</span>.
-          </p>
+      <section className="pt-24 pb-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Accuracy is everything.
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-12">
+              We optimize kapa for one thing: providing the <span className="text-foreground font-semibold">most accurate answers</span> about your product. That system is what we call the <span className="text-foreground font-semibold">Answer Engine</span>.
+            </p>
 
-          {/* Stats */}
-          <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto mb-16">
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">+250k</div>
-              <p className="text-muted-foreground">AI answers generated per month by NestAi.tools.</p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">+100</div>
-              <p className="text-muted-foreground">Companies trust NestAi.tools in production.</p>
+            {/* Stats */}
+            <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto mb-16">
+              <div>
+                <div className="text-4xl font-bold text-primary mb-2">+250k</div>
+                <p className="text-muted-foreground">AI answers generated per month by NestAi.tools.</p>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-primary mb-2">+100</div>
+                <p className="text-muted-foreground">Companies trust NestAi.tools in production.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -111,29 +113,31 @@ const Engine = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Our philosophy: Evaluation-Driven Development
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            Academic benchmarks and leaderboards only take you so far.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
-            <div>
-              <p className="text-muted-foreground">
-                You need <span className="text-foreground font-semibold">custom evaluations</span> to align AI models. And at <span className="text-primary">NestAi.tools</span>, our mission is to help companies to deploy reliable AI assistants to <span className="text-foreground font-semibold">answer technical product questions</span>.
-              </p>
-            </div>
-            <div>
-              <p className="text-muted-foreground">
-                So we have <span className="text-foreground font-semibold">developed specialized evolution frameworks for answering technical product questions</span> that go beyond generic metrics, incorporating real-world customer feedback.
-              </p>
-            </div>
-            <div>
-              <p className="text-muted-foreground">
-                This approach allows us to <span className="text-foreground font-semibold">continuously refine our system and deploy latest research and models</span>, only when it improves accuracy for all users of NestAi.tools.
-              </p>
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              Our philosophy: Evaluation-Driven Development
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
+              Academic benchmarks and leaderboards only take you so far.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 text-left max-w-6xl mx-auto">
+              <div>
+                <p className="text-muted-foreground">
+                  You need <span className="text-foreground font-semibold">custom evaluations</span> to align AI models. And at <span className="text-primary">NestAi.tools</span>, our mission is to help companies to deploy reliable AI assistants to <span className="text-foreground font-semibold">answer technical product questions</span>.
+                </p>
+              </div>
+              <div>
+                <p className="text-muted-foreground">
+                  So we have <span className="text-foreground font-semibold">developed specialized evolution frameworks for answering technical product questions</span> that go beyond generic metrics, incorporating real-world customer feedback.
+                </p>
+              </div>
+              <div>
+                <p className="text-muted-foreground">
+                  This approach allows us to <span className="text-foreground font-semibold">continuously refine our system and deploy latest research and models</span>, only when it improves accuracy for all users of NestAi.tools.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -269,48 +273,50 @@ const Engine = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-foreground text-center mb-12">
-            Frequently asked questions
-          </h2>
-          <Accordion type="single" collapsible className="w-full space-y-4">
-            <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
-              <AccordionTrigger className="text-left hover:no-underline">
-                What LLM do you use?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                We use a combination of state-of-the-art language models, optimized specifically for technical product questions. Our system is model-agnostic and continuously evolves as new models become available.
-              </AccordionContent>
-            </AccordionItem>
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground text-center mb-12">
+              Frequently asked questions
+            </h2>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  What LLM do you use?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  We use a combination of state-of-the-art language models, optimized specifically for technical product questions. Our system is model-agnostic and continuously evolves as new models become available.
+                </AccordionContent>
+              </AccordionItem>
 
-            <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
-              <AccordionTrigger className="text-left hover:no-underline">
-                How accurate is kapa?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Our accuracy rates consistently exceed 90% for technical product questions. We continuously evaluate and improve our system using real-world customer feedback and specialized evaluation frameworks.
-              </AccordionContent>
-            </AccordionItem>
+              <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  How accurate is kapa?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Our accuracy rates consistently exceed 90% for technical product questions. We continuously evaluate and improve our system using real-world customer feedback and specialized evaluation frameworks.
+                </AccordionContent>
+              </AccordionItem>
 
-            <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
-              <AccordionTrigger className="text-left hover:no-underline">
-                How do you solve hallucinations?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                We use grounded generation techniques that ensure answers are based only on your knowledge content. Our system provides citations and stays strictly on topic to minimize hallucinations.
-              </AccordionContent>
-            </AccordionItem>
+              <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  How do you solve hallucinations?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  We use grounded generation techniques that ensure answers are based only on your knowledge content. Our system provides citations and stays strictly on topic to minimize hallucinations.
+                </AccordionContent>
+              </AccordionItem>
 
-            <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
-              <AccordionTrigger className="text-left hover:no-underline">
-                Do you use fine-tuning or RAG?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                We use a hybrid approach that combines the best of both techniques, along with our proprietary Answer Engine optimizations for technical product questions.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+              <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  Do you use fine-tuning or RAG?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  We use a hybrid approach that combines the best of both techniques, along with our proprietary Answer Engine optimizations for technical product questions.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
       </section>
 
