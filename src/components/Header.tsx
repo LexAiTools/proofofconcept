@@ -35,9 +35,6 @@ export const Header = () => {
             <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </Link>
-            <Link to="/working-chat" className="text-muted-foreground hover:text-foreground transition-colors">
-              Chat
-            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -77,9 +74,6 @@ export const Header = () => {
               </Link>
               <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
                 Contact
-              </Link>
-              <Link to="/working-chat" className="text-muted-foreground hover:text-foreground transition-colors">
-                Chat
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <Link to="/signin">
