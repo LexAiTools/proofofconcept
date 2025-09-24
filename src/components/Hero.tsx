@@ -4,6 +4,7 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import { useState } from "react";
+import { VercelV0Chat } from "./VercelV0Chat";
 
 export const Hero = () => {
   return (
@@ -75,7 +76,7 @@ export const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
           <div>
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
             <div className="text-muted-foreground">Enterprise Clients</div>
@@ -93,6 +94,11 @@ export const Hero = () => {
             <div className="text-muted-foreground">Expert Support</div>
           </div>
         </div>
+      </div>
+
+      {/* VercelV0Chat Component */}
+      <div className="relative w-full">
+        <VercelV0Chat />
       </div>
     </section>
   );
