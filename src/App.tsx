@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import BookDemo from "./pages/BookDemo";
 import Signin from "./pages/Signin";
 import Podcast from "./pages/Podcast";
+import WorkingChat from "./pages/WorkingChat";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/book-demo" element={<BookDemo />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/podcast" element={<Podcast />} />
+          <Route path="/working-chat" element={<WorkingChat />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
