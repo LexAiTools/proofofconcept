@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { VercelV0Chat } from "@/components/VercelV0Chat";
 import { 
   Accordion,
   AccordionContent,
@@ -137,6 +138,8 @@ const Engine = () => {
           </div>
         </div>
       </section>
+
+      <VercelV0Chat />
 
       {/* How the Engine Works */}
       <section className="py-16 px-6 bg-muted/50">
