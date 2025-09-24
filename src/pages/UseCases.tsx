@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Ticket, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { VercelV0Chat } from "@/components/VercelV0Chat";
 
 const UseCases = () => {
   const trustedLogos = [
@@ -68,6 +69,9 @@ const UseCases = () => {
             </div>
           </div>
         </section>
+
+        {/* VercelV0Chat Section */}
+        <VercelV0Chat />
 
         {/* Hero Gradient Section */}
         <section className="py-20 mx-6 my-16 rounded-3xl bg-gradient-primary relative overflow-hidden">
