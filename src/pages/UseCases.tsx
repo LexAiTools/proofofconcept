@@ -70,9 +70,6 @@ const UseCases = () => {
           </div>
         </section>
 
-        {/* VercelV0Chat Section */}
-        <VercelV0Chat />
-
         {/* Hero Gradient Section */}
         <section className="py-20 mx-6 my-16 rounded-3xl bg-gradient-primary relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-hero opacity-50"></div>
@@ -95,6 +92,9 @@ const UseCases = () => {
             </Link>
           </div>
         </section>
+
+        {/* VercelV0Chat Section */}
+        <VercelV0Chat />
 
         {/* Use Cases Section */}
         <section className="py-20 bg-background">
