@@ -21,40 +21,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
 
 const Pricing = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    problem: ""
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      const { error } = await supabase.from("leads").insert({
-        email: formData.email,
-        problem: formData.problem,
-        source_form: "pricing",
-        status: "new",
-      });
-
-      if (error) throw error;
-
-      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
-      setFormData({
-        email: "",
-        problem: ""
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error("Wystąpił błąd. Spróbuj ponownie.");
-    }
-  };
-
   const features = [
     {
       icon: MessageCircle,
@@ -220,7 +188,7 @@ const Pricing = () => {
               <div>
                 <Card className="bg-card border-border">
                   <CardContent className="p-8">
-                    <form className="space-y-6" onSubmit={handleSubmit}>
+                    <form className="space-y-6">
                       <div>
                         <Label htmlFor="email" className="text-foreground font-medium">
                           Work Email
@@ -230,9 +198,6 @@ const Pricing = () => {
                           type="email"
                           placeholder="john@acme.com"
                           className="mt-2 bg-input border-border"
-                          value={formData.email}
-                          onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          required
                         />
                       </div>
                       
@@ -244,9 +209,6 @@ const Pricing = () => {
                           id="problem"
                           placeholder="Building an AI assistant for my docs, rolling out internal support agent etc."
                           className="mt-2 bg-input border-border min-h-[120px]"
-                          value={formData.problem}
-                          onChange={(e) => setFormData({...formData, problem: e.target.value})}
-                          required
                         />
                       </div>
 

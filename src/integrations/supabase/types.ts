@@ -112,87 +112,6 @@ export type Database = {
         }
         Relationships: []
       }
-      leads: {
-        Row: {
-          additional_requirements: string | null
-          appointment_date: string | null
-          appointment_time: string | null
-          company: string | null
-          created_at: string
-          data_sources: string | null
-          email: string | null
-          id: string
-          message: string | null
-          metadata: Json | null
-          name: string | null
-          phone: string | null
-          problem: string | null
-          service: string | null
-          source_form: string
-          status: string | null
-          updated_at: string
-        }
-        Insert: {
-          additional_requirements?: string | null
-          appointment_date?: string | null
-          appointment_time?: string | null
-          company?: string | null
-          created_at?: string
-          data_sources?: string | null
-          email?: string | null
-          id?: string
-          message?: string | null
-          metadata?: Json | null
-          name?: string | null
-          phone?: string | null
-          problem?: string | null
-          service?: string | null
-          source_form: string
-          status?: string | null
-          updated_at?: string
-        }
-        Update: {
-          additional_requirements?: string | null
-          appointment_date?: string | null
-          appointment_time?: string | null
-          company?: string | null
-          created_at?: string
-          data_sources?: string | null
-          email?: string | null
-          id?: string
-          message?: string | null
-          metadata?: Json | null
-          name?: string | null
-          phone?: string | null
-          problem?: string | null
-          service?: string | null
-          source_form?: string
-          status?: string | null
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      user_roles: {
-        Row: {
-          created_at: string
-          id: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          role?: Database["public"]["Enums"]["app_role"]
-          user_id?: string
-        }
-        Relationships: []
-      }
     }
     Views: {
       [_ in never]: never
@@ -217,13 +136,6 @@ export type Database = {
       halfvec_typmod_in: {
         Args: { "": unknown[] }
         Returns: number
-      }
-      has_role: {
-        Args: {
-          _role: Database["public"]["Enums"]["app_role"]
-          _user_id: string
-        }
-        Returns: boolean
       }
       hnsw_bit_support: {
         Args: { "": unknown }
@@ -299,7 +211,7 @@ export type Database = {
       }
     }
     Enums: {
-      app_role: "admin" | "user"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -426,8 +338,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["admin", "user"],
-    },
+    Enums: {},
   },
 } as const

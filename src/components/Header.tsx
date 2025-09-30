@@ -1,40 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const { user } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const checkAdminStatus = async () => {
-      if (!user) {
-        setIsAdmin(false);
-        return;
-      }
-
-      try {
-        const { data, error } = await supabase
-          .from("user_roles")
-          .select("role")
-          .eq("user_id", user.id)
-          .eq("role", "admin")
-          .maybeSingle();
-
-        setIsAdmin(!!data);
-      } catch (error) {
-        console.error("Error checking admin status:", error);
-        setIsAdmin(false);
-      }
-    };
-
-    checkAdminStatus();
-  }, [user]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -72,20 +42,12 @@ export const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            {isAdmin ? (
-              <Button variant="default" onClick={() => navigate('/admin')}>
-                Admin Panel
-              </Button>
-            ) : (
-              <>
-                <Button variant="ghost" onClick={() => navigate('/signin')}>
-                  Log In
-                </Button>
-                <Button variant="default" onClick={() => navigate('/book-demo')}>
-                  Book Demo
-                </Button>
-              </>
-            )}
+            <Link to="/signin">
+              <Button variant="ghost">Sign In</Button>
+            </Link>
+            <Link to="/book-demo">
+              <Button variant="default">Book Demo</Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -120,41 +82,12 @@ export const Header = () => {
                 Chat
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
-                {isAdmin ? (
-                  <Button 
-                    variant="default" 
-                    className="justify-start w-full"
-                    onClick={() => {
-                      navigate('/admin');
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Admin Panel
-                  </Button>
-                ) : (
-                  <>
-                    <Button 
-                      variant="ghost" 
-                      className="justify-start w-full"
-                      onClick={() => {
-                        navigate('/signin');
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      Log In
-                    </Button>
-                    <Button 
-                      variant="default" 
-                      className="justify-start w-full"
-                      onClick={() => {
-                        navigate('/book-demo');
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      Book Demo
-                    </Button>
-                  </>
-                )}
+                <Link to="/signin">
+                  <Button variant="ghost" className="justify-start">Sign In</Button>
+                </Link>
+                <Link to="/book-demo">
+                  <Button variant="default" className="justify-start">Book Demo</Button>
+                </Link>
               </div>
             </nav>
           </div>
