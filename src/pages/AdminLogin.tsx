@@ -85,9 +85,9 @@ export default function AdminLogin() {
             <Shield className="w-8 h-8 text-primary" />
           </div>
           <div>
-            <CardTitle className="text-2xl">Panel Administratora</CardTitle>
+            <CardTitle className="text-2xl">Panel SUPERADMIN</CardTitle>
             <CardDescription className="text-base mt-2">
-              Zaloguj się aby uzyskać dostęp do panelu admina
+              Logowanie dla administratorów portalu. Zarządzaj leadami i ustawieniami systemu.
             </CardDescription>
           </div>
         </CardHeader>
@@ -130,7 +130,7 @@ export default function AdminLogin() {
               ) : (
                 <>
                   <Shield className="mr-2 h-4 w-4" />
-                  Zaloguj się jako Admin
+                  Zaloguj się jako SUPERADMIN
                 </>
               )}
             </Button>

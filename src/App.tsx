@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import BookDemo from "./pages/BookDemo";
 import Signin from "./pages/Signin";
 import AdminLogin from "./pages/AdminLogin";
+import SuperadminSetup from "./pages/SuperadminSetup";
 import Podcast from "./pages/Podcast";
 import Chat from "./pages/Chat";
 import Admin from "./pages/Admin";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/book-demo" element={<BookDemo />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/superadmin-setup" element={<SuperadminSetup />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/admin" element={<Admin />} />
