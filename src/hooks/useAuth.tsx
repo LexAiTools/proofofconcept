@@ -15,8 +15,6 @@ export function useAuth() {
     // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        console.log('useAuth: auth state changed', { event, hasSession: !!session });
-        
         // Debounce state updates to prevent rapid changes
         clearTimeout(debounceTimeout);
         debounceTimeout = setTimeout(() => {
@@ -30,7 +28,6 @@ export function useAuth() {
 
     // Check for existing session
     supabase.auth.getSession().then(({ data: { session } }) => {
-      console.log('useAuth: initial session check', { hasSession: !!session });
       setSession(session);
       setUser(session?.user ?? null);
       setLoading(false);
@@ -59,7 +56,6 @@ export function useAuth() {
       if (error) throw error;
 
       toast.success('Konto utworzone! Zalogowano automatycznie.');
-      console.log('Sign up successful, user created');
       return { data, error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas rejestracji');
@@ -80,7 +76,6 @@ export function useAuth() {
       if (error) throw error;
 
       toast.success('Zalogowano pomyślnie!');
-      console.log('Sign in successful');
       return { data, error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas logowania');
@@ -117,7 +112,6 @@ export function useAuth() {
       if (error) throw error;
       
       toast.success('Wylogowano pomyślnie');
-      console.log('Sign out successful');
       return { error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas wylogowania');
