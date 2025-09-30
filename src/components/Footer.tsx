@@ -37,6 +37,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">Solutions</h3>
             <ul className="space-y-2">
+              <li><Link to="/book-demo" className="text-muted-foreground hover:text-foreground transition-colors">WordPress AI Plugin</Link></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">AI Analytics</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Predictive Modeling</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Automation Platform</a></li>
