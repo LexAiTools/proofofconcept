@@ -58,13 +58,21 @@ const AdminPodcasts = () => {
   });
 
   useEffect(() => {
+    console.log("🔍 AdminPodcasts: useEffect triggered", { user, userId: user?.id });
+    
     if (!user) {
+      console.log("❌ No user found, redirecting to signin");
       navigate("/signin");
       return;
     }
 
     const checkAdminRole = async () => {
-      if (!user?.id) return;
+      console.log("🔑 Checking admin role for user:", user.id);
+      
+      if (!user?.id) {
+        console.log("❌ No user ID, returning");
+        return;
+      }
 
       const { data, error } = await supabase
         .from("user_roles")
@@ -73,18 +81,21 @@ const AdminPodcasts = () => {
         .eq("role", "admin")
         .maybeSingle();
 
+      console.log("📊 Admin role check result:", { data, error });
+
       if (error) {
-        console.error("Error checking admin role:", error);
+        console.error("❌ Error checking admin role:", error);
         navigate("/signin");
         return;
       }
 
       if (!data) {
-        console.log("User is not an admin");
+        console.log("❌ User is not an admin, redirecting");
         navigate("/signin");
         return;
       }
 
+      console.log("✅ User is admin, fetching podcasts");
       setIsAdmin(true);
       fetchPodcasts();
     };
