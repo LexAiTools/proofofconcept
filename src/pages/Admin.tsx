@@ -18,6 +18,8 @@ export default function Admin() {
     newLeads: 0,
     converted: 0,
     thisMonth: 0,
+    today: 0,
+    thisWeek: 0,
   });
   const { user, loading } = useAuth();
   const navigate = useNavigate();
@@ -141,11 +143,28 @@ export default function Admin() {
         .select("*", { count: "exact", head: true })
         .gte("created_at", firstDayOfMonth.toISOString());
 
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const { count: todayLeads } = await supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true })
+        .gte("created_at", today.toISOString());
+
+      const firstDayOfWeek = new Date();
+      firstDayOfWeek.setDate(firstDayOfWeek.getDate() - firstDayOfWeek.getDay());
+      firstDayOfWeek.setHours(0, 0, 0, 0);
+      const { count: thisWeekLeads } = await supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true })
+        .gte("created_at", firstDayOfWeek.toISOString());
+
       setStats({
         totalLeads: totalLeads || 0,
         newLeads: newLeads || 0,
         converted: converted || 0,
         thisMonth: thisMonth || 0,
+        today: todayLeads || 0,
+        thisWeek: thisWeekLeads || 0,
       });
     } catch (error) {
       console.error("Error fetching stats:", error);
