@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { VercelV0Chat } from "@/components/VercelV0Chat";
 import { 
   Accordion,
@@ -12,6 +12,16 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 
 const Engine = () => {
+  const navigate = useNavigate();
+
+  const handleMessageSubmit = (message: string) => {
+    navigate('/chat', { state: { initialMessage: message } });
+  };
+
+  const handleRequestDemo = () => {
+    navigate('/chat', { state: { initialMessage: 'Chce zapytać o demo' } });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -143,7 +153,7 @@ const Engine = () => {
         </div>
       </section>
 
-      <VercelV0Chat />
+      <VercelV0Chat onMessageSubmit={handleMessageSubmit} />
 
       {/* How the Engine Works */}
       <section className="py-16 px-6 bg-muted/50">
@@ -329,11 +339,9 @@ const Engine = () => {
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Request a demo to try NestAi.tools on your data sources today
           </p>
-          <Link to="/book-demo">
-            <Button variant="secondary" size="lg">
-              Request Demo →
-            </Button>
-          </Link>
+          <Button variant="secondary" size="lg" onClick={handleRequestDemo}>
+            Request Demo →
+          </Button>
         </div>
       </section>
 
