@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -9,11 +9,7 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const { user } = useAuth();
-
-  const handleNavigation = (path: string) => {
-    console.log('Header: navigating to:', path);
-    window.location.href = path;
-  };
+  const navigate = useNavigate();
 
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -77,15 +73,15 @@ export const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             {isAdmin ? (
-              <Button variant="default" onClick={() => handleNavigation('/admin')}>
+              <Button variant="default" onClick={() => navigate('/admin')}>
                 Admin Panel
               </Button>
             ) : (
               <>
-                <Button variant="ghost" onClick={() => handleNavigation('/signin')}>
+                <Button variant="ghost" onClick={() => navigate('/signin')}>
                   Log In
                 </Button>
-                <Button variant="default" onClick={() => handleNavigation('/book-demo')}>
+                <Button variant="default" onClick={() => navigate('/book-demo')}>
                   Book Demo
                 </Button>
               </>
@@ -129,7 +125,7 @@ export const Header = () => {
                     variant="default" 
                     className="justify-start w-full"
                     onClick={() => {
-                      handleNavigation('/admin');
+                      navigate('/admin');
                       setIsMenuOpen(false);
                     }}
                   >
@@ -141,7 +137,7 @@ export const Header = () => {
                       variant="ghost" 
                       className="justify-start w-full"
                       onClick={() => {
-                        handleNavigation('/signin');
+                        navigate('/signin');
                         setIsMenuOpen(false);
                       }}
                     >
@@ -151,7 +147,7 @@ export const Header = () => {
                       variant="default" 
                       className="justify-start w-full"
                       onClick={() => {
-                        handleNavigation('/book-demo');
+                        navigate('/book-demo');
                         setIsMenuOpen(false);
                       }}
                     >

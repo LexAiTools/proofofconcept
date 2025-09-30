@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Users, Mail, TrendingUp, Eye } from "lucide-react";
 import { DashboardCard } from "@/components/admin/DashboardCard";
@@ -19,10 +20,17 @@ export default function Admin() {
     thisMonth: 0,
   });
   const { user, loading } = useAuth();
+  const navigate = useNavigate();
+  const hasCheckedRef = useRef(false);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
     let isMounted = true;
+
+    if (hasCheckedRef.current) {
+      console.log('Admin page: already checked, skipping');
+      return;
+    }
 
     const checkAdminRole = async () => {
       console.log('Admin page: checking auth state', { loading, user: !!user });
@@ -34,12 +42,8 @@ export default function Admin() {
       
       if (!user) {
         console.log('Admin page: no user, redirecting to signin');
-        // Add delay before redirect
-        timeoutId = setTimeout(() => {
-          if (isMounted) {
-            window.location.href = "/signin";
-          }
-        }, 300);
+        hasCheckedRef.current = true;
+        navigate('/signin', { replace: true });
         return;
       }
 
@@ -79,13 +83,11 @@ export default function Admin() {
         
         if (!isMounted) return;
         
+        hasCheckedRef.current = true;
+        
         if (!isAdmin) {
           console.log('Admin page: user is not admin, redirecting to home');
-          timeoutId = setTimeout(() => {
-            if (isMounted) {
-              window.location.href = "/";
-            }
-          }, 300);
+          navigate('/home', { replace: true });
           return;
         }
         
@@ -94,11 +96,7 @@ export default function Admin() {
       } catch (error) {
         console.error("Admin page: error checking admin role:", error);
         if (isMounted) {
-          timeoutId = setTimeout(() => {
-            if (isMounted) {
-              window.location.href = "/";
-            }
-          }, 300);
+          navigate('/home', { replace: true });
         }
       }
     };
@@ -112,7 +110,7 @@ export default function Admin() {
       isMounted = false;
       clearTimeout(timeoutId);
     };
-  }, [user, loading]);
+  }, [user, loading, navigate]);
 
   useEffect(() => {
     fetchStats();

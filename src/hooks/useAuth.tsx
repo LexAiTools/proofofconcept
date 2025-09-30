@@ -131,6 +131,7 @@ export function useAuth() {
     user,
     session,
     loading,
+    isInitialized,
     signUp,
     signIn,
     signInWithOAuth,

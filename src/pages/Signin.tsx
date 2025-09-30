@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
@@ -16,26 +17,27 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
   
-  const { user, loading, signUp, signIn, signInWithOAuth } = useAuth();
+  const { user, loading, isInitialized, signUp, signIn, signInWithOAuth } = useAuth();
 
   // Redirect if already logged in with delay
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
     
-    if (!loading && user) {
+    if (!loading && user && isInitialized) {
       console.log('Signin: user already logged in, scheduling redirect');
       // Add delay to prevent flickering
       timeoutId = setTimeout(() => {
         console.log('Signin: redirecting to home');
-        window.location.href = '/';
+        navigate('/home', { replace: true });
       }, 500);
     }
 
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [user, loading]);
+  }, [user, loading, isInitialized, navigate]);
 
   // Show loading while checking auth state
   if (loading) {
