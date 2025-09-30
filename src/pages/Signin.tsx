@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const authSchema = z.object({
   email: z.string().email("Nieprawidłowy adres email"),
@@ -21,22 +22,28 @@ const Signin = () => {
   
   const { user, loading, isInitialized, signUp, signIn, signInWithOAuth } = useAuth();
 
-  // Redirect if already logged in with delay
+  // Redirect if already logged in - check admin status
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    
-    if (!loading && user && isInitialized) {
-      console.log('Signin: user already logged in, scheduling redirect');
-      // Add delay to prevent flickering
-      timeoutId = setTimeout(() => {
-        console.log('Signin: redirecting to home');
-        navigate('/home', { replace: true });
-      }, 500);
-    }
+    const checkAndRedirect = async () => {
+      if (!loading && user && isInitialized) {
+        // Check if user is admin
+        const { data } = await supabase
+          .from("user_roles")
+          .select("role")
+          .eq("user_id", user.id)
+          .eq("role", "admin")
+          .maybeSingle();
 
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
+        // Redirect immediately without delay
+        if (data) {
+          navigate('/admin', { replace: true });
+        } else {
+          navigate('/home', { replace: true });
+        }
+      }
     };
+
+    checkAndRedirect();
   }, [user, loading, isInitialized, navigate]);
 
   // Show loading while checking auth state
