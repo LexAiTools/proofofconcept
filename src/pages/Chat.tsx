@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Bot, ArrowUp, Loader2, MessageSquare, Image as ImageIcon, FileUp, Monitor } from 'lucide-react';
+import { Bot, ArrowUp, Loader2, MessageSquare, Lightbulb, Settings, DollarSign, Clock } from 'lucide-react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -250,64 +250,41 @@ export default function Chat() {
                 type="button"
                 variant="ghost"
                 size="sm"
+                onClick={() => handleSubmit(undefined, "Potrzebuję aplikację MVP, jak mogę zacząć?")}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
-                <ImageIcon className="h-4 w-4" />
-                <span className="text-sm">Clone a Screenshot</span>
+                <Lightbulb className="h-4 w-4" />
+                <span className="text-sm">Potrzebuję aplikację</span>
               </Button>
               <Button
                 type="button"
                 variant="ghost"
                 size="sm"
+                onClick={() => handleSubmit(undefined, "Jakie technologie używacie do tworzenia aplikacji?")}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
-                <svg
-                  className="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 2L2 7L12 12L22 7L12 2Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M2 17L12 22L22 17"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M2 12L12 17L22 12"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span className="text-sm">Import from Figma</span>
+                <Settings className="h-4 w-4" />
+                <span className="text-sm">Jakie technologie?</span>
               </Button>
               <Button
                 type="button"
                 variant="ghost"
                 size="sm"
+                onClick={() => handleSubmit(undefined, "Ile kosztuje stworzenie aplikacji MVP?")}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
-                <FileUp className="h-4 w-4" />
-                <span className="text-sm">Upload a Project</span>
+                <DollarSign className="h-4 w-4" />
+                <span className="text-sm">Ile to kosztuje?</span>
               </Button>
               <Button
                 type="button"
                 variant="ghost"
                 size="sm"
+                onClick={() => handleSubmit(undefined, "Jak długo trwa stworzenie aplikacji MVP?")}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
-                <Monitor className="h-4 w-4" />
-                <span className="text-sm">Landing Page</span>
+                <Clock className="h-4 w-4" />
+                <span className="text-sm">Jak długo trwa?</span>
               </Button>
             </div>
           </div>
