@@ -18,6 +18,7 @@ import Podcast from "./pages/Podcast";
 import Chat from "./pages/Chat";
 import Admin from "./pages/Admin";
 import AdminPodcasts from "./pages/AdminPodcasts";
+import AdminDocuments from "./pages/AdminDocuments";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/chat" element={<Chat />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/podcasts" element={<AdminPodcasts />} />
+          <Route path="/admin/documents" element={<AdminDocuments />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

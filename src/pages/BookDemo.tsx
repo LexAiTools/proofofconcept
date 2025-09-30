@@ -8,6 +8,7 @@ import { ArrowRight, Download, Settings, Database, CreditCard, Shield, Check } f
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { DocumentsSection } from "@/components/documents/DocumentsSection";
 
 const BookDemo = () => {
   const [formData, setFormData] = useState({
@@ -217,6 +218,9 @@ const BookDemo = () => {
           </div>
         </div>
       </section>
+
+      {/* Documents Section */}
+      <DocumentsSection />
 
       {/* Demo Request Form */}
       <section className="py-24">
