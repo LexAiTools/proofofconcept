@@ -66,7 +66,9 @@ export default function SuperadminSetup() {
       setIsLoading(true);
 
       // Try to create user account
+      console.log('Attempting to create user account:', email);
       const { data: authData, error: signUpError } = await signUp(email, password);
+      console.log('Sign up result:', { hasAuthData: !!authData, hasUser: !!authData?.user, error: signUpError });
 
       // If user already exists, try to sign in and assign admin role
       if (signUpError?.message?.includes('already registered')) {
@@ -119,13 +121,16 @@ export default function SuperadminSetup() {
         return;
       }
 
-      if (signUpError || !authData.data?.user) {
+      if (signUpError || !authData?.user) {
+        console.error('Sign up failed:', signUpError);
         throw signUpError || new Error('Nie udało się utworzyć konta');
       }
 
-      const userId = authData.data.user.id;
+      const userId = authData.user.id;
+      console.log('New user created, userId:', userId);
 
       // Assign admin role to new user
+      console.log('Attempting to insert admin role for userId:', userId);
       const { error: roleError } = await supabase
         .from('user_roles')
         .insert({
@@ -138,6 +143,8 @@ export default function SuperadminSetup() {
         toast.error('Konto utworzone, ale nie przypisano roli administratora. Skontaktuj się z pomocą techniczną.');
         return;
       }
+
+      console.log('Admin role assigned successfully');
 
       toast.success('Konto SUPERADMIN utworzone pomyślnie!');
       console.log('SUPERADMIN created successfully');
