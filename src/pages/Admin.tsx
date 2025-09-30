@@ -68,13 +68,14 @@ export default function Admin() {
               await new Promise(resolve => setTimeout(resolve, 500));
               return checkRoleWithRetry(retries - 1);
             }
-            throw error;
+            console.error("Admin page: role check error:", error);
+            return false;
           }
           
           return !!roleData;
         } catch (error) {
           console.error("Admin page: error checking admin role:", error);
-          throw error;
+          return false;
         }
       };
 
@@ -96,6 +97,8 @@ export default function Admin() {
       } catch (error) {
         console.error("Admin page: error checking admin role:", error);
         if (isMounted) {
+          hasCheckedRef.current = true;
+          setIsChecking(false);
           navigate('/home', { replace: true });
         }
       }
