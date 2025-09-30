@@ -11,6 +11,17 @@ export const Header = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
+  const handleNavigation = (path: string) => {
+    try {
+      console.log('Navigating to:', path);
+      navigate(path);
+    } catch (error) {
+      console.error('Navigation error:', error);
+      // Fallback to direct navigation
+      window.location.href = path;
+    }
+  };
+
   useEffect(() => {
     const checkAdminStatus = async () => {
       if (!user) {
@@ -73,15 +84,15 @@ export const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             {isAdmin ? (
-              <Button variant="default" onClick={() => navigate('/admin')}>
+              <Button variant="default" onClick={() => handleNavigation('/admin')}>
                 Admin Panel
               </Button>
             ) : (
               <>
-                <Button variant="ghost" onClick={() => navigate('/signin')}>
+                <Button variant="ghost" onClick={() => handleNavigation('/signin')}>
                   Log In
                 </Button>
-                <Button variant="default" onClick={() => navigate('/book-demo')}>
+                <Button variant="default" onClick={() => handleNavigation('/book-demo')}>
                   Book Demo
                 </Button>
               </>
@@ -125,7 +136,7 @@ export const Header = () => {
                     variant="default" 
                     className="justify-start w-full"
                     onClick={() => {
-                      navigate('/admin');
+                      handleNavigation('/admin');
                       setIsMenuOpen(false);
                     }}
                   >
@@ -137,7 +148,7 @@ export const Header = () => {
                       variant="ghost" 
                       className="justify-start w-full"
                       onClick={() => {
-                        navigate('/signin');
+                        handleNavigation('/signin');
                         setIsMenuOpen(false);
                       }}
                     >
@@ -147,7 +158,7 @@ export const Header = () => {
                       variant="default" 
                       className="justify-start w-full"
                       onClick={() => {
-                        navigate('/book-demo');
+                        handleNavigation('/book-demo');
                         setIsMenuOpen(false);
                       }}
                     >

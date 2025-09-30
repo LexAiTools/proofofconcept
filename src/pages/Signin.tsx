@@ -20,8 +20,18 @@ const Signin = () => {
   
   const { user, loading, signUp, signIn, signInWithOAuth } = useAuth();
 
+  // Show loading while checking auth state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
   // Redirect if already logged in
-  if (user && !loading) {
+  if (user) {
+    console.log('User already logged in, redirecting to home');
     return <Navigate to="/" replace />;
   }
 
