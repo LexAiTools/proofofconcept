@@ -17,38 +17,44 @@ import {
   BarChart,
   LogOut
 } from "lucide-react";
-import { NavLink } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
-const menuItems = [
+export type AdminSection = "dashboard" | "leads" | "users" | "stats" | "settings";
+
+const menuItems: Array<{ title: string; section: AdminSection; icon: any }> = [
   {
     title: "Dashboard",
-    url: "/admin",
+    section: "dashboard",
     icon: LayoutDashboard,
   },
   {
     title: "Leady",
-    url: "/admin/leads",
+    section: "leads",
     icon: Mail,
   },
   {
     title: "Użytkownicy",
-    url: "/admin/users",
+    section: "users",
     icon: Users,
   },
   {
     title: "Statystyki",
-    url: "/admin/stats",
+    section: "stats",
     icon: BarChart,
   },
   {
     title: "Ustawienia",
-    url: "/admin/settings",
+    section: "settings",
     icon: Settings,
   },
 ];
 
-export function AdminSidebar() {
+interface AdminSidebarProps {
+  activeSection: AdminSection;
+  onSectionChange: (section: AdminSection) => void;
+}
+
+export function AdminSidebar({ activeSection, onSectionChange }: AdminSidebarProps) {
   const { signOut } = useAuth();
 
   return (
@@ -72,19 +78,16 @@ export function AdminSidebar() {
             <SidebarMenu>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <NavLink
-                      to={item.url}
-                      end={item.url === "/admin"}
-                      className={({ isActive }) =>
-                        isActive
-                          ? "bg-primary/10 text-primary font-medium"
-                          : "hover:bg-muted/50"
-                      }
-                    >
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.title}</span>
-                    </NavLink>
+                  <SidebarMenuButton
+                    onClick={() => onSectionChange(item.section)}
+                    className={
+                      activeSection === item.section
+                        ? "bg-primary/10 text-primary font-medium"
+                        : "hover:bg-muted/50"
+                    }
+                  >
+                    <item.icon className="h-4 w-4" />
+                    <span>{item.title}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
