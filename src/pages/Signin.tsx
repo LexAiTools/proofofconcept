@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Link, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { z } from "zod";
@@ -20,6 +19,14 @@ const Signin = () => {
   
   const { user, loading, signUp, signIn, signInWithOAuth } = useAuth();
 
+  // Redirect if already logged in
+  useEffect(() => {
+    if (!loading && user) {
+      console.log('Signin: user already logged in, redirecting to home');
+      window.location.href = '/';
+    }
+  }, [user, loading]);
+
   // Show loading while checking auth state
   if (loading) {
     return (
@@ -27,12 +34,6 @@ const Signin = () => {
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     );
-  }
-
-  // Redirect if already logged in
-  if (user) {
-    console.log('User already logged in, redirecting to home');
-    return <Navigate to="/" replace />;
   }
 
   const validateForm = () => {

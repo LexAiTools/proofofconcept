@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -9,17 +9,10 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const { user } = useAuth();
-  const navigate = useNavigate();
 
   const handleNavigation = (path: string) => {
-    try {
-      console.log('Navigating to:', path);
-      navigate(path);
-    } catch (error) {
-      console.error('Navigation error:', error);
-      // Fallback to direct navigation
-      window.location.href = path;
-    }
+    console.log('Header: navigating to:', path);
+    window.location.href = path;
   };
 
   useEffect(() => {

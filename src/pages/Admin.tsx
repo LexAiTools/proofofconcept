@@ -6,7 +6,6 @@ import { LeadsTable } from "@/components/admin/LeadsTable";
 import { DashboardHeader } from "@/components/admin/DashboardHeader";
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { supabase } from "@/integrations/supabase/client";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
 export default function Admin() {
@@ -18,7 +17,6 @@ export default function Admin() {
     converted: 0,
     thisMonth: 0,
   });
-  const navigate = useNavigate();
   const { user, loading } = useAuth();
 
   useEffect(() => {
@@ -32,7 +30,7 @@ export default function Admin() {
       
       if (!user) {
         console.log('Admin page: no user, redirecting to signin');
-        navigate("/signin");
+        window.location.href = "/signin";
         return;
       }
 
@@ -52,19 +50,19 @@ export default function Admin() {
         
         if (!roleData) {
           console.log('Admin page: user is not admin, redirecting to home');
-          navigate("/");
+          window.location.href = "/";
           return;
         }
         
         console.log('Admin page: user is admin, showing dashboard');
       } catch (error) {
         console.error("Admin page: error checking admin role:", error);
-        navigate("/");
+        window.location.href = "/";
       }
     };
 
     checkAdminRole();
-  }, [user, loading, navigate]);
+  }, [user, loading]);
 
   useEffect(() => {
     fetchStats();
