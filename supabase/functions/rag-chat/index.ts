@@ -7,6 +7,38 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Helper function to detect language from text
+function detectLanguage(text: string): string {
+  const lowerText = text.toLowerCase();
+  
+  // Polish indicators
+  const polishWords = ['potrzebuję', 'jak', 'gdzie', 'kiedy', 'dlaczego', 'czy', 'jest', 'może', 'chcę', 'proszę', 'dziękuję', 'ile', 'kosztuje'];
+  const polishChars = /[ąćęłńóśźż]/i;
+  
+  if (polishChars.test(text) || polishWords.some(word => lowerText.includes(word))) {
+    return 'pl';
+  }
+  
+  // Default to English
+  return 'en';
+}
+
+// Error messages by language
+const ERROR_MESSAGES = {
+  rateLimit: {
+    pl: 'Limit zapytań przekroczony. Spróbuj ponownie za chwilę.',
+    en: 'Rate limit exceeded. Please try again in a moment.'
+  },
+  payment: {
+    pl: 'Brak środków w koncie AI. Skontaktuj się z administratorem.',
+    en: 'AI account out of credits. Please contact administrator.'
+  },
+  general: {
+    pl: 'Wystąpił błąd. Spróbuj ponownie.',
+    en: 'An error occurred. Please try again.'
+  }
+};
+
 const SYSTEM_PROMPT = `You are an intelligent assistant for Proof of Concepts, a platform for rapid MVP development. 
 
   "strategy_points": {
@@ -27,8 +59,7 @@ const SYSTEM_PROMPT = `You are an intelligent assistant for Proof of Concepts, a
   },
   "communication_style": "COMMUNICATION STYLE:",
   "style_points": {
-    "use_english": "Use English language in chat communication",
-    "detect_language": "If the user asks in a language other than English, recognize which language it is and communicate in that language",
+    "language_adaptation": "CRITICAL: Detect the language of the user's first message and respond EXCLUSIVELY in that language throughout the entire conversation. Match the user's language exactly.",
     "be_friendly": "Be friendly and natural",
     "avoid_sales": "Avoid overly salesy phrases",
     "show_expertise": "Show expertise through valuable answers",
@@ -54,43 +85,33 @@ serve(async (req) => {
 
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // 1. Search knowledge base for relevant content
-    const { data: knowledgeData, error: kbError } = await supabase
-      .from('knowledge_base')
-      .select('title, content')
-      .limit(5);
+    // Detect language from user message
+    const detectedLanguage = detectLanguage(message);
 
-    if (kbError) {
-      console.error('Knowledge base error:', kbError);
-    }
-
-    // Build context from knowledge base
-    const context = knowledgeData && knowledgeData.length > 0
-      ? knowledgeData.map(item => `${item.title}: ${item.content}`).join('\n\n')
-      : '';
-
-    // 2. Get conversation history if conversationId exists
-    let conversationHistory: any[] = [];
-    if (conversationId) {
-      const { data: messages } = await supabase
-        .from('chat_messages')
-        .select('role, content')
-        .eq('conversation_id', conversationId)
-        .order('created_at', { ascending: true })
-        .limit(10);
-
-      if (messages) {
-        conversationHistory = messages;
-      }
-    }
-
-    // 3. Create new conversation if needed
+    // 1. Get or create conversation and detect language
     let finalConversationId = conversationId;
-    if (!finalConversationId) {
+    let conversationLanguage = detectedLanguage;
+    
+    if (conversationId) {
+      // Get existing conversation to check stored language
+      const { data: existingConv } = await supabase
+        .from('chat_conversations')
+        .select('metadata')
+        .eq('id', conversationId)
+        .single();
+      
+      if (existingConv?.metadata?.language) {
+        conversationLanguage = existingConv.metadata.language;
+      }
+    } else {
+      // Create new conversation with detected language
       const { data: newConv, error: convError } = await supabase
         .from('chat_conversations')
         .insert({
-          metadata: { started_at: new Date().toISOString() }
+          metadata: { 
+            started_at: new Date().toISOString(),
+            language: detectedLanguage
+          }
         })
         .select('id')
         .single();
@@ -99,6 +120,50 @@ serve(async (req) => {
         console.error('Error creating conversation:', convError);
       } else if (newConv) {
         finalConversationId = newConv.id;
+      }
+    }
+
+    // 2. Search knowledge base for relevant content (prefer content in conversation language)
+    const { data: knowledgeData, error: kbError } = await supabase
+      .from('knowledge_base')
+      .select('title, content, metadata')
+      .limit(10);
+
+    if (kbError) {
+      console.error('Knowledge base error:', kbError);
+    }
+
+    // Build context from knowledge base, prioritizing content in the conversation language
+    let context = '';
+    if (knowledgeData && knowledgeData.length > 0) {
+      // First, try to get content in the conversation language
+      const languageSpecificContent = knowledgeData.filter(
+        item => item.metadata?.language === conversationLanguage
+      );
+      
+      // If no language-specific content, use all content
+      const contentToUse = languageSpecificContent.length > 0 
+        ? languageSpecificContent 
+        : knowledgeData;
+      
+      context = contentToUse
+        .slice(0, 5)
+        .map(item => `${item.title}: ${item.content}`)
+        .join('\n\n');
+    }
+
+    // 3. Get conversation history if conversationId exists
+    let conversationHistory: any[] = [];
+    if (finalConversationId) {
+      const { data: messages } = await supabase
+        .from('chat_messages')
+        .select('role, content')
+        .eq('conversation_id', finalConversationId)
+        .order('created_at', { ascending: true })
+        .limit(10);
+
+      if (messages) {
+        conversationHistory = messages;
       }
     }
 
@@ -113,17 +178,21 @@ serve(async (req) => {
         });
     }
 
-    // 5. Build messages for AI
+    // 4. Build messages for AI with language instruction
+    const languageInstruction = conversationLanguage === 'pl' 
+      ? '\n\nIMPORTANT: Respond in POLISH language.'
+      : '\n\nIMPORTANT: Respond in ENGLISH language.';
+    
     const messages = [
       { 
         role: 'system', 
-        content: `${SYSTEM_PROMPT}\n\nBAZA WIEDZY:\n${context}` 
+        content: `${SYSTEM_PROMPT}${languageInstruction}\n\nKNOWLEDGE BASE:\n${context}` 
       },
       ...conversationHistory,
       { role: 'user', content: message }
     ];
 
-    // 6. Call Lovable AI with streaming
+    // 5. Call Lovable AI with streaming
     const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -144,14 +213,14 @@ serve(async (req) => {
       
       if (response.status === 429) {
         return new Response(
-          JSON.stringify({ error: 'Limit zapytań przekroczony. Spróbuj ponownie za chwilę.' }),
+          JSON.stringify({ error: ERROR_MESSAGES.rateLimit[conversationLanguage] || ERROR_MESSAGES.rateLimit.en }),
           { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
       
       if (response.status === 402) {
         return new Response(
-          JSON.stringify({ error: 'Brak środków w koncie AI. Skontaktuj się z administratorem.' }),
+          JSON.stringify({ error: ERROR_MESSAGES.payment[conversationLanguage] || ERROR_MESSAGES.payment.en }),
           { status: 402, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
@@ -159,7 +228,7 @@ serve(async (req) => {
       throw new Error(`AI API error: ${response.status}`);
     }
 
-    // 7. Stream response back to client and save assistant message
+    // 6. Stream response back to client and save assistant message
     let fullResponse = '';
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
@@ -226,8 +295,14 @@ serve(async (req) => {
 
   } catch (error) {
     console.error('Error in rag-chat function:', error);
+    
+    // Try to detect language from error context
+    const errorLang = 'en'; // Default to English for error messages
+    
     return new Response(
-      JSON.stringify({ error: error.message || 'Internal server error' }),
+      JSON.stringify({ 
+        error: ERROR_MESSAGES.general[errorLang] || error.message || 'Internal server error' 
+      }),
       { 
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
