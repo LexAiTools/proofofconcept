@@ -66,8 +66,23 @@ export function useAuth() {
 
       if (error) throw error;
 
+      // Check if user is admin
+      const { data: roleData } = await supabase
+        .from('user_roles' as any)
+        .select('role')
+        .eq('user_id', data.user.id)
+        .eq('role', 'admin')
+        .maybeSingle();
+
       toast.success('Zalogowano pomyślnie!');
-      navigate('/');
+      
+      // Redirect admin to admin panel, others to home
+      if (roleData) {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
+      
       return { data, error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas logowania');
