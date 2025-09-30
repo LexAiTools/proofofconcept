@@ -65,8 +65,59 @@ export default function SuperadminSetup() {
     try {
       setIsLoading(true);
 
-      // Create user account
+      // Try to create user account
       const { data: authData, error: signUpError } = await signUp(email, password);
+
+      // If user already exists, try to sign in and assign admin role
+      if (signUpError?.message?.includes('already registered')) {
+        console.log('User already exists, attempting to sign in and assign admin role');
+        
+        // Try to sign in with provided credentials
+        const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
+          email,
+          password
+        });
+
+        if (signInError || !signInData.user) {
+          toast.error('Użytkownik istnieje, ale hasło jest nieprawidłowe');
+          return;
+        }
+
+        const userId = signInData.user.id;
+
+        // Check if user already has admin role
+        const { data: existingRole } = await supabase
+          .from('user_roles')
+          .select('id')
+          .eq('user_id', userId)
+          .eq('role', 'admin')
+          .single();
+
+        if (existingRole) {
+          toast.error('Ten użytkownik już jest administratorem');
+          return;
+        }
+
+        // Assign admin role to existing user
+        const { error: roleError } = await supabase
+          .from('user_roles')
+          .insert({
+            user_id: userId,
+            role: 'admin'
+          });
+
+        if (roleError) {
+          console.error('Error assigning admin role:', roleError);
+          toast.error('Nie udało się przypisać roli administratora');
+          return;
+        }
+
+        toast.success('Rola SUPERADMIN przypisana pomyślnie!');
+        setTimeout(() => {
+          navigate('/admin');
+        }, 1500);
+        return;
+      }
 
       if (signUpError || !authData.data?.user) {
         throw signUpError || new Error('Nie udało się utworzyć konta');
@@ -74,7 +125,7 @@ export default function SuperadminSetup() {
 
       const userId = authData.data.user.id;
 
-      // Assign admin role
+      // Assign admin role to new user
       const { error: roleError } = await supabase
         .from('user_roles')
         .insert({
