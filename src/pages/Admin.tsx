@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Users, Mail, TrendingUp, Eye } from "lucide-react";
 import { DashboardCard } from "@/components/admin/DashboardCard";
-import { LeadsTable } from "@/components/admin/LeadsTable";
 import { DashboardHeader } from "@/components/admin/DashboardHeader";
 import { AdminSidebar, AdminSection } from "@/components/admin/AdminSidebar";
 import { LeadsSection } from "@/components/admin/sections/LeadsSection";
