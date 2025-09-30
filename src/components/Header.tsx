@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -9,6 +9,7 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -72,17 +73,17 @@ export const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             {isAdmin ? (
-              <Link to="/admin">
-                <Button variant="default">Admin Panel</Button>
-              </Link>
+              <Button variant="default" onClick={() => navigate('/admin')}>
+                Admin Panel
+              </Button>
             ) : (
               <>
-                <Link to="/signin">
-                  <Button variant="ghost">Log In</Button>
-                </Link>
-                <Link to="/book-demo">
-                  <Button variant="default">Book Demo</Button>
-                </Link>
+                <Button variant="ghost" onClick={() => navigate('/signin')}>
+                  Log In
+                </Button>
+                <Button variant="default" onClick={() => navigate('/book-demo')}>
+                  Book Demo
+                </Button>
               </>
             )}
           </div>
@@ -120,17 +121,38 @@ export const Header = () => {
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
                 {isAdmin ? (
-                  <Link to="/admin">
-                    <Button variant="default" className="justify-start w-full">Admin Panel</Button>
-                  </Link>
+                  <Button 
+                    variant="default" 
+                    className="justify-start w-full"
+                    onClick={() => {
+                      navigate('/admin');
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    Admin Panel
+                  </Button>
                 ) : (
                   <>
-                    <Link to="/signin">
-                      <Button variant="ghost" className="justify-start w-full">Log In</Button>
-                    </Link>
-                    <Link to="/book-demo">
-                      <Button variant="default" className="justify-start w-full">Book Demo</Button>
-                    </Link>
+                    <Button 
+                      variant="ghost" 
+                      className="justify-start w-full"
+                      onClick={() => {
+                        navigate('/signin');
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      Log In
+                    </Button>
+                    <Button 
+                      variant="default" 
+                      className="justify-start w-full"
+                      onClick={() => {
+                        navigate('/book-demo');
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      Book Demo
+                    </Button>
                   </>
                 )}
               </div>
