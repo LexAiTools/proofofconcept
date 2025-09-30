@@ -214,7 +214,14 @@ export default function Admin() {
     );
   }
 
+  const handleSectionChange = (section: AdminSection) => {
+    console.log('Admin: section changed to', section);
+    setActiveSection(section);
+  };
+
   const renderContent = () => {
+    console.log('Admin: rendering content for section', activeSection);
+    
     switch (activeSection) {
       case "leads":
         return <LeadsSection />;
@@ -224,6 +231,7 @@ export default function Admin() {
         return <StatsSection />;
       case "settings":
         return <SettingsSection />;
+      case "dashboard":
       default:
         return (
           <div className="space-y-6">
@@ -243,12 +251,12 @@ export default function Admin() {
               ))}
             </div>
 
-            {/* Leads Table */}
+            {/* Recent Leads Preview */}
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-foreground">
                 Ostatnie Leady
               </h2>
-              <LeadsTable />
+              <LeadsSection />
             </div>
           </div>
         );
@@ -260,7 +268,7 @@ export default function Admin() {
       <div className="flex min-h-screen w-full">
         <AdminSidebar 
           activeSection={activeSection}
-          onSectionChange={setActiveSection}
+          onSectionChange={handleSectionChange}
         />
         <SidebarInset className="flex-1">
           <DashboardHeader

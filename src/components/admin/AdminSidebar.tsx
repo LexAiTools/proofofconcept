@@ -57,6 +57,15 @@ interface AdminSidebarProps {
 export function AdminSidebar({ activeSection, onSectionChange }: AdminSidebarProps) {
   const { signOut } = useAuth();
 
+  const handleSectionChange = (section: AdminSection) => {
+    console.log('AdminSidebar: changing section to', section);
+    if (onSectionChange && typeof onSectionChange === 'function') {
+      onSectionChange(section);
+    } else {
+      console.error('AdminSidebar: onSectionChange is not a function');
+    }
+  };
+
   return (
     <Sidebar className="border-r border-border">
       <SidebarContent>
@@ -79,7 +88,7 @@ export function AdminSidebar({ activeSection, onSectionChange }: AdminSidebarPro
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
-                    onClick={() => onSectionChange(item.section)}
+                    onClick={() => handleSectionChange(item.section)}
                     className={
                       activeSection === item.section
                         ? "bg-primary/10 text-primary font-medium"
