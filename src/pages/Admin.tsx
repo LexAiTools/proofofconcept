@@ -43,6 +43,7 @@ type Stats = {
 };
 
 export default function Admin() {
+  console.log('[Admin] Component rendering');
   const { loading: authLoading } = useAdminAuth();
   const { signOut } = useAuth();
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -51,6 +52,8 @@ export default function Admin() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
+  
+  console.log('[Admin] authLoading:', authLoading, 'loading:', loading);
 
   const fetchLeads = async () => {
     try {

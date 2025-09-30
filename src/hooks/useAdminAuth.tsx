@@ -11,14 +11,21 @@ export function useAdminAuth() {
 
   useEffect(() => {
     const checkAdminStatus = async () => {
-      if (authLoading) return;
+      console.log('[useAdminAuth] Starting check - authLoading:', authLoading, 'user:', user?.id);
+      
+      if (authLoading) {
+        console.log('[useAdminAuth] Still loading auth, returning');
+        return;
+      }
 
       if (!user) {
+        console.log('[useAdminAuth] No user, redirecting to signin');
         navigate('/signin');
         return;
       }
 
       try {
+        console.log('[useAdminAuth] Checking admin role for user:', user.id);
         const { data, error } = await supabase
           .from('user_roles' as any)
           .select('role')
@@ -26,16 +33,20 @@ export function useAdminAuth() {
           .eq('role', 'admin')
           .maybeSingle();
 
+        console.log('[useAdminAuth] Query result - data:', data, 'error:', error);
+
         if (error) throw error;
 
         if (data) {
+          console.log('[useAdminAuth] User is admin!');
           setIsAdmin(true);
         } else {
+          console.log('[useAdminAuth] User is NOT admin, redirecting to home');
           setIsAdmin(false);
           navigate('/');
         }
       } catch (error) {
-        console.error('Error checking admin status:', error);
+        console.error('[useAdminAuth] Error checking admin status:', error);
         setIsAdmin(false);
         navigate('/');
       } finally {
