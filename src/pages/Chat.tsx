@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Bot, Send, Loader2, MessageSquare } from 'lucide-react';
+import { Bot, ArrowUp, Loader2, MessageSquare, Image as ImageIcon, FileUp, Monitor } from 'lucide-react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -194,40 +194,108 @@ export default function Chat() {
 
         <form onSubmit={handleSubmit} className="relative">
           <div className="relative bg-muted/50 rounded-3xl border-2 border-border focus-within:border-primary transition-colors">
-            <Textarea
-              ref={textareaRef}
-              value={input}
-              onChange={(e) => {
-                setInput(e.target.value);
-                adjustHeight();
-              }}
-              onKeyDown={handleKeyDown}
-              placeholder="Wpisz swoją wiadomość..."
-              className={cn(
-                'w-full resize-none rounded-3xl border-none bg-transparent',
-                'py-4 pr-14 pl-6 text-base leading-relaxed',
-                'focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0',
-                'placeholder:text-muted-foreground/70',
-                'min-h-[56px]'
-              )}
-              disabled={isLoading}
-            />
-            <Button
-              type="submit"
-              size="icon"
-              disabled={!input.trim() || isLoading}
-              className={cn(
-                'absolute top-1/2 right-3 -translate-y-1/2',
-                'rounded-xl h-10 w-10',
-                'transition-all duration-200'
-              )}
-            >
-              {isLoading ? (
-                <Loader2 className="h-5 w-5 animate-spin" />
-              ) : (
-                <Send className="h-5 w-5" />
-              )}
-            </Button>
+            <div className="relative">
+              <Textarea
+                ref={textareaRef}
+                value={input}
+                onChange={(e) => {
+                  setInput(e.target.value);
+                  adjustHeight();
+                }}
+                onKeyDown={handleKeyDown}
+                placeholder="Wpisz swoją wiadomość..."
+                className={cn(
+                  'w-full resize-none rounded-t-3xl border-none bg-transparent',
+                  'py-4 pr-14 pl-6 text-base leading-relaxed',
+                  'focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0',
+                  'placeholder:text-muted-foreground/70',
+                  'min-h-[56px]'
+                )}
+                disabled={isLoading}
+              />
+              <Button
+                type="submit"
+                size="icon"
+                disabled={!input.trim() || isLoading}
+                className={cn(
+                  'absolute top-3 right-3',
+                  'rounded-xl h-10 w-10',
+                  'transition-all duration-200'
+                )}
+              >
+                {isLoading ? (
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                ) : (
+                  <ArrowUp className="h-5 w-5" />
+                )}
+              </Button>
+            </div>
+            
+            <div className="flex items-center gap-2 px-4 py-3 border-t border-border/50">
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+              >
+                <ImageIcon className="h-4 w-4" />
+                <span className="text-sm">Clone a Screenshot</span>
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+              >
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M2 17L12 22L22 17"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M2 12L12 17L22 12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="text-sm">Import from Figma</span>
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+              >
+                <FileUp className="h-4 w-4" />
+                <span className="text-sm">Upload a Project</span>
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+              >
+                <Monitor className="h-4 w-4" />
+                <span className="text-sm">Landing Page</span>
+              </Button>
+            </div>
           </div>
         </form>
       </main>
