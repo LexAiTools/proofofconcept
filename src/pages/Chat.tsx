@@ -147,7 +147,7 @@ export default function Chat() {
       
       <main className="flex-1 container mx-auto px-4 py-8 flex flex-col max-w-4xl overflow-hidden">
         <ScrollArea className="flex-1 mb-6 pr-4">
-          <div className="space-y-6">
+          <div className="space-y-6 pt-20">
           {messages.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center py-12">
               <div className="bg-primary/10 rounded-full p-6 mb-6">
