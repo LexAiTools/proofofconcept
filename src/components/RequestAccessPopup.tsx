@@ -6,6 +6,8 @@ import { CustomerForm, CustomerFormData } from "./forms/CustomerForm";
 import { ServiceSelector, ServiceData } from "./forms/ServiceSelector";
 import { DateSelector, DateData } from "./forms/DateSelector";
 import { TimeSelector, TimeData } from "./forms/TimeSelector";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 interface RequestAccessPopupProps {
   children: React.ReactNode;
@@ -34,22 +36,36 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
     setCurrentStep(4);
   };
 
-  const handleCustomerFormSubmit = (data: CustomerFormData) => {
+  const handleCustomerFormSubmit = async (data: CustomerFormData) => {
     setCustomerData(data);
-    // Here you would normally submit to your backend
-    console.log("Final submission:", { 
-      service: serviceData, 
-      date: dateData, 
-      time: timeData, 
-      customer: data 
-    });
-    setIsOpen(false);
-    // Reset form
-    setCurrentStep(1);
-    setServiceData(null);
-    setDateData(null);
-    setTimeData(null);
-    setCustomerData(null);
+    
+    try {
+      const { error } = await supabase.from("leads").insert({
+        name: `${data.firstName} ${data.lastName}`,
+        email: data.email,
+        phone: data.phone,
+        message: data.comments || "",
+        service: serviceData?.service,
+        appointment_date: dateData?.date.toISOString().split('T')[0],
+        appointment_time: timeData?.time,
+        source_form: "request-access",
+        status: "new",
+      });
+
+      if (error) throw error;
+
+      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+      setIsOpen(false);
+      // Reset form
+      setCurrentStep(1);
+      setServiceData(null);
+      setDateData(null);
+      setTimeData(null);
+      setCustomerData(null);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Wystąpił błąd. Spróbuj ponownie.");
+    }
   };
 
   const handleBack = () => {

@@ -7,6 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Mail, MapPin, Phone, ArrowRight, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,10 +27,34 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    
+    try {
+      const { error } = await supabase.from("leads").insert({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        data_sources: formData.dataSources,
+        message: formData.message,
+        source_form: "contact",
+        status: "new",
+      });
+
+      if (error) throw error;
+
+      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        dataSources: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Wystąpił błąd. Spróbuj ponownie.");
+    }
   };
 
   const features = [

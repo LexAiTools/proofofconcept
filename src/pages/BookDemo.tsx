@@ -6,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Download, Settings, Database, CreditCard, Shield, Check } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const BookDemo = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +17,32 @@ const BookDemo = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Demo request submitted:', formData);
-    // Here you would handle the form submission
+    
+    try {
+      const { error } = await supabase.from("leads").insert({
+        email: formData.email,
+        company: formData.company,
+        data_sources: formData.source,
+        additional_requirements: formData.message,
+        source_form: "book-demo",
+        status: "new",
+      });
+
+      if (error) throw error;
+
+      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+      setFormData({
+        source: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Wystąpił błąd. Spróbuj ponownie.");
+    }
   };
 
   return (
