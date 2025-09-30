@@ -17,54 +17,39 @@ import {
   BarChart,
   LogOut
 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
-export type AdminSection = "dashboard" | "leads" | "users" | "stats" | "settings";
-
-const menuItems: Array<{ title: string; section: AdminSection; icon: any }> = [
+const menuItems = [
   {
     title: "Dashboard",
-    section: "dashboard",
+    url: "/admin",
     icon: LayoutDashboard,
   },
   {
     title: "Leady",
-    section: "leads",
+    url: "/admin/leads",
     icon: Mail,
   },
   {
     title: "Użytkownicy",
-    section: "users",
+    url: "/admin/users",
     icon: Users,
   },
   {
     title: "Statystyki",
-    section: "stats",
+    url: "/admin/stats",
     icon: BarChart,
   },
   {
     title: "Ustawienia",
-    section: "settings",
+    url: "/admin/settings",
     icon: Settings,
   },
 ];
 
-interface AdminSidebarProps {
-  activeSection: AdminSection;
-  onSectionChange: (section: AdminSection) => void;
-}
-
-export function AdminSidebar({ activeSection, onSectionChange }: AdminSidebarProps) {
+export function AdminSidebar() {
   const { signOut } = useAuth();
-
-  const handleSectionChange = (section: AdminSection) => {
-    console.log('AdminSidebar: changing section to', section);
-    if (onSectionChange && typeof onSectionChange === 'function') {
-      onSectionChange(section);
-    } else {
-      console.error('AdminSidebar: onSectionChange is not a function');
-    }
-  };
 
   return (
     <Sidebar className="border-r border-border">
@@ -87,16 +72,19 @@ export function AdminSidebar({ activeSection, onSectionChange }: AdminSidebarPro
             <SidebarMenu>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton
-                    onClick={() => handleSectionChange(item.section)}
-                    className={
-                      activeSection === item.section
-                        ? "bg-primary/10 text-primary font-medium"
-                        : "hover:bg-muted/50"
-                    }
-                  >
-                    <item.icon className="h-4 w-4" />
-                    <span>{item.title}</span>
+                  <SidebarMenuButton asChild>
+                    <NavLink
+                      to={item.url}
+                      end={item.url === "/admin"}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "bg-primary/10 text-primary font-medium"
+                          : "hover:bg-muted/50"
+                      }
+                    >
+                      <item.icon className="h-4 w-4" />
+                      <span>{item.title}</span>
+                    </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

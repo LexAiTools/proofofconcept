@@ -3,12 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Users, Mail, TrendingUp, Eye } from "lucide-react";
 import { DashboardCard } from "@/components/admin/DashboardCard";
+import { LeadsTable } from "@/components/admin/LeadsTable";
 import { DashboardHeader } from "@/components/admin/DashboardHeader";
-import { AdminSidebar, AdminSection } from "@/components/admin/AdminSidebar";
-import { LeadsSection } from "@/components/admin/sections/LeadsSection";
-import { UsersSection } from "@/components/admin/sections/UsersSection";
-import { StatsSection } from "@/components/admin/sections/StatsSection";
-import { SettingsSection } from "@/components/admin/sections/SettingsSection";
+import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -16,7 +13,6 @@ export default function Admin() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isChecking, setIsChecking] = useState(true);
-  const [activeSection, setActiveSection] = useState<AdminSection>("dashboard");
   const [stats, setStats] = useState({
     totalLeads: 0,
     newLeads: 0,
@@ -213,62 +209,10 @@ export default function Admin() {
     );
   }
 
-  const handleSectionChange = (section: AdminSection) => {
-    console.log('Admin: section changed to', section);
-    setActiveSection(section);
-  };
-
-  const renderContent = () => {
-    console.log('Admin: rendering content for section', activeSection);
-    
-    switch (activeSection) {
-      case "leads":
-        return <LeadsSection />;
-      case "users":
-        return <UsersSection />;
-      case "stats":
-        return <StatsSection />;
-      case "settings":
-        return <SettingsSection />;
-      case "dashboard":
-      default:
-        return (
-          <div className="space-y-6">
-            <div>
-              <h1 className="text-3xl font-bold text-foreground">
-                Witaj w Panelu Admina
-              </h1>
-              <p className="text-muted-foreground mt-2">
-                Zarządzaj leadami i użytkownikami swojej platformy.
-              </p>
-            </div>
-
-            {/* Stats Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {dashboardStats.map((stat, index) => (
-                <DashboardCard key={stat.title} stat={stat} index={index} />
-              ))}
-            </div>
-
-            {/* Recent Leads Preview */}
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-foreground">
-                Ostatnie Leady
-              </h2>
-              <LeadsSection />
-            </div>
-          </div>
-        );
-    }
-  };
-
   return (
     <SidebarProvider>
       <div className="flex min-h-screen w-full">
-        <AdminSidebar 
-          activeSection={activeSection}
-          onSectionChange={handleSectionChange}
-        />
+        <AdminSidebar />
         <SidebarInset className="flex-1">
           <DashboardHeader
             searchQuery={searchQuery}
@@ -279,8 +223,30 @@ export default function Admin() {
           />
 
           <div className="flex-1 p-6">
-            <div className="max-w-7xl mx-auto">
-              {renderContent()}
+            <div className="max-w-7xl mx-auto space-y-6">
+              <div>
+                <h1 className="text-3xl font-bold text-foreground">
+                  Witaj w Panelu Admina
+                </h1>
+                <p className="text-muted-foreground mt-2">
+                  Zarządzaj leadami i użytkownikami swojej platformy.
+                </p>
+              </div>
+
+              {/* Stats Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {dashboardStats.map((stat, index) => (
+                  <DashboardCard key={stat.title} stat={stat} index={index} />
+                ))}
+              </div>
+
+              {/* Leads Table */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">
+                  Ostatnie Leady
+                </h2>
+                <LeadsTable />
+              </div>
             </div>
           </div>
         </SidebarInset>
