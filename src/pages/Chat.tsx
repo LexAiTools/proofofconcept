@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useAutoResizeTextarea } from '@/hooks/use-auto-resize-textarea';
 import { Header } from '@/components/Header';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { toast } from 'sonner';
 
 interface Message {
@@ -132,7 +131,7 @@ export default function Chat() {
       <Header />
       
       <main className="flex-1 container mx-auto px-4 py-8 flex flex-col max-w-4xl overflow-hidden">
-        <ScrollArea className="flex-1 mb-6 pr-4">
+        <div className="flex-1 mb-6 pr-4 overflow-y-auto">
           <div className="space-y-6">
           {messages.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center py-12">
@@ -190,7 +189,7 @@ export default function Chat() {
             </>
           )}
           </div>
-        </ScrollArea>
+        </div>
 
         <form onSubmit={handleSubmit} className="relative">
           <div className="relative bg-muted/50 rounded-3xl border-2 border-border focus-within:border-primary transition-colors">
