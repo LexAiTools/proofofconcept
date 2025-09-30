@@ -11,6 +11,7 @@ import { useAuth } from "@/hooks/useAuth";
 export default function Admin() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isChecking, setIsChecking] = useState(true);
   const [stats, setStats] = useState({
     totalLeads: 0,
     newLeads: 0,
@@ -20,6 +21,9 @@ export default function Admin() {
   const { user, loading } = useAuth();
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    let isMounted = true;
+
     const checkAdminRole = async () => {
       console.log('Admin page: checking auth state', { loading, user: !!user });
       
@@ -30,38 +34,84 @@ export default function Admin() {
       
       if (!user) {
         console.log('Admin page: no user, redirecting to signin');
-        window.location.href = "/signin";
+        // Add delay before redirect
+        timeoutId = setTimeout(() => {
+          if (isMounted) {
+            window.location.href = "/signin";
+          }
+        }, 300);
         return;
       }
 
       console.log('Admin page: checking admin role for user', user.id);
       
+      // Retry logic for network errors
+      const checkRoleWithRetry = async (retries = 2): Promise<boolean> => {
+        try {
+          const { data: roleData, error } = await supabase
+            .from("user_roles")
+            .select("role")
+            .eq("user_id", user.id)
+            .eq("role", "admin")
+            .maybeSingle();
+
+          console.log('Admin page: role check result', { roleData, error });
+
+          if (error) {
+            // If it's a network error and we have retries left, try again
+            if (error.message?.includes('Failed to fetch') && retries > 0) {
+              console.log(`Admin page: network error, retrying... (${retries} attempts left)`);
+              await new Promise(resolve => setTimeout(resolve, 500));
+              return checkRoleWithRetry(retries - 1);
+            }
+            throw error;
+          }
+          
+          return !!roleData;
+        } catch (error) {
+          console.error("Admin page: error checking admin role:", error);
+          throw error;
+        }
+      };
+
       try {
-        const { data: roleData, error } = await supabase
-          .from("user_roles")
-          .select("role")
-          .eq("user_id", user.id)
-          .eq("role", "admin")
-          .maybeSingle();
-
-        console.log('Admin page: role check result', { roleData, error });
-
-        if (error) throw error;
+        const isAdmin = await checkRoleWithRetry();
         
-        if (!roleData) {
+        if (!isMounted) return;
+        
+        if (!isAdmin) {
           console.log('Admin page: user is not admin, redirecting to home');
-          window.location.href = "/";
+          timeoutId = setTimeout(() => {
+            if (isMounted) {
+              window.location.href = "/";
+            }
+          }, 300);
           return;
         }
         
         console.log('Admin page: user is admin, showing dashboard');
+        setIsChecking(false);
       } catch (error) {
         console.error("Admin page: error checking admin role:", error);
-        window.location.href = "/";
+        if (isMounted) {
+          timeoutId = setTimeout(() => {
+            if (isMounted) {
+              window.location.href = "/";
+            }
+          }, 300);
+        }
       }
     };
 
-    checkAdminRole();
+    // Debounce the check
+    timeoutId = setTimeout(() => {
+      checkAdminRole();
+    }, 100);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timeoutId);
+    };
   }, [user, loading]);
 
   useEffect(() => {
@@ -153,7 +203,7 @@ export default function Admin() {
     console.log("Exporting data...");
   };
 
-  if (loading) {
+  if (loading || isChecking) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-muted-foreground">Ładowanie...</div>

@@ -19,12 +19,22 @@ const Signin = () => {
   
   const { user, loading, signUp, signIn, signInWithOAuth } = useAuth();
 
-  // Redirect if already logged in
+  // Redirect if already logged in with delay
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    
     if (!loading && user) {
-      console.log('Signin: user already logged in, redirecting to home');
-      window.location.href = '/';
+      console.log('Signin: user already logged in, scheduling redirect');
+      // Add delay to prevent flickering
+      timeoutId = setTimeout(() => {
+        console.log('Signin: redirecting to home');
+        window.location.href = '/';
+      }, 500);
     }
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, [user, loading]);
 
   // Show loading while checking auth state

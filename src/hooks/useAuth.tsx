@@ -7,25 +7,40 @@ export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
+    let debounceTimeout: NodeJS.Timeout;
+
     // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        setSession(session);
-        setUser(session?.user ?? null);
-        setLoading(false);
+        console.log('useAuth: auth state changed', { event, hasSession: !!session });
+        
+        // Debounce state updates to prevent rapid changes
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(() => {
+          setSession(session);
+          setUser(session?.user ?? null);
+          setLoading(false);
+          setIsInitialized(true);
+        }, 50);
       }
     );
 
     // Check for existing session
     supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log('useAuth: initial session check', { hasSession: !!session });
       setSession(session);
       setUser(session?.user ?? null);
       setLoading(false);
+      setIsInitialized(true);
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+      clearTimeout(debounceTimeout);
+    };
   }, []);
 
   const signUp = async (email: string, password: string) => {
