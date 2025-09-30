@@ -9,10 +9,17 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
 import { pl } from "date-fns/locale";
-import { Eye, Trash2, Mail } from "lucide-react";
+import { Trash2, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 
 interface Lead {
@@ -74,6 +81,22 @@ export function LeadsTable() {
     fetchLeads();
   }, []);
 
+  const handleStatusChange = async (id: string, newStatus: string) => {
+    try {
+      const { error } = await supabase
+        .from("leads")
+        .update({ status: newStatus })
+        .eq("id", id);
+
+      if (error) throw error;
+      toast.success("Status został zaktualizowany");
+      fetchLeads();
+    } catch (error) {
+      console.error("Error updating status:", error);
+      toast.error("Błąd podczas aktualizacji statusu");
+    }
+  };
+
   const handleDelete = async (id: string) => {
     try {
       const { error } = await supabase
@@ -99,65 +122,87 @@ export function LeadsTable() {
       <Table>
         <TableHeader>
           <TableRow>
+            <TableHead className="w-12"></TableHead>
+            <TableHead>Data ↓</TableHead>
+            <TableHead>Firma</TableHead>
             <TableHead>Imię</TableHead>
             <TableHead>Email</TableHead>
-            <TableHead>Firma</TableHead>
             <TableHead>Telefon</TableHead>
-            <TableHead>Źródło</TableHead>
+            <TableHead>Katalog</TableHead>
             <TableHead>Status</TableHead>
-            <TableHead>Data</TableHead>
-            <TableHead className="text-right">Akcje</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {leads.length === 0 ? (
             <TableRow>
-              <TableCell colSpan={8} className="text-center text-muted-foreground">
+              <TableCell colSpan={8} className="text-center text-muted-foreground py-8">
                 Brak leadów
               </TableCell>
             </TableRow>
           ) : (
             leads.map((lead) => (
-              <TableRow key={lead.id}>
+              <TableRow key={lead.id} className="hover:bg-muted/50">
+                <TableCell>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                </TableCell>
+                <TableCell className="text-sm text-muted-foreground">
+                  {format(new Date(lead.created_at), "dd.MM.yyyy HH:mm", { locale: pl })}
+                </TableCell>
                 <TableCell className="font-medium">
+                  {lead.company || "-"}
+                </TableCell>
+                <TableCell>
                   {lead.name || "-"}
                 </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
-                    {lead.email || "-"}
-                  </div>
+                <TableCell className="text-sm">
+                  {lead.email || "-"}
                 </TableCell>
-                <TableCell>{lead.company || "-"}</TableCell>
-                <TableCell>{lead.phone || "-"}</TableCell>
+                <TableCell className="text-sm">
+                  {lead.phone || "-"}
+                </TableCell>
                 <TableCell>
-                  <Badge variant="outline">
+                  <Badge variant="outline" className="bg-green-500/10 text-green-600 border-green-500/20">
                     {formLabels[lead.source_form] || lead.source_form}
                   </Badge>
                 </TableCell>
                 <TableCell>
-                  <Badge className={statusColors[lead.status] || statusColors.new}>
-                    {statusLabels[lead.status] || lead.status}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-sm text-muted-foreground">
-                  {format(new Date(lead.created_at), "dd MMM yyyy, HH:mm", { locale: pl })}
-                </TableCell>
-                <TableCell className="text-right">
-                  <div className="flex items-center justify-end gap-2">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => toast.info("Szczegóły leada - TODO")}
+                  <div className="flex items-center gap-2">
+                    <Select
+                      value={lead.status}
+                      onValueChange={(value) => handleStatusChange(lead.id, value)}
                     >
-                      <Eye className="h-4 w-4" />
-                    </Button>
+                      <SelectTrigger className="w-[180px] h-8">
+                        <SelectValue>
+                          <Badge className={statusColors[lead.status] || statusColors.new}>
+                            {statusLabels[lead.status] || lead.status}
+                          </Badge>
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="new">
+                          <Badge className={statusColors.new}>Nowy</Badge>
+                        </SelectItem>
+                        <SelectItem value="contacted">
+                          <Badge className={statusColors.contacted}>Skontaktowany</Badge>
+                        </SelectItem>
+                        <SelectItem value="qualified">
+                          <Badge className={statusColors.qualified}>Kwalifikowany</Badge>
+                        </SelectItem>
+                        <SelectItem value="converted">
+                          <Badge className={statusColors.converted}>Przekonwertowany</Badge>
+                        </SelectItem>
+                        <SelectItem value="closed">
+                          <Badge className={statusColors.closed}>Zamknięty</Badge>
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
                     <Button
                       variant="ghost"
                       size="sm"
                       onClick={() => handleDelete(lead.id)}
+                      className="h-8 w-8 p-0"
                     >
-                      <Trash2 className="h-4 w-4 text-destructive" />
+                      <Trash2 className="h-4 w-4 text-muted-foreground hover:text-destructive" />
                     </Button>
                   </div>
                 </TableCell>
