@@ -5,14 +5,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import { useAutoResizeTextarea } from '@/hooks/use-auto-resize-textarea';
 import {
-  ImageIcon,
-  FileUp,
-  Figma,
-  MonitorIcon,
-  CircleUserRound,
   ArrowUpIcon,
   Paperclip,
   PlusIcon,
+  Lightbulb,
+  Settings,
+  DollarSign,
+  Clock,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -125,20 +124,24 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
         <div className="-mx-4 mt-4 px-4 sm:mx-0 sm:px-0">
           <div className="flex flex-col flex-wrap items-start gap-2 sm:flex-row sm:items-center sm:justify-center sm:gap-3 sm:overflow-x-auto sm:pb-2">
             <ActionButton
-              icon={<ImageIcon className="h-4 w-4" />}
-              label="Clone a Screenshot"
+              icon={<Lightbulb className="h-4 w-4" />}
+              label="Potrzebuję aplikację"
+              onClick={() => onMessageSubmit?.("Potrzebuję aplikację MVP, jak mogę zacząć?")}
             />
             <ActionButton
-              icon={<Figma className="h-4 w-4" />}
-              label="Import from Figma"
+              icon={<Settings className="h-4 w-4" />}
+              label="Jakie technologie?"
+              onClick={() => onMessageSubmit?.("Jakie technologie używacie do tworzenia aplikacji?")}
             />
             <ActionButton
-              icon={<FileUp className="h-4 w-4" />}
-              label="Upload a Project"
+              icon={<DollarSign className="h-4 w-4" />}
+              label="Ile to kosztuje?"
+              onClick={() => onMessageSubmit?.("Ile kosztuje stworzenie aplikacji MVP?")}
             />
             <ActionButton
-              icon={<MonitorIcon className="h-4 w-4" />}
-              label="Landing Page"
+              icon={<Clock className="h-4 w-4" />}
+              label="Jak długo trwa?"
+              onClick={() => onMessageSubmit?.("Jak długo trwa stworzenie aplikacji MVP?")}
             />
           </div>
         </div>
@@ -150,13 +153,15 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
 interface ActionButtonProps {
   icon: React.ReactNode;
   label: string;
+  onClick?: () => void;
 }
 
-function ActionButton({ icon, label }: ActionButtonProps) {
+function ActionButton({ icon, label, onClick }: ActionButtonProps) {
   return (
     <Button
       type="button"
       variant="secondary"
+      onClick={onClick}
       className="border-border bg-secondary/20 flex w-full flex-shrink-0 items-center gap-2 rounded-full border px-3 py-2 whitespace-nowrap transition-colors sm:w-auto sm:px-4"
     >
       {icon}
