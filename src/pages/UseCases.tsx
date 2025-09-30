@@ -3,10 +3,15 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Ticket, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { VercelV0Chat } from "@/components/VercelV0Chat";
 
 const UseCases = () => {
+  const navigate = useNavigate();
+
+  const handleMessageSubmit = (message: string) => {
+    navigate('/chat', { state: { initialMessage: message } });
+  };
   const trustedLogos = [
     "Logitech", "OpenAI", "Docker", "Reddit", "Juniper",
     "Amplitude", "Monday.com", "CircleCI", "Netlify"
@@ -94,7 +99,7 @@ const UseCases = () => {
         </section>
 
         {/* VercelV0Chat Section */}
-        <VercelV0Chat />
+        <VercelV0Chat onMessageSubmit={handleMessageSubmit} />
 
         {/* Use Cases Section */}
         <section className="py-20 bg-background">

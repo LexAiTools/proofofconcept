@@ -7,6 +7,7 @@ import { useAutoResizeTextarea } from '@/hooks/use-auto-resize-textarea';
 import { Header } from '@/components/Header';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { toast } from 'sonner';
+import { useLocation } from 'react-router-dom';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -14,6 +15,7 @@ interface Message {
 }
 
 export default function Chat() {
+  const location = useLocation();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -32,11 +34,23 @@ export default function Chat() {
     scrollToBottom();
   }, [messages]);
 
-  const handleSubmit = async (e?: React.FormEvent) => {
-    e?.preventDefault();
-    if (!input.trim() || isLoading) return;
+  // Handle initial message from navigation
+  useEffect(() => {
+    const initialMessage = location.state?.initialMessage;
+    if (initialMessage && messages.length === 0 && !isLoading) {
+      setInput(initialMessage);
+      // Small delay to ensure textarea is rendered
+      setTimeout(() => {
+        handleSubmit(undefined, initialMessage);
+      }, 100);
+    }
+  }, [location.state]);
 
-    const userMessage = input.trim();
+  const handleSubmit = async (e?: React.FormEvent, messageOverride?: string) => {
+    e?.preventDefault();
+    const userMessage = messageOverride || input.trim();
+    if (!userMessage || isLoading) return;
+
     setInput('');
     adjustHeight(true);
 

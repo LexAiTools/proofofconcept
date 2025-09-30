@@ -16,20 +16,29 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export function VercelV0Chat() {
+interface VercelV0ChatProps {
+  onMessageSubmit?: (message: string) => void;
+}
+
+export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
   const [value, setValue] = useState('');
   const { textareaRef, adjustHeight } = useAutoResizeTextarea({
     minHeight: 60,
     maxHeight: 200,
   });
 
+  const handleSubmit = () => {
+    if (value.trim() && onMessageSubmit) {
+      onMessageSubmit(value.trim());
+      setValue('');
+      adjustHeight(true);
+    }
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      if (value.trim()) {
-        setValue('');
-        adjustHeight(true);
-      }
+      handleSubmit();
     }
   };
 
@@ -94,9 +103,11 @@ export function VercelV0Chat() {
               </Button>
               <button
                 type="button"
+                onClick={handleSubmit}
+                disabled={!value.trim()}
                 className={cn(
                   'border-border flex items-center justify-between gap-1 rounded-lg border px-1.5 py-1.5 text-sm transition-colors',
-                  value.trim() ? 'bg-white text-black' : 'text-zinc-400',
+                  value.trim() ? 'bg-white text-black hover:bg-gray-100' : 'text-zinc-400 cursor-not-allowed',
                 )}
               >
                 <ArrowUpIcon
