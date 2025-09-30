@@ -24,6 +24,13 @@ interface Lead {
   source_form: string;
   status: string;
   created_at: string;
+  message: string | null;
+  data_sources: string | null;
+  problem: string | null;
+  additional_requirements: string | null;
+  service: string | null;
+  appointment_date: string | null;
+  appointment_time: string | null;
 }
 
 const statusColors: Record<string, string> = {
@@ -52,6 +59,7 @@ const formLabels: Record<string, string> = {
 export function LeadsTable() {
   const [leads, setLeads] = useState<Lead[]>([]);
   const [loading, setLoading] = useState(true);
+  const [expandedLeadId, setExpandedLeadId] = useState<string | null>(null);
 
   const fetchLeads = async () => {
     try {
@@ -90,6 +98,10 @@ export function LeadsTable() {
     }
   };
 
+  const toggleExpand = (id: string) => {
+    setExpandedLeadId(expandedLeadId === id ? null : id);
+  };
+
   if (loading) {
     return <div className="text-center py-8 text-muted-foreground">Wczytywanie...</div>;
   }
@@ -118,50 +130,109 @@ export function LeadsTable() {
             </TableRow>
           ) : (
             leads.map((lead) => (
-              <TableRow key={lead.id}>
-                <TableCell className="font-medium">
-                  {lead.name || "-"}
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
-                    {lead.email || "-"}
-                  </div>
-                </TableCell>
-                <TableCell>{lead.company || "-"}</TableCell>
-                <TableCell>{lead.phone || "-"}</TableCell>
-                <TableCell>
-                  <Badge variant="outline">
-                    {formLabels[lead.source_form] || lead.source_form}
-                  </Badge>
-                </TableCell>
-                <TableCell>
-                  <Badge className={statusColors[lead.status] || statusColors.new}>
-                    {statusLabels[lead.status] || lead.status}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-sm text-muted-foreground">
-                  {format(new Date(lead.created_at), "dd MMM yyyy, HH:mm", { locale: pl })}
-                </TableCell>
-                <TableCell className="text-right">
-                  <div className="flex items-center justify-end gap-2">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => toast.info("Szczegóły leada - TODO")}
-                    >
-                      <Eye className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => handleDelete(lead.id)}
-                    >
-                      <Trash2 className="h-4 w-4 text-destructive" />
-                    </Button>
-                  </div>
-                </TableCell>
-              </TableRow>
+              <>
+                <TableRow key={lead.id} className="hover:bg-muted/30">
+                  <TableCell className="font-medium">
+                    {lead.name || "-"}
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-2">
+                      <Mail className="h-4 w-4 text-muted-foreground" />
+                      {lead.email || "-"}
+                    </div>
+                  </TableCell>
+                  <TableCell>{lead.company || "-"}</TableCell>
+                  <TableCell>{lead.phone || "-"}</TableCell>
+                  <TableCell>
+                    <Badge variant="outline">
+                      {formLabels[lead.source_form] || lead.source_form}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>
+                    <Badge className={statusColors[lead.status] || statusColors.new}>
+                      {statusLabels[lead.status] || lead.status}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="text-sm text-muted-foreground">
+                    {format(new Date(lead.created_at), "dd MMM yyyy, HH:mm", { locale: pl })}
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => toggleExpand(lead.id)}
+                      >
+                        <Eye className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleDelete(lead.id)}
+                      >
+                        <Trash2 className="h-4 w-4 text-destructive" />
+                      </Button>
+                    </div>
+                  </TableCell>
+                </TableRow>
+                
+                {expandedLeadId === lead.id && (
+                  <TableRow key={`${lead.id}-details`}>
+                    <TableCell colSpan={8} className="bg-muted/20 p-6">
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {lead.message && (
+                            <div className="col-span-2">
+                              <div className="text-sm font-semibold text-foreground mb-1">Wiadomość</div>
+                              <div className="text-sm text-muted-foreground bg-background p-3 rounded-md">
+                                {lead.message}
+                              </div>
+                            </div>
+                          )}
+                          
+                          {lead.service && (
+                            <div>
+                              <div className="text-sm font-semibold text-foreground mb-1">Usługa</div>
+                              <div className="text-sm text-muted-foreground">{lead.service}</div>
+                            </div>
+                          )}
+                          
+                          {lead.problem && (
+                            <div>
+                              <div className="text-sm font-semibold text-foreground mb-1">Problem do rozwiązania</div>
+                              <div className="text-sm text-muted-foreground">{lead.problem}</div>
+                            </div>
+                          )}
+                          
+                          {lead.data_sources && (
+                            <div>
+                              <div className="text-sm font-semibold text-foreground mb-1">Źródła danych</div>
+                              <div className="text-sm text-muted-foreground">{lead.data_sources}</div>
+                            </div>
+                          )}
+                          
+                          {lead.additional_requirements && (
+                            <div>
+                              <div className="text-sm font-semibold text-foreground mb-1">Dodatkowe wymagania</div>
+                              <div className="text-sm text-muted-foreground">{lead.additional_requirements}</div>
+                            </div>
+                          )}
+                          
+                          {lead.appointment_date && (
+                            <div>
+                              <div className="text-sm font-semibold text-foreground mb-1">Data spotkania</div>
+                              <div className="text-sm text-muted-foreground">
+                                {format(new Date(lead.appointment_date), "dd MMMM yyyy", { locale: pl })}
+                                {lead.appointment_time && ` o ${lead.appointment_time}`}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                )}
+              </>
             ))
           )}
         </TableBody>

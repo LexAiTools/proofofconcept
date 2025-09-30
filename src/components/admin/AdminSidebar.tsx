@@ -26,26 +26,6 @@ const menuItems = [
     url: "/admin",
     icon: LayoutDashboard,
   },
-  {
-    title: "Leady",
-    url: "/admin/leads",
-    icon: Mail,
-  },
-  {
-    title: "Użytkownicy",
-    url: "/admin/users",
-    icon: Users,
-  },
-  {
-    title: "Statystyki",
-    url: "/admin/stats",
-    icon: BarChart,
-  },
-  {
-    title: "Ustawienia",
-    url: "/admin/settings",
-    icon: Settings,
-  },
 ];
 
 export function AdminSidebar() {
