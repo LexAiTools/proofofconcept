@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Set up auth state listener
@@ -46,7 +44,7 @@ export function useAuth() {
       if (error) throw error;
 
       toast.success('Konto utworzone! Zalogowano automatycznie.');
-      navigate('/');
+      console.log('Sign up successful, user created');
       return { data, error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas rejestracji');
@@ -67,7 +65,7 @@ export function useAuth() {
       if (error) throw error;
 
       toast.success('Zalogowano pomyślnie!');
-      navigate('/');
+      console.log('Sign in successful');
       return { data, error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas logowania');
@@ -104,9 +102,11 @@ export function useAuth() {
       if (error) throw error;
       
       toast.success('Wylogowano pomyślnie');
-      navigate('/signin');
+      console.log('Sign out successful');
+      return { error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas wylogowania');
+      return { error };
     } finally {
       setLoading(false);
     }

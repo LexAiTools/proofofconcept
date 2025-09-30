@@ -94,7 +94,11 @@ export function AdminSidebar() {
 
         <div className="mt-auto p-4 border-t border-border">
           <button
-            onClick={signOut}
+            onClick={async () => {
+              console.log('Admin sidebar: logging out');
+              await signOut();
+              window.location.href = '/signin';
+            }}
             className="flex items-center gap-2 w-full px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
           >
             <LogOut className="h-4 w-4" />

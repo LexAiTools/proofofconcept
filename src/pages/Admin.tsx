@@ -23,13 +23,21 @@ export default function Admin() {
 
   useEffect(() => {
     const checkAdminRole = async () => {
-      if (loading) return;
+      console.log('Admin page: checking auth state', { loading, user: !!user });
+      
+      if (loading) {
+        console.log('Admin page: still loading auth state');
+        return;
+      }
       
       if (!user) {
+        console.log('Admin page: no user, redirecting to signin');
         navigate("/signin");
         return;
       }
 
+      console.log('Admin page: checking admin role for user', user.id);
+      
       try {
         const { data: roleData, error } = await supabase
           .from("user_roles")
@@ -38,14 +46,19 @@ export default function Admin() {
           .eq("role", "admin")
           .maybeSingle();
 
+        console.log('Admin page: role check result', { roleData, error });
+
         if (error) throw error;
         
         if (!roleData) {
+          console.log('Admin page: user is not admin, redirecting to home');
           navigate("/");
           return;
         }
+        
+        console.log('Admin page: user is admin, showing dashboard');
       } catch (error) {
-        console.error("Error checking admin role:", error);
+        console.error("Admin page: error checking admin role:", error);
         navigate("/");
       }
     };
