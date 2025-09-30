@@ -1,33 +1,46 @@
 import { useState, useEffect } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
+    let debounceTimeout: NodeJS.Timeout;
+
     // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        setSession(session);
-        setUser(session?.user ?? null);
-        setLoading(false);
+        console.log('useAuth: auth state changed', { event, hasSession: !!session });
+        
+        // Debounce state updates to prevent rapid changes
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(() => {
+          setSession(session);
+          setUser(session?.user ?? null);
+          setLoading(false);
+          setIsInitialized(true);
+        }, 50);
       }
     );
 
     // Check for existing session
     supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log('useAuth: initial session check', { hasSession: !!session });
       setSession(session);
       setUser(session?.user ?? null);
       setLoading(false);
+      setIsInitialized(true);
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+      clearTimeout(debounceTimeout);
+    };
   }, []);
 
   const signUp = async (email: string, password: string) => {
@@ -46,7 +59,7 @@ export function useAuth() {
       if (error) throw error;
 
       toast.success('Konto utworzone! Zalogowano automatycznie.');
-      navigate('/');
+      console.log('Sign up successful, user created');
       return { data, error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas rejestracji');
@@ -66,23 +79,8 @@ export function useAuth() {
 
       if (error) throw error;
 
-      // Check if user is admin
-      const { data: roleData } = await supabase
-        .from('user_roles' as any)
-        .select('role')
-        .eq('user_id', data.user.id)
-        .eq('role', 'admin')
-        .maybeSingle();
-
       toast.success('Zalogowano pomyślnie!');
-      
-      // Redirect admin to admin panel, others to home
-      if (roleData) {
-        navigate('/admin');
-      } else {
-        navigate('/');
-      }
-      
+      console.log('Sign in successful');
       return { data, error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas logowania');
@@ -119,9 +117,11 @@ export function useAuth() {
       if (error) throw error;
       
       toast.success('Wylogowano pomyślnie');
-      navigate('/signin');
+      console.log('Sign out successful');
+      return { error: null };
     } catch (error: any) {
       toast.error(error.message || 'Błąd podczas wylogowania');
+      return { error };
     } finally {
       setLoading(false);
     }
@@ -131,6 +131,7 @@ export function useAuth() {
     user,
     session,
     loading,
+    isInitialized,
     signUp,
     signIn,
     signInWithOAuth,

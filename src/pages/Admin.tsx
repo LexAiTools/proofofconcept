@@ -1,307 +1,256 @@
-import { useState, useEffect } from 'react';
-import { useAdminAuth } from '@/hooks/useAdminAuth';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card } from '@/components/ui/card';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { LogOut, RefreshCw, Search, Trash2 } from 'lucide-react';
-import { toast } from 'sonner';
-import { format, startOfDay, startOfWeek, startOfMonth } from 'date-fns';
-
-type Lead = {
-  id: string;
-  created_at: string;
-  company: string | null;
-  name: string | null;
-  email: string | null;
-  phone: string | null;
-  source_form: string;
-  status: string | null;
-};
-
-type Stats = {
-  today: number;
-  thisWeek: number;
-  thisMonth: number;
-  total: number;
-};
+import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { Users, Mail, TrendingUp, Eye } from "lucide-react";
+import { DashboardCard } from "@/components/admin/DashboardCard";
+import { LeadsTable } from "@/components/admin/LeadsTable";
+import { DashboardHeader } from "@/components/admin/DashboardHeader";
+import { AdminSidebar } from "@/components/admin/AdminSidebar";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function Admin() {
-  console.log('[Admin] Component rendering');
-  const { loading: authLoading } = useAdminAuth();
-  const { signOut } = useAuth();
-  const [leads, setLeads] = useState<Lead[]>([]);
-  const [filteredLeads, setFilteredLeads] = useState<Lead[]>([]);
-  const [stats, setStats] = useState<Stats>({ today: 0, thisWeek: 0, thisMonth: 0, total: 0 });
-  const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [statusFilter, setStatusFilter] = useState<string>('all');
-  
-  console.log('[Admin] authLoading:', authLoading, 'loading:', loading);
-
-  const fetchLeads = async () => {
-    try {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('leads' as any)
-        .select('*')
-        .order('created_at', { ascending: false });
-
-      if (error) throw error;
-
-      setLeads((data || []) as unknown as Lead[]);
-      calculateStats((data || []) as unknown as Lead[]);
-    } catch (error) {
-      console.error('Error fetching leads:', error);
-      toast.error('Błąd podczas pobierania leadów');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const calculateStats = (leadsData: Lead[]) => {
-    const now = new Date();
-    const todayStart = startOfDay(now);
-    const weekStart = startOfWeek(now, { weekStartsOn: 1 });
-    const monthStart = startOfMonth(now);
-
-    const today = leadsData.filter(
-      (lead) => new Date(lead.created_at) >= todayStart
-    ).length;
-
-    const thisWeek = leadsData.filter(
-      (lead) => new Date(lead.created_at) >= weekStart
-    ).length;
-
-    const thisMonth = leadsData.filter(
-      (lead) => new Date(lead.created_at) >= monthStart
-    ).length;
-
-    setStats({
-      today,
-      thisWeek,
-      thisMonth,
-      total: leadsData.length,
-    });
-  };
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isChecking, setIsChecking] = useState(true);
+  const [stats, setStats] = useState({
+    totalLeads: 0,
+    newLeads: 0,
+    converted: 0,
+    thisMonth: 0,
+  });
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+  const hasCheckedRef = useRef(false);
 
   useEffect(() => {
-    if (!authLoading) {
-      fetchLeads();
+    let timeoutId: NodeJS.Timeout;
+    let isMounted = true;
+
+    if (hasCheckedRef.current) {
+      console.log('Admin page: already checked, skipping');
+      return;
     }
-  }, [authLoading]);
+
+    const checkAdminRole = async () => {
+      console.log('Admin page: checking auth state', { loading, user: !!user });
+      
+      if (loading) {
+        console.log('Admin page: still loading auth state');
+        return;
+      }
+      
+      if (!user) {
+        console.log('Admin page: no user, redirecting to signin');
+        hasCheckedRef.current = true;
+        navigate('/signin', { replace: true });
+        return;
+      }
+
+      console.log('Admin page: checking admin role for user', user.id);
+      
+      // Retry logic for network errors
+      const checkRoleWithRetry = async (retries = 2): Promise<boolean> => {
+        try {
+          const { data: roleData, error } = await supabase
+            .from("user_roles")
+            .select("role")
+            .eq("user_id", user.id)
+            .eq("role", "admin")
+            .maybeSingle();
+
+          console.log('Admin page: role check result', { roleData, error });
+
+          if (error) {
+            // If it's a network error and we have retries left, try again
+            if (error.message?.includes('Failed to fetch') && retries > 0) {
+              console.log(`Admin page: network error, retrying... (${retries} attempts left)`);
+              await new Promise(resolve => setTimeout(resolve, 500));
+              return checkRoleWithRetry(retries - 1);
+            }
+            throw error;
+          }
+          
+          return !!roleData;
+        } catch (error) {
+          console.error("Admin page: error checking admin role:", error);
+          throw error;
+        }
+      };
+
+      try {
+        const isAdmin = await checkRoleWithRetry();
+        
+        if (!isMounted) return;
+        
+        hasCheckedRef.current = true;
+        
+        if (!isAdmin) {
+          console.log('Admin page: user is not admin, redirecting to home');
+          navigate('/home', { replace: true });
+          return;
+        }
+        
+        console.log('Admin page: user is admin, showing dashboard');
+        setIsChecking(false);
+      } catch (error) {
+        console.error("Admin page: error checking admin role:", error);
+        if (isMounted) {
+          navigate('/home', { replace: true });
+        }
+      }
+    };
+
+    // Debounce the check
+    timeoutId = setTimeout(() => {
+      checkAdminRole();
+    }, 100);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timeoutId);
+    };
+  }, [user, loading, navigate]);
 
   useEffect(() => {
-    let filtered = leads;
+    fetchStats();
+  }, []);
 
-    if (statusFilter !== 'all') {
-      filtered = filtered.filter((lead) => lead.status === statusFilter);
-    }
-
-    if (searchQuery) {
-      filtered = filtered.filter((lead) =>
-        lead.company?.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    setFilteredLeads(filtered);
-  }, [leads, statusFilter, searchQuery]);
-
-  const handleStatusChange = async (leadId: string, newStatus: string) => {
+  const fetchStats = async () => {
     try {
-      const { error } = await supabase
-        .from('leads' as any)
-        .update({ status: newStatus })
-        .eq('id', leadId);
+      const { count: totalLeads } = await supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true });
 
-      if (error) throw error;
+      const { count: newLeads } = await supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true })
+        .eq("status", "new");
 
-      setLeads((prev) =>
-        prev.map((lead) =>
-          lead.id === leadId ? { ...lead, status: newStatus } : lead
-        )
-      );
-      toast.success('Status zaktualizowany');
+      const { count: converted } = await supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true })
+        .eq("status", "converted");
+
+      const firstDayOfMonth = new Date();
+      firstDayOfMonth.setDate(1);
+      firstDayOfMonth.setHours(0, 0, 0, 0);
+
+      const { count: thisMonth } = await supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true })
+        .gte("created_at", firstDayOfMonth.toISOString());
+
+      setStats({
+        totalLeads: totalLeads || 0,
+        newLeads: newLeads || 0,
+        converted: converted || 0,
+        thisMonth: thisMonth || 0,
+      });
     } catch (error) {
-      console.error('Error updating status:', error);
-      toast.error('Błąd podczas aktualizacji statusu');
+      console.error("Error fetching stats:", error);
     }
   };
 
-  const handleDeleteLead = async (leadId: string) => {
-    if (!confirm('Czy na pewno chcesz usunąć ten lead?')) return;
+  const dashboardStats = [
+    {
+      title: "Wszystkie Leady",
+      value: stats.totalLeads.toString(),
+      change: "+12%",
+      changeType: "positive" as const,
+      icon: Mail,
+      color: "text-blue-500",
+      bgColor: "bg-blue-500/10",
+    },
+    {
+      title: "Nowe Leady",
+      value: stats.newLeads.toString(),
+      change: "+8.2%",
+      changeType: "positive" as const,
+      icon: Users,
+      color: "text-green-500",
+      bgColor: "bg-green-500/10",
+    },
+    {
+      title: "Przekonwertowane",
+      value: stats.converted.toString(),
+      change: "+15%",
+      changeType: "positive" as const,
+      icon: TrendingUp,
+      color: "text-purple-500",
+      bgColor: "bg-purple-500/10",
+    },
+    {
+      title: "Ten Miesiąc",
+      value: stats.thisMonth.toString(),
+      change: "+23%",
+      changeType: "positive" as const,
+      icon: Eye,
+      color: "text-orange-500",
+      bgColor: "bg-orange-500/10",
+    },
+  ];
 
-    try {
-      const { error } = await supabase.from('leads' as any).delete().eq('id', leadId);
-
-      if (error) throw error;
-
-      setLeads((prev) => prev.filter((lead) => lead.id !== leadId));
-      toast.success('Lead usunięty');
-    } catch (error) {
-      console.error('Error deleting lead:', error);
-      toast.error('Błąd podczas usuwania leadu');
-    }
+  const handleRefresh = async () => {
+    setIsRefreshing(true);
+    await fetchStats();
+    setTimeout(() => setIsRefreshing(false), 1000);
   };
 
-  if (authLoading || loading) {
+  const handleExport = () => {
+    console.log("Exporting data...");
+  };
+
+  if (loading || isChecking) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-lg">Ładowanie...</div>
+        <div className="text-muted-foreground">Ładowanie...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold">Panel Administratora</h1>
-          <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={fetchLeads}>
-              <RefreshCw className="h-4 w-4 mr-2" />
-              Odśwież
-            </Button>
-            <Button variant="outline" size="sm" onClick={signOut}>
-              <LogOut className="h-4 w-4 mr-2" />
-              Wyloguj
-            </Button>
-          </div>
-        </div>
-      </header>
+    <SidebarProvider>
+      <div className="flex min-h-screen w-full">
+        <AdminSidebar />
+        <SidebarInset className="flex-1">
+          <DashboardHeader
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+            onRefresh={handleRefresh}
+            onExport={handleExport}
+            isRefreshing={isRefreshing}
+          />
 
-      <main className="container mx-auto px-4 py-8">
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <Card className="p-6">
-            <div className="text-sm text-muted-foreground mb-2">Dzisiaj</div>
-            <div className="text-3xl font-bold">{stats.today}</div>
-          </Card>
-          <Card className="p-6">
-            <div className="text-sm text-muted-foreground mb-2">Ten tydzień</div>
-            <div className="text-3xl font-bold">{stats.thisWeek}</div>
-          </Card>
-          <Card className="p-6">
-            <div className="text-sm text-muted-foreground mb-2">Ten miesiąc</div>
-            <div className="text-3xl font-bold">{stats.thisMonth}</div>
-          </Card>
-          <Card className="p-6">
-            <div className="text-sm text-muted-foreground mb-2">Łącznie</div>
-            <div className="text-3xl font-bold">{stats.total}</div>
-          </Card>
-        </div>
+          <div className="flex-1 p-6">
+            <div className="max-w-7xl mx-auto space-y-6">
+              <div>
+                <h1 className="text-3xl font-bold text-foreground">
+                  Witaj w Panelu Admina
+                </h1>
+                <p className="text-muted-foreground mt-2">
+                  Zarządzaj leadami i użytkownikami swojej platformy.
+                </p>
+              </div>
 
-        {/* Filters */}
-        <Card className="p-4 mb-4">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Szukaj po nazwie firmy..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
-              />
+              {/* Stats Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {dashboardStats.map((stat, index) => (
+                  <DashboardCard key={stat.title} stat={stat} index={index} />
+                ))}
+              </div>
+
+              {/* Leads Table */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">
+                  Ostatnie Leady
+                </h2>
+                <LeadsTable />
+              </div>
             </div>
-            <Select value={statusFilter} onValueChange={setStatusFilter}>
-              <SelectTrigger className="w-full md:w-[200px]">
-                <SelectValue placeholder="Filtruj po statusie" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Wszystkie</SelectItem>
-                <SelectItem value="new">Nowy</SelectItem>
-                <SelectItem value="contacted">Skontaktowany</SelectItem>
-                <SelectItem value="qualified">Zakwalifikowany</SelectItem>
-                <SelectItem value="converted">Przekonwertowany</SelectItem>
-                <SelectItem value="lost">Utracony</SelectItem>
-              </SelectContent>
-            </Select>
           </div>
-        </Card>
-
-        {/* Leads Table */}
-        <Card>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Data</TableHead>
-                <TableHead>Firma</TableHead>
-                <TableHead>Imię</TableHead>
-                <TableHead>Email</TableHead>
-                <TableHead>Telefon</TableHead>
-                <TableHead>Źródło</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead className="text-right">Akcje</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {filteredLeads.length === 0 ? (
-                <TableRow>
-                  <TableCell colSpan={8} className="text-center text-muted-foreground py-8">
-                    Brak leadów do wyświetlenia
-                  </TableCell>
-                </TableRow>
-              ) : (
-                filteredLeads.map((lead) => (
-                  <TableRow key={lead.id}>
-                    <TableCell className="whitespace-nowrap">
-                      {format(new Date(lead.created_at), 'dd.MM.yyyy HH:mm')}
-                    </TableCell>
-                    <TableCell>{lead.company || '-'}</TableCell>
-                    <TableCell>{lead.name || '-'}</TableCell>
-                    <TableCell>{lead.email || '-'}</TableCell>
-                    <TableCell>{lead.phone || '-'}</TableCell>
-                    <TableCell className="capitalize">{lead.source_form}</TableCell>
-                    <TableCell>
-                      <Select
-                        value={lead.status || 'new'}
-                        onValueChange={(value) => handleStatusChange(lead.id, value)}
-                      >
-                        <SelectTrigger className="w-[140px]">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="new">Nowy</SelectItem>
-                          <SelectItem value="contacted">Skontaktowany</SelectItem>
-                          <SelectItem value="qualified">Zakwalifikowany</SelectItem>
-                          <SelectItem value="converted">Przekonwertowany</SelectItem>
-                          <SelectItem value="lost">Utracony</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => handleDeleteLead(lead.id)}
-                      >
-                        <Trash2 className="h-4 w-4 text-destructive" />
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                ))
-              )}
-            </TableBody>
-          </Table>
-        </Card>
-      </main>
-    </div>
+        </SidebarInset>
+      </div>
+    </SidebarProvider>
   );
 }

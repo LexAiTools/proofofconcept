@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Link, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const authSchema = z.object({
   email: z.string().email("Nieprawidłowy adres email"),
@@ -17,12 +18,41 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
   
-  const { user, loading, signUp, signIn, signInWithOAuth } = useAuth();
+  const { user, loading, isInitialized, signUp, signIn, signInWithOAuth } = useAuth();
 
-  // Redirect if already logged in
-  if (user && !loading) {
-    return <Navigate to="/" replace />;
+  // Redirect if already logged in - check admin status
+  useEffect(() => {
+    const checkAndRedirect = async () => {
+      if (!loading && user && isInitialized) {
+        // Check if user is admin
+        const { data } = await supabase
+          .from("user_roles")
+          .select("role")
+          .eq("user_id", user.id)
+          .eq("role", "admin")
+          .maybeSingle();
+
+        // Redirect immediately without delay
+        if (data) {
+          navigate('/admin', { replace: true });
+        } else {
+          navigate('/home', { replace: true });
+        }
+      }
+    };
+
+    checkAndRedirect();
+  }, [user, loading, isInitialized, navigate]);
+
+  // Show loading while checking auth state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
   }
 
   const validateForm = () => {
