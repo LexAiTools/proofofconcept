@@ -187,10 +187,12 @@ serve(async (req) => {
       ? '\n\nIMPORTANT: Respond in POLISH language.'
       : '\n\nIMPORTANT: Respond in ENGLISH language.';
     
+    const systemContent = SYSTEM_PROMPT + languageInstruction + '\n\nKNOWLEDGE BASE:\n' + context;
+    
     const messages = [
       { 
         role: 'system', 
-        content: `${SYSTEM_PROMPT}${languageInstruction}\n\nKNOWLEDGE BASE:\n${context}` 
+        content: systemContent
       },
       ...conversationHistory,
       { role: 'user', content: message }
