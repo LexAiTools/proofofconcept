@@ -138,7 +138,10 @@ serve(async (req) => {
     if (knowledgeData && knowledgeData.length > 0) {
       // First, try to get content in the conversation language
       const languageSpecificContent = knowledgeData.filter(
-        item => item.metadata?.language === conversationLanguage
+        (item) => {
+          const lang = item.metadata as any;
+          return lang && lang.language === conversationLanguage;
+        }
       );
       
       // If no language-specific content, use all content
@@ -146,10 +149,11 @@ serve(async (req) => {
         ? languageSpecificContent 
         : knowledgeData;
       
-      context = contentToUse
-        .slice(0, 5)
-        .map(item => `${item.title}: ${item.content}`)
-        .join('\n\n');
+      const contextParts: string[] = [];
+      for (const item of contentToUse.slice(0, 5)) {
+        contextParts.push(item.title + ': ' + item.content);
+      }
+      context = contextParts.join('\n\n');
     }
 
     // 3. Get conversation history if conversationId exists
