@@ -172,6 +172,57 @@ export type Database = {
         }
         Relationships: []
       }
+      podcasts: {
+        Row: {
+          company: string
+          company_color: string
+          created_at: string
+          description: string
+          episode_date: string
+          episode_number: number
+          guest_name: string
+          guest_role: string
+          host_name: string
+          host_role: string
+          id: string
+          title: string
+          updated_at: string
+          youtube_url: string
+        }
+        Insert: {
+          company: string
+          company_color: string
+          created_at?: string
+          description: string
+          episode_date: string
+          episode_number: number
+          guest_name: string
+          guest_role: string
+          host_name: string
+          host_role: string
+          id?: string
+          title: string
+          updated_at?: string
+          youtube_url: string
+        }
+        Update: {
+          company?: string
+          company_color?: string
+          created_at?: string
+          description?: string
+          episode_date?: string
+          episode_number?: number
+          guest_name?: string
+          guest_role?: string
+          host_name?: string
+          host_role?: string
+          id?: string
+          title?: string
+          updated_at?: string
+          youtube_url?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string

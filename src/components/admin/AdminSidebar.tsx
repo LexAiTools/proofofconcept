@@ -15,7 +15,8 @@ import {
   Settings, 
   Mail, 
   BarChart,
-  LogOut
+  LogOut,
+  Mic
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
@@ -25,6 +26,11 @@ const menuItems = [
     title: "Dashboard",
     url: "/admin",
     icon: LayoutDashboard,
+  },
+  {
+    title: "Podcast",
+    url: "/admin/podcasts",
+    icon: Mic,
   },
 ];
 
