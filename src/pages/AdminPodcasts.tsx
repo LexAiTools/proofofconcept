@@ -36,10 +36,11 @@ interface Podcast {
 
 const AdminPodcasts = () => {
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const { toast } = useToast();
   const [podcasts, setPodcasts] = useState<Podcast[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isChecking, setIsChecking] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
   const [editingPodcast, setEditingPodcast] = useState<Podcast | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -58,50 +59,87 @@ const AdminPodcasts = () => {
   });
 
   useEffect(() => {
-    console.log("🔍 AdminPodcasts: useEffect triggered", { user, userId: user?.id });
-    
-    if (!user) {
-      console.log("❌ No user found, redirecting to signin");
-      navigate("/signin");
-      return;
-    }
+    let timeoutId: NodeJS.Timeout;
+    let isMounted = true;
 
     const checkAdminRole = async () => {
-      console.log("🔑 Checking admin role for user:", user.id);
+      console.log('AdminPodcasts: checking auth state', { authLoading, user: !!user });
       
-      if (!user?.id) {
-        console.log("❌ No user ID, returning");
+      if (authLoading) {
+        console.log('AdminPodcasts: still loading auth state');
+        return;
+      }
+      
+      if (!user) {
+        console.log('AdminPodcasts: no user, redirecting to signin');
+        navigate('/signin', { replace: true });
         return;
       }
 
-      const { data, error } = await supabase
-        .from("user_roles")
-        .select("role")
-        .eq("user_id", user.id)
-        .eq("role", "admin")
-        .maybeSingle();
+      console.log('AdminPodcasts: checking admin role for user', user.id);
+      
+      // Retry logic for network errors
+      const checkRoleWithRetry = async (retries = 2): Promise<boolean> => {
+        try {
+          const { data: roleData, error } = await supabase
+            .from("user_roles")
+            .select("role")
+            .eq("user_id", user.id)
+            .eq("role", "admin")
+            .maybeSingle();
 
-      console.log("📊 Admin role check result:", { data, error });
+          console.log('AdminPodcasts: role check result', { roleData, error });
 
-      if (error) {
-        console.error("❌ Error checking admin role:", error);
-        navigate("/signin");
-        return;
+          if (error) {
+            // If it's a network error and we have retries left, try again
+            if (error.message?.includes('Failed to fetch') && retries > 0) {
+              console.log(`AdminPodcasts: network error, retrying... (${retries} attempts left)`);
+              await new Promise(resolve => setTimeout(resolve, 500));
+              return checkRoleWithRetry(retries - 1);
+            }
+            throw error;
+          }
+          
+          return !!roleData;
+        } catch (error) {
+          console.error("AdminPodcasts: error checking admin role:", error);
+          throw error;
+        }
+      };
+
+      try {
+        const isAdmin = await checkRoleWithRetry();
+        
+        if (!isMounted) return;
+        
+        if (!isAdmin) {
+          console.log('AdminPodcasts: user is not admin, redirecting to signin');
+          navigate('/signin', { replace: true });
+          return;
+        }
+        
+        console.log('AdminPodcasts: user is admin, fetching podcasts');
+        setIsAdmin(true);
+        setIsChecking(false);
+        fetchPodcasts();
+      } catch (error) {
+        console.error("AdminPodcasts: error checking admin role:", error);
+        if (isMounted) {
+          navigate('/signin', { replace: true });
+        }
       }
-
-      if (!data) {
-        console.log("❌ User is not an admin, redirecting");
-        navigate("/signin");
-        return;
-      }
-
-      console.log("✅ User is admin, fetching podcasts");
-      setIsAdmin(true);
-      fetchPodcasts();
     };
 
-    checkAdminRole();
-  }, [user, navigate]);
+    // Debounce the check
+    timeoutId = setTimeout(() => {
+      checkAdminRole();
+    }, 100);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timeoutId);
+    };
+  }, [user, authLoading, navigate]);
 
   const fetchPodcasts = async () => {
     try {
@@ -242,10 +280,10 @@ const AdminPodcasts = () => {
     setIsDialogOpen(true);
   };
 
-  if (!user || !isAdmin) {
+  if (authLoading || isChecking) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-muted-foreground">Ładowanie...</div>
       </div>
     );
   }
