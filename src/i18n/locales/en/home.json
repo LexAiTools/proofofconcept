@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "trustedBy": "Trusted by 500+ Enterprise Clients",
+    "headline": "Transform Your Business with",
+    "headlineHighlight": "Intelligent AI",
+    "subheadline": "Build advanced AI solutions that deliver real results in days, not months. Trusted by leading enterprises for data-driven insights and automated decision-making.",
+    "stats": {
+      "clients": "Enterprise Clients",
+      "dataPoints": "Data Points Processed",
+      "uptime": "Uptime Guaranteed",
+      "support": "Expert Support"
+    }
+  },
+  "vercelChat": {
+    "placeholder": "Ask me anything about our AI solutions...",
+    "examplePrompts": {
+      "integration": "How do I integrate your AI into my system?",
+      "pricing": "What are your pricing options?",
+      "security": "Tell me about your security features"
+    }
+  },
+  "features": {
+    "title": "Built for Enterprise Scale",
+    "subtitle": "Our AI platform combines cutting-edge technology with enterprise-grade security to deliver solutions that grow with your business.",
+    "advancedAI": {
+      "title": "Advanced AI Models",
+      "description": "Cutting-edge machine learning algorithms tailored to your business needs with continuous learning capabilities."
+    },
+    "lightning": {
+      "title": "Lightning Fast Processing",
+      "description": "Process millions of data points in real-time with our optimized infrastructure and edge computing."
+    },
+    "enterpriseSecurity": {
+      "title": "Enterprise Security",
+      "description": "Bank-level security with end-to-end encryption, SOC 2 compliance, and dedicated infrastructure."
+    },
+    "seamlessIntegration": {
+      "title": "Seamless Integration",
+      "description": "Connect with your existing tools and workflows through our robust API and pre-built integrations."
+    },
+    "realtime": {
+      "title": "Real-time Analytics",
+      "description": "Monitor performance and gain insights instantly with our comprehensive analytics dashboard."
+    },
+    "support": {
+      "title": "24/7 Expert Support",
+      "description": "Dedicated support team available around the clock to ensure your success."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Join thousands of satisfied customers who have transformed their business with our AI solutions.",
+    "cta": "Ready to transform your business?",
+    "ctaButton": "Start Your Free Trial"
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Join leading enterprises already using our AI platform",
+    "button": "Schedule a Demo"
+  }
+}

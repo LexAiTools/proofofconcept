@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Shield, Zap, BarChart3, Cpu, Lock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const features = [
   {
@@ -35,21 +36,55 @@ const features = [
 ];
 
 export const Features = () => {
+  const { t } = useTranslation('home');
+  
+  const translatedFeatures = [
+    {
+      icon: Brain,
+      title: t('features.advancedAI.title'),
+      description: t('features.advancedAI.description')
+    },
+    {
+      icon: Zap,
+      title: t('features.lightning.title'),
+      description: t('features.lightning.description')
+    },
+    {
+      icon: BarChart3,
+      title: t('features.realtime.title'),
+      description: t('features.realtime.description')
+    },
+    {
+      icon: Shield,
+      title: t('features.enterpriseSecurity.title'),
+      description: t('features.enterpriseSecurity.description')
+    },
+    {
+      icon: Cpu,
+      title: t('features.seamlessIntegration.title'),
+      description: t('features.seamlessIntegration.description')
+    },
+    {
+      icon: Lock,
+      title: t('features.support.title'),
+      description: t('features.support.description')
+    }
+  ];
+  
   return (
     <section className="py-24 bg-gradient-secondary">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Built for Enterprise Scale
+            {t('features.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our AI platform combines cutting-edge technology with enterprise-grade security 
-            to deliver solutions that grow with your business.
+            {t('features.subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {translatedFeatures.map((feature, index) => (
             <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover:shadow-card transition-all duration-300 group">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">

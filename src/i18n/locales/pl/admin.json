@@ -1,0 +1,78 @@
+{
+  "dashboard": {
+    "welcome": "Witaj w Panelu Administracyjnym",
+    "subtitle": "Zarządzaj leadami i użytkownikami platformy",
+    "loading": "Ładowanie panelu..."
+  },
+  "sidebar": {
+    "dashboard": "Panel główny",
+    "leads": "Leady",
+    "documents": "Dokumenty",
+    "podcasts": "Podcasty",
+    "logout": "Wyloguj"
+  },
+  "stats": {
+    "allLeads": "Wszystkie leady",
+    "newLeads": "Nowe leady",
+    "converted": "Przekonwertowane",
+    "thisMonth": "W tym miesiącu",
+    "fromLastMonth": "od ostatniego miesiąca"
+  },
+  "leads": {
+    "title": "Ostatnie leady",
+    "viewAll": "Zobacz wszystkie leady",
+    "table": {
+      "name": "Imię i nazwisko",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "service": "Usługa",
+      "date": "Data",
+      "time": "Godzina",
+      "status": "Status",
+      "comments": "Uwagi",
+      "actions": "Akcje"
+    },
+    "status": {
+      "new": "Nowy",
+      "contacted": "Skontaktowano się",
+      "qualified": "Zakwalifikowany",
+      "converted": "Przekonwertowany",
+      "lost": "Utracony"
+    },
+    "empty": "Nie znaleziono leadów"
+  },
+  "documents": {
+    "title": "Zarządzanie dokumentami",
+    "upload": "Prześlij dokument",
+    "uploadSuccess": "Dokument przesłany pomyślnie",
+    "uploadError": "Błąd przesyłania dokumentu",
+    "deleteSuccess": "Dokument usunięty pomyślnie",
+    "deleteError": "Błąd usuwania dokumentu",
+    "table": {
+      "title": "Tytuł",
+      "category": "Kategoria",
+      "uploadedAt": "Data przesłania",
+      "actions": "Akcje"
+    },
+    "form": {
+      "title": "Tytuł dokumentu",
+      "category": "Kategoria",
+      "file": "Wybierz plik",
+      "selectCategory": "Wybierz kategorię"
+    },
+    "categories": {
+      "whitepaper": "Whitepaper",
+      "caseStudy": "Studium przypadku",
+      "guide": "Przewodnik",
+      "technical": "Dokumentacja techniczna"
+    }
+  },
+  "podcasts": {
+    "title": "Zarządzanie podcastami",
+    "upload": "Prześlij podcast",
+    "uploadSuccess": "Podcast przesłany pomyślnie",
+    "uploadError": "Błąd przesyłania podcastu",
+    "deleteSuccess": "Podcast usunięty pomyślnie",
+    "deleteError": "Błąd usuwania podcastu"
+  }
+}

@@ -1,7 +1,10 @@
 import { Linkedin, Twitter, Github, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation('common');
+  
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-16">
@@ -35,53 +38,51 @@ export const Footer = () => {
 
           {/* Solutions */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Solutions</h3>
+            <h3 className="text-lg font-semibold text-foreground">{t('footer.solutions')}</h3>
             <ul className="space-y-2">
-              <li><Link to="/book-demo" className="text-muted-foreground hover:text-foreground transition-colors">WordPress AI Plugin</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">AI Analytics</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Predictive Modeling</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Automation Platform</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Custom Development</a></li>
+              <li><Link to="/book-demo" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.wordpressPlugin')}</Link></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.aiAnalytics')}</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.predictiveModeling')}</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.automationPlatform')}</a></li>
             </ul>
           </div>
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Company</h3>
+            <h3 className="text-lg font-semibold text-foreground">{t('footer.company')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
-              <li><Link to="/podcast" className="text-muted-foreground hover:text-foreground transition-colors">Podcast</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Partners</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.about')}</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.careers')}</a></li>
+              <li><Link to="/podcast" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.podcast')}</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.contact')}</Link></li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Resources */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Support</h3>
+            <h3 className="text-lg font-semibold text-foreground">{t('footer.resources')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Status</a></li>
-              <li><Link to="/admin-login" className="text-muted-foreground hover:text-foreground transition-colors">Panel Administratora</Link></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.documentation')}</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.support')}</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.community')}</a></li>
+              <li><Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.pricing')}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-muted-foreground text-sm">
-            © 2024 ProofOfConcepts. All rights reserved.
+            © 2024 ProofOfConcepts. {t('footer.copyright')}
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              Privacy Policy
+              {t('footer.legalLinks.privacy')}
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              Terms of Service
+              {t('footer.legalLinks.terms')}
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              Cookie Policy
+              {t('footer.legalLinks.security')}
             </a>
           </div>
         </div>

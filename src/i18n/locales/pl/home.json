@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "trustedBy": "Zaufało nam ponad 500 klientów korporacyjnych",
+    "headline": "Przekształć swoją firmę dzięki",
+    "headlineHighlight": "Inteligentnej AI",
+    "subheadline": "Buduj zaawansowane rozwiązania AI, które dostarczają realne rezultaty w dni, a nie miesiące. Zaufane przez wiodące przedsiębiorstwa w zakresie analiz opartych na danych i automatycznego podejmowania decyzji.",
+    "stats": {
+      "clients": "Klientów korporacyjnych",
+      "dataPoints": "Przetworzonych punktów danych",
+      "uptime": "Gwarantowana dostępność",
+      "support": "Wsparcie eksperckie"
+    }
+  },
+  "vercelChat": {
+    "placeholder": "Zapytaj mnie o nasze rozwiązania AI...",
+    "examplePrompts": {
+      "integration": "Jak zintegrować waszą AI z moim systemem?",
+      "pricing": "Jakie są opcje cenowe?",
+      "security": "Opowiedz mi o funkcjach bezpieczeństwa"
+    }
+  },
+  "features": {
+    "title": "Stworzone dla skali korporacyjnej",
+    "subtitle": "Nasza platforma AI łączy najnowocześniejszą technologię z bezpieczeństwem klasy korporacyjnej, dostarczając rozwiązania rosnące wraz z Twoim biznesem.",
+    "advancedAI": {
+      "title": "Zaawansowane modele AI",
+      "description": "Najnowocześniejsze algorytmy uczenia maszynowego dostosowane do potrzeb Twojej firmy z możliwościami ciągłego uczenia."
+    },
+    "lightning": {
+      "title": "Błyskawiczne przetwarzanie",
+      "description": "Przetwarzaj miliony punktów danych w czasie rzeczywistym dzięki zoptymalizowanej infrastrukturze i edge computing."
+    },
+    "enterpriseSecurity": {
+      "title": "Bezpieczeństwo korporacyjne",
+      "description": "Bezpieczeństwo na poziomie bankowym z szyfrowaniem end-to-end, zgodnością SOC 2 i dedykowaną infrastrukturą."
+    },
+    "seamlessIntegration": {
+      "title": "Bezproblemowa integracja",
+      "description": "Połącz się z istniejącymi narzędziami i procesami dzięki solidnemu API i gotowym integracjom."
+    },
+    "realtime": {
+      "title": "Analityka w czasie rzeczywistym",
+      "description": "Monitoruj wydajność i uzyskuj wgląd natychmiastowo dzięki kompleksowemu panelowi analitycznemu."
+    },
+    "support": {
+      "title": "Wsparcie 24/7",
+      "description": "Dedykowany zespół wsparcia dostępny przez całą dobę, aby zapewnić Twój sukces."
+    }
+  },
+  "testimonials": {
+    "title": "Co mówią nasi klienci",
+    "subtitle": "Dołącz do tysięcy zadowolonych klientów, którzy przekształcili swój biznes dzięki naszym rozwiązaniom AI.",
+    "cta": "Gotowy na transformację biznesu?",
+    "ctaButton": "Rozpocznij darmowy okres próbny"
+  },
+  "cta": {
+    "title": "Gotowy, aby zacząć?",
+    "subtitle": "Dołącz do wiodących przedsiębiorstw już korzystających z naszej platformy AI",
+    "button": "Zaplanuj demo"
+  }
+}

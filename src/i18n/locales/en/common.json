@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "engine": "Engine",
+    "about": "About",
+    "contact": "Contact",
+    "chat": "Chat",
+    "podcast": "Podcast",
+    "documents": "Documents"
+  },
+  "buttons": {
+    "getStarted": "Get Started Now",
+    "watchDemo": "Watch Demo",
+    "bookDemo": "Book Demo",
+    "logIn": "Log In",
+    "adminPanel": "Admin Panel",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "send": "Send",
+    "schedule": "Schedule Meeting",
+    "close": "Close",
+    "download": "Download",
+    "upload": "Upload",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "viewAll": "View All"
+  },
+  "footer": {
+    "solutions": "Solutions",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "copyright": "All rights reserved.",
+    "solutionsLinks": {
+      "wordpressPlugin": "WordPress AI Plugin",
+      "aiAnalytics": "AI Analytics",
+      "predictiveModeling": "Predictive Modeling",
+      "automationPlatform": "Automation Platform"
+    },
+    "companyLinks": {
+      "about": "About",
+      "careers": "Careers",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "resourcesLinks": {
+      "documentation": "Documentation",
+      "support": "Support",
+      "community": "Community",
+      "pricing": "Pricing"
+    },
+    "legalLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security"
+    }
+  }
+}

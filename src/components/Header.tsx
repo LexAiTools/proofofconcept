@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const Header = () => {
+  const { t } = useTranslation('common');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const { user } = useAuth();
@@ -51,38 +54,39 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
-              Use Cases
+              {t('nav.useCases')}
             </Link>
             <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
+              {t('nav.pricing')}
             </Link>
             <Link to="/engine" className="text-muted-foreground hover:text-foreground transition-colors">
-              Engine
+              {t('nav.engine')}
             </Link>
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-              About
+              {t('nav.about')}
             </Link>
             <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-              Contact
+              {t('nav.contact')}
             </Link>
             <Link to="/chat" className="text-muted-foreground hover:text-foreground transition-colors">
-              Chat
+              {t('nav.chat')}
             </Link>
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSwitcher />
             {isAdmin ? (
               <Button variant="default" onClick={() => navigate('/admin')}>
-                Admin Panel
+                {t('buttons.adminPanel')}
               </Button>
             ) : (
               <>
                 <Button variant="ghost" onClick={() => navigate('/signin')}>
-                  Log In
+                  {t('buttons.logIn')}
                 </Button>
                 <Button variant="default" onClick={() => navigate('/book-demo')}>
-                  Book Demo
+                  {t('buttons.bookDemo')}
                 </Button>
               </>
             )}
@@ -102,24 +106,25 @@ export const Header = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 mt-4">
               <Link to="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
-                Use Cases
+                {t('nav.useCases')}
               </Link>
               <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-                Pricing
+                {t('nav.pricing')}
               </Link>
               <Link to="/engine" className="text-muted-foreground hover:text-foreground transition-colors">
-                Engine
+                {t('nav.engine')}
               </Link>
               <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                About
+                {t('nav.about')}
               </Link>
               <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Contact
+                {t('nav.contact')}
               </Link>
               <Link to="/chat" className="text-muted-foreground hover:text-foreground transition-colors">
-                Chat
+                {t('nav.chat')}
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
+                <LanguageSwitcher />
                 {isAdmin ? (
                   <Button 
                     variant="default" 
@@ -129,7 +134,7 @@ export const Header = () => {
                       setIsMenuOpen(false);
                     }}
                   >
-                    Admin Panel
+                    {t('buttons.adminPanel')}
                   </Button>
                 ) : (
                   <>
@@ -141,7 +146,7 @@ export const Header = () => {
                         setIsMenuOpen(false);
                       }}
                     >
-                      Log In
+                      {t('buttons.logIn')}
                     </Button>
                     <Button 
                       variant="default" 
@@ -151,7 +156,7 @@ export const Header = () => {
                         setIsMenuOpen(false);
                       }}
                     >
-                      Book Demo
+                      {t('buttons.bookDemo')}
                     </Button>
                   </>
                 )}

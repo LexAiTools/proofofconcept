@@ -1,0 +1,26 @@
+{
+  "success": {
+    "formSubmitted": "Thank you! We will contact you shortly.",
+    "documentUploaded": "Document uploaded successfully",
+    "podcastUploaded": "Podcast uploaded successfully",
+    "saved": "Changes saved successfully",
+    "deleted": "Deleted successfully",
+    "copied": "Copied to clipboard",
+    "updated": "Updated successfully"
+  },
+  "error": {
+    "general": "An error occurred. Please try again.",
+    "network": "Network error. Please check your connection.",
+    "unauthorized": "Unauthorized access. Please log in.",
+    "notFound": "Resource not found",
+    "validation": "Please check your input and try again",
+    "uploadFailed": "Upload failed. Please try again.",
+    "deleteFailed": "Delete failed. Please try again."
+  },
+  "info": {
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "noData": "No data available",
+    "comingSoon": "Coming soon"
+  }
+}

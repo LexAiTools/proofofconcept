@@ -1,0 +1,78 @@
+{
+  "dashboard": {
+    "welcome": "Welcome to Admin Panel",
+    "subtitle": "Manage leads and users of your platform",
+    "loading": "Loading dashboard..."
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "leads": "Leads",
+    "documents": "Documents",
+    "podcasts": "Podcasts",
+    "logout": "Logout"
+  },
+  "stats": {
+    "allLeads": "All Leads",
+    "newLeads": "New Leads",
+    "converted": "Converted",
+    "thisMonth": "This Month",
+    "fromLastMonth": "from last month"
+  },
+  "leads": {
+    "title": "Recent Leads",
+    "viewAll": "View All Leads",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service",
+      "date": "Date",
+      "time": "Time",
+      "status": "Status",
+      "comments": "Comments",
+      "actions": "Actions"
+    },
+    "status": {
+      "new": "New",
+      "contacted": "Contacted",
+      "qualified": "Qualified",
+      "converted": "Converted",
+      "lost": "Lost"
+    },
+    "empty": "No leads found"
+  },
+  "documents": {
+    "title": "Document Management",
+    "upload": "Upload Document",
+    "uploadSuccess": "Document uploaded successfully",
+    "uploadError": "Error uploading document",
+    "deleteSuccess": "Document deleted successfully",
+    "deleteError": "Error deleting document",
+    "table": {
+      "title": "Title",
+      "category": "Category",
+      "uploadedAt": "Uploaded",
+      "actions": "Actions"
+    },
+    "form": {
+      "title": "Document Title",
+      "category": "Category",
+      "file": "Select File",
+      "selectCategory": "Select a category"
+    },
+    "categories": {
+      "whitepaper": "Whitepaper",
+      "caseStudy": "Case Study",
+      "guide": "Guide",
+      "technical": "Technical Documentation"
+    }
+  },
+  "podcasts": {
+    "title": "Podcast Management",
+    "upload": "Upload Podcast",
+    "uploadSuccess": "Podcast uploaded successfully",
+    "uploadError": "Error uploading podcast",
+    "deleteSuccess": "Podcast deleted successfully",
+    "deleteError": "Error deleting podcast"
+  }
+}

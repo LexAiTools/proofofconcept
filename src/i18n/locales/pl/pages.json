@@ -1,0 +1,57 @@
+{
+  "about": {
+    "title": "O nas",
+    "subtitle": "Dowiedz się więcej o naszej misji i zespole"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Skontaktuj się z naszym zespołem",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "E-mail",
+      "message": "Wiadomość",
+      "send": "Wyślij wiadomość"
+    }
+  },
+  "pricing": {
+    "title": "Cennik",
+    "subtitle": "Wybierz plan odpowiedni dla Ciebie"
+  },
+  "useCases": {
+    "title": "Zastosowania",
+    "subtitle": "Zobacz, jak nasze rozwiązania AI mogą pomóc Twojemu biznesowi"
+  },
+  "engine": {
+    "title": "Silnik AI",
+    "subtitle": "Poznaj możliwości naszego potężnego silnika AI"
+  },
+  "chat": {
+    "title": "Chat AI",
+    "subtitle": "Rozmawiaj z naszym asystentem AI"
+  },
+  "podcast": {
+    "title": "Podcasty",
+    "subtitle": "Posłuchaj naszych najnowszych odcinków"
+  },
+  "documents": {
+    "title": "Dokumenty",
+    "subtitle": "Przeglądaj naszą bibliotekę zasobów"
+  },
+  "bookDemo": {
+    "title": "Umów demo",
+    "subtitle": "Zaplanuj spersonalizowaną prezentację"
+  },
+  "signin": {
+    "title": "Zaloguj się",
+    "subtitle": "Uzyskaj dostęp do swojego konta",
+    "email": "E-mail",
+    "password": "Hasło",
+    "signIn": "Zaloguj się",
+    "forgotPassword": "Zapomniałeś hasła?"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Ups! Nie znaleziono strony",
+    "button": "Powrót do strony głównej"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "consultation": {
+    "title": "Schedule Consultation",
+    "subtitle": "Demo of our AI solutions",
+    "steps": {
+      "service": "Service",
+      "date": "Date",
+      "time": "Time",
+      "data": "Data"
+    }
+  },
+  "customer": {
+    "title": "Contact Information",
+    "subtitle": "Please provide your contact details",
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "comments": "Additional Comments",
+      "placeholders": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "phone": "+1 123 456 789",
+        "email": "john@company.com",
+        "comments": "Tell us about your needs..."
+      }
+    },
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "phoneRequired": "Phone number is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email address"
+    }
+  },
+  "service": {
+    "title": "Choose a Service",
+    "subtitle": "Select the service you're interested in",
+    "services": {
+      "aiConsulting": {
+        "title": "AI Consulting",
+        "description": "Strategic guidance on AI implementation and optimization for your business"
+      },
+      "customDevelopment": {
+        "title": "Custom AI Development",
+        "description": "Tailored AI solutions built specifically for your unique business needs"
+      },
+      "integration": {
+        "title": "System Integration",
+        "description": "Seamless integration of AI tools with your existing infrastructure"
+      },
+      "training": {
+        "title": "Team Training",
+        "description": "Comprehensive training programs to upskill your team on AI technologies"
+      }
+    }
+  },
+  "date": {
+    "title": "Select Date",
+    "subtitle": "Choose an available date",
+    "selectedDate": "Selected date:"
+  },
+  "time": {
+    "title": "Select Time",
+    "subtitle": "Choose an available time slot",
+    "selectedDate": "Selected date:",
+    "availableSlots": "Available time slots:",
+    "selectedMeeting": "Selected meeting:",
+    "at": "at"
+  }
+}

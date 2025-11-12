@@ -1,0 +1,72 @@
+{
+  "consultation": {
+    "title": "Zaplanuj konsultację",
+    "subtitle": "Demo naszych rozwiązań AI",
+    "steps": {
+      "service": "Usługa",
+      "date": "Data",
+      "time": "Godzina",
+      "data": "Dane"
+    }
+  },
+  "customer": {
+    "title": "Dane kontaktowe",
+    "subtitle": "Podaj swoje dane kontaktowe",
+    "fields": {
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "phone": "Numer telefonu",
+      "email": "Adres e-mail",
+      "comments": "Dodatkowe uwagi",
+      "placeholders": {
+        "firstName": "Jan",
+        "lastName": "Kowalski",
+        "phone": "+48 123 456 789",
+        "email": "jan@firma.pl",
+        "comments": "Opowiedz nam o swoich potrzebach..."
+      }
+    },
+    "validation": {
+      "firstNameRequired": "Imię jest wymagane",
+      "lastNameRequired": "Nazwisko jest wymagane",
+      "phoneRequired": "Numer telefonu jest wymagany",
+      "emailRequired": "Adres e-mail jest wymagany",
+      "emailInvalid": "Proszę podać prawidłowy adres e-mail"
+    }
+  },
+  "service": {
+    "title": "Wybierz usługę",
+    "subtitle": "Wybierz usługę, która Cię interesuje",
+    "services": {
+      "aiConsulting": {
+        "title": "Konsulting AI",
+        "description": "Strategiczne doradztwo w zakresie wdrażania i optymalizacji AI dla Twojego biznesu"
+      },
+      "customDevelopment": {
+        "title": "Rozwój AI na zamówienie",
+        "description": "Dostosowane rozwiązania AI stworzone specjalnie dla Twoich unikalnych potrzeb biznesowych"
+      },
+      "integration": {
+        "title": "Integracja systemów",
+        "description": "Bezproblemowa integracja narzędzi AI z istniejącą infrastrukturą"
+      },
+      "training": {
+        "title": "Szkolenie zespołu",
+        "description": "Kompleksowe programy szkoleniowe rozwijające umiejętności zespołu w zakresie technologii AI"
+      }
+    }
+  },
+  "date": {
+    "title": "Wybierz datę",
+    "subtitle": "Wybierz dostępną datę",
+    "selectedDate": "Wybrana data:"
+  },
+  "time": {
+    "title": "Wybierz godzinę",
+    "subtitle": "Wybierz dostępną godzinę spotkania",
+    "selectedDate": "Wybrana data:",
+    "availableSlots": "Dostępne godziny:",
+    "selectedMeeting": "Wybrane spotkanie:",
+    "at": "o godz."
+  }
+}

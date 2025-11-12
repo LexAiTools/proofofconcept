@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "useCases": "Zastosowania",
+    "pricing": "Cennik",
+    "engine": "Silnik",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "chat": "Chat",
+    "podcast": "Podcast",
+    "documents": "Dokumenty"
+  },
+  "buttons": {
+    "getStarted": "Rozpocznij teraz",
+    "watchDemo": "Zobacz demo",
+    "bookDemo": "Umów demo",
+    "logIn": "Zaloguj się",
+    "adminPanel": "Panel administracyjny",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "submit": "Wyślij",
+    "send": "Wyślij",
+    "schedule": "Zaplanuj spotkanie",
+    "close": "Zamknij",
+    "download": "Pobierz",
+    "upload": "Prześlij",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "viewAll": "Zobacz wszystko"
+  },
+  "footer": {
+    "solutions": "Rozwiązania",
+    "company": "Firma",
+    "resources": "Zasoby",
+    "legal": "Prawne",
+    "copyright": "Wszelkie prawa zastrzeżone.",
+    "solutionsLinks": {
+      "wordpressPlugin": "Wtyczka AI dla WordPress",
+      "aiAnalytics": "Analityka AI",
+      "predictiveModeling": "Modelowanie predykcyjne",
+      "automationPlatform": "Platforma automatyzacji"
+    },
+    "companyLinks": {
+      "about": "O nas",
+      "careers": "Kariera",
+      "contact": "Kontakt",
+      "blog": "Blog"
+    },
+    "resourcesLinks": {
+      "documentation": "Dokumentacja",
+      "support": "Wsparcie",
+      "community": "Społeczność",
+      "pricing": "Cennik"
+    },
+    "legalLinks": {
+      "privacy": "Polityka prywatności",
+      "terms": "Warunki użytkowania",
+      "security": "Bezpieczeństwo"
+    }
+  }
+}

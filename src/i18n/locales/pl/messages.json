@@ -1,0 +1,26 @@
+{
+  "success": {
+    "formSubmitted": "Dziękujemy! Skontaktujemy się z Tobą wkrótce.",
+    "documentUploaded": "Dokument przesłany pomyślnie",
+    "podcastUploaded": "Podcast przesłany pomyślnie",
+    "saved": "Zmiany zapisane pomyślnie",
+    "deleted": "Usunięto pomyślnie",
+    "copied": "Skopiowano do schowka",
+    "updated": "Zaktualizowano pomyślnie"
+  },
+  "error": {
+    "general": "Wystąpił błąd. Spróbuj ponownie.",
+    "network": "Błąd sieci. Sprawdź połączenie internetowe.",
+    "unauthorized": "Brak autoryzacji. Zaloguj się.",
+    "notFound": "Nie znaleziono zasobu",
+    "validation": "Sprawdź wprowadzone dane i spróbuj ponownie",
+    "uploadFailed": "Przesyłanie nie powiodło się. Spróbuj ponownie.",
+    "deleteFailed": "Usuwanie nie powiodło się. Spróbuj ponownie."
+  },
+  "info": {
+    "loading": "Ładowanie...",
+    "processing": "Przetwarzanie...",
+    "noData": "Brak danych",
+    "comingSoon": "Wkrótce"
+  }
+}

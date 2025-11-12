@@ -3,9 +3,11 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation('home');
+  
   return (
     <section className="relative py-20 md:py-32 flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
@@ -24,28 +26,27 @@ export const Hero = () => {
       <div className="relative container mx-auto px-6 text-center">
         {/* Trusted by badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-muted-foreground mb-8">
-          Trusted by 500+ Enterprise Clients
+          {t('hero.trustedBy')}
         </div>
 
         {/* Main headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-          Transform Your Business with{" "}
+          {t('hero.headline')}{" "}
           <span className="bg-gradient-primary bg-clip-text text-transparent">
-            Intelligent AI
+            {t('hero.headlineHighlight')}
           </span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-          Build advanced AI solutions that deliver real results in days, not months. 
-          Trusted by leading enterprises for data-driven insights and automated decision-making.
+          {t('hero.subheadline')}
         </p>
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <Link to="/contact">
             <Button variant="hero" size="xl" className="group">
-              Get Started Now
+              {t('hero.stats.clients', { defaultValue: 'Get Started Now' })}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
@@ -54,7 +55,7 @@ export const Hero = () => {
             <DialogTrigger asChild>
               <Button variant="glass" size="xl" className="group">
                 <PlayCircle className="w-5 h-5 mr-2" />
-                Watch Demo
+                {t('common:buttons.watchDemo')}
               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-4xl w-full">
@@ -78,19 +79,19 @@ export const Hero = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
           <div>
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-            <div className="text-muted-foreground">Enterprise Clients</div>
+            <div className="text-muted-foreground">{t('hero.stats.clients')}</div>
           </div>
           <div>
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10M+</div>
-            <div className="text-muted-foreground">Data Points Processed</div>
+            <div className="text-muted-foreground">{t('hero.stats.dataPoints')}</div>
           </div>
           <div>
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">99.9%</div>
-            <div className="text-muted-foreground">Uptime Guaranteed</div>
+            <div className="text-muted-foreground">{t('hero.stats.uptime')}</div>
           </div>
           <div>
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
-            <div className="text-muted-foreground">Expert Support</div>
+            <div className="text-muted-foreground">{t('hero.stats.support')}</div>
           </div>
         </div>
       </div>
