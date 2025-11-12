@@ -22,6 +22,9 @@ export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isWaiting, setIsWaiting] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false);
+  const [streamingMessage, setStreamingMessage] = useState('');
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [showLeadForm, setShowLeadForm] = useState<number | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -61,6 +64,8 @@ export default function Chat() {
     // Add user message immediately
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
+    setIsWaiting(true);
+    setStreamingMessage('');
 
     try {
       const response = await fetch(
@@ -87,11 +92,9 @@ export default function Chat() {
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
       let assistantMessage = '';
+      let firstChunk = true;
 
       if (reader) {
-        // Add empty assistant message to start streaming
-        setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
-
         let textBuffer = ''; // Buffer for incomplete lines
 
         while (true) {
@@ -116,16 +119,15 @@ export default function Chat() {
             try {
               const parsed = JSON.parse(data);
               if (parsed.content) {
+                // Hide waiting indicator and start streaming on first chunk
+                if (firstChunk) {
+                  setIsWaiting(false);
+                  setIsStreaming(true);
+                  firstChunk = false;
+                }
+                
                 assistantMessage += parsed.content;
-                // Update last message with accumulated content
-                setMessages(prev => {
-                  const newMessages = [...prev];
-                  newMessages[newMessages.length - 1] = {
-                    role: 'assistant',
-                    content: assistantMessage,
-                  };
-                  return newMessages;
-                });
+                setStreamingMessage(assistantMessage);
               }
               if (parsed.conversationId && !conversationId) {
                 setConversationId(parsed.conversationId);
@@ -148,15 +150,13 @@ export default function Chat() {
             try {
               const parsed = JSON.parse(data);
               if (parsed.content) {
+                if (firstChunk) {
+                  setIsWaiting(false);
+                  setIsStreaming(true);
+                  firstChunk = false;
+                }
                 assistantMessage += parsed.content;
-                setMessages(prev => {
-                  const newMessages = [...prev];
-                  newMessages[newMessages.length - 1] = {
-                    role: 'assistant',
-                    content: assistantMessage,
-                  };
-                  return newMessages;
-                });
+                setStreamingMessage(assistantMessage);
               }
               if (parsed.conversationId && !conversationId) {
                 setConversationId(parsed.conversationId);
@@ -166,14 +166,22 @@ export default function Chat() {
             }
           }
         }
+        
+        // Add final message to messages array
+        if (assistantMessage) {
+          setMessages(prev => [...prev, { role: 'assistant', content: assistantMessage }]);
+          setIsStreaming(false);
+          setStreamingMessage('');
+        }
       }
     } catch (error) {
       console.error('Chat error:', error);
       toast.error(error instanceof Error ? error.message : t('errors.general'));
-      // Remove the empty assistant message if streaming failed
-      setMessages(prev => prev.filter(m => m.content !== ''));
     } finally {
       setIsLoading(false);
+      setIsWaiting(false);
+      setIsStreaming(false);
+      setStreamingMessage('');
     }
   };
 
@@ -283,16 +291,38 @@ export default function Chat() {
                   )}
                 </div>
               ))}
-              {isLoading && messages[messages.length - 1]?.role === 'user' && (
-                <div className="flex gap-4 items-start justify-start">
+              
+              {/* Typing indicator during waiting */}
+              {isWaiting && (
+                <div className="flex gap-4 items-start justify-start animate-fade-in">
                   <div className="bg-primary/10 rounded-full p-2 shrink-0">
                     <Bot className="w-5 h-5 text-primary" />
                   </div>
                   <div className="bg-muted rounded-2xl px-6 py-4">
-                    <Loader2 className="w-5 h-5 animate-spin text-primary" />
+                    <div className="flex gap-1">
+                      <span className="w-2 h-2 bg-primary/60 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                      <span className="w-2 h-2 bg-primary/60 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                      <span className="w-2 h-2 bg-primary/60 rounded-full animate-bounce"></span>
+                    </div>
                   </div>
                 </div>
               )}
+              
+              {/* Streaming message with typing cursor */}
+              {isStreaming && streamingMessage && (
+                <div className="flex gap-4 items-start justify-start animate-fade-in">
+                  <div className="bg-primary/10 rounded-full p-2 shrink-0">
+                    <Bot className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="bg-muted rounded-2xl px-6 py-4">
+                    <p className="whitespace-pre-wrap leading-relaxed">
+                      {streamingMessage}
+                      <span className="inline-block w-[2px] h-5 bg-primary ml-1 animate-pulse">▊</span>
+                    </p>
+                  </div>
+                </div>
+              )}
+              
               <div ref={messagesEndRef} />
             </>
           )}
