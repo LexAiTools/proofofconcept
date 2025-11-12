@@ -17,6 +17,7 @@ import enBookDemo from './locales/en/bookDemo.json';
 import enEngine from './locales/en/engine.json';
 import enChat from './locales/en/chat.json';
 import enLeads from './locales/en/leads.json';
+import enPoc from './locales/en/poc.json';
 
 import plCommon from './locales/pl/common.json';
 import plHome from './locales/pl/home.json';
@@ -33,6 +34,7 @@ import plBookDemo from './locales/pl/bookDemo.json';
 import plEngine from './locales/pl/engine.json';
 import plChat from './locales/pl/chat.json';
 import plLeads from './locales/pl/leads.json';
+import plPoc from './locales/pl/poc.json';
 
 const resources = {
   en: {
@@ -51,6 +53,7 @@ const resources = {
       engine: enEngine,
       chat: enChat,
       leads: enLeads,
+      poc: enPoc,
   },
   pl: {
     common: plCommon,
@@ -68,6 +71,7 @@ const resources = {
       engine: plEngine,
       chat: plChat,
       leads: plLeads,
+      poc: plPoc,
   },
 };
 
@@ -78,7 +82,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads'],
+    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads', 'poc'],
     
     detection: {
       order: ['localStorage', 'navigator'],

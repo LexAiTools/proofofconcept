@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "title": "Proof of Concept (PoC)",
+    "subtitle": "Zamień pomysł w działający produkt w godzinę"
+  },
+  "whyChoose": {
+    "title": "Dlaczego warto wybrać nasze PoC?",
+    "saveMoney": {
+      "title": "Oszczędź czas i pieniądze na rozwoju produktu",
+      "description": "Zamiast czekać miesiące na rozwój aplikacji i wydawać dziesiątki tysięcy złotych, otrzymasz działający prototyp w godzinę. Twój pomysł zamieni się w klikalne demo, które możesz od razu pokazać klientom lub inwestorom."
+    },
+    "showDontTell": {
+      "title": "Pokaż zamiast tłumaczyć",
+      "description": "Przestań tracić czas na długie prezentacje PowerPoint i niekończące się wyjaśnienia. Dzięki wizualnej prezentacji Twojego produktu, każdy od razu zrozumie, o co Ci chodzi. Interaktywny prototyp mówi więcej niż tysiąc słów."
+    },
+    "verify": {
+      "title": "Zweryfikuj pomysł przed dużą inwestycją",
+      "description": "Nie ryzykuj dużych budżetów na niepewny pomysł. Za ułamek kosztów tradycyjnego MVP sprawdzisz, czy Twoja idea ma sens biznesowy. Zbierz opinie użytkowników i potencjalnych klientów na prawdziwym, działającym produkcie."
+    }
+  },
+  "services": {
+    "title": "Nasze usługi",
+    "quickStart": {
+      "label": "1. Szybki Start - Formularz PoC",
+      "title": "Napisz, zobaczysz od razu efekt",
+      "description": "Wypełnij prosty formularz z opisem swojego pomysłu, a my natychmiast rozpoczniemy pracę nad Twoim prototypem."
+    },
+    "interactiveApp": {
+      "label": "2. Interaktywna Aplikacja PoC",
+      "title": "Klikalna aplikacja w React - gotowa do prezentacji",
+      "description": "Stworzysz z nami:",
+      "feature1": "Interfejs aplikacji webowej lub mobilnej",
+      "feature2": "Klikalne demo, które działa jak prawdziwa aplikacja",
+      "feature3": "Prototyp gotowy do pokazania inwestorom i klientom",
+      "highlight": "Twój produkt będzie wyglądał jak gotowa aplikacja, nie jak szkic na papierze."
+    },
+    "completePackage": {
+      "label": "3. PAKIET KOMPLETNY",
+      "title": "Prezentacja Produktu",
+      "price": "2500 zł / 581 EUR",
+      "subtitle": "Wszystko, czego potrzebujesz do skutecznej prezentacji",
+      "feature1Title": "Film explainer",
+      "feature1Desc": "profesjonalne wideo prezentujące Twój produkt",
+      "feature2Title": "Landing Page",
+      "feature2Desc": "strona internetowa do zbierania leadów",
+      "feature3Title": "Treść",
+      "feature3Desc": "gotowe teksty sprzedażowe",
+      "description": "To kompletne rozwiązanie do prezentacji produktu inwestorom, partnerom biznesowym lub pierwszym klientom.",
+      "button": "Zamów Pakiet Kompletny"
+    },
+    "custom": {
+      "label": "4. Projekt Szytej na Miarę",
+      "title": "Masz nietypowe wymagania? Skontaktuj się z nami",
+      "description": "Każdy pomysł jest inny. Jeśli standardowe pakiety nie odpowiadają Twoim potrzebom, opracujemy indywidualną ofertę dopasowaną do Twojego projektu.",
+      "button": "Skontaktuj się"
+    },
+    "websitePackage": {
+      "label": "5. PAKIET",
+      "title": "Profesjonalna Strona Internetowa",
+      "price": "3500 zł / 814 EUR",
+      "subtitle": "Twoja strona gotowa w godzinę",
+      "feature1": "Nowoczesny, responsywny interfejs",
+      "feature2": "Analitykę internetową do śledzenia użytkowników",
+      "feature3": "Formularze kontaktowe zintegrowane z Twoim systemem",
+      "feature4": "3-4 podstrony + dedykowana strona kontaktowa",
+      "feature5": "Działającą stronę gotową do publikacji w godzinę",
+      "highlight": "Zapomnij o miesiącach oczekiwania na stronę internetową.",
+      "button": "Zamów Stronę"
+    }
+  },
+  "howItWorks": {
+    "title": "Jak to działa?",
+    "payAndHave": {
+      "title": "Model \"Płać i Miej\"",
+      "description": "Bez ukrytych kosztów, bez niespodzianek. Płacisz ustaloną cenę i natychmiast otrzymujesz działający prototyp. Proste, przejrzyste, skuteczne."
+    },
+    "adminPanel": {
+      "title": "Panel Administracyjny",
+      "description": "Po zakupie otrzymujesz dostęp do panelu administracyjnego (admin.corballyconcepts.com), gdzie zarządzasz swoimi projektami i usługami PoC."
+    }
+  },
+  "targetAudience": {
+    "title": "Dla kogo jest PoC?",
+    "startups": {
+      "title": "Startupy",
+      "description": "które potrzebują MVP do prezentacji inwestorom"
+    },
+    "entrepreneurs": {
+      "title": "Przedsiębiorcy",
+      "description": "testujący nowe pomysły biznesowe"
+    },
+    "companies": {
+      "title": "Firmy",
+      "description": "chcące szybko zweryfikować nową funkcjonalność"
+    },
+    "innovators": {
+      "title": "Innowatorzy",
+      "description": "potrzebujący szybkiego prototypu do prezentacji"
+    }
+  },
+  "cta": {
+    "title": "Zacznij już dziś",
+    "description": "Nie trać czasu na długie procesy rozwojowe. Zamień swój pomysł w działający produkt w godzinę i zacznij zbierać feedback od prawdziwych użytkowników.",
+    "buttonForm": "Wypełnij Formularz PoC",
+    "buttonContact": "Skontaktuj się z nami"
+  }
+}
