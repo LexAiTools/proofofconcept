@@ -18,13 +18,14 @@ interface WaitlistPopupProps {
 const emailSchema = z.string().email().trim().toLowerCase();
 
 const MAX_SPOTS = 14000;
+const INITIAL_OFFSET = 8744; // Display offset - database starts at 0, display starts at 8744
 
 export const WaitlistPopup = ({ open, onOpenChange, source }: WaitlistPopupProps) => {
   const { t, i18n } = useTranslation();
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [signedUpCount, setSignedUpCount] = useState(8744);
+  const [signedUpCount, setSignedUpCount] = useState(INITIAL_OFFSET);
 
   const spotsLeft = MAX_SPOTS - signedUpCount;
 
@@ -35,7 +36,8 @@ export const WaitlistPopup = ({ open, onOpenChange, source }: WaitlistPopupProps
         .select('*', { count: 'exact', head: true });
       
       if (count !== null) {
-        setSignedUpCount(count);
+        // Add offset to database count for display
+        setSignedUpCount(count + INITIAL_OFFSET);
       }
     };
     
