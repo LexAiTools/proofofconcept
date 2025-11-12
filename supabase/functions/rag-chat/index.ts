@@ -9,32 +9,61 @@ const corsHeaders = {
 
 const SYSTEM_PROMPT = `You are an intelligent assistant for Proof of Concepts, a platform for rapid MVP development. 
 
-  "strategy_points": {
-    "knowledge_base": "Answer EXCLUSIVELY based on the provided knowledge base",
-    "be_helpful": "Be helpful, professional, and enthusiastic",
-    "intrigue_educate": "Instead of directly selling, INTRIGUE and EDUCATE",
-    "guide_conversation": "Subtly guide the conversation towards the value that Proof of Concepts offers",
-    "identify_needs": "Identify customer needs through questions",
-    "propose_contact": "At the right moment (when the user shows interest) propose contact and registration with us",
-    "ask_contact_info": "Ask for email address or messenger they use, Telegram or other"
+LANGUAGE HANDLING:
+- Automatically detect the language of the user's first message and respond in that language
+- Maintain the same language throughout the entire conversation
+- Primary support for Polish and English, but adapt to any language the user uses
+- Respond naturally in the detected language - don't mention that you detected the language
+
+STRATEGY:
+- Answer EXCLUSIVELY based on the provided knowledge base
+- Be helpful, professional, and enthusiastic
+- Instead of directly selling, INTRIGUE and EDUCATE
+- Subtly guide the conversation towards the value that Proof of Concepts offers
+- Identify customer needs through questions
+- At the right moment (when the user shows interest) propose contact and registration with us
+- Ask for email address or messenger they use, Telegram or other
+
+WHEN TO ENCOURAGE CONTACT:
+- When user asks about specific services or pricing
+- When they describe their idea/project
+- When they ask 'how to start' or 'what next'
+- When they show interest in specific solutions
+
+COMMUNICATION STYLE:
+- Be friendly and natural
+- Avoid overly salesy phrases
+- Show expertise through valuable answers
+- Ask open questions that deepen the conversation
+
+NEVER make up information - if you don't have the answer in the knowledge base, simply say you don't have that information and propose contact with the team.`;
+
+// Language detection function
+function detectLanguage(text: string): string {
+  // Polish specific characters
+  const polishChars = /[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/;
+  
+  // Common Polish words
+  const polishWords = /\b(jak|co|czy|jest|w|z|na|do|i|że|się|nie|aby|który|która|które|kiedy|gdzie|dlaczego|potrzebuję|chcę|mogę|jestem)\b/i;
+  
+  if (polishChars.test(text) || polishWords.test(text)) {
+    return 'pl';
+  }
+  
+  return 'en'; // Default to English
+}
+
+// Error messages in multiple languages
+const ERROR_MESSAGES = {
+  rate_limit: {
+    pl: 'Limit zapytań przekroczony. Spróbuj ponownie za chwilę.',
+    en: 'Rate limit exceeded. Please try again in a moment.'
   },
-  "when_to_encourage_contact": "GUIDELINES WHEN TO ENCOURAGE CONTACT:",
-  "contact_triggers": {
-    "services_pricing": "When user asks about specific services or pricing",
-    "describes_project": "When they describe their idea/project",
-    "asks_next_steps": "When they ask 'how to start' or 'what next'",
-    "shows_interest": "When they show interest in specific solutions"
-  },
-  "communication_style": "COMMUNICATION STYLE:",
-  "style_points": {
-    "use_english": "Use English language in chat communication",
-    "detect_language": "If the user asks in a language other than English, recognize which language it is and communicate in that language",
-    "be_friendly": "Be friendly and natural",
-    "avoid_sales": "Avoid overly salesy phrases",
-    "show_expertise": "Show expertise through valuable answers",
-    "ask_open_questions": "Ask open questions that deepen the conversation"
-  },
-  "never_fabricate": "NEVER make up information - if you don't have the answer in the knowledge base, simply say you don't have that information and propose contact with the team.";
+  payment_required: {
+    pl: 'Brak środków w koncie AI. Skontaktuj się z administratorem.',
+    en: 'AI credits exhausted. Please contact the administrator.'
+  }
+};
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -69,9 +98,23 @@ serve(async (req) => {
       ? knowledgeData.map(item => `${item.title}: ${item.content}`).join('\n\n')
       : '';
 
-    // 2. Get conversation history if conversationId exists
+    // 2. Get conversation history and metadata if conversationId exists
     let conversationHistory: any[] = [];
+    let conversationLanguage = 'en';
+    
     if (conversationId) {
+      // Get conversation metadata
+      const { data: conversation } = await supabase
+        .from('chat_conversations')
+        .select('metadata')
+        .eq('id', conversationId)
+        .single();
+      
+      if (conversation?.metadata?.language) {
+        conversationLanguage = conversation.metadata.language;
+      }
+      
+      // Get messages
       const { data: messages } = await supabase
         .from('chat_messages')
         .select('role, content')
@@ -84,13 +127,19 @@ serve(async (req) => {
       }
     }
 
-    // 3. Create new conversation if needed
+    // 3. Create new conversation if needed and detect language
     let finalConversationId = conversationId;
     if (!finalConversationId) {
+      // Detect language from first user message
+      conversationLanguage = detectLanguage(message);
+      
       const { data: newConv, error: convError } = await supabase
         .from('chat_conversations')
         .insert({
-          metadata: { started_at: new Date().toISOString() }
+          metadata: { 
+            started_at: new Date().toISOString(),
+            language: conversationLanguage
+          }
         })
         .select('id')
         .single();
@@ -113,11 +162,15 @@ serve(async (req) => {
         });
     }
 
-    // 5. Build messages for AI
+    // 5. Build messages for AI with language context
+    const languageContext = conversationLanguage === 'pl' 
+      ? '\n\nIMPORTANT: This conversation is in POLISH. Continue responding in Polish.'
+      : '\n\nIMPORTANT: This conversation is in ENGLISH. Continue responding in English.';
+    
     const messages = [
       { 
         role: 'system', 
-        content: `${SYSTEM_PROMPT}\n\nBAZA WIEDZY:\n${context}` 
+        content: `${SYSTEM_PROMPT}${languageContext}\n\nBAZA WIEDZY:\n${context}` 
       },
       ...conversationHistory,
       { role: 'user', content: message }
@@ -144,14 +197,14 @@ serve(async (req) => {
       
       if (response.status === 429) {
         return new Response(
-          JSON.stringify({ error: 'Limit zapytań przekroczony. Spróbuj ponownie za chwilę.' }),
+          JSON.stringify({ error: ERROR_MESSAGES.rate_limit[conversationLanguage as 'pl' | 'en'] || ERROR_MESSAGES.rate_limit.en }),
           { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
       
       if (response.status === 402) {
         return new Response(
-          JSON.stringify({ error: 'Brak środków w koncie AI. Skontaktuj się z administratorem.' }),
+          JSON.stringify({ error: ERROR_MESSAGES.payment_required[conversationLanguage as 'pl' | 'en'] || ERROR_MESSAGES.payment_required.en }),
           { status: 402, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
