@@ -288,31 +288,60 @@ serve(async (req) => {
       async start(controller) {
         const reader = response.body!.getReader();
         const decoder = new TextDecoder();
+        let textBuffer = ''; // Buffer for incomplete lines
 
         try {
           while (true) {
             const { done, value } = await reader.read();
             if (done) break;
 
-            const chunk = decoder.decode(value);
-            const lines = chunk.split('\n');
+            textBuffer += decoder.decode(value, { stream: true });
 
-            for (const line of lines) {
-              if (line.startsWith('data: ')) {
-                const data = line.slice(6);
-                if (data === '[DONE]') continue;
+            // Process only complete lines
+            let newlineIndex: number;
+            while ((newlineIndex = textBuffer.indexOf('\n')) !== -1) {
+              let line = textBuffer.slice(0, newlineIndex);
+              textBuffer = textBuffer.slice(newlineIndex + 1);
 
-                try {
-                  const parsed = JSON.parse(data);
-                  const content = parsed.choices?.[0]?.delta?.content;
-                  
-                  if (content) {
-                    fullResponse += content;
-                    controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content, conversationId: finalConversationId })}\n\n`));
-                  }
-                } catch (e) {
-                  // Skip invalid JSON
+              if (line.endsWith('\r')) line = line.slice(0, -1); // Handle CRLF
+              if (line.startsWith(':') || line.trim() === '') continue; // SSE comments
+              if (!line.startsWith('data: ')) continue;
+
+              const data = line.slice(6).trim();
+              if (data === '[DONE]') continue;
+
+              try {
+                const parsed = JSON.parse(data);
+                const content = parsed.choices?.[0]?.delta?.content;
+                
+                if (content) {
+                  fullResponse += content;
+                  controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content, conversationId: finalConversationId })}\n\n`));
                 }
+              } catch (e) {
+                console.error('Failed to parse JSON:', data, e);
+              }
+            }
+          }
+
+          // Final flush buffer
+          if (textBuffer.trim()) {
+            for (let raw of textBuffer.split('\n')) {
+              if (!raw) continue;
+              if (raw.endsWith('\r')) raw = raw.slice(0, -1);
+              if (raw.startsWith(':') || raw.trim() === '') continue;
+              if (!raw.startsWith('data: ')) continue;
+              const data = raw.slice(6).trim();
+              if (data === '[DONE]') continue;
+              try {
+                const parsed = JSON.parse(data);
+                const content = parsed.choices?.[0]?.delta?.content;
+                if (content) {
+                  fullResponse += content;
+                  controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content, conversationId: finalConversationId })}\n\n`));
+                }
+              } catch (e) {
+                // Ignore partial leftovers
               }
             }
           }

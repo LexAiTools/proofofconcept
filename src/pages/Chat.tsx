@@ -92,38 +92,77 @@ export default function Chat() {
         // Add empty assistant message to start streaming
         setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
 
+        let textBuffer = ''; // Buffer for incomplete lines
+
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
 
-          const chunk = decoder.decode(value);
-          const lines = chunk.split('\n');
+          textBuffer += decoder.decode(value, { stream: true });
 
-          for (const line of lines) {
-            if (line.startsWith('data: ')) {
-              const data = line.slice(6);
-              if (data === '[DONE]') continue;
+          // Process only complete lines
+          let newlineIndex: number;
+          while ((newlineIndex = textBuffer.indexOf('\n')) !== -1) {
+            let line = textBuffer.slice(0, newlineIndex);
+            textBuffer = textBuffer.slice(newlineIndex + 1);
 
-              try {
-                const parsed = JSON.parse(data);
-                if (parsed.content) {
-                  assistantMessage += parsed.content;
-                  // Update last message with accumulated content
-                  setMessages(prev => {
-                    const newMessages = [...prev];
-                    newMessages[newMessages.length - 1] = {
-                      role: 'assistant',
-                      content: assistantMessage,
-                    };
-                    return newMessages;
-                  });
-                }
-                if (parsed.conversationId && !conversationId) {
-                  setConversationId(parsed.conversationId);
-                }
-              } catch (e) {
-                // Skip invalid JSON
+            if (line.endsWith('\r')) line = line.slice(0, -1); // Handle CRLF
+            if (line.startsWith(':') || line.trim() === '') continue; // SSE comments
+            if (!line.startsWith('data: ')) continue;
+
+            const data = line.slice(6).trim();
+            if (data === '[DONE]') continue;
+
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.content) {
+                assistantMessage += parsed.content;
+                // Update last message with accumulated content
+                setMessages(prev => {
+                  const newMessages = [...prev];
+                  newMessages[newMessages.length - 1] = {
+                    role: 'assistant',
+                    content: assistantMessage,
+                  };
+                  return newMessages;
+                });
               }
+              if (parsed.conversationId && !conversationId) {
+                setConversationId(parsed.conversationId);
+              }
+            } catch (e) {
+              console.error('Failed to parse JSON:', data, e);
+            }
+          }
+        }
+
+        // Final flush buffer
+        if (textBuffer.trim()) {
+          for (let raw of textBuffer.split('\n')) {
+            if (!raw) continue;
+            if (raw.endsWith('\r')) raw = raw.slice(0, -1);
+            if (raw.startsWith(':') || raw.trim() === '') continue;
+            if (!raw.startsWith('data: ')) continue;
+            const data = raw.slice(6).trim();
+            if (data === '[DONE]') continue;
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.content) {
+                assistantMessage += parsed.content;
+                setMessages(prev => {
+                  const newMessages = [...prev];
+                  newMessages[newMessages.length - 1] = {
+                    role: 'assistant',
+                    content: assistantMessage,
+                  };
+                  return newMessages;
+                });
+              }
+              if (parsed.conversationId && !conversationId) {
+                setConversationId(parsed.conversationId);
+              }
+            } catch (e) {
+              // Ignore partial leftovers
             }
           }
         }
