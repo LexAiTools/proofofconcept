@@ -16,20 +16,32 @@ interface DateSelectorProps {
   showBackButton: boolean;
 }
 
-// Mock available dates - you can replace this with API data
-const availableDates = [
-  new Date(2025, 8, 25), // September 25, 2025
-  new Date(2025, 8, 26), // September 26, 2025
-  new Date(2025, 8, 27), // September 27, 2025
-  new Date(2025, 8, 30), // September 30, 2025
-  new Date(2025, 9, 1),  // October 1, 2025
-  new Date(2025, 9, 2),  // October 2, 2025
-  new Date(2025, 9, 3),  // October 3, 2025
-];
+// Generate available dates dynamically (next 60 days, excluding weekends)
+const generateAvailableDates = () => {
+  const dates = [];
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  
+  for (let i = 0; i < 60; i++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() + i);
+    
+    // Exclude weekends (Saturday = 6, Sunday = 0)
+    if (date.getDay() !== 0 && date.getDay() !== 6) {
+      dates.push(date);
+    }
+  }
+  
+  return dates;
+};
+
+const availableDates = generateAvailableDates();
 
 export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorProps) => {
   const { t } = useTranslation('forms');
-  const [selectedDate, setSelectedDate] = useState<Date>();
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const [selectedDate, setSelectedDate] = useState<Date>(today);
 
   const isDateAvailable = (date: Date) => {
     return availableDates.some(availableDate => 
@@ -61,6 +73,7 @@ export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorP
             mode="single"
             selected={selectedDate}
             onSelect={setSelectedDate}
+            defaultMonth={new Date()}
             disabled={(date) => {
               const today = new Date();
               today.setHours(0, 0, 0, 0);
