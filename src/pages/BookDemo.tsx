@@ -9,8 +9,10 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { DocumentsSection } from "@/components/documents/DocumentsSection";
+import { useTranslation } from "react-i18next";
 
 const BookDemo = () => {
+  const { t } = useTranslation(['bookDemo', 'common']);
   const [formData, setFormData] = useState({
     source: '',
     email: '',
@@ -33,7 +35,7 @@ const BookDemo = () => {
 
       if (error) throw error;
 
-      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+      toast.success(t('bookDemo:messages.success'));
       setFormData({
         source: '',
         email: '',
@@ -42,7 +44,7 @@ const BookDemo = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Wystąpił błąd. Spróbuj ponownie.");
+      toast.error(t('bookDemo:messages.error'));
     }
   };
 
@@ -55,19 +57,19 @@ const BookDemo = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Experience Our AI <span className="text-primary">WordPress Plugin</span>
+              {t('bookDemo:hero.title')} <span className="text-primary">{t('bookDemo:hero.titleHighlight')}</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Transform your WordPress site with our powerful AI assistant. Download, install, and start using advanced AI capabilities in minutes.
+              {t('bookDemo:hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" className="group">
                 <Download className="w-5 h-5 mr-2" />
-                Download Plugin
+                {t('bookDemo:hero.downloadButton')}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="glass" size="xl">
-                View Documentation
+                {t('bookDemo:hero.documentationButton')}
               </Button>
             </div>
           </div>
@@ -79,10 +81,10 @@ const BookDemo = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              WordPress Plugin Features
+              {t('bookDemo:features.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our NestAI WordPress plugin brings enterprise-grade AI capabilities directly to your website with easy setup and powerful features.
+              {t('bookDemo:features.subtitle')}
             </p>
           </div>
 
@@ -90,25 +92,19 @@ const BookDemo = () => {
             <Card className="border-border bg-card">
               <CardHeader>
                 <Settings className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Integration Settings</CardTitle>
+                <CardTitle>{t('bookDemo:features.integration.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Configure your AI assistant with custom settings including system name, API key integration, and response style preferences.
+                  {t('bookDemo:features.integration.description')}
                 </p>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
-                    Custom assistant name
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
-                    Secure API key management
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
-                    Response style customization
-                  </li>
+                  {(t('bookDemo:features.integration.items', { returnObjects: true }) as string[]).map((item, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-primary" />
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
@@ -116,30 +112,30 @@ const BookDemo = () => {
             <Card className="border-border bg-card">
               <CardHeader>
                 <CreditCard className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Credit Management</CardTitle>
+                <CardTitle>{t('bookDemo:features.credits.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Monitor your AI usage with real-time credit tracking and flexible top-up packages to suit your needs.
+                  {t('bookDemo:features.credits.description')}
                 </p>
                 <div className="space-y-2 mb-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-primary">0.00</span>
-                    <Badge variant="secondary">Available Credits</Badge>
+                    <Badge variant="secondary">{t('bookDemo:features.credits.available')}</Badge>
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-xs">
                   <div className="text-center p-2 bg-muted rounded">
                     <div className="font-semibold">10</div>
-                    <div>credits</div>
+                    <div>{t('bookDemo:features.credits.credits')}</div>
                   </div>
                   <div className="text-center p-2 bg-muted rounded">
                     <div className="font-semibold">50</div>
-                    <div>credits</div>
+                    <div>{t('bookDemo:features.credits.credits')}</div>
                   </div>
                   <div className="text-center p-2 bg-muted rounded">
                     <div className="font-semibold">100</div>
-                    <div>credits</div>
+                    <div>{t('bookDemo:features.credits.credits')}</div>
                   </div>
                 </div>
               </CardContent>
@@ -148,25 +144,19 @@ const BookDemo = () => {
             <Card className="border-border bg-card">
               <CardHeader>
                 <Database className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Knowledge Base RAG</CardTitle>
+                <CardTitle>{t('bookDemo:features.knowledgeBase.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Upload and manage your knowledge base with support for multiple file formats and intelligent document processing.
+                  {t('bookDemo:features.knowledgeBase.description')}
                 </p>
                 <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
-                    PDF, TXT, CSV, DOCX, XLSX
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
-                    Drag & drop upload
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-primary" />
-                    WordPress data integration
-                  </div>
+                  {(t('bookDemo:features.knowledgeBase.items', { returnObjects: true }) as string[]).map((item, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-primary" />
+                      {item}
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
@@ -179,41 +169,21 @@ const BookDemo = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
-              Easy Installation Process
+              {t('bookDemo:installation.title')}
             </h2>
             
             <div className="space-y-8">
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Download the Plugin</h3>
-                  <p className="text-muted-foreground">Download the NestAI WordPress plugin from our secure server. The plugin is regularly updated with new features and security improvements.</p>
+              {(t('bookDemo:installation.steps', { returnObjects: true }) as Array<{title: string, description: string}>).map((step, index) => (
+                <div key={index} className="flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground">{step.description}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Install in WordPress</h3>
-                  <p className="text-muted-foreground">Upload the plugin through your WordPress admin panel or via FTP. Activate it with one click and access the configuration panel.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Configure Your AI</h3>
-                  <p className="text-muted-foreground">Set up your AI assistant name, add your API key, and customize the response style to match your brand voice and requirements.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Start Using AI</h3>
-                  <p className="text-muted-foreground">Begin leveraging AI capabilities immediately. Upload documents to your knowledge base and start providing intelligent responses to your users.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -228,10 +198,10 @@ const BookDemo = () => {
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Start Using AI in Your <span className="text-primary">Content Today</span>
+                {t('bookDemo:demoForm.title')} <span className="text-primary">{t('bookDemo:demoForm.titleHighlight')}</span>
               </h2>
               <p className="text-xl text-muted-foreground">
-                Request a personalized demo and see how our AI can transform your WordPress site with intelligent content generation and user interactions.
+                {t('bookDemo:demoForm.subtitle')}
               </p>
             </div>
 
@@ -240,10 +210,10 @@ const BookDemo = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      What data sources do you want to use? *
+                      {t('bookDemo:demoForm.fields.dataSources.label')} *
                     </label>
                     <Textarea
-                      placeholder="Documentation, help center, reports, wiki etc."
+                      placeholder={t('bookDemo:demoForm.fields.dataSources.placeholder')}
                       value={formData.source}
                       onChange={(e) => setFormData({...formData, source: e.target.value})}
                       className="min-h-[100px]"
@@ -253,11 +223,11 @@ const BookDemo = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Business email address *
+                      {t('bookDemo:demoForm.fields.email.label')} *
                     </label>
                     <Input
                       type="email"
-                      placeholder="Your business email address"
+                      placeholder={t('bookDemo:demoForm.fields.email.placeholder')}
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
                       required
@@ -266,11 +236,11 @@ const BookDemo = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Company name
+                      {t('bookDemo:demoForm.fields.company.label')}
                     </label>
                     <Input
                       type="text"
-                      placeholder="Your company name"
+                      placeholder={t('bookDemo:demoForm.fields.company.placeholder')}
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
                     />
@@ -278,10 +248,10 @@ const BookDemo = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Additional requirements
+                      {t('bookDemo:demoForm.fields.requirements.label')}
                     </label>
                     <Textarea
-                      placeholder="Tell us about your specific needs and use cases..."
+                      placeholder={t('bookDemo:demoForm.fields.requirements.placeholder')}
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       className="min-h-[100px]"
@@ -289,30 +259,24 @@ const BookDemo = () => {
                   </div>
 
                   <Button type="submit" variant="hero" size="xl" className="w-full">
-                    Request Demo & Proof-of-Concept
+                    {t('bookDemo:demoForm.submit')}
                   </Button>
 
                   <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      7-day free trial
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      Full content access
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Shield className="w-4 h-4 text-primary" />
-                      SOC II compliant
-                    </div>
+                    {(t('bookDemo:demoForm.benefits', { returnObjects: true }) as string[]).map((benefit, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        {index === 2 ? <Shield className="w-4 h-4 text-primary" /> : <Check className="w-4 h-4 text-primary" />}
+                        {benefit}
+                      </div>
+                    ))}
                   </div>
                 </form>
               </CardContent>
             </Card>
 
             <p className="text-center text-sm text-muted-foreground mt-6">
-              By clicking "Request Demo", you agree to the processing of your data in accordance with our{" "}
-              <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a> for marketing purposes.
+              {t('bookDemo:demoForm.privacy.text')}{" "}
+              <a href="/privacy" className="text-primary hover:underline">{t('bookDemo:demoForm.privacy.link')}</a> {t('bookDemo:demoForm.privacy.suffix')}
             </p>
           </div>
         </div>

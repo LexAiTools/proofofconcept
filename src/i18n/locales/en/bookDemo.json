@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "title": "Experience Our AI",
+    "titleHighlight": "WordPress Plugin",
+    "subtitle": "Transform your WordPress site with our powerful AI assistant. Download, install, and start using advanced AI capabilities in minutes.",
+    "downloadButton": "Download Plugin",
+    "documentationButton": "View Documentation"
+  },
+  "features": {
+    "title": "WordPress Plugin Features",
+    "subtitle": "Our NestAI WordPress plugin brings enterprise-grade AI capabilities directly to your website with easy setup and powerful features.",
+    "integration": {
+      "title": "Integration Settings",
+      "description": "Configure your AI assistant with custom settings including system name, API key integration, and response style preferences.",
+      "items": [
+        "Custom assistant name",
+        "Secure API key management",
+        "Response style customization"
+      ]
+    },
+    "credits": {
+      "title": "Credit Management",
+      "description": "Monitor your AI usage with real-time credit tracking and flexible top-up packages to suit your needs.",
+      "available": "Available Credits",
+      "credits": "credits"
+    },
+    "knowledgeBase": {
+      "title": "Knowledge Base RAG",
+      "description": "Upload and manage your knowledge base with support for multiple file formats and intelligent document processing.",
+      "items": [
+        "PDF, TXT, CSV, DOCX, XLSX",
+        "Drag & drop upload",
+        "WordPress data integration"
+      ]
+    }
+  },
+  "installation": {
+    "title": "Easy Installation Process",
+    "steps": [
+      {
+        "title": "Download the Plugin",
+        "description": "Download the NestAI WordPress plugin from our secure server. The plugin is regularly updated with new features and security improvements."
+      },
+      {
+        "title": "Install in WordPress",
+        "description": "Upload the plugin through your WordPress admin panel or via FTP. Activate it with one click and access the configuration panel."
+      },
+      {
+        "title": "Configure Your AI",
+        "description": "Set up your AI assistant name, add your API key, and customize the response style to match your brand voice and requirements."
+      },
+      {
+        "title": "Start Using AI",
+        "description": "Begin leveraging AI capabilities immediately. Upload documents to your knowledge base and start providing intelligent responses to your users."
+      }
+    ]
+  },
+  "demoForm": {
+    "title": "Start Using AI in Your",
+    "titleHighlight": "Content Today",
+    "subtitle": "Request a personalized demo and see how our AI can transform your WordPress site with intelligent content generation and user interactions.",
+    "fields": {
+      "dataSources": {
+        "label": "What data sources do you want to use?",
+        "placeholder": "Documentation, help center, reports, wiki etc."
+      },
+      "email": {
+        "label": "Business email address",
+        "placeholder": "Your business email address"
+      },
+      "company": {
+        "label": "Company name",
+        "placeholder": "Your company name"
+      },
+      "requirements": {
+        "label": "Additional requirements",
+        "placeholder": "Tell us about your specific needs and use cases..."
+      }
+    },
+    "submit": "Request Demo & Proof-of-Concept",
+    "benefits": [
+      "7-day free trial",
+      "Full content access",
+      "SOC II compliant"
+    ],
+    "privacy": {
+      "text": "By clicking \"Request Demo\", you agree to the processing of your data in accordance with our",
+      "link": "Privacy Policy",
+      "suffix": "for marketing purposes."
+    }
+  },
+  "messages": {
+    "success": "Thank you! We will contact you shortly.",
+    "error": "An error occurred. Please try again."
+  }
+}

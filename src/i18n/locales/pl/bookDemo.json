@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "title": "Poznaj naszą wtyczkę AI dla",
+    "titleHighlight": "WordPress",
+    "subtitle": "Przekształć swoją stronę WordPress dzięki naszemu potężnemu asystentowi AI. Pobierz, zainstaluj i zacznij korzystać z zaawansowanych możliwości AI w kilka minut.",
+    "downloadButton": "Pobierz wtyczkę",
+    "documentationButton": "Zobacz dokumentację"
+  },
+  "features": {
+    "title": "Funkcje wtyczki WordPress",
+    "subtitle": "Nasza wtyczka NestAI WordPress przynosi możliwości AI klasy korporacyjnej bezpośrednio na Twoją stronę internetową z łatwą konfiguracją i potężnymi funkcjami.",
+    "integration": {
+      "title": "Ustawienia integracji",
+      "description": "Skonfiguruj swojego asystenta AI za pomocą niestandardowych ustawień, w tym nazwy systemu, integracji klucza API i preferencji stylu odpowiedzi.",
+      "items": [
+        "Niestandardowa nazwa asystenta",
+        "Bezpieczne zarządzanie kluczem API",
+        "Dostosowanie stylu odpowiedzi"
+      ]
+    },
+    "credits": {
+      "title": "Zarządzanie kredytami",
+      "description": "Monitoruj swoje wykorzystanie AI dzięki śledzeniu kredytów w czasie rzeczywistym i elastycznym pakietom doładowań dostosowanym do Twoich potrzeb.",
+      "available": "Dostępne kredyty",
+      "credits": "kredyty"
+    },
+    "knowledgeBase": {
+      "title": "Baza wiedzy RAG",
+      "description": "Przesyłaj i zarządzaj swoją bazą wiedzy z obsługą wielu formatów plików i inteligentnym przetwarzaniem dokumentów.",
+      "items": [
+        "PDF, TXT, CSV, DOCX, XLSX",
+        "Przesyłanie metodą przeciągnij i upuść",
+        "Integracja danych WordPress"
+      ]
+    }
+  },
+  "installation": {
+    "title": "Łatwy proces instalacji",
+    "steps": [
+      {
+        "title": "Pobierz wtyczkę",
+        "description": "Pobierz wtyczkę NestAI WordPress z naszego bezpiecznego serwera. Wtyczka jest regularnie aktualizowana o nowe funkcje i ulepszenia bezpieczeństwa."
+      },
+      {
+        "title": "Zainstaluj w WordPress",
+        "description": "Prześlij wtyczkę przez panel administratora WordPress lub przez FTP. Aktywuj ją jednym kliknięciem i uzyskaj dostęp do panelu konfiguracji."
+      },
+      {
+        "title": "Skonfiguruj swojego AI",
+        "description": "Ustaw nazwę asystenta AI, dodaj swój klucz API i dostosuj styl odpowiedzi, aby pasował do głosu marki i wymagań."
+      },
+      {
+        "title": "Zacznij używać AI",
+        "description": "Zacznij natychmiast korzystać z możliwości AI. Prześlij dokumenty do swojej bazy wiedzy i zacznij dostarczać inteligentne odpowiedzi swoim użytkownikom."
+      }
+    ]
+  },
+  "demoForm": {
+    "title": "Zacznij używać AI w swojej",
+    "titleHighlight": "treści już dziś",
+    "subtitle": "Poproś o spersonalizowane demo i zobacz, jak nasze AI może przekształcić Twoją stronę WordPress dzięki inteligentnemu generowaniu treści i interakcjom użytkowników.",
+    "fields": {
+      "dataSources": {
+        "label": "Jakie źródła danych chcesz używać?",
+        "placeholder": "Dokumentacja, centrum pomocy, raporty, wiki itp."
+      },
+      "email": {
+        "label": "Służbowy adres e-mail",
+        "placeholder": "Twój służbowy adres e-mail"
+      },
+      "company": {
+        "label": "Nazwa firmy",
+        "placeholder": "Nazwa Twojej firmy"
+      },
+      "requirements": {
+        "label": "Dodatkowe wymagania",
+        "placeholder": "Opowiedz nam o swoich konkretnych potrzebach i przypadkach użycia..."
+      }
+    },
+    "submit": "Zapytaj o demo i proof-of-concept",
+    "benefits": [
+      "7-dniowy bezpłatny okres próbny",
+      "Pełny dostęp do treści",
+      "Zgodność z SOC II"
+    ],
+    "privacy": {
+      "text": "Klikając \"Zapytaj o demo\", wyrażasz zgodę na przetwarzanie Twoich danych zgodnie z naszą",
+      "link": "Polityką prywatności",
+      "suffix": "w celach marketingowych."
+    }
+  },
+  "messages": {
+    "success": "Dziękujemy! Skontaktujemy się z Tobą wkrótce.",
+    "error": "Wystąpił błąd. Spróbuj ponownie."
+  }
+}
