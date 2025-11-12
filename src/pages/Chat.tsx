@@ -8,6 +8,7 @@ import { Header } from '@/components/Header';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { toast } from 'sonner';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -15,6 +16,7 @@ interface Message {
 }
 
 export default function Chat() {
+  const { t } = useTranslation('chat');
   const location = useLocation();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -126,7 +128,7 @@ export default function Chat() {
       }
     } catch (error) {
       console.error('Chat error:', error);
-      toast.error(error instanceof Error ? error.message : 'Wystąpił błąd');
+      toast.error(error instanceof Error ? error.message : t('errors.general'));
       // Remove the empty assistant message if streaming failed
       setMessages(prev => prev.filter(m => m.content !== ''));
     } finally {
@@ -154,11 +156,10 @@ export default function Chat() {
                 <MessageSquare className="w-16 h-16 text-primary" />
               </div>
               <h1 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                Porozmawiaj z naszym asystentem
+                {t('welcome.title')}
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl">
-                Zapytaj o nasze usługi, technologie, proces współpracy lub cennik.
-                Pomożemy Ci zrozumieć jak możemy wspólnie zrealizować Twój projekt MVP.
+                {t('welcome.description')}
               </p>
             </div>
           ) : (
@@ -217,7 +218,7 @@ export default function Chat() {
                   adjustHeight();
                 }}
                 onKeyDown={handleKeyDown}
-                placeholder="Wpisz swoją wiadomość..."
+                placeholder={t('input.placeholder')}
                 className={cn(
                   'w-full resize-none rounded-t-3xl border-none bg-transparent',
                   'py-4 pr-14 pl-6 text-base leading-relaxed',
@@ -250,41 +251,41 @@ export default function Chat() {
                 type="button"
                 variant="ghost"
                 size="sm"
-                onClick={() => handleSubmit(undefined, "Potrzebuję aplikację MVP, jak mogę zacząć?")}
+                onClick={() => handleSubmit(undefined, t('quickActions.needApp.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
                 <Lightbulb className="h-4 w-4" />
-                <span className="text-sm">Potrzebuję aplikację</span>
+                <span className="text-sm">{t('quickActions.needApp.label')}</span>
               </Button>
               <Button
                 type="button"
                 variant="ghost"
                 size="sm"
-                onClick={() => handleSubmit(undefined, "Jakie technologie używacie do tworzenia aplikacji?")}
+                onClick={() => handleSubmit(undefined, t('quickActions.technologies.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
                 <Settings className="h-4 w-4" />
-                <span className="text-sm">Jakie technologie?</span>
+                <span className="text-sm">{t('quickActions.technologies.label')}</span>
               </Button>
               <Button
                 type="button"
                 variant="ghost"
                 size="sm"
-                onClick={() => handleSubmit(undefined, "Ile kosztuje stworzenie aplikacji MVP?")}
+                onClick={() => handleSubmit(undefined, t('quickActions.pricing.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
                 <DollarSign className="h-4 w-4" />
-                <span className="text-sm">Ile to kosztuje?</span>
+                <span className="text-sm">{t('quickActions.pricing.label')}</span>
               </Button>
               <Button
                 type="button"
                 variant="ghost"
                 size="sm"
-                onClick={() => handleSubmit(undefined, "Jak długo trwa stworzenie aplikacji MVP?")}
+                onClick={() => handleSubmit(undefined, t('quickActions.timeline.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               >
                 <Clock className="h-4 w-4" />
-                <span className="text-sm">Jak długo trwa?</span>
+                <span className="text-sm">{t('quickActions.timeline.label')}</span>
               </Button>
             </div>
           </div>

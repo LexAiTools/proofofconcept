@@ -1,0 +1,30 @@
+{
+  "welcome": {
+    "title": "Porozmawiaj z naszym asystentem",
+    "description": "Zapytaj o nasze usługi, technologie, proces współpracy lub cennik. Pomożemy Ci zrozumieć jak możemy wspólnie zrealizować Twój projekt MVP."
+  },
+  "input": {
+    "placeholder": "Wpisz swoją wiadomość..."
+  },
+  "quickActions": {
+    "needApp": {
+      "message": "Potrzebuję aplikację MVP, jak mogę zacząć?",
+      "label": "Potrzebuję aplikację"
+    },
+    "technologies": {
+      "message": "Jakie technologie używacie do tworzenia aplikacji?",
+      "label": "Jakie technologie?"
+    },
+    "pricing": {
+      "message": "Ile kosztuje stworzenie aplikacji MVP?",
+      "label": "Ile to kosztuje?"
+    },
+    "timeline": {
+      "message": "Jak długo trwa stworzenie aplikacji MVP?",
+      "label": "Jak długo trwa?"
+    }
+  },
+  "errors": {
+    "general": "Wystąpił błąd"
+  }
+}
