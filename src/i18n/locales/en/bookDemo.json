@@ -92,5 +92,31 @@
   "messages": {
     "success": "Thank you! We will contact you shortly.",
     "error": "An error occurred. Please try again."
+  },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "subtitle": "Get early access to our WordPress AI plugin",
+    "info": "Those who sign up will receive the plugin for free first. Limited spots available!",
+    "counter": {
+      "max": "Max",
+      "signedUp": "Signed up",
+      "spotsLeft": "spots left"
+    },
+    "form": {
+      "email": "Your email address",
+      "emailPlaceholder": "name@company.com",
+      "submit": "Join Waitlist",
+      "submitting": "Joining..."
+    },
+    "success": {
+      "title": "You're on the list! 🎉",
+      "message": "Thank you for joining our waitlist. We'll notify you as soon as the plugin is available.",
+      "reminder": "Check your inbox for confirmation."
+    },
+    "errors": {
+      "invalidEmail": "Please enter a valid email address",
+      "alreadyRegistered": "This email is already on the waitlist",
+      "failed": "Failed to join waitlist. Please try again."
+    }
   }
 }

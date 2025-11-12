@@ -92,5 +92,31 @@
   "messages": {
     "success": "Dziękujemy! Skontaktujemy się z Tobą wkrótce.",
     "error": "Wystąpił błąd. Spróbuj ponownie."
+  },
+  "waitlist": {
+    "title": "Dołącz do listy oczekujących",
+    "subtitle": "Uzyskaj wczesny dostęp do naszej wtyczki AI dla WordPress",
+    "info": "Osoby, które się zapiszą, otrzymają wtyczkę za darmo w pierwszej kolejności. Liczba miejsc ograniczona!",
+    "counter": {
+      "max": "Maksymalnie",
+      "signedUp": "Zapisanych",
+      "spotsLeft": "wolnych miejsc"
+    },
+    "form": {
+      "email": "Twój adres e-mail",
+      "emailPlaceholder": "nazwa@firma.pl",
+      "submit": "Zapisz się na listę",
+      "submitting": "Zapisywanie..."
+    },
+    "success": {
+      "title": "Jesteś na liście! 🎉",
+      "message": "Dziękujemy za dołączenie do naszej listy oczekujących. Powiadomimy Cię, gdy tylko wtyczka będzie dostępna.",
+      "reminder": "Sprawdź swoją skrzynkę e-mail w celu potwierdzenia."
+    },
+    "errors": {
+      "invalidEmail": "Proszę podać prawidłowy adres e-mail",
+      "alreadyRegistered": "Ten adres e-mail jest już na liście oczekujących",
+      "failed": "Nie udało się dołączyć do listy. Spróbuj ponownie."
+    }
   }
 }

@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { DocumentsSection } from "@/components/documents/DocumentsSection";
 import { useTranslation } from "react-i18next";
+import { WaitlistPopup } from "@/components/WaitlistPopup";
 
 const BookDemo = () => {
   const { t } = useTranslation(['bookDemo', 'common']);
@@ -19,6 +20,8 @@ const BookDemo = () => {
     company: '',
     message: ''
   });
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+  const [waitlistSource, setWaitlistSource] = useState<'download' | 'documentation'>('download');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,12 +66,27 @@ const BookDemo = () => {
               {t('bookDemo:hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl" className="group">
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="group"
+                onClick={() => {
+                  setWaitlistSource('download');
+                  setWaitlistOpen(true);
+                }}
+              >
                 <Download className="w-5 h-5 mr-2" />
                 {t('bookDemo:hero.downloadButton')}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="glass" size="xl">
+              <Button 
+                variant="glass" 
+                size="xl"
+                onClick={() => {
+                  setWaitlistSource('documentation');
+                  setWaitlistOpen(true);
+                }}
+              >
                 {t('bookDemo:hero.documentationButton')}
               </Button>
             </div>
@@ -281,6 +299,12 @@ const BookDemo = () => {
           </div>
         </div>
       </section>
+
+      <WaitlistPopup 
+        open={waitlistOpen} 
+        onOpenChange={setWaitlistOpen}
+        source={waitlistSource}
+      />
     </div>
   );
 };
