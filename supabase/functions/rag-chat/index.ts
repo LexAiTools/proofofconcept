@@ -107,19 +107,38 @@ CONVERSATION GOALS:
 🎯 Secondary: Schedule demo
 🎯 Ultimate: Convert to paying customer`;
 
-// Language detection function
+// Language detection function - improved with better patterns
 function detectLanguage(text: string): string {
-  // Polish specific characters
+  // Polish specific characters - highest priority
   const polishChars = /[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/;
-  
-  // Common Polish words
-  const polishWords = /\b(jak|co|czy|jest|w|z|na|do|i|że|się|nie|aby|który|która|które|kiedy|gdzie|dlaczego|potrzebuję|chcę|mogę|jestem)\b/i;
-  
-  if (polishChars.test(text) || polishWords.test(text)) {
+  if (polishChars.test(text)) {
     return 'pl';
   }
   
-  return 'en'; // Default to English
+  // Common Polish words with higher specificity (3+ letters to avoid false positives)
+  const polishWords = /\b(jak|jest|może|mogę|jestem|chcę|potrzebuję|gdzie|kiedy|dlaczego|który|która|które|proszę|dziękuję|witam|cześć|jaki|jakie)\b/i;
+  
+  // Common English patterns
+  const englishWords = /\b(the|this|that|what|when|where|how|can|could|would|should|need|want|hello|thanks|please|which|help|price)\b/i;
+  
+  // Count matches
+  const polishMatches = (text.match(polishWords) || []).length;
+  const englishMatches = (text.match(englishWords) || []).length;
+  
+  if (polishMatches > englishMatches) {
+    return 'pl';
+  } else if (englishMatches > polishMatches) {
+    return 'en';
+  }
+  
+  // Default: check average word length (Polish words tend to be longer)
+  const words = text.split(/\s+/).filter(w => w.length > 0);
+  if (words.length > 0) {
+    const avgWordLength = words.reduce((sum, word) => sum + word.length, 0) / words.length;
+    return avgWordLength > 5 ? 'pl' : 'en';
+  }
+  
+  return 'en'; // Final default
 }
 
 // Error messages in multiple languages
@@ -196,11 +215,19 @@ serve(async (req) => {
       }
     }
 
-    // 3. Create new conversation if needed and detect language
+    // 3. Detect language from current message (always, not just on first message)
+    const detectedLanguage = detectLanguage(message);
+    
+    console.log('=== Language Detection ===');
+    console.log('User message:', message);
+    console.log('Detected language:', detectedLanguage);
+    console.log('Previous language:', conversationLanguage);
+    
+    // 4. Create new conversation if needed OR update language if changed
     let finalConversationId = conversationId;
     if (!finalConversationId) {
-      // Detect language from first user message
-      conversationLanguage = detectLanguage(message);
+      // New conversation - create with detected language
+      conversationLanguage = detectedLanguage;
       
       const { data: newConv, error: convError } = await supabase
         .from('chat_conversations')
@@ -218,7 +245,27 @@ serve(async (req) => {
       } else if (newConv) {
         finalConversationId = newConv.id;
       }
+    } else {
+      // Existing conversation - update language if it changed
+      if (detectedLanguage !== conversationLanguage) {
+        console.log(`Language switched from ${conversationLanguage} to ${detectedLanguage}`);
+        conversationLanguage = detectedLanguage;
+        
+        // Update conversation metadata with new language
+        await supabase
+          .from('chat_conversations')
+          .update({
+            metadata: {
+              language: conversationLanguage,
+              language_updated_at: new Date().toISOString()
+            }
+          })
+          .eq('id', conversationId);
+      }
     }
+    
+    console.log('Final language:', conversationLanguage);
+    console.log('========================');
 
     // 4. Save user message
     if (finalConversationId) {
@@ -231,10 +278,22 @@ serve(async (req) => {
         });
     }
 
-    // 5. Build messages for AI with language context
+    // 5. Build messages for AI with CRITICAL language context
     const languageContext = conversationLanguage === 'pl' 
-      ? '\n\nIMPORTANT: This conversation is in POLISH. Continue responding in Polish.'
-      : '\n\nIMPORTANT: This conversation is in ENGLISH. Continue responding in English.';
+      ? `\n\n🔴 CRITICAL LANGUAGE INSTRUCTION: 
+This conversation is in POLISH. You MUST respond ONLY in Polish language.
+Examples:
+- "Witaj! Jak mogę Ci pomóc?" NOT "Hello! How can I help you?"
+- "Nasz pakiet Single-Page MVP kosztuje 2500 PLN" NOT "Our Single-Page MVP package costs 2500 PLN"
+- Use Polish grammar, Polish words, Polish sentence structure.
+- If user switches to English, still respond in Polish unless explicitly asked to switch.`
+      : `\n\n🔴 CRITICAL LANGUAGE INSTRUCTION: 
+This conversation is in ENGLISH. You MUST respond ONLY in English language.
+Examples:
+- "Hello! How can I help you?" NOT "Witaj! Jak mogę Ci pomóc?"
+- "Our Single-Page MVP package costs ~580 EUR" NOT "Nasz pakiet kosztuje ~580 EUR"
+- Use English grammar, English words, English sentence structure.
+- If user switches to Polish, still respond in English unless explicitly asked to switch.`;
     
     const messages = [
       { 
