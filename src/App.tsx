@@ -20,6 +20,8 @@ import Admin from "./pages/Admin";
 import AdminPodcasts from "./pages/AdminPodcasts";
 import AdminDocuments from "./pages/AdminDocuments";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,8 @@ const App = () => (
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/podcasts" element={<AdminPodcasts />} />
           <Route path="/admin/documents" element={<AdminDocuments />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

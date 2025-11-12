@@ -41,9 +41,6 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold text-foreground">{t('footer.solutions')}</h3>
             <ul className="space-y-2">
               <li><Link to="/book-demo" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.wordpressPlugin')}</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.aiAnalytics')}</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.predictiveModeling')}</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.automationPlatform')}</a></li>
             </ul>
           </div>
 
@@ -51,8 +48,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">{t('footer.company')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.about')}</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.careers')}</a></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.about')}</Link></li>
               <li><Link to="/podcast" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.podcast')}</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.contact')}</Link></li>
             </ul>
@@ -62,9 +58,6 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">{t('footer.resources')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.documentation')}</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.support')}</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.community')}</a></li>
               <li><Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.resourcesLinks.pricing')}</Link></li>
             </ul>
           </div>
@@ -75,15 +68,12 @@ export const Footer = () => {
             © 2024 ProofOfConcepts. {t('footer.copyright')}
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t('footer.legalLinks.privacy')}
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            </Link>
+            <Link to="/terms-of-service" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t('footer.legalLinks.terms')}
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {t('footer.legalLinks.security')}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
