@@ -82,8 +82,8 @@ export const Header = () => {
               </Button>
             ) : (
               <>
-                <Button variant="ghost" onClick={() => navigate('/signin')}>
-                  {t('buttons.logIn')}
+                <Button variant="ghost" onClick={() => navigate('/usluga-poc')}>
+                  POC
                 </Button>
                 <Button variant="default" onClick={() => navigate('/book-demo')}>
                   {t('buttons.bookDemo')}
@@ -142,11 +142,11 @@ export const Header = () => {
                       variant="ghost" 
                       className="justify-start w-full"
                       onClick={() => {
-                        navigate('/signin');
+                        navigate('/usluga-poc');
                         setIsMenuOpen(false);
                       }}
                     >
-                      {t('buttons.logIn')}
+                      POC
                     </Button>
                     <Button 
                       variant="default" 

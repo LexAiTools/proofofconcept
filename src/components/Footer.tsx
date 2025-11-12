@@ -54,7 +54,7 @@ export const Footer = () => {
               <li><Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.about')}</Link></li>
               <li><Link to="/podcast" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.podcast')}</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.contact')}</Link></li>
-              <li><Link to="/signin" className="text-muted-foreground hover:text-foreground transition-colors">{t('buttons.logIn')}</Link></li>
+              <li><Link to="/usluga-poc" className="text-muted-foreground hover:text-foreground transition-colors">POC</Link></li>
             </ul>
           </div>
 
