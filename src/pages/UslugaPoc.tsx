@@ -12,6 +12,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { PlayCircle } from "lucide-react";
+import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
@@ -173,9 +174,11 @@ const UslugaPoc = () => {
                   <p className="text-primary-foreground/90 mb-6">
                     {t('services.completePackage.description')}
                   </p>
-                  <Button variant="secondary" size="lg" onClick={() => navigate('/book-demo')}>
-                    {t('services.completePackage.button')}
-                  </Button>
+                  <RequestAccessPopup>
+                    <Button variant="secondary" size="lg">
+                      {t('services.completePackage.button')}
+                    </Button>
+                  </RequestAccessPopup>
                 </div>
               </CardContent>
             </Card>
@@ -233,9 +236,11 @@ const UslugaPoc = () => {
                   <p className="text-primary-foreground/90 mb-6 font-semibold">
                     {t('services.websitePackage.highlight')}
                   </p>
-                  <Button variant="secondary" size="lg" onClick={() => navigate('/book-demo')}>
-                    {t('services.websitePackage.button')}
-                  </Button>
+                  <RequestAccessPopup>
+                    <Button variant="secondary" size="lg">
+                      {t('services.websitePackage.button')}
+                    </Button>
+                  </RequestAccessPopup>
                 </div>
               </CardContent>
             </Card>
@@ -318,9 +323,11 @@ const UslugaPoc = () => {
             {t('cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" onClick={() => navigate('/book-demo')}>
-              {t('cta.buttonForm')}
-            </Button>
+            <RequestAccessPopup>
+              <Button variant="secondary" size="lg">
+                {t('cta.buttonForm')}
+              </Button>
+            </RequestAccessPopup>
             <Button variant="glass" size="lg" onClick={() => navigate('/contact')}>
               {t('cta.buttonContact')}
             </Button>
