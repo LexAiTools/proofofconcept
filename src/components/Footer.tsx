@@ -41,6 +41,9 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold text-foreground">{t('footer.solutions')}</h3>
             <ul className="space-y-2">
               <li><Link to="/book-demo" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.solutionsLinks.wordpressPlugin')}</Link></li>
+              <li><Link to="/engine" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.engine')}</Link></li>
+              <li><Link to="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.useCases')}</Link></li>
+              <li><Link to="/chat" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.chat')}</Link></li>
             </ul>
           </div>
 
@@ -51,6 +54,7 @@ export const Footer = () => {
               <li><Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.about')}</Link></li>
               <li><Link to="/podcast" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.podcast')}</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('footer.companyLinks.contact')}</Link></li>
+              <li><Link to="/signin" className="text-muted-foreground hover:text-foreground transition-colors">{t('buttons.logIn')}</Link></li>
             </ul>
           </div>
 
