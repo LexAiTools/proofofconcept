@@ -24,8 +24,10 @@ import {
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 const Pricing = () => {
+  const { t } = useTranslation(['pricing', 'common']);
   const [formData, setFormData] = useState({
     email: "",
     problem: ""
@@ -44,133 +46,28 @@ const Pricing = () => {
 
       if (error) throw error;
 
-      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+      toast.success(t('pricing:messages.success'));
       setFormData({
         email: "",
         problem: ""
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Wystąpił błąd. Spróbuj ponownie.");
+      toast.error(t('pricing:messages.error'));
     }
   };
 
   const features = [
-    {
-      icon: MessageCircle,
-      title: "Explainable and accurate answers",
-      description: "Minimal hallucinations with state-of-the-art answer engine grounded in source materials, rigorously tested across 100+ deployments."
-    },
-    {
-      icon: Settings,
-      title: "Comprehensive integrations", 
-      description: "30+ data source integrations that are optimized for LLMs and automatically refresh, ensuring up-to-date information."
-    },
-    {
-      icon: Rocket,
-      title: "Off-the-shelf deployments",
-      description: "1-click deployments including website chatbot widgets, Slack bots, Discord bots, and APIs for easy integration."
-    },
-    {
-      icon: BarChart,
-      title: "Actionable analytics suite",
-      description: "Get insight in to real user intentions by analyzing conversations and use the platform to find gaps in your documentation."
-    },
-    {
-      icon: Shield,
-      title: "Enterprise-grade security",
-      description: "Secure by design with SOC II Type II certification and advanced PII detection & masking technology for data security."
-    },
-    {
-      icon: Users,
-      title: "End-to-end implementation success",
-      description: "Full support from our technical team including answer debugging, managed source setup, and custom onboarding to ensure your successful deployment"
-    }
-  ];
-
-  const pricingBenefits = [
-    "AI platform fee based on your needs incl. optional add-ons",
-    "Flexible scaled pricing based on answers per month", 
-    "Support and integration with your tools included with every plan"
+    MessageCircle,
+    Settings,
+    Rocket,
+    BarChart,
+    Shield,
+    Users
   ];
 
   const trustedLogos = [
     "logitech", "docker", "reddit", "monday.com"
-  ];
-
-  const stats = [
-    {
-      number: "10k+",
-      description: "Monthly questions answered unblocking thousands of developers instantly.",
-      company: "Docker"
-    },
-    {
-      number: "24/7", 
-      description: "Global self-help coverage with multi-language tech support.",
-      company: "OpenAI"
-    },
-    {
-      number: "28%",
-      description: "Improvement in support response time with AI-Powered Developer Support.",
-      company: "CircleCI"
-    },
-    {
-      number: "20%",
-      description: "Decrease in support tickets with instant AI answers.",
-      company: "Mapbox"
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "CorballyConcepts is the only LLM-based system I trust to put in front of our customers",
-      author: "Rusty Wilson",
-      position: "VP Support @ Sonatype",
-      company: "Sonatype"
-    },
-    {
-      quote: "Our team did its best to stump CorballyConcepts, and time and time again, it delivered helpful, accurate responses.",
-      author: "Michael Ellis", 
-      position: "Developer Lead @ Ionic",
-      company: "Ionic"
-    },
-    {
-      quote: "CorballyConcepts is much better at answering questions about Prisma than ChatGPT is",
-      author: "Soren Schmidt",
-      position: "CEO @ Prisma", 
-      company: "Prisma"
-    }
-  ];
-
-  const faqs = [
-    {
-      question: "What LLM do you use?",
-      answer: "We use a combination of state-of-the-art language models optimized for technical documentation and customer support scenarios."
-    },
-    {
-      question: "How accurate is CorballyConcepts?",
-      answer: "Our platform maintains industry-leading accuracy through rigorous testing across 100+ deployments and continuous improvement of our answer engine."
-    },
-    {
-      question: "How do you solve hallucinations?",
-      answer: "We use advanced grounding techniques, source citation, and confidence scoring to minimize hallucinations and ensure reliable answers."
-    },
-    {
-      question: "Do you use fine-tuning or RAG?",
-      answer: "We use a hybrid approach combining the best of both RAG (Retrieval-Augmented Generation) and fine-tuning for optimal performance."
-    },
-    {
-      question: "What support does CorballyConcepts provide?",
-      answer: "We offer comprehensive support including technical onboarding, answer debugging, managed source setup, and ongoing optimization assistance."
-    },
-    {
-      question: "Do you have a special tier for non-commercial OSS?",
-      answer: "Yes, we offer special pricing for open source projects and non-commercial use cases. Contact our team for details."
-    },
-    {
-      question: "Who do I reach out to for commercial and billing questions?",
-      answer: "Please contact our sales team at sales@corballyconcepts.com for all commercial inquiries and billing questions."
-    }
   ];
 
   return (
@@ -188,16 +85,16 @@ const Pricing = () => {
               {/* Left Column - Content */}
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Get started with <br />
-                  CorballyConcepts pricing
+                  {t('pricing:hero.title')} <br />
+                  {t('pricing:hero.titleHighlight')}
                 </h1>
                 
                 <p className="text-xl text-muted-foreground mb-8">
-                  CorballyConcepts' pricing is tailored to your specific team's needs.
+                  {t('pricing:hero.subtitle')}
                 </p>
 
                 <div className="space-y-4 mb-8">
-                  {pricingBenefits.map((benefit, index) => (
+                  {(t('pricing:benefits', { returnObjects: true }) as string[]).map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="w-5 h-5 rounded-full bg-primary flex-shrink-0 flex items-center justify-center mt-0.5">
                         <Check className="w-3 h-3 text-primary-foreground" />
@@ -223,12 +120,12 @@ const Pricing = () => {
                     <form className="space-y-6" onSubmit={handleSubmit}>
                       <div>
                         <Label htmlFor="email" className="text-foreground font-medium">
-                          Work Email
+                          {t('pricing:form.email.label')}
                         </Label>
                         <Input
                           id="email"
                           type="email"
-                          placeholder="john@acme.com"
+                          placeholder={t('pricing:form.email.placeholder')}
                           className="mt-2 bg-input border-border"
                           value={formData.email}
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -238,11 +135,11 @@ const Pricing = () => {
                       
                       <div>
                         <Label htmlFor="problem" className="text-foreground font-medium">
-                          What problem are you trying to solve?
+                          {t('pricing:form.problem.label')}
                         </Label>
                         <Textarea
                           id="problem"
-                          placeholder="Building an AI assistant for my docs, rolling out internal support agent etc."
+                          placeholder={t('pricing:form.problem.placeholder')}
                           className="mt-2 bg-input border-border min-h-[120px]"
                           value={formData.problem}
                           onChange={(e) => setFormData({...formData, problem: e.target.value})}
@@ -255,7 +152,7 @@ const Pricing = () => {
                         className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90"
                         size="lg"
                       >
-                        Request pricing
+                        {t('pricing:form.submit')}
                       </Button>
                     </form>
                   </CardContent>
@@ -270,11 +167,11 @@ const Pricing = () => {
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
-              Trusted by leading teams
+              {t('pricing:trustedBy.title')}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {stats.map((stat, index) => (
+              {(t('pricing:stats', { returnObjects: true }) as Array<{number: string, description: string, company: string}>).map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-4">
                     {stat.number}
@@ -295,12 +192,12 @@ const Pricing = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
-              Why companies choose CorballyConcepts
+              {t('pricing:whyChoose.title')}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+              {(t('pricing:features', { returnObjects: true }) as Array<{title: string, description: string}>).map((feature, index) => {
+                const Icon = features[index];
                 return (
                   <Card key={index} className="bg-card border-border hover:shadow-glow/20 transition-all duration-300">
                     <CardContent className="p-8">
@@ -327,7 +224,7 @@ const Pricing = () => {
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {testimonials.map((testimonial, index) => (
+              {(t('pricing:testimonials', { returnObjects: true }) as Array<{quote: string, author: string, position: string}>).map((testimonial, index) => (
                 <Card key={index} className="bg-card border-border">
                   <CardContent className="p-8">
                     <blockquote className="text-foreground mb-6 italic">
@@ -337,7 +234,7 @@ const Pricing = () => {
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                         <span className="text-white font-semibold">
-                          {testimonial.author.split(' ').map(n => n[0]).join('')}
+                          {testimonial.author.split(' ').map((n) => n[0]).join('')}
                         </span>
                       </div>
                       <div>
@@ -360,12 +257,12 @@ const Pricing = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
-              Frequently asked questions
+              {t('pricing:faq.title')}
             </h2>
 
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
+                {(t('pricing:faq.questions', { returnObjects: true }) as Array<{question: string, answer: string}>).map((faq, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`item-${index}`}

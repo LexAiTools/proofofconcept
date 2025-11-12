@@ -1,0 +1,131 @@
+{
+  "hero": {
+    "title": "Rozpocznij z",
+    "titleHighlight": "cennikiem CorballyConcepts",
+    "subtitle": "Cennik CorballyConcepts jest dostosowany do specyficznych potrzeb Twojego zespołu."
+  },
+  "benefits": [
+    "Opłata za platformę AI dostosowana do Twoich potrzeb, w tym opcjonalne dodatki",
+    "Elastyczne skalowanie cen w oparciu o liczbę odpowiedzi miesięcznie",
+    "Wsparcie i integracja z Twoimi narzędziami wliczone w każdy plan"
+  ],
+  "form": {
+    "email": {
+      "label": "E-mail służbowy",
+      "placeholder": "jan@firma.pl"
+    },
+    "problem": {
+      "label": "Jaki problem próbujesz rozwiązać?",
+      "placeholder": "Tworzenie asystenta AI dla mojej dokumentacji, wdrażanie wewnętrznego agenta wsparcia itp."
+    },
+    "submit": "Zapytaj o cennik"
+  },
+  "trustedBy": {
+    "title": "Zaufały nam wiodące zespoły"
+  },
+  "stats": [
+    {
+      "number": "10k+",
+      "description": "Miesięczne pytania udzielone, odblokowując tysiące programistów natychmiast.",
+      "company": "Docker"
+    },
+    {
+      "number": "24/7",
+      "description": "Globalne wsparcie samoobsługowe z wielojęzycznym wsparciem technicznym.",
+      "company": "OpenAI"
+    },
+    {
+      "number": "28%",
+      "description": "Poprawa czasu odpowiedzi wsparcia dzięki wsparciu deweloperów napędzanemu AI.",
+      "company": "CircleCI"
+    },
+    {
+      "number": "20%",
+      "description": "Spadek zgłoszeń wsparcia dzięki natychmiastowym odpowiedziom AI.",
+      "company": "Mapbox"
+    }
+  ],
+  "whyChoose": {
+    "title": "Dlaczego firmy wybierają CorballyConcepts"
+  },
+  "features": [
+    {
+      "title": "Wyjaśnialne i dokładne odpowiedzi",
+      "description": "Minimalne halucynacje dzięki najnowocześniejszemu silnikowi odpowiedzi opartemu na materiałach źródłowych, rygorystycznie przetestowanemu w ponad 100 wdrożeniach."
+    },
+    {
+      "title": "Wszechstronne integracje",
+      "description": "Ponad 30 integracji źródeł danych zoptymalizowanych dla LLM, które automatycznie się odświeżają, zapewniając aktualne informacje."
+    },
+    {
+      "title": "Gotowe wdrożenia",
+      "description": "Wdrożenia jednym kliknięciem, w tym widżety chatbotów na strony internetowe, boty Slack, boty Discord i API do łatwej integracji."
+    },
+    {
+      "title": "Pakiet analityczny do działania",
+      "description": "Uzyskaj wgląd w rzeczywiste intencje użytkowników poprzez analizę rozmów i wykorzystaj platformę do znalezienia luk w dokumentacji."
+    },
+    {
+      "title": "Bezpieczeństwo klasy korporacyjnej",
+      "description": "Bezpieczne z założenia dzięki certyfikacji SOC II Type II oraz zaawansowanej technologii wykrywania i maskowania danych osobowych."
+    },
+    {
+      "title": "Sukces wdrożenia od początku do końca",
+      "description": "Pełne wsparcie od naszego zespołu technicznego, w tym debugowanie odpowiedzi, zarządzanie konfiguracją źródeł oraz niestandardowe wdrożenie, aby zapewnić udane wdrożenie"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "CorballyConcepts to jedyny system oparty na LLM, któremu ufam, aby pokazać go naszym klientom",
+      "author": "Rusty Wilson",
+      "position": "VP Wsparcia @ Sonatype"
+    },
+    {
+      "quote": "Nasz zespół zrobił wszystko, aby zaskoczyć CorballyConcepts, a raz za razem dostarczał pomocne, dokładne odpowiedzi.",
+      "author": "Michael Ellis",
+      "position": "Lider Deweloperów @ Ionic"
+    },
+    {
+      "quote": "CorballyConcepts jest znacznie lepszy w odpowiadaniu na pytania o Prisma niż ChatGPT",
+      "author": "Soren Schmidt",
+      "position": "CEO @ Prisma"
+    }
+  ],
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "questions": [
+      {
+        "question": "Jakiego LLM używacie?",
+        "answer": "Używamy kombinacji najnowocześniejszych modeli językowych zoptymalizowanych dla dokumentacji technicznej i scenariuszy wsparcia klienta."
+      },
+      {
+        "question": "Jak dokładny jest CorballyConcepts?",
+        "answer": "Nasza platforma utrzymuje wiodącą w branży dokładność dzięki rygorystycznym testom w ponad 100 wdrożeniach i ciągłemu doskonaleniu naszego silnika odpowiedzi."
+      },
+      {
+        "question": "Jak rozwiązujecie problem halucynacji?",
+        "answer": "Używamy zaawansowanych technik ugruntowania, cytowania źródeł i oceny pewności, aby zminimalizować halucynacje i zapewnić wiarygodne odpowiedzi."
+      },
+      {
+        "question": "Czy używacie fine-tuningu czy RAG?",
+        "answer": "Używamy hybrydowego podejścia łączącego zalety zarówno RAG (Retrieval-Augmented Generation), jak i fine-tuningu dla optymalnej wydajności."
+      },
+      {
+        "question": "Jakie wsparcie zapewnia CorballyConcepts?",
+        "answer": "Oferujemy kompleksowe wsparcie, w tym techniczne wdrożenie, debugowanie odpowiedzi, zarządzaną konfigurację źródeł i bieżącą pomoc w optymalizacji."
+      },
+      {
+        "question": "Czy macie specjalny pakiet dla niekomercyjnych projektów OSS?",
+        "answer": "Tak, oferujemy specjalne ceny dla projektów open source i zastosowań niekomercyjnych. Skontaktuj się z naszym zespołem w celu uzyskania szczegółów."
+      },
+      {
+        "question": "Z kim mam się skontaktować w sprawie pytań handlowych i dotyczących rozliczeń?",
+        "answer": "Skontaktuj się z naszym zespołem sprzedaży pod adresem sales@corballyconcepts.com w przypadku wszystkich zapytań handlowych i dotyczących rozliczeń."
+      }
+    ]
+  },
+  "messages": {
+    "success": "Dziękujemy! Skontaktujemy się z Tobą wkrótce.",
+    "error": "Wystąpił błąd. Spróbuj ponownie."
+  }
+}

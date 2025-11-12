@@ -1,0 +1,131 @@
+{
+  "hero": {
+    "title": "Get started with",
+    "titleHighlight": "CorballyConcepts pricing",
+    "subtitle": "CorballyConcepts' pricing is tailored to your specific team's needs."
+  },
+  "benefits": [
+    "AI platform fee based on your needs incl. optional add-ons",
+    "Flexible scaled pricing based on answers per month",
+    "Support and integration with your tools included with every plan"
+  ],
+  "form": {
+    "email": {
+      "label": "Work Email",
+      "placeholder": "john@acme.com"
+    },
+    "problem": {
+      "label": "What problem are you trying to solve?",
+      "placeholder": "Building an AI assistant for my docs, rolling out internal support agent etc."
+    },
+    "submit": "Request pricing"
+  },
+  "trustedBy": {
+    "title": "Trusted by leading teams"
+  },
+  "stats": [
+    {
+      "number": "10k+",
+      "description": "Monthly questions answered unblocking thousands of developers instantly.",
+      "company": "Docker"
+    },
+    {
+      "number": "24/7",
+      "description": "Global self-help coverage with multi-language tech support.",
+      "company": "OpenAI"
+    },
+    {
+      "number": "28%",
+      "description": "Improvement in support response time with AI-Powered Developer Support.",
+      "company": "CircleCI"
+    },
+    {
+      "number": "20%",
+      "description": "Decrease in support tickets with instant AI answers.",
+      "company": "Mapbox"
+    }
+  ],
+  "whyChoose": {
+    "title": "Why companies choose CorballyConcepts"
+  },
+  "features": [
+    {
+      "title": "Explainable and accurate answers",
+      "description": "Minimal hallucinations with state-of-the-art answer engine grounded in source materials, rigorously tested across 100+ deployments."
+    },
+    {
+      "title": "Comprehensive integrations",
+      "description": "30+ data source integrations that are optimized for LLMs and automatically refresh, ensuring up-to-date information."
+    },
+    {
+      "title": "Off-the-shelf deployments",
+      "description": "1-click deployments including website chatbot widgets, Slack bots, Discord bots, and APIs for easy integration."
+    },
+    {
+      "title": "Actionable analytics suite",
+      "description": "Get insight in to real user intentions by analyzing conversations and use the platform to find gaps in your documentation."
+    },
+    {
+      "title": "Enterprise-grade security",
+      "description": "Secure by design with SOC II Type II certification and advanced PII detection & masking technology for data security."
+    },
+    {
+      "title": "End-to-end implementation success",
+      "description": "Full support from our technical team including answer debugging, managed source setup, and custom onboarding to ensure your successful deployment"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "CorballyConcepts is the only LLM-based system I trust to put in front of our customers",
+      "author": "Rusty Wilson",
+      "position": "VP Support @ Sonatype"
+    },
+    {
+      "quote": "Our team did its best to stump CorballyConcepts, and time and time again, it delivered helpful, accurate responses.",
+      "author": "Michael Ellis",
+      "position": "Developer Lead @ Ionic"
+    },
+    {
+      "quote": "CorballyConcepts is much better at answering questions about Prisma than ChatGPT is",
+      "author": "Soren Schmidt",
+      "position": "CEO @ Prisma"
+    }
+  ],
+  "faq": {
+    "title": "Frequently asked questions",
+    "questions": [
+      {
+        "question": "What LLM do you use?",
+        "answer": "We use a combination of state-of-the-art language models optimized for technical documentation and customer support scenarios."
+      },
+      {
+        "question": "How accurate is CorballyConcepts?",
+        "answer": "Our platform maintains industry-leading accuracy through rigorous testing across 100+ deployments and continuous improvement of our answer engine."
+      },
+      {
+        "question": "How do you solve hallucinations?",
+        "answer": "We use advanced grounding techniques, source citation, and confidence scoring to minimize hallucinations and ensure reliable answers."
+      },
+      {
+        "question": "Do you use fine-tuning or RAG?",
+        "answer": "We use a hybrid approach combining the best of both RAG (Retrieval-Augmented Generation) and fine-tuning for optimal performance."
+      },
+      {
+        "question": "What support does CorballyConcepts provide?",
+        "answer": "We offer comprehensive support including technical onboarding, answer debugging, managed source setup, and ongoing optimization assistance."
+      },
+      {
+        "question": "Do you have a special tier for non-commercial OSS?",
+        "answer": "Yes, we offer special pricing for open source projects and non-commercial use cases. Contact our team for details."
+      },
+      {
+        "question": "Who do I reach out to for commercial and billing questions?",
+        "answer": "Please contact our sales team at sales@corballyconcepts.com for all commercial inquiries and billing questions."
+      }
+    ]
+  },
+  "messages": {
+    "success": "Thank you! We will contact you shortly.",
+    "error": "An error occurred. Please try again."
+  }
+}

@@ -11,6 +11,7 @@ import enPages from './locales/en/pages.json';
 import enAbout from './locales/en/about.json';
 import enTestimonials from './locales/en/testimonials.json';
 import enContact from './locales/en/contact.json';
+import enPricing from './locales/en/pricing.json';
 
 import plCommon from './locales/pl/common.json';
 import plHome from './locales/pl/home.json';
@@ -21,6 +22,7 @@ import plPages from './locales/pl/pages.json';
 import plAbout from './locales/pl/about.json';
 import plTestimonials from './locales/pl/testimonials.json';
 import plContact from './locales/pl/contact.json';
+import plPricing from './locales/pl/pricing.json';
 
 const resources = {
   en: {
@@ -33,6 +35,7 @@ const resources = {
       about: enAbout,
       testimonials: enTestimonials,
       contact: enContact,
+      pricing: enPricing,
   },
   pl: {
     common: plCommon,
@@ -44,6 +47,7 @@ const resources = {
       about: plAbout,
       testimonials: plTestimonials,
       contact: plContact,
+      pricing: plPricing,
   },
 };
 
@@ -54,7 +58,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact'],
+    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing'],
     
     detection: {
       order: ['localStorage', 'navigator'],
