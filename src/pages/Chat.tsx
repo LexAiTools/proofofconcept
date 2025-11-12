@@ -25,6 +25,9 @@ export default function Chat() {
   const [isWaiting, setIsWaiting] = useState(false);
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamingMessage, setStreamingMessage] = useState('');
+  const [displayedText, setDisplayedText] = useState('');
+  const [characterQueue, setCharacterQueue] = useState<string[]>([]);
+  const characterQueueRef = useRef<string[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [showLeadForm, setShowLeadForm] = useState<number | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -39,7 +42,27 @@ export default function Chat() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, displayedText]);
+
+  // Character-by-character typing effect
+  useEffect(() => {
+    if (!isStreaming || characterQueueRef.current.length === 0) return;
+
+    const TYPING_SPEED = 30; // ms between characters
+    
+    const timer = setInterval(() => {
+      if (characterQueueRef.current.length > 0) {
+        const nextChar = characterQueueRef.current.shift()!;
+        setDisplayedText(prev => prev + nextChar);
+        setStreamingMessage(prev => prev + nextChar);
+        setCharacterQueue([...characterQueueRef.current]); // Trigger re-render
+      } else {
+        clearInterval(timer);
+      }
+    }, TYPING_SPEED);
+
+    return () => clearInterval(timer);
+  }, [isStreaming, characterQueue.length]);
 
   // Handle initial message from navigation
   useEffect(() => {
@@ -61,11 +84,16 @@ export default function Chat() {
     setInput('');
     adjustHeight(true);
 
+    // Reset typing animation state
+    characterQueueRef.current = [];
+    setCharacterQueue([]);
+    setDisplayedText('');
+    setStreamingMessage('');
+
     // Add user message immediately
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
     setIsWaiting(true);
-    setStreamingMessage('');
 
     try {
       const response = await fetch(
@@ -123,11 +151,15 @@ export default function Chat() {
                 if (firstChunk) {
                   setIsWaiting(false);
                   setIsStreaming(true);
+                  setDisplayedText('');
                   firstChunk = false;
                 }
                 
                 assistantMessage += parsed.content;
-                setStreamingMessage(assistantMessage);
+                // Add characters to queue for typing animation
+                const newChars = parsed.content.split('');
+                characterQueueRef.current.push(...newChars);
+                setCharacterQueue([...characterQueueRef.current]);
               }
               if (parsed.conversationId && !conversationId) {
                 setConversationId(parsed.conversationId);
@@ -153,10 +185,14 @@ export default function Chat() {
                 if (firstChunk) {
                   setIsWaiting(false);
                   setIsStreaming(true);
+                  setDisplayedText('');
                   firstChunk = false;
                 }
                 assistantMessage += parsed.content;
-                setStreamingMessage(assistantMessage);
+                // Add characters to queue for typing animation
+                const newChars = parsed.content.split('');
+                characterQueueRef.current.push(...newChars);
+                setCharacterQueue([...characterQueueRef.current]);
               }
               if (parsed.conversationId && !conversationId) {
                 setConversationId(parsed.conversationId);
@@ -167,11 +203,19 @@ export default function Chat() {
           }
         }
         
-        // Add final message to messages array
+        // Wait for all characters to be displayed before finalizing
         if (assistantMessage) {
+          // Wait for queue to empty
+          while (characterQueueRef.current.length > 0) {
+            await new Promise(resolve => setTimeout(resolve, 50));
+          }
+          
           setMessages(prev => [...prev, { role: 'assistant', content: assistantMessage }]);
           setIsStreaming(false);
           setStreamingMessage('');
+          setDisplayedText('');
+          characterQueueRef.current = [];
+          setCharacterQueue([]);
         }
       }
     } catch (error) {
@@ -309,14 +353,14 @@ export default function Chat() {
               )}
               
               {/* Streaming message with typing cursor */}
-              {isStreaming && streamingMessage && (
+              {isStreaming && displayedText && (
                 <div className="flex gap-4 items-start justify-start animate-fade-in">
                   <div className="bg-primary/10 rounded-full p-2 shrink-0">
                     <Bot className="w-5 h-5 text-primary" />
                   </div>
                   <div className="bg-muted rounded-2xl px-6 py-4">
                     <p className="whitespace-pre-wrap leading-relaxed">
-                      {streamingMessage}
+                      {displayedText}
                       <span className="inline-block w-[2px] h-5 bg-primary ml-1 animate-pulse">▊</span>
                     </p>
                   </div>
