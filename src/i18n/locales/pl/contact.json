@@ -1,0 +1,67 @@
+{
+  "title": "Zacznij korzystać z naszych",
+  "titleHighlight": "rozwiązań AI",
+  "titleEnd": "za darmo",
+  "subtitle": "Jakie źródła danych chciałbyś zintegrować z naszą platformą AI?",
+  "form": {
+    "dataSources": {
+      "label": "Źródła danych, których chcesz używać",
+      "placeholder": "Dokumentacja, centrum wsparcia, raporty, wiki, itp."
+    },
+    "name": {
+      "label": "Imię i nazwisko",
+      "placeholder": "Twoje imię i nazwisko"
+    },
+    "company": {
+      "label": "Firma",
+      "placeholder": "Twoja firma"
+    },
+    "email": {
+      "label": "E-mail służbowy",
+      "placeholder": "twoj.email@firma.pl"
+    },
+    "message": {
+      "label": "Dodatkowa wiadomość",
+      "placeholder": "Opowiedz nam więcej o swoim projekcie..."
+    },
+    "submit": "Rozpocznij darmowy okres próbny"
+  },
+  "features": {
+    "consultation": "Darmowa konsultacja",
+    "solutions": "Niestandardowe rozwiązania AI",
+    "support": "Wsparcie dla firm",
+    "compliant": "Zgodność z SOC II"
+  },
+  "testimonial": {
+    "company": "Konsorcjum AI",
+    "subtitle": "NestAI & CorballyConcepts",
+    "quote": "Nasze rozwiązania AI pokazują, jak zaawansowane systemy sztucznej inteligencji mogą być wdrażane w rzeczywistych scenariuszach biznesowych, dostarczając mierzalne rezultaty."
+  },
+  "trustedBy": "Zaufały nam wiodące firmy i startupy",
+  "companies": ["OpenAI", "Microsoft", "Google", "Amazon", "Meta", "Apple", "Tesla", "Stripe"],
+  "contactInfo": {
+    "title": "Skontaktuj się z nami",
+    "polandOffice": {
+      "title": "Biuro w Polsce",
+      "location": "Cieszyn, Polska",
+      "description": "NestAI - Rozwój silnika"
+    },
+    "irelandOffice": {
+      "title": "Biuro w Irlandii",
+      "location": "Dublin, Irlandia",
+      "description": "CorballyConcepts - Interfejs i PoC"
+    },
+    "nestaiEmail": "E-mail NestAI",
+    "corballyEmail": "E-mail CorballyConcepts"
+  },
+  "privacy": {
+    "text": "Klikając \"Rozpocznij\", akceptujesz naszą",
+    "privacyPolicy": "Politykę prywatności",
+    "and": "i",
+    "termsOfService": "Warunki korzystania z usługi"
+  },
+  "messages": {
+    "success": "Dziękujemy! Skontaktujemy się z Tobą wkrótce.",
+    "error": "Wystąpił błąd. Spróbuj ponownie."
+  }
+}

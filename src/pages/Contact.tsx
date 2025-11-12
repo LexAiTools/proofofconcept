@@ -9,8 +9,10 @@ import { Check, Mail, MapPin, Phone, ArrowRight, MessageCircle } from "lucide-re
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation(['contact', 'common']);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,7 +45,7 @@ const Contact = () => {
 
       if (error) throw error;
 
-      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+      toast.success(t('contact:messages.success'));
       setFormData({
         name: "",
         email: "",
@@ -53,20 +55,10 @@ const Contact = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Wystąpił błąd. Spróbuj ponownie.");
+      toast.error(t('contact:messages.error'));
     }
   };
 
-  const features = [
-    "Free consultation",
-    "Custom AI solutions",
-    "Enterprise support",
-    "SOC II compliant"
-  ];
-
-  const companies = [
-    "OpenAI", "Microsoft", "Google", "Amazon", "Meta", "Apple", "Tesla", "Stripe"
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -79,23 +71,23 @@ const Contact = () => {
             <div className="bg-gradient-to-br from-muted/50 to-background p-8 rounded-2xl border border-border/50">
               <div className="mb-8">
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                  Start using our <br />
+                  {t('contact:title')} <br />
                   <span className="text-transparent bg-clip-text bg-gradient-primary">
-                    AI solutions
-                  </span> for free
+                    {t('contact:titleHighlight')}
+                  </span> {t('contact:titleEnd')}
                 </h1>
                 <p className="text-muted-foreground text-lg">
-                  What data sources would you like to integrate with our AI platform?
+                  {t('contact:subtitle')}
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="dataSources">Data sources you want to use *</Label>
+                  <Label htmlFor="dataSources">{t('contact:form.dataSources.label')} *</Label>
                   <Textarea
                     id="dataSources"
                     name="dataSources"
-                    placeholder="Documentation, support center, reports, wiki, etc."
+                    placeholder={t('contact:form.dataSources.placeholder')}
                     value={formData.dataSources}
                     onChange={handleInputChange}
                     className="min-h-[100px] bg-background/50"
@@ -105,11 +97,11 @@ const Contact = () => {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full Name *</Label>
+                    <Label htmlFor="name">{t('contact:form.name.label')} *</Label>
                     <Input
                       id="name"
                       name="name"
-                      placeholder="Your full name"
+                      placeholder={t('contact:form.name.placeholder')}
                       value={formData.name}
                       onChange={handleInputChange}
                       className="bg-background/50"
@@ -117,11 +109,11 @@ const Contact = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
+                    <Label htmlFor="company">{t('contact:form.company.label')}</Label>
                     <Input
                       id="company"
                       name="company"
-                      placeholder="Your company"
+                      placeholder={t('contact:form.company.placeholder')}
                       value={formData.company}
                       onChange={handleInputChange}
                       className="bg-background/50"
@@ -130,12 +122,12 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Business Email *</Label>
+                  <Label htmlFor="email">{t('contact:form.email.label')} *</Label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="your.email@company.com"
+                    placeholder={t('contact:form.email.placeholder')}
                     value={formData.email}
                     onChange={handleInputChange}
                     className="bg-background/50"
@@ -144,11 +136,11 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Additional Message</Label>
+                  <Label htmlFor="message">{t('contact:form.message.label')}</Label>
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Tell us more about your project..."
+                    placeholder={t('contact:form.message.placeholder')}
                     value={formData.message}
                     onChange={handleInputChange}
                     className="bg-background/50"
@@ -159,14 +151,19 @@ const Contact = () => {
                   type="submit" 
                   className="w-full h-12 text-lg font-semibold bg-gradient-primary hover:opacity-90"
                 >
-                  Start Free Trial
+                  {t('contact:form.submit')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </form>
 
               {/* Features */}
               <div className="flex flex-wrap gap-6 mt-8 pt-8 border-t border-border/50">
-                {features.map((feature, index) => (
+                {[
+                  t('contact:features.consultation'),
+                  t('contact:features.solutions'),
+                  t('contact:features.support'),
+                  t('contact:features.compliant')
+                ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <Check className="h-4 w-4 text-primary" />
                     <span className="text-sm text-muted-foreground">{feature}</span>
@@ -175,9 +172,9 @@ const Contact = () => {
               </div>
 
               <p className="text-xs text-muted-foreground mt-6">
-                By clicking "Start", you agree to our{" "}
-                <a href="#" className="text-primary hover:underline">Privacy Policy</a> and{" "}
-                <a href="#" className="text-primary hover:underline">Terms of Service</a>.
+                {t('contact:privacy.text')}{" "}
+                <a href="#" className="text-primary hover:underline">{t('contact:privacy.privacyPolicy')}</a> {t('contact:privacy.and')}{" "}
+                <a href="#" className="text-primary hover:underline">{t('contact:privacy.termsOfService')}</a>.
               </p>
             </div>
 
@@ -191,12 +188,12 @@ const Contact = () => {
                       <span className="text-white font-bold text-sm">AI</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">AI Consortium</div>
-                      <div className="text-sm text-muted-foreground">NestAI & CorballyConcepts</div>
+                      <div className="font-semibold text-foreground">{t('contact:testimonial.company')}</div>
+                      <div className="text-sm text-muted-foreground">{t('contact:testimonial.subtitle')}</div>
                     </div>
                   </div>
                   <blockquote className="text-muted-foreground italic">
-                    "Our AI solutions demonstrate how advanced artificial intelligence systems can be implemented in real business scenarios, delivering measurable results."
+                    "{t('contact:testimonial.quote')}"
                   </blockquote>
                 </CardContent>
               </Card>
@@ -204,10 +201,10 @@ const Contact = () => {
               {/* Trusted By */}
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-4">
-                  Trusted by leading companies and startups
+                  {t('contact:trustedBy')}
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {companies.map((company, index) => (
+                  {["OpenAI", "Microsoft", "Google", "Amazon", "Meta", "Apple", "Tesla", "Stripe"].map((company, index) => (
                     <div 
                       key={index}
                       className="flex items-center justify-center h-12 bg-muted/30 rounded-lg border border-border/50"
@@ -220,15 +217,15 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-6">
-                <h3 className="text-lg font-semibold text-foreground">Get in Touch</h3>
+                <h3 className="text-lg font-semibold text-foreground">{t('contact:contactInfo.title')}</h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <div className="font-medium text-foreground">Poland Office</div>
-                      <div className="text-sm text-muted-foreground">Cieszyn, Poland</div>
-                      <div className="text-sm text-muted-foreground">NestAI - Engine Development</div>
+                      <div className="font-medium text-foreground">{t('contact:contactInfo.polandOffice.title')}</div>
+                      <div className="text-sm text-muted-foreground">{t('contact:contactInfo.polandOffice.location')}</div>
+                      <div className="text-sm text-muted-foreground">{t('contact:contactInfo.polandOffice.description')}</div>
                       <div className="flex items-center gap-2 mt-1">
                         <MessageCircle className="h-4 w-4 text-primary" />
                         <a 
@@ -246,9 +243,9 @@ const Contact = () => {
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <div className="font-medium text-foreground">Ireland Office</div>
-                      <div className="text-sm text-muted-foreground">Dublin, Ireland</div>
-                      <div className="text-sm text-muted-foreground">CorballyConcepts - Interface & PoCs</div>
+                      <div className="font-medium text-foreground">{t('contact:contactInfo.irelandOffice.title')}</div>
+                      <div className="text-sm text-muted-foreground">{t('contact:contactInfo.irelandOffice.location')}</div>
+                      <div className="text-sm text-muted-foreground">{t('contact:contactInfo.irelandOffice.description')}</div>
                       <div className="flex items-center gap-2 mt-1">
                         <MessageCircle className="h-4 w-4 text-primary" />
                         <a 
@@ -266,7 +263,7 @@ const Contact = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <div className="font-medium text-foreground">NestAI Email</div>
+                      <div className="font-medium text-foreground">{t('contact:contactInfo.nestaiEmail')}</div>
                       <div className="text-sm text-muted-foreground">info@nestai.tools</div>
                     </div>
                   </div>
@@ -274,7 +271,7 @@ const Contact = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <div className="font-medium text-foreground">CorballyConcepts Email</div>
+                      <div className="font-medium text-foreground">{t('contact:contactInfo.corballyEmail')}</div>
                       <div className="text-sm text-muted-foreground">contact@corballyconcepts.com</div>
                     </div>
                   </div>

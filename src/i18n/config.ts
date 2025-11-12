@@ -10,6 +10,7 @@ import enMessages from './locales/en/messages.json';
 import enPages from './locales/en/pages.json';
 import enAbout from './locales/en/about.json';
 import enTestimonials from './locales/en/testimonials.json';
+import enContact from './locales/en/contact.json';
 
 import plCommon from './locales/pl/common.json';
 import plHome from './locales/pl/home.json';
@@ -19,6 +20,7 @@ import plMessages from './locales/pl/messages.json';
 import plPages from './locales/pl/pages.json';
 import plAbout from './locales/pl/about.json';
 import plTestimonials from './locales/pl/testimonials.json';
+import plContact from './locales/pl/contact.json';
 
 const resources = {
   en: {
@@ -26,20 +28,22 @@ const resources = {
     home: enHome,
     forms: enForms,
     admin: enAdmin,
-    messages: enMessages,
-    pages: enPages,
-    about: enAbout,
-    testimonials: enTestimonials,
+      messages: enMessages,
+      pages: enPages,
+      about: enAbout,
+      testimonials: enTestimonials,
+      contact: enContact,
   },
   pl: {
     common: plCommon,
     home: plHome,
     forms: plForms,
     admin: plAdmin,
-    messages: plMessages,
-    pages: plPages,
-    about: plAbout,
-    testimonials: plTestimonials,
+      messages: plMessages,
+      pages: plPages,
+      about: plAbout,
+      testimonials: plTestimonials,
+      contact: plContact,
   },
 };
 
@@ -50,7 +54,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials'],
+    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact'],
     
     detection: {
       order: ['localStorage', 'navigator'],
