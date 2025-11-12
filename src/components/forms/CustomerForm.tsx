@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { ArrowLeft, ArrowRight, Phone, Mail, User, MessageSquare } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const customerFormSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -24,6 +25,8 @@ interface CustomerFormProps {
 }
 
 export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormProps) => {
+  const { t } = useTranslation('forms');
+  
   const form = useForm<CustomerFormData>({
     resolver: zodResolver(customerFormSchema),
     defaultValues: {
@@ -38,9 +41,9 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1">
-        <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2">Dane kontaktowe</h3>
+        <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2">{t('customer.title')}</h3>
         <p className="text-muted-foreground mb-6 text-sm md:text-base">
-          Podaj dane do kontaktu.
+          {t('customer.subtitle')}
         </p>
 
         <Form {...form}>
@@ -51,12 +54,12 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                 name="firstName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-foreground font-medium text-sm">Imię</FormLabel>
+                    <FormLabel className="text-foreground font-medium text-sm">{t('customer.fields.firstName')}</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input 
-                          placeholder="Jan" 
+                          placeholder={t('customer.fields.placeholders.firstName')}
                           className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                           {...field} 
                         />
@@ -72,12 +75,12 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                 name="lastName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-foreground font-medium text-sm">Nazwisko</FormLabel>
+                    <FormLabel className="text-foreground font-medium text-sm">{t('customer.fields.lastName')}</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input 
-                          placeholder="Kowalski" 
+                          placeholder={t('customer.fields.placeholders.lastName')}
                           className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                           {...field} 
                         />
@@ -94,7 +97,7 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-foreground font-medium text-sm">Telefon</FormLabel>
+                  <FormLabel className="text-foreground font-medium text-sm">{t('customer.fields.phone')}</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2 text-muted-foreground">
@@ -102,7 +105,7 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                         <span className="text-sm">🇺🇸</span>
                       </div>
                       <Input 
-                        placeholder="+48 123 456 789" 
+                        placeholder={t('customer.fields.placeholders.phone')}
                         className="pl-16 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                         {...field} 
                       />
@@ -118,12 +121,12 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-foreground font-medium text-sm">Email</FormLabel>
+                  <FormLabel className="text-foreground font-medium text-sm">{t('customer.fields.email')}</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                       <Input 
-                        placeholder="jan@firma.pl" 
+                        placeholder={t('customer.fields.placeholders.email')}
                         type="email"
                         className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                         {...field} 
@@ -140,12 +143,12 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
               name="comments"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-foreground font-medium text-sm">Dodatkowe uwagi</FormLabel>
+                  <FormLabel className="text-foreground font-medium text-sm">{t('customer.fields.comments')}</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                       <Textarea 
-                        placeholder="Opisz swoje potrzeby..."
+                        placeholder={t('customer.fields.placeholders.comments')}
                         className="pl-10 bg-input border-border focus:border-primary focus:ring-primary min-h-[80px] md:min-h-[100px] resize-none"
                         {...field} 
                       />
@@ -165,7 +168,7 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                 className={showBackButton ? "text-muted-foreground hover:text-foreground h-9 md:h-10" : "invisible"}
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Wstecz
+                {t('common:buttons.back')}
               </Button>
               
               <Button
@@ -173,7 +176,7 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                 variant="default"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 md:px-8 h-9 md:h-10"
               >
-                Wyślij
+                {t('common:buttons.submit')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export interface ServiceData {
   service: string;
@@ -38,12 +39,36 @@ const services = [
 ];
 
 export const ServiceSelector = ({ onSubmit, onBack, showBackButton }: ServiceSelectorProps) => {
+  const { t } = useTranslation('forms');
   const [selectedService, setSelectedService] = useState<string>("");
+  
+  const translatedServices = [
+    {
+      id: "aiConsulting",
+      title: t('service.services.aiConsulting.title'),
+      description: t('service.services.aiConsulting.description')
+    },
+    {
+      id: "customDevelopment",
+      title: t('service.services.customDevelopment.title'),
+      description: t('service.services.customDevelopment.description')
+    },
+    {
+      id: "integration",
+      title: t('service.services.integration.title'),
+      description: t('service.services.integration.description')
+    },
+    {
+      id: "training",
+      title: t('service.services.training.title'),
+      description: t('service.services.training.description')
+    }
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedService) {
-      const service = services.find(s => s.id === selectedService);
+      const service = translatedServices.find(s => s.id === selectedService);
       if (service) {
         onSubmit({
           service: service.title,
@@ -58,16 +83,16 @@ export const ServiceSelector = ({ onSubmit, onBack, showBackButton }: ServiceSel
       <div className="flex-1">
         <div className="mb-8">
           <h3 className="text-2xl font-bold text-foreground mb-2">
-            Wybierz rodzaj usługi
+            {t('service.title')}
           </h3>
           <p className="text-muted-foreground">
-            Wybierz usługę, która najlepiej odpowiada Twoim potrzebom
+            {t('service.subtitle')}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid gap-4">
-            {services.map((service) => (
+            {translatedServices.map((service) => (
               <Card
                 key={service.id}
                 className={`p-4 cursor-pointer border-2 transition-all hover:border-primary/50 ${
@@ -111,7 +136,7 @@ export const ServiceSelector = ({ onSubmit, onBack, showBackButton }: ServiceSel
             className="flex items-center space-x-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Wstecz</span>
+            <span>{t('common:buttons.back')}</span>
           </Button>
         ) : (
           <div />
@@ -123,7 +148,7 @@ export const ServiceSelector = ({ onSubmit, onBack, showBackButton }: ServiceSel
           disabled={!selectedService}
           className="flex items-center space-x-2"
         >
-          <span>Dalej</span>
+          <span>{t('common:buttons.next')}</span>
           <ArrowRight className="w-4 h-4" />
         </Button>
       </div>

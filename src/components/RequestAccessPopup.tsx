@@ -8,12 +8,14 @@ import { DateSelector, DateData } from "./forms/DateSelector";
 import { TimeSelector, TimeData } from "./forms/TimeSelector";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 interface RequestAccessPopupProps {
   children: React.ReactNode;
 }
 
 export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
+  const { t } = useTranslation('forms');
   const [isOpen, setIsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [serviceData, setServiceData] = useState<ServiceData | null>(null);
@@ -54,7 +56,7 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
 
       if (error) throw error;
 
-      toast.success("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+      toast.success(t('messages:success.formSubmitted'));
       setIsOpen(false);
       // Reset form
       setCurrentStep(1);
@@ -64,7 +66,7 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
       setCustomerData(null);
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Wystąpił błąd. Spróbuj ponownie.");
+      toast.error(t('messages:error.general'));
     }
   };
 
@@ -99,10 +101,10 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-                Umów spotkanie
+                {t('consultation.title')}
               </h2>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                Demo naszych rozwiązań AI.
+                {t('consultation.subtitle')}
               </p>
             </div>
 
@@ -150,16 +152,16 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
               
               <div className="flex justify-between mt-2 text-xs">
                 <span className={currentStep >= 1 ? 'text-gray-900' : 'text-gray-500'}>
-                  Usługa
+                  {t('consultation.steps.service')}
                 </span>
                 <span className={currentStep >= 2 ? 'text-gray-900' : 'text-gray-500'}>
-                  Data
+                  {t('consultation.steps.date')}
                 </span>
                 <span className={currentStep >= 3 ? 'text-gray-900' : 'text-gray-500'}>
-                  Godzina
+                  {t('consultation.steps.time')}
                 </span>
                 <span className={currentStep >= 4 ? 'text-gray-900' : 'text-gray-500'}>
-                  Dane
+                  {t('consultation.steps.data')}
                 </span>
               </div>
             </div>
@@ -170,7 +172,7 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
             {/* Mobile header */}
             <div className="lg:hidden mb-4 pb-4 border-b border-border">
               <h2 className="text-xl font-bold text-foreground mb-2">
-                Umów spotkanie
+                {t('consultation.title')}
               </h2>
               <div className="flex items-center space-x-1">
                 <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${

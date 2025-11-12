@@ -4,6 +4,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 export interface DateData {
   date: Date;
@@ -27,6 +28,7 @@ const availableDates = [
 ];
 
 export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorProps) => {
+  const { t } = useTranslation('forms');
   const [selectedDate, setSelectedDate] = useState<Date>();
 
   const isDateAvailable = (date: Date) => {
@@ -47,10 +49,10 @@ export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorP
       <div className="flex-1">
         <div className="mb-8">
           <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2">
-            Wybierz datę
+            {t('date.title')}
           </h3>
           <p className="text-muted-foreground text-sm md:text-base">
-            Wybierz dostępną datę
+            {t('date.subtitle')}
           </p>
         </div>
 
@@ -80,7 +82,7 @@ export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorP
 
         {selectedDate && (
           <div className="mt-6 p-4 bg-primary/10 rounded-lg text-center">
-            <p className="text-sm text-muted-foreground">Wybrana data:</p>
+            <p className="text-sm text-muted-foreground">{t('date.selectedDate')}</p>
             <p className="font-semibold text-foreground">
               {format(selectedDate, "EEEE, d MMMM yyyy")}
             </p>
@@ -97,7 +99,7 @@ export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorP
             className="flex items-center space-x-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Wstecz</span>
+            <span>{t('common:buttons.back')}</span>
           </Button>
         ) : (
           <div />
@@ -109,7 +111,7 @@ export const DateSelector = ({ onSubmit, onBack, showBackButton }: DateSelectorP
           disabled={!selectedDate}
           className="flex items-center space-x-2"
         >
-          <span>Dalej</span>
+          <span>{t('common:buttons.next')}</span>
           <ArrowRight className="w-4 h-4" />
         </Button>
       </div>

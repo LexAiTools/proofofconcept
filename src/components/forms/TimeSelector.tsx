@@ -2,6 +2,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export interface TimeData {
   time: string;
@@ -24,6 +25,7 @@ const timeSlots = [
 ];
 
 export const TimeSelector = ({ selectedDate, onSubmit, onBack, showBackButton }: TimeSelectorProps) => {
+  const { t } = useTranslation('forms');
   const [selectedTime, setSelectedTime] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,13 +43,13 @@ export const TimeSelector = ({ selectedDate, onSubmit, onBack, showBackButton }:
       <div className="flex-1">
         <div className="mb-8">
           <h3 className="text-2xl font-bold text-foreground mb-2">
-            Wybierz godzinę
+            {t('time.title')}
           </h3>
           <p className="text-muted-foreground mb-2">
-            Wybierz dostępną godzinę spotkania
+            {t('time.subtitle')}
           </p>
           <div className="p-3 bg-primary/10 rounded-lg">
-            <p className="text-sm text-muted-foreground">Wybrana data:</p>
+            <p className="text-sm text-muted-foreground">{t('time.selectedDate')}</p>
             <p className="font-semibold text-foreground">
               {format(selectedDate, "EEEE, d MMMM yyyy")}
             </p>
@@ -56,7 +58,7 @@ export const TimeSelector = ({ selectedDate, onSubmit, onBack, showBackButton }:
 
         <div className="mb-6">
           <p className="text-sm font-medium text-foreground mb-4">
-            Dostępne godziny:
+            {t('time.availableSlots')}
           </p>
           <div className="grid grid-cols-5 gap-3">
             {timeSlots.map((time) => (
@@ -79,9 +81,9 @@ export const TimeSelector = ({ selectedDate, onSubmit, onBack, showBackButton }:
 
         {selectedTime && (
           <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-center">
-            <p className="text-sm text-green-700">Wybrane spotkanie:</p>
+            <p className="text-sm text-green-700">{t('time.selectedMeeting')}</p>
             <p className="font-semibold text-green-800">
-              {format(selectedDate, "d MMMM yyyy")} o godz. {selectedTime}
+              {format(selectedDate, "d MMMM yyyy")} {t('time.at')} {selectedTime}
             </p>
           </div>
         )}
@@ -96,7 +98,7 @@ export const TimeSelector = ({ selectedDate, onSubmit, onBack, showBackButton }:
             className="flex items-center space-x-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Wstecz</span>
+            <span>{t('common:buttons.back')}</span>
           </Button>
         ) : (
           <div />
@@ -108,7 +110,7 @@ export const TimeSelector = ({ selectedDate, onSubmit, onBack, showBackButton }:
           disabled={!selectedTime}
           className="flex items-center space-x-2"
         >
-          <span>Dalej</span>
+          <span>{t('common:buttons.next')}</span>
           <ArrowRight className="w-4 h-4" />
         </Button>
       </div>
