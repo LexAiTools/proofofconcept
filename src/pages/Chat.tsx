@@ -9,6 +9,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { toast } from 'sonner';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { LeadCaptureForm } from '@/components/chat/LeadCaptureForm';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -22,6 +23,7 @@ export default function Chat() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [conversationId, setConversationId] = useState<string | null>(null);
+  const [showLeadForm, setShowLeadForm] = useState<number | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const { textareaRef, adjustHeight } = useAutoResizeTextarea({
     minHeight: 56,
@@ -136,6 +138,30 @@ export default function Chat() {
     }
   };
 
+  const detectLeadTrigger = (content: string): boolean => {
+    const triggers = [
+      'email',
+      'contact',
+      'messenger',
+      'whatsapp',
+      'telegram',
+      'share your',
+      'provide your',
+      'reach out',
+      'get in touch',
+      'podziel się',
+      'podaj',
+      'skontaktuj',
+    ];
+    const lowerContent = content.toLowerCase();
+    return triggers.some(trigger => lowerContent.includes(trigger));
+  };
+
+  const handleLeadFormSuccess = () => {
+    setShowLeadForm(null);
+    toast.success(t('leads:success'));
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -165,30 +191,57 @@ export default function Chat() {
           ) : (
             <>
               {messages.map((message, index) => (
-                <div
-                  key={index}
-                  className={cn(
-                    'flex gap-4 items-start',
-                    message.role === 'user' ? 'justify-end' : 'justify-start'
-                  )}
-                >
-                  {message.role === 'assistant' && (
-                    <div className="bg-primary/10 rounded-full p-2 shrink-0">
-                      <Bot className="w-5 h-5 text-primary" />
-                    </div>
-                  )}
+                <div key={index} className="space-y-2">
                   <div
                     className={cn(
-                      'rounded-2xl px-6 py-4 max-w-[80%]',
-                      message.role === 'user'
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted'
+                      'flex gap-4 items-start',
+                      message.role === 'user' ? 'justify-end' : 'justify-start'
                     )}
                   >
-                    <p className="whitespace-pre-wrap leading-relaxed">
-                      {message.content}
-                    </p>
+                    {message.role === 'assistant' && (
+                      <div className="bg-primary/10 rounded-full p-2 shrink-0">
+                        <Bot className="w-5 h-5 text-primary" />
+                      </div>
+                    )}
+                    <div
+                      className={cn(
+                        'rounded-2xl px-6 py-4 max-w-[80%]',
+                        message.role === 'user'
+                          ? 'bg-primary text-primary-foreground'
+                          : 'bg-muted'
+                      )}
+                    >
+                      <p className="whitespace-pre-wrap leading-relaxed">
+                        {message.content}
+                      </p>
+                    </div>
                   </div>
+                  
+                  {message.role === "assistant" && 
+                   detectLeadTrigger(message.content) && 
+                   showLeadForm !== index && (
+                    <div className="flex justify-start ml-14">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setShowLeadForm(index)}
+                        className="text-sm"
+                      >
+                        {t('leads:actions.showForm')}
+                      </Button>
+                    </div>
+                  )}
+                  
+                  {showLeadForm === index && conversationId && (
+                    <div className="ml-14">
+                      <LeadCaptureForm
+                        conversationId={conversationId}
+                        onSuccess={handleLeadFormSuccess}
+                        onCancel={() => setShowLeadForm(null)}
+                        lastUserMessage={messages[messages.length - 1]?.content}
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
               {isLoading && messages[messages.length - 1]?.role === 'user' && (

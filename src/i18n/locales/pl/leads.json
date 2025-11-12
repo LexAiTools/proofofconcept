@@ -1,0 +1,20 @@
+{
+  "title": "Podziel się danymi kontaktowymi",
+  "description": "Skontaktujemy się w ciągu 24 godzin",
+  "fields": {
+    "name": "Imię i nazwisko",
+    "email": "Email",
+    "phone": "Telefon (opcjonalnie)",
+    "message": "Dodatkowa wiadomość (opcjonalnie)"
+  },
+  "actions": {
+    "submit": "Wyślij",
+    "submitting": "Wysyłanie...",
+    "cancel": "Może Później",
+    "showForm": "📧 Podziel się danymi"
+  },
+  "success": "Dziękujemy! Wkrótce się skontaktujemy.",
+  "successDescription": "Nasz zespół odezwie się w ciągu 24 godzin.",
+  "error": "Błąd wysyłania",
+  "errorDescription": "Spróbuj ponownie lub skontaktuj się z nami bezpośrednio."
+}
