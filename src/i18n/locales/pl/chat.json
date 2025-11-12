@@ -24,6 +24,9 @@
       "label": "Jak długo trwa?"
     }
   },
+  "actions": {
+    "scheduleMeeting": "Umów spotkanie"
+  },
   "errors": {
     "general": "Wystąpił błąd"
   }

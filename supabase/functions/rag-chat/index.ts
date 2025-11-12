@@ -15,13 +15,13 @@ LANGUAGE HANDLING:
 - Primary support: Polish and English, but adapt to any language
 - Respond naturally - don't mention language detection
 
-YOUR ROLE - LEAD GENERATION:
+YOUR ROLE - LEAD GENERATION & MEETING SCHEDULING:
 - Answer EXCLUSIVELY based on the provided knowledge base
 - Be helpful, professional, and enthusiastic
 - INTRIGUE and EDUCATE instead of direct selling
 - Subtly guide conversation towards the value of Proof of Concepts
 - Identify customer needs through questions
-- At the right moment, propose contact or demo
+- PRIMARY GOAL: Capture qualified leads and schedule meetings
 
 CONVERSION STRATEGY:
 
@@ -36,17 +36,29 @@ CONVERSION STRATEGY:
    - Emphasize speed and concrete results
    - Use examples: "Working MVP in an hour instead of waiting months"
 
-3. CONVERSION (when interest shown):
+3. MEETING SCHEDULING - LEAD CAPTURE (when qualified interest detected):
    
-   TRIGGERS:
-   ✓ User asks about pricing/services
-   ✓ User describes their project
+   LEAD QUALIFICATION TRIGGERS (at least 2-3 messages exchanged):
+   ✓ User expresses concrete project needs
+   ✓ User asks about pricing/timeline
+   ✓ User mentions budget or deadline
    ✓ User asks "how to start?"
-   ✓ Clear interest signals
+   ✓ User shows decision-making signals ("we need", "I want to", "looking for")
    
-   OPTIONS:
-   → Primary: "Share your email or messenger (WhatsApp/Telegram), our team will contact you within 24h"
-   → Secondary: "Schedule a quick demo to see how it works - click 'Schedule Demo'"
+   MEETING INVITATION PROTOCOL:
+   When you detect QUALIFIED INTEREST, after your helpful response, include this EXACT marker on a new line:
+   [SCHEDULE_MEETING_CTA]
+   
+   This marker will automatically display a button for scheduling a meeting.
+   
+   IMPORTANT RULES:
+   - Include [SCHEDULE_MEETING_CTA] marker ONLY ONCE per conversation
+   - Only include it after at least 2-3 messages and providing value
+   - Must detect clear interest signals before suggesting
+   - The button opens a multi-step form: Service → Date → Time → Contact Data
+   
+   FALLBACK OPTIONS (if user doesn't click meeting button):
+   → "Share your email or messenger (WhatsApp/Telegram), our team will contact you within 24h"
 
 PACKAGES (always mention prices in user's currency):
 
@@ -312,11 +324,29 @@ serve(async (req) => {
 
               try {
                 const parsed = JSON.parse(data);
-                const content = parsed.choices?.[0]?.delta?.content;
+                let content = parsed.choices?.[0]?.delta?.content;
                 
                 if (content) {
+                  // Check for meeting CTA marker
+                  if (content.includes('[SCHEDULE_MEETING_CTA]')) {
+                    // Remove marker from visible content
+                    content = content.replace('[SCHEDULE_MEETING_CTA]', '').trim();
+                    
+                    // Send special event for meeting CTA (only once)
+                    if (!fullResponse.includes('[SCHEDULE_MEETING_CTA]')) {
+                      controller.enqueue(encoder.encode(
+                        `data: ${JSON.stringify({ 
+                          showMeetingCTA: true, 
+                          conversationId: finalConversationId 
+                        })}\n\n`
+                      ));
+                    }
+                  }
+                  
                   fullResponse += content;
-                  controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content, conversationId: finalConversationId })}\n\n`));
+                  if (content) { // Only send if content is not empty after marker removal
+                    controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content, conversationId: finalConversationId })}\n\n`));
+                  }
                 }
               } catch (e) {
                 console.error('Failed to parse JSON:', data, e);
@@ -346,14 +376,15 @@ serve(async (req) => {
             }
           }
 
-          // Save assistant message
+          // Save assistant message (remove marker before saving)
           if (finalConversationId && fullResponse) {
+            const cleanedResponse = fullResponse.replace('[SCHEDULE_MEETING_CTA]', '').trim();
             await supabase
               .from('chat_messages')
               .insert({
                 conversation_id: finalConversationId,
                 role: 'assistant',
-                content: fullResponse
+                content: cleanedResponse
               });
           }
 

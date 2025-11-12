@@ -24,6 +24,9 @@
       "label": "How long does it take?"
     }
   },
+  "actions": {
+    "scheduleMeeting": "Schedule Meeting"
+  },
   "errors": {
     "general": "An error occurred"
   }

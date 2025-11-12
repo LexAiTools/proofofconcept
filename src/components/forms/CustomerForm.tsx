@@ -13,6 +13,7 @@ const customerFormSchema = z.object({
   lastName: z.string().min(2, "Last name must be at least 2 characters"),
   phone: z.string().min(10, "Please enter a valid phone number"),
   email: z.string().email("Please enter a valid email address"),
+  company: z.string().optional(),
   comments: z.string().optional(),
 });
 
@@ -34,6 +35,7 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
       lastName: "",
       phone: "",
       email: "",
+      company: "",
       comments: "",
     },
   });
@@ -128,6 +130,27 @@ export const CustomerForm = ({ onSubmit, onBack, showBackButton }: CustomerFormP
                       <Input 
                         placeholder={t('customer.fields.placeholders.email')}
                         type="email"
+                        className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
+                        {...field} 
+                      />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="company"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-foreground font-medium text-sm">{t('customer.fields.company')}</FormLabel>
+                  <FormControl>
+                    <div className="relative">
+                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                      <Input 
+                        placeholder={t('customer.fields.placeholders.company')}
                         className="pl-10 bg-input border-border focus:border-primary focus:ring-primary h-10 md:h-11"
                         {...field} 
                       />
