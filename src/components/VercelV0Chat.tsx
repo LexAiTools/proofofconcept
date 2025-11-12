@@ -78,7 +78,7 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
 
           <div className="flex items-center justify-between p-3">
             <div className="flex items-center gap-2">
-              <Button
+              {/* <Button
                 type="button"
                 size="sm"
                 variant="outline"
@@ -88,10 +88,10 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
                 <span className="hidden text-xs transition-opacity group-hover:inline">
                   Attach
                 </span>
-              </Button>
+              </Button> */}
             </div>
             <div className="flex items-center gap-2">
-              <Button
+              {/* <Button
                 type="button"
                 size="sm"
                 variant="secondary"
@@ -99,7 +99,7 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
               >
                 <PlusIcon className="h-4 w-4" />
                 Project
-              </Button>
+              </Button> */}
               <button
                 type="button"
                 onClick={handleSubmit}
