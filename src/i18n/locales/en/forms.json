@@ -17,14 +17,12 @@
       "lastName": "Last Name",
       "phone": "Phone Number",
       "email": "Email Address",
-      "company": "Company Name (optional)",
       "comments": "Additional Comments",
       "placeholders": {
         "firstName": "John",
         "lastName": "Doe",
         "phone": "+1 123 456 789",
         "email": "john@company.com",
-        "company": "Your Company Inc.",
         "comments": "Tell us about your needs..."
       }
     },

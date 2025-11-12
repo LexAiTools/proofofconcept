@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Bot, ArrowUp, Loader2, MessageSquare, Lightbulb, Settings, DollarSign, Clock, User } from 'lucide-react';
+import { Bot, ArrowUp, Loader2, MessageSquare, Lightbulb, Settings, DollarSign, Clock } from 'lucide-react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -10,7 +10,6 @@ import { toast } from 'sonner';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { LeadCaptureForm } from '@/components/chat/LeadCaptureForm';
-import { RequestAccessPopup } from '@/components/RequestAccessPopup';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -31,7 +30,6 @@ export default function Chat() {
   const characterQueueRef = useRef<string[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [showLeadForm, setShowLeadForm] = useState<number | null>(null);
-  const [showMeetingButton, setShowMeetingButton] = useState<number | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const { textareaRef, adjustHeight } = useAutoResizeTextarea({
     minHeight: 56,
@@ -148,12 +146,6 @@ export default function Chat() {
 
             try {
               const parsed = JSON.parse(data);
-              
-              // Check for meeting CTA trigger
-              if (parsed.showMeetingCTA && parsed.conversationId) {
-                setShowMeetingButton(messages.length);
-              }
-              
               if (parsed.content) {
                 // Hide waiting indicator and start streaming on first chunk
                 if (firstChunk) {
@@ -293,7 +285,7 @@ export default function Chat() {
                 <div key={index} className="space-y-2">
                   <div
                     className={cn(
-                      'flex gap-4 items-start animate-fade-in',
+                      'flex gap-4 items-start',
                       message.role === 'user' ? 'justify-end' : 'justify-start'
                     )}
                   >
@@ -314,29 +306,11 @@ export default function Chat() {
                         {message.content}
                       </p>
                     </div>
-                    {message.role === 'user' && (
-                      <div className="bg-primary/10 rounded-full p-2 shrink-0">
-                        <User className="w-5 h-5 text-primary" />
-                      </div>
-                    )}
                   </div>
                   
-                  {/* Meeting CTA Button - prioritized over lead form */}
-                  {message.role === "assistant" && showMeetingButton === index && (
-                    <div className="flex justify-start ml-14 animate-fade-in">
-                      <RequestAccessPopup conversationId={conversationId || undefined}>
-                        <Button className="gap-2 bg-primary hover:bg-primary/90">
-                          📅 {t('actions.scheduleMeeting')}
-                        </Button>
-                      </RequestAccessPopup>
-                    </div>
-                  )}
-                  
-                  {/* Legacy lead form trigger */}
                   {message.role === "assistant" && 
                    detectLeadTrigger(message.content) && 
-                   showLeadForm !== index &&
-                   showMeetingButton !== index && (
+                   showLeadForm !== index && (
                     <div className="flex justify-start ml-14">
                       <Button
                         variant="outline"

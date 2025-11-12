@@ -12,10 +12,9 @@ import { useTranslation } from "react-i18next";
 
 interface RequestAccessPopupProps {
   children: React.ReactNode;
-  conversationId?: string;
 }
 
-export const RequestAccessPopup = ({ children, conversationId }: RequestAccessPopupProps) => {
+export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
   const { t } = useTranslation('forms');
   const [isOpen, setIsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
@@ -43,64 +42,21 @@ export const RequestAccessPopup = ({ children, conversationId }: RequestAccessPo
     setCustomerData(data);
     
     try {
-      // Fetch chat history if conversationId is provided
-      let chatHistory = null;
-      if (conversationId) {
-        const { data: messages } = await supabase
-          .from('chat_messages')
-          .select('role, content, created_at')
-          .eq('conversation_id', conversationId)
-          .order('created_at', { ascending: true });
-        
-        chatHistory = messages;
-      }
-
-      // Insert lead with chat history
-      const { data: leadData, error } = await supabase.from("leads").insert({
+      const { error } = await supabase.from("leads").insert({
         name: `${data.firstName} ${data.lastName}`,
         email: data.email,
         phone: data.phone,
-        company: data.company || "",
         message: data.comments || "",
         service: serviceData?.service,
         appointment_date: dateData?.date.toISOString().split('T')[0],
         appointment_time: timeData?.time,
-        source_form: conversationId ? "chat-scheduled-meeting" : "request-access-popup",
-        status: conversationId ? "scheduled" : "new",
-        metadata: conversationId ? {
-          conversation_id: conversationId,
-          chat_history: chatHistory,
-          captured_via: 'ai-assistant-cta',
-          captured_at: new Date().toISOString()
-        } : undefined
-      }).select('id').single();
+        source_form: "request-access",
+        status: "new",
+      });
 
       if (error) throw error;
 
-      // Update conversation with lead info if from chat
-      if (conversationId && leadData) {
-        await supabase
-          .from('chat_conversations')
-          .update({
-            name: `${data.firstName} ${data.lastName}`,
-            email: data.email,
-            phone: data.phone,
-            metadata: {
-              lead_id: leadData.id,
-              lead_captured: true,
-              meeting_scheduled: true,
-              meeting_date: dateData?.date.toISOString(),
-              meeting_time: timeData?.time
-            }
-          })
-          .eq('id', conversationId);
-      }
-
-      toast.success(
-        conversationId 
-          ? t('messages:success.meetingScheduled') 
-          : t('messages:success.formSubmitted')
-      );
+      toast.success(t('messages:success.formSubmitted'));
       setIsOpen(false);
       // Reset form
       setCurrentStep(1);
