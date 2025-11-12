@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "title": "Dokładność to wszystko.",
+    "description": "Optymalizujemy kapa pod jednym kątem: dostarczanie <strong>najdokładniejszych odpowiedzi</strong> dotyczących Twojego produktu. Ten system nazywamy <strong>Silnikiem Odpowiedzi</strong>.",
+    "stats": {
+      "answers": {
+        "value": "+250k",
+        "label": "Odpowiedzi AI generowanych miesięcznie przez NestAi.tools."
+      },
+      "companies": {
+        "value": "+100",
+        "label": "Firm ufa NestAi.tools w środowisku produkcyjnym."
+      }
+    }
+  },
+  "testimonials": {
+    "sonatype": {
+      "company": "Sonatype",
+      "quote": "NestAi.tools to <strong>jedyny system oparty na LLM, któremu ufam</strong> przed naszymi klientami",
+      "author": "Rusty Wilson",
+      "position": "VP Wsparcia @ Sonatype"
+    },
+    "ionic": {
+      "company": "Ionic",
+      "quote": "Nasz zespół zrobił wszystko, aby postawić NestAi.tools w trudnej sytuacji, a raz za razem <strong>dostarczał pomocnych, dokładnych odpowiedzi</strong>.",
+      "author": "Michael Ellis",
+      "position": "Lider Deweloperów @ Ionic"
+    },
+    "prisma": {
+      "company": "Prisma",
+      "quote": "NestAi.tools jest znacznie <strong>lepszy w odpowiadaniu na pytania o Prisma niż ChatGPT</strong>",
+      "author": "Soren Schmidt",
+      "position": "CEO @ Prisma"
+    }
+  },
+  "philosophy": {
+    "title": "Nasza filozofia: Rozwój oparty na ewaluacji",
+    "subtitle": "Akademickie benchmarki i rankingi to nie wszystko.",
+    "paragraphs": {
+      "custom": "Potrzebujesz <strong>niestandardowych ewaluacji</strong>, aby dostosować modele AI. A w <span class=\"text-primary\">NestAi.tools</span> naszą misją jest pomoc firmom we wdrażaniu niezawodnych asystentów AI do <strong>odpowiadania na techniczne pytania dotyczące produktów</strong>.",
+      "frameworks": "Dlatego <strong>opracowaliśmy wyspecjalizowane frameworki ewolucji do odpowiadania na techniczne pytania dotyczące produktów</strong>, które wykraczają poza ogólne metryki, uwzględniając rzeczywiste opinie klientów.",
+      "refinement": "To podejście pozwala nam <strong>ciągle udoskonalać nasz system i wdrażać najnowsze badania oraz modele</strong>, tylko wtedy, gdy poprawiają dokładność dla wszystkich użytkowników NestAi.tools."
+    }
+  },
+  "howItWorks": {
+    "title": "Jak działa Silnik Odpowiedzi",
+    "subtitle": "Silnik Odpowiedzi to nasz <strong>kompleksowy system zoptymalizowany do odpowiadania na techniczne pytania dotyczące produktów</strong>. Jest niezależny od modelu, co oznacza, że zmienia się w czasie wraz z pojawianiem się nowych technik i modeli, i jest <strong>zaprojektowany do użytku produkcyjnego</strong>.",
+    "features": {
+      "multiProduct": {
+        "title": "Obsługa wielu produktów i wersji",
+        "description": "Obsługuje zapytania dotyczące różnych wersji produktów i opcji wdrożenia.",
+        "example": {
+          "question": "Jak rozpocząć pracę z ExampleDB?",
+          "answer": "To zależy. Jeśli używasz wersji open-source, postępuj zgodnie z <span class=\"text-primary\">Przewodnikiem Self-hosted</span>, a jeśli używasz chmury <span class=\"text-primary underline\">załóż konto</span>."
+        }
+      },
+      "queryUnderstanding": {
+        "title": "Zrozumienie zapytania",
+        "description": "Rozkłada trudne i niejasne zapytania użytkowników na konkretne podzapytania, aby poprawić jakość odpowiedzi.",
+        "example": {
+          "question": "Jak tego użyć?",
+          "subQuestions": [
+            "Jakie są kroki konfiguracji?",
+            "Czy są jakieś wymagania wstępne?",
+            "Gdzie mogę znaleźć tutoriale?"
+          ]
+        }
+      },
+      "multilingual": {
+        "title": "Wielojęzyczność z założenia",
+        "description": "Przetwarza treści w jednym języku i odpowiada w preferowanym języku użytkownika.",
+        "example": {
+          "question": "🇧🇷 Quantos idiomas são suportados?",
+          "answer": "Suportamos mais de 60 idiomas, incluindo inglês, espanhol e mandarim, conforme mencionado em nosso <span class=\"text-primary\">📖 Help Center</span>"
+        }
+      },
+      "groundedAnswers": {
+        "title": "Ugruntowane odpowiedzi z cytatami",
+        "description": "Dostarcza odpowiedzi oparte wyłącznie na Twojej bazie wiedzy, redukując halucynacje.",
+        "example": {
+          "question": "Jak utworzyć tabelę w ExampleDB?",
+          "answer": "Użyj polecenia <code>CREATE TABLE</code>. Szczegóły składni znajdziesz w naszym <span class=\"text-primary\">📖 Przewodniku tworzenia tabel</span>"
+        }
+      },
+      "knowledgeSources": {
+        "title": "Zoptymalizowane do łączenia źródeł wiedzy",
+        "description": "Syntetyzuje informacje z wielu źródeł, aby zapewnić kompleksowe odpowiedzi.",
+        "example": {
+          "question": "Jak naprawić błąd \"Memory allocation\"?",
+          "answer": "Zwiększ <code>max_memory_allocation</code> (zobacz <span class=\"text-primary\">📖 Dokumentacja</span> lub wypróbuj obejście wspomniane w tym <span class=\"text-primary\">🔗 Github Issue</span>"
+        }
+      },
+      "staysOnTopic": {
+        "title": "Pozostaje przy temacie",
+        "description": "Odpowiada tylko na pytania dotyczące Twojego produktu, aby można go było bezpiecznie wdrożyć dla klientów.",
+        "example": {
+          "question": "Jak rozpocząć pracę z OtherDB?",
+          "answer": "Przepraszam, ale jako asystent AI dla ExampleDB, jestem dostrojony do odpowiadania na pytania dotyczące ExampleDB."
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "questions": {
+      "llm": {
+        "question": "Jakiego LLM używacie?",
+        "answer": "Używamy kombinacji najnowocześniejszych modeli językowych, zoptymalizowanych specjalnie pod kątem technicznych pytań dotyczących produktów. Nasz system jest niezależny od modelu i ciągle ewoluuje w miarę pojawiania się nowych modeli."
+      },
+      "accuracy": {
+        "question": "Jak dokładna jest kapa?",
+        "answer": "Nasze wskaźniki dokładności konsekwentnie przekraczają 90% dla technicznych pytań dotyczących produktów. Ciągle oceniamy i ulepszamy nasz system, wykorzystując rzeczywiste opinie klientów i wyspecjalizowane frameworki ewaluacji."
+      },
+      "hallucinations": {
+        "question": "Jak rozwiązujecie problem halucynacji?",
+        "answer": "Używamy technik ugruntowanej generacji, które zapewniają, że odpowiedzi są oparte wyłącznie na Twojej bazie wiedzy. Nasz system dostarcza cytaty i ściśle trzyma się tematu, aby zminimalizować halucynacje."
+      },
+      "fineTuning": {
+        "question": "Czy używacie fine-tuningu czy RAG?",
+        "answer": "Używamy hybrydowego podejścia, które łączy zalety obu technik, wraz z naszymi własnymi optymalizacjami Answer Engine dla technicznych pytań dotyczących produktów."
+      }
+    }
+  },
+  "cta": {
+    "title": "Przekształć swoją bazę wiedzy w gotowego do produkcji asystenta AI",
+    "subtitle": "Poproś o demo, aby wypróbować NestAi.tools na swoich źródłach danych już dziś",
+    "button": "Poproś o demo →"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "title": "Accuracy is everything.",
+    "description": "We optimize kapa for one thing: providing the <strong>most accurate answers</strong> about your product. That system is what we call the <strong>Answer Engine</strong>.",
+    "stats": {
+      "answers": {
+        "value": "+250k",
+        "label": "AI answers generated per month by NestAi.tools."
+      },
+      "companies": {
+        "value": "+100",
+        "label": "Companies trust NestAi.tools in production."
+      }
+    }
+  },
+  "testimonials": {
+    "sonatype": {
+      "company": "Sonatype",
+      "quote": "NestAi.tools is the <strong>only LLM-based system I trust</strong> to put in front of our customers",
+      "author": "Rusty Wilson",
+      "position": "VP Support @ Sonatype"
+    },
+    "ionic": {
+      "company": "Ionic",
+      "quote": "Our team did its best to stump NestAi.tools, and time and time again, it <strong>delivered helpful, accurate responses</strong>.",
+      "author": "Michael Ellis",
+      "position": "Developer Lead @ Ionic"
+    },
+    "prisma": {
+      "company": "Prisma",
+      "quote": "NestAi.tools is much <strong>better at answering questions about Prisma than ChatGPT is</strong>",
+      "author": "Soren Schmidt",
+      "position": "CEO @ Prisma"
+    }
+  },
+  "philosophy": {
+    "title": "Our philosophy: Evaluation-Driven Development",
+    "subtitle": "Academic benchmarks and leaderboards only take you so far.",
+    "paragraphs": {
+      "custom": "You need <strong>custom evaluations</strong> to align AI models. And at <span class=\"text-primary\">NestAi.tools</span>, our mission is to help companies to deploy reliable AI assistants to <strong>answer technical product questions</strong>.",
+      "frameworks": "So we have <strong>developed specialized evolution frameworks for answering technical product questions</strong> that go beyond generic metrics, incorporating real-world customer feedback.",
+      "refinement": "This approach allows us to <strong>continuously refine our system and deploy latest research and models</strong>, only when it improves accuracy for all users of NestAi.tools."
+    }
+  },
+  "howItWorks": {
+    "title": "How the Answer Engine works",
+    "subtitle": "The Answer Engine is our <strong>end-to-end system optimized for answering technical product questions</strong>. It's model-agnostic, meaning it changes over time as new techniques and models come out, and is <strong>designed for production</strong> use-cases.",
+    "features": {
+      "multiProduct": {
+        "title": "Multi-Product and Multi-Version Support",
+        "description": "Handles queries across different product versions and deployment options.",
+        "example": {
+          "question": "How do I get started with ExampleDB?",
+          "answer": "That depends. If you use the open-source version follow the <span class=\"text-primary\">Self-hosted Guide</span> and if you use the cloud <span class=\"text-primary underline\">sign up for an account</span>."
+        }
+      },
+      "queryUnderstanding": {
+        "title": "Query Understanding",
+        "description": "Breaks down challenging and vague users queries into specific sub-questions to improve answer quality.",
+        "example": {
+          "question": "How do I use it?",
+          "subQuestions": [
+            "What are steps to set up?",
+            "Are there any prerequisites?",
+            "Where can I find tutorials?"
+          ]
+        }
+      },
+      "multilingual": {
+        "title": "Multilingual By Design",
+        "description": "Processes content in one language and responds in the user's preferred language.",
+        "example": {
+          "question": "🇧🇷 Quantos idiomas são suportados?",
+          "answer": "Suportamos mais de 60 idiomas, incluindo inglês, espanhol e mandarim, conforme mencionado em nosso <span class=\"text-primary\">📖 Help Center</span>"
+        }
+      },
+      "groundedAnswers": {
+        "title": "Grounded Answers with Citations",
+        "description": "Provides answers based only on your knowledge content, reducing hallucinations.",
+        "example": {
+          "question": "How do I create a table in ExampleDB?",
+          "answer": "Use the <code>CREATE TABLE</code> command. For Syntax details see our <span class=\"text-primary\">📖 Table Creation Guide</span>"
+        }
+      },
+      "knowledgeSources": {
+        "title": "Optimized For Combining Knowledge Sources",
+        "description": "Synthesizes information from multiple sources to provide comprehensive answers.",
+        "example": {
+          "question": "How do I fix \"Memory allocation\" error?",
+          "answer": "Increase <code>max_memory_allocation</code> (see <span class=\"text-primary\">📖 Documentation</span> or try the workaround mentioned in this <span class=\"text-primary\">🔗 Github Issue</span>"
+        }
+      },
+      "staysOnTopic": {
+        "title": "Stays On Topic",
+        "description": "Answers questions only specific to your product, to be safely deployed to customers.",
+        "example": {
+          "question": "How do I get started with OtherDB?",
+          "answer": "I'm sorry, but as an AI assistant for ExampleDB, I'm tuned to answer questions about ExampleDB."
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "questions": {
+      "llm": {
+        "question": "What LLM do you use?",
+        "answer": "We use a combination of state-of-the-art language models, optimized specifically for technical product questions. Our system is model-agnostic and continuously evolves as new models become available."
+      },
+      "accuracy": {
+        "question": "How accurate is kapa?",
+        "answer": "Our accuracy rates consistently exceed 90% for technical product questions. We continuously evaluate and improve our system using real-world customer feedback and specialized evaluation frameworks."
+      },
+      "hallucinations": {
+        "question": "How do you solve hallucinations?",
+        "answer": "We use grounded generation techniques that ensure answers are based only on your knowledge content. Our system provides citations and stays strictly on topic to minimize hallucinations."
+      },
+      "fineTuning": {
+        "question": "Do you use fine-tuning or RAG?",
+        "answer": "We use a hybrid approach that combines the best of both techniques, along with our proprietary Answer Engine optimizations for technical product questions."
+      }
+    }
+  },
+  "cta": {
+    "title": "Turn your knowledge base into a production-ready AI assistant",
+    "subtitle": "Request a demo to try NestAi.tools on your data sources today",
+    "button": "Request Demo →"
+  }
+}
