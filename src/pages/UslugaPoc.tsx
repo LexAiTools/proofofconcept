@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation('poc');
 
   return (
     <div className="min-h-screen bg-background">
