@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "About Our",
+    "titleHighlight": "Consortium",
+    "subtitle": "A decade-long partnership between two innovative companies, building the future of AI and blockchain technology."
+  },
+  "partnership": {
+    "title": "10 Years of Innovation Together",
+    "description": "Our consortium brings together complementary expertise in AI engine development and user interface design. For over a decade, we've been collaborating on cutting-edge projects in Blockchain and Artificial Intelligence.",
+    "jointTeam": "Joint Team",
+    "innovationFocus": "Innovation Focus",
+    "stats": {
+      "yearsPartnership": "Years Partnership",
+      "countries": "Countries",
+      "projects": "Projects",
+      "coreTechnologies": "Core Technologies"
+    }
+  },
+  "members": {
+    "title": "Our Consortium Members",
+    "subtitle": "Two specialized companies working as one unified team",
+    "nestai": {
+      "name": "NestAI",
+      "website": "nestai.tools",
+      "location": "Cieszyn, Poland",
+      "description": "Specializes in AI engine development and core technology infrastructure. Our engine team focuses on building robust, scalable AI systems that power modern applications.",
+      "expertise": "Core Expertise:",
+      "expertiseList": {
+        "architecture": "AI Engine Architecture",
+        "ml": "Machine Learning Systems",
+        "backend": "Backend Infrastructure",
+        "optimization": "Performance Optimization"
+      }
+    },
+    "corbally": {
+      "name": "CorballyConcepts",
+      "website": "corballyconcepts.com",
+      "location": "Dublin, Ireland",
+      "description": "Builds user interfaces and develops proof-of-concepts that bring AI technology to life. Our design team creates intuitive experiences that make complex AI accessible.",
+      "expertise": "Core Expertise:",
+      "expertiseList": {
+        "ui": "User Interface Design",
+        "poc": "Proof-of-Concept Development",
+        "frontend": "Frontend Architecture",
+        "ux": "User Experience Strategy"
+      }
+    }
+  },
+  "technology": {
+    "title": "Our Technology Focus",
+    "subtitle": "For a decade, we've been at the forefront of two revolutionary technologies",
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "Building intelligent systems that understand, learn, and adapt. From natural language processing to machine learning algorithms, we create AI solutions that solve real-world problems.",
+      "features": {
+        "nlp": "Natural Language Processing",
+        "ml": "Machine Learning Models",
+        "conversational": "Conversational AI Systems",
+        "automation": "Intelligent Automation"
+      }
+    },
+    "blockchain": {
+      "title": "Blockchain Technology",
+      "description": "Developing decentralized solutions that ensure transparency, security, and trust. Our blockchain expertise spans from smart contracts to distributed systems architecture.",
+      "features": {
+        "smartContracts": "Smart Contract Development",
+        "dapps": "Decentralized Applications",
+        "architecture": "Blockchain Architecture",
+        "crypto": "Cryptocurrency Solutions"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to work with our consortium?",
+    "subtitle": "Let's discuss how our combined expertise can bring your AI and blockchain projects to life.",
+    "button": "Get in Touch"
+  }
+}

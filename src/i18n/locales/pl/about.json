@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "O Naszym",
+    "titleHighlight": "Konsorcjum",
+    "subtitle": "Dziesięcioletnie partnerstwo dwóch innowacyjnych firm, budujących przyszłość sztucznej inteligencji i technologii blockchain."
+  },
+  "partnership": {
+    "title": "10 Lat Wspólnych Innowacji",
+    "description": "Nasze konsorcjum łączy komplementarną wiedzę w zakresie rozwoju silników AI i projektowania interfejsów użytkownika. Od ponad dekady współpracujemy nad najnowocześniejszymi projektami w obszarze Blockchain i Sztucznej Inteligencji.",
+    "jointTeam": "Wspólny Zespół",
+    "innovationFocus": "Skupienie na Innowacjach",
+    "stats": {
+      "yearsPartnership": "Lat Partnerstwa",
+      "countries": "Kraje",
+      "projects": "Projekty",
+      "coreTechnologies": "Kluczowe Technologie"
+    }
+  },
+  "members": {
+    "title": "Członkowie Naszego Konsorcjum",
+    "subtitle": "Dwie wyspecjalizowane firmy działające jako jeden zespół",
+    "nestai": {
+      "name": "NestAI",
+      "website": "nestai.tools",
+      "location": "Cieszyn, Polska",
+      "description": "Specjalizuje się w rozwoju silników AI i infrastruktury technologicznej. Nasz zespół inżynierski koncentruje się na budowaniu solidnych, skalowalnych systemów AI zasilających nowoczesne aplikacje.",
+      "expertise": "Główne Kompetencje:",
+      "expertiseList": {
+        "architecture": "Architektura Silnika AI",
+        "ml": "Systemy Uczenia Maszynowego",
+        "backend": "Infrastruktura Backendowa",
+        "optimization": "Optymalizacja Wydajności"
+      }
+    },
+    "corbally": {
+      "name": "CorballyConcepts",
+      "website": "corballyconcepts.com",
+      "location": "Dublin, Irlandia",
+      "description": "Tworzy interfejsy użytkownika i rozwija proof-of-concepts, które ożywiają technologię AI. Nasz zespół projektowy tworzy intuicyjne doświadczenia, które sprawiają, że złożona AI staje się dostępna.",
+      "expertise": "Główne Kompetencje:",
+      "expertiseList": {
+        "ui": "Projektowanie Interfejsów Użytkownika",
+        "poc": "Rozwój Proof-of-Concept",
+        "frontend": "Architektura Frontendowa",
+        "ux": "Strategia Doświadczeń Użytkownika"
+      }
+    }
+  },
+  "technology": {
+    "title": "Nasze Technologie",
+    "subtitle": "Od dekady jesteśmy na czele dwóch rewolucyjnych technologii",
+    "ai": {
+      "title": "Sztuczna Inteligencja",
+      "description": "Budujemy inteligentne systemy, które rozumieją, uczą się i adaptują. Od przetwarzania języka naturalnego po algorytmy uczenia maszynowego, tworzymy rozwiązania AI rozwiązujące rzeczywiste problemy.",
+      "features": {
+        "nlp": "Przetwarzanie Języka Naturalnego",
+        "ml": "Modele Uczenia Maszynowego",
+        "conversational": "Systemy Konwersacyjne AI",
+        "automation": "Inteligentna Automatyzacja"
+      }
+    },
+    "blockchain": {
+      "title": "Technologia Blockchain",
+      "description": "Rozwijamy zdecentralizowane rozwiązania zapewniające przejrzystość, bezpieczeństwo i zaufanie. Nasza wiedza blockchain obejmuje od smart contracts po architekturę systemów rozproszonych.",
+      "features": {
+        "smartContracts": "Rozwój Smart Contracts",
+        "dapps": "Aplikacje Zdecentralizowane",
+        "architecture": "Architektura Blockchain",
+        "crypto": "Rozwiązania Kryptowalutowe"
+      }
+    }
+  },
+  "cta": {
+    "title": "Gotowy na współpracę z naszym konsorcjum?",
+    "subtitle": "Porozmawiajmy o tym, jak nasza wspólna wiedza może ożywić Twoje projekty AI i blockchain.",
+    "button": "Skontaktuj się"
+  }
+}

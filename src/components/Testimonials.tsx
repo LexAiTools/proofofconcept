@@ -1,40 +1,43 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    role: "CTO at TechCorp",
-    content: "CorballyConcepts transformed our data strategy completely. We're now processing 10x more data with half the resources.",
-    rating: 5,
-    avatar: "SC"
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "VP of Analytics at DataFlow",
-    content: "The AI insights we get are incredibly accurate. It's like having a team of data scientists working 24/7.",
-    rating: 5,
-    avatar: "MR"
-  },
-  {
-    name: "Jennifer Wu",
-    role: "CEO at InnovateLabs",
-    content: "Implementation was seamless and the ROI was visible within weeks. Exactly what we needed for scaling our operations.",
-    rating: 5,
-    avatar: "JW"
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export const Testimonials = () => {
+  const { t } = useTranslation('testimonials');
+  
+  const testimonials = [
+    {
+      name: t('testimonials.sarahChen.name'),
+      role: t('testimonials.sarahChen.role'),
+      content: t('testimonials.sarahChen.content'),
+      rating: 5,
+      avatar: "SC"
+    },
+    {
+      name: t('testimonials.michaelRodriguez.name'),
+      role: t('testimonials.michaelRodriguez.role'),
+      content: t('testimonials.michaelRodriguez.content'),
+      rating: 5,
+      avatar: "MR"
+    },
+    {
+      name: t('testimonials.jenniferWu.name'),
+      role: t('testimonials.jenniferWu.role'),
+      content: t('testimonials.jenniferWu.content'),
+      rating: 5,
+      avatar: "JW"
+    }
+  ];
+  
   return (
     <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Loved by Industry Leaders
+            {t('title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See what our clients say about their transformation journey with CorballyConcepts.
+            {t('subtitle')}
           </p>
         </div>
 

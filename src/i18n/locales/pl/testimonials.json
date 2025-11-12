@@ -1,0 +1,21 @@
+{
+  "title": "Cenieni przez Liderów Branży",
+  "subtitle": "Zobacz, co nasi klienci mówią o swojej transformacji z CorballyConcepts.",
+  "testimonials": {
+    "sarahChen": {
+      "name": "Sarah Chen",
+      "role": "CTO w TechCorp",
+      "content": "CorballyConcepts całkowicie przekształciło naszą strategię danych. Teraz przetwarzamy 10x więcej danych przy połowie zasobów."
+    },
+    "michaelRodriguez": {
+      "name": "Michael Rodriguez",
+      "role": "VP Analityki w DataFlow",
+      "content": "Wglądy AI, które otrzymujemy, są niezwykle dokładne. To jak posiadanie zespołu data scientists pracującego 24/7."
+    },
+    "jenniferWu": {
+      "name": "Jennifer Wu",
+      "role": "CEO w InnovateLabs",
+      "content": "Implementacja była bezproblemowa, a ROI było widoczne w ciągu tygodni. Dokładnie to, czego potrzebowaliśmy do skalowania operacji."
+    }
+  }
+}
