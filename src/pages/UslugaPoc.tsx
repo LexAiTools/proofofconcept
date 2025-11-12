@@ -10,6 +10,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { PlayCircle } from "lucide-react";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
@@ -29,6 +31,30 @@ const UslugaPoc = () => {
             <p className="text-2xl text-primary font-semibold mb-8">
               {t('hero.subtitle')}
             </p>
+            
+            {/* Watch Video Button */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="glass" size="lg" className="group">
+                  <PlayCircle className="w-5 h-5 mr-2" />
+                  {t('hero.watchVideo')}
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl w-full">
+                <div className="aspect-video w-full">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="PoC Demo Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </section>
