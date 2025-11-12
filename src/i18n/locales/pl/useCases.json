@@ -1,0 +1,54 @@
+{
+  "trusted": {
+    "title": "Zaufało nam ponad",
+    "titleLine2": "200 wiodących",
+    "titleLine3": "zespołów"
+  },
+  "companies": [
+    "Logitech",
+    "OpenAI",
+    "Docker",
+    "Reddit",
+    "Juniper",
+    "Amplitude",
+    "Monday.com",
+    "CircleCI",
+    "Netlify"
+  ],
+  "hero": {
+    "title": "Ten sam RAG,",
+    "titleLine2": "którego używają",
+    "titleLine3": "najlepsi praktycy AI.",
+    "cta": "Umów demo"
+  },
+  "deployment": {
+    "title": "Wdróż PoC tam, gdzie",
+    "titleLine2": "Twoi klienci i członkowie zespołu",
+    "titleLine3": "będą zadawać pytania",
+    "subtitle": "Natychmiastowe odpowiedzi techniczne, które zwiększają wartość Twojej firmy.",
+    "cta": "Rozpocznij darmowy okres próbny"
+  },
+  "cases": [
+    {
+      "subtitle": "Dane zewnętrzne",
+      "title": "Zapytaj AI",
+      "description": "Osadź czat AI w dokumentacji i produktach",
+      "details": "Gotowe, konfigurowalne widżety witryn internetowych, boty Slack/Discord i SDK API do tworzenia niestandardowych rozwiązań",
+      "stat": "+90% szybszy onboarding użytkowników, wyższy CSAT, niższa rezygnacja użytkowników"
+    },
+    {
+      "subtitle": "Dane wewnętrzne",
+      "title": "Deflektor zgłoszeń",
+      "description": "Natychmiastowe zmniejszenie liczby zgłoszeń wsparcia",
+      "details": "Prosta integracja za pomocą jednej linii skryptu z istniejącym formularzem wsparcia",
+      "stat": "20-40% przychodzących zgłoszeń wsparcia jest odrzucanych"
+    },
+    {
+      "subtitle": "Dane wewnętrzne",
+      "title": "Wewnętrzny asystent techniczny",
+      "description": "Czat wewnętrzny zoptymalizowany dla zespołów",
+      "details": "Bezpieczna aplikacja czatu, która ma dostęp do Twoich wewnętrznych źródeł",
+      "stat": "6 godzin zaoszczędzonych na AE, SDR, Wsparcie i CSM"
+    }
+  ]
+}

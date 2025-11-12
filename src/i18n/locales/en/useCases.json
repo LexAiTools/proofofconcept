@@ -1,0 +1,54 @@
+{
+  "trusted": {
+    "title": "Trusted by over",
+    "titleLine2": "200 leading",
+    "titleLine3": "teams"
+  },
+  "companies": [
+    "Logitech",
+    "OpenAI",
+    "Docker",
+    "Reddit",
+    "Juniper",
+    "Amplitude",
+    "Monday.com",
+    "CircleCI",
+    "Netlify"
+  ],
+  "hero": {
+    "title": "The same RAG",
+    "titleLine2": "used by top AI",
+    "titleLine3": "practitioners.",
+    "cta": "Book Demo"
+  },
+  "deployment": {
+    "title": "Deploy PoC where your",
+    "titleLine2": "customers and team members",
+    "titleLine3": "will ask questions",
+    "subtitle": "Instant technical answers that increase your company's value.",
+    "cta": "Start Free Trial"
+  },
+  "cases": [
+    {
+      "subtitle": "External Data",
+      "title": "Ask AI",
+      "description": "Embed AI chat in docs and products",
+      "details": "Ready-made, configurable website widgets, Slack/Discord bots, and API SDKs for building custom solutions",
+      "stat": "+90% faster user onboarding, higher CSAT, lower user churn"
+    },
+    {
+      "subtitle": "Internal Data",
+      "title": "Ticket Deflector",
+      "description": "Instantly reduce support tickets",
+      "details": "Simple 1-line script integration with existing support form",
+      "stat": "20-40% of incoming support tickets are deflected"
+    },
+    {
+      "subtitle": "Internal Data",
+      "title": "Internal Technical Assistant",
+      "description": "Internal chat optimized for teams",
+      "details": "Secure chat app that has access to your internal sources",
+      "stat": "6 hours saved per AE, SDRs, Support, and CSMs"
+    }
+  ]
+}
