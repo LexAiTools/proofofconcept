@@ -214,6 +214,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder={t('step1.placeholders.name')}
+                className="max-w-full"
               />
             </div>
             <div className="space-y-2">
@@ -224,6 +225,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder={t('step1.placeholders.email')}
+                className="max-w-full"
               />
             </div>
             <div className="space-y-2">
@@ -233,6 +235,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder={t('step1.placeholders.phone')}
+                className="max-w-full"
               />
             </div>
           </div>
@@ -249,7 +252,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
                 placeholder={t('step2.placeholder')}
                 rows={5}
-                className="sm:min-h-[200px]"
+                className="sm:min-h-[200px] max-w-full"
                 maxLength={500}
               />
               <p className="text-sm text-muted-foreground">
@@ -270,7 +273,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 onChange={(e) => setFormData({ ...formData, targetAudience: e.target.value })}
                 placeholder={t('step3.placeholder')}
                 rows={4}
-                className="sm:min-h-[150px]"
+                className="sm:min-h-[150px] max-w-full"
               />
             </div>
             <div className="space-y-2">
@@ -306,6 +309,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                     value={feature}
                     onChange={(e) => updateFeature(index, e.target.value)}
                     placeholder={t(`step4.placeholders.feature${Math.min(index + 1, 3)}`)}
+                    className="max-w-full"
                   />
                 </div>
               ))}
@@ -340,6 +344,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 onChange={(e) => setFormData({ ...formData, inspirationLinks: e.target.value })}
                 placeholder={t('step5.inspirationPlaceholder')}
                 rows={3}
+                className="max-w-full"
               />
             </div>
           </div>
@@ -395,9 +400,9 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               title={t('step7.sections.contact')}
               onEdit={() => goToStep(1)}
             >
-              <p className="text-sm">{formData.name}</p>
-              <p className="text-sm">{formData.email}</p>
-              <p className="text-sm">{formData.phone}</p>
+              <p className="text-sm break-words">{formData.name}</p>
+              <p className="text-sm break-words">{formData.email}</p>
+              <p className="text-sm break-words">{formData.phone}</p>
             </SummarySection>
 
             <SummarySection
@@ -405,7 +410,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               title={t('step7.sections.problem')}
               onEdit={() => goToStep(2)}
             >
-              <p className="text-sm">{formData.problem}</p>
+              <p className="text-sm break-words">{formData.problem}</p>
             </SummarySection>
 
             <SummarySection
@@ -413,7 +418,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               title={t('step7.sections.audience')}
               onEdit={() => goToStep(3)}
             >
-              <p className="text-sm">{formData.targetAudience}</p>
+              <p className="text-sm break-words">{formData.targetAudience}</p>
             </SummarySection>
 
             <SummarySection
@@ -423,7 +428,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
             >
               <ul className="list-disc list-inside space-y-1">
                 {formData.features.filter(f => f.trim()).map((f, i) => (
-                  <li key={i} className="text-sm">{f}</li>
+                  <li key={i} className="text-sm break-words">{f}</li>
                 ))}
               </ul>
             </SummarySection>
@@ -433,9 +438,9 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               title={t('step7.sections.style')}
               onEdit={() => goToStep(5)}
             >
-              <p className="text-sm">{formData.visualStyle && t(`step5.styles.${formData.visualStyle}.title`)}</p>
+              <p className="text-sm break-words">{formData.visualStyle && t(`step5.styles.${formData.visualStyle}.title`)}</p>
               {formData.inspirationLinks && (
-                <p className="text-sm text-muted-foreground mt-1">{formData.inspirationLinks}</p>
+                <p className="text-sm text-muted-foreground mt-1 break-words">{formData.inspirationLinks}</p>
               )}
             </SummarySection>
 
@@ -444,9 +449,9 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               title={t('step7.sections.timeline')}
               onEdit={() => goToStep(6)}
             >
-              <p className="text-sm">{formData.timeline && t(`step6.options.${formData.timeline}`)}</p>
+              <p className="text-sm break-words">{formData.timeline && t(`step6.options.${formData.timeline}`)}</p>
               {formData.specificDate && (
-                <p className="text-sm text-muted-foreground mt-1">
+                <p className="text-sm text-muted-foreground mt-1 break-words">
                   {formData.specificDate.toLocaleDateString()}
                 </p>
               )}
@@ -462,7 +467,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-6xl w-[95vw] sm:w-full p-0 overflow-hidden max-h-[95vh] sm:max-h-[90vh]">
+      <DialogContent className="max-w-6xl w-[95vw] sm:w-full p-0 overflow-hidden overflow-x-hidden max-h-[95vh] sm:max-h-[90vh]">
         <div className="flex flex-col lg:grid lg:grid-cols-2 h-full max-h-[95vh] sm:max-h-[90vh]">
           {/* Left column - Question */}
           <div className="bg-muted/30 p-4 sm:p-6 lg:p-12 flex flex-col justify-between overflow-y-auto lg:min-h-0">
@@ -516,7 +521,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
           </div>
 
           {/* Right column - Form */}
-          <div className="p-4 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0">
+          <div className="p-3 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0">
             <Button
               variant="ghost"
               size="icon"
@@ -595,7 +600,7 @@ const SummarySection = ({ icon: Icon, title, onEdit, children }: SummarySectionP
           {t('step7.editButton')}
         </Button>
       </div>
-      <div className="text-muted-foreground">{children}</div>
+      <div className="text-muted-foreground break-words overflow-wrap-anywhere">{children}</div>
     </div>
   );
 };
