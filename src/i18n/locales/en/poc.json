@@ -20,53 +20,68 @@
     }
   },
   "services": {
-    "title": "Our services",
+    "title": "Our Services",
     "quickStart": {
-      "label": "1. Quick Start - PoC Form",
+      "label": "1. Quick Start PoC - Working Prototype (24h)",
       "title": "Write it, see the result immediately",
-      "description": "Fill out a simple form describing your idea, and we'll immediately start working on your prototype."
+      "price": "€349 / $380",
+      "description": "Fill out a simple form describing your idea, and we'll immediately start working on your prototype.",
+      "subtitle": "What you get:",
+      "feature1": "Clickable React app - ready for presentation",
+      "feature2": "Working prototype - that looks like a real application",
+      "feature3": "Interactive interface - to show investors and first customers",
+      "highlight": "This is the basic package that will allow you to quickly verify your idea and see what your product will look like in practice.",
+      "button": "Order PoC Prototype",
+      "example": "See Example"
     },
     "interactiveApp": {
       "label": "2. Interactive PoC Application",
-      "title": "Clickable React app - ready for presentation",
+      "title": "Clickable React app - working like a real application (3 days)",
+      "price": "€488 / $532",
       "description": "You'll create with us:",
       "feature1": "Web or mobile app interface",
-      "feature2": "Clickable demo that works like a real application",
-      "feature3": "Prototype ready to show to investors and clients",
-      "highlight": "Your product will look like a finished application, not like a sketch on paper."
+      "feature2": "Clickable demo that works immediately like a real application",
+      "feature3": "Lead collection system - app accepts submissions and contact data",
+      "feature4": "Prototype ready to show investors and collect real customers",
+      "highlight": "Your product will not only look like a finished application, but will actually work and collect leads from day one.",
+      "button": "Order PoC Application",
+      "example": "See Example"
     },
     "completePackage": {
-      "label": "3. COMPLETE PACKAGE",
-      "title": "Product Presentation",
-      "price": "2500 PLN / 581 EUR",
-      "subtitle": "Everything you need for an effective presentation",
-      "feature1Title": "Explainer video",
+      "label": "3. COMPLETE PoC PACKAGE - Product Presentation",
+      "title": "Everything you need for an effective presentation (7 days)",
+      "price": "€651 / $710",
+      "subtitle": "Package includes:",
+      "feature1Title": "Explainer Video",
       "feature1Desc": "professional video presenting your product",
       "feature2Title": "Landing Page",
-      "feature2Desc": "website for lead generation",
+      "feature2Desc": "website to collect leads",
       "feature3Title": "Content",
       "feature3Desc": "ready-made sales copy",
-      "description": "This is a complete solution for presenting the product to investors, business partners, or first customers.",
-      "button": "Order Complete Package"
+      "description": "This is a complete solution for presenting your product to investors, business partners, or first customers.",
+      "button": "Order Complete PoC Package",
+      "example": "See Example"
     },
     "custom": {
-      "label": "4. Custom Project",
+      "label": "4. Custom Tailored PoC Project",
       "title": "Have unusual requirements? Contact us",
       "description": "Every idea is different. If standard packages don't meet your needs, we'll develop a custom offer tailored to your project.",
       "button": "Contact Us"
     },
     "websitePackage": {
-      "label": "5. PACKAGE",
-      "title": "Professional Website",
-      "price": "3500 PLN / 814 EUR",
-      "subtitle": "Your website ready in one hour",
+      "label": "5. PoC PACKAGE - Professional Website with AI",
+      "title": "Your website ready in (14 days)",
+      "price": "€3,814 / $4,160",
+      "subtitle": "What you get:",
       "feature1": "Modern, responsive interface",
       "feature2": "Web analytics to track users",
       "feature3": "Contact forms integrated with your system",
       "feature4": "3-4 subpages + dedicated contact page",
-      "feature5": "Working website ready for publication in one hour",
-      "highlight": "Forget about months of waiting for a website.",
-      "button": "Order Website"
+      "feature5": "AI Assistant talking to customers \"in your company's language\" - trained in your business specifics, answering customer questions 24/7",
+      "feature6": "Working website ready for publication in 14 days",
+      "highlight": "Forget about months of waiting for a website. Your website with intelligent AI assistant ready in two weeks.",
+      "button": "Order Website with AI",
+      "example": "See Example"
     }
   },
   "howItWorks": {

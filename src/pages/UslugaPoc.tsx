@@ -112,89 +112,81 @@ const UslugaPoc = () => {
           <div className="space-y-8 max-w-5xl mx-auto">
             <Card className="bg-card border-border">
               <CardContent className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <div className="text-sm font-semibold text-primary mb-2">{t('services.quickStart.label')}</div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
-                      {t('services.quickStart.title')}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {t('services.quickStart.description')}
-                    </p>
-                  </div>
+                <div className="text-sm font-semibold text-primary mb-2">
+                  {t('services.quickStart.label')}
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card border-border">
-              <CardContent className="p-8">
-                <div className="mb-4">
-                  <div className="text-sm font-semibold text-primary mb-2">{t('services.interactiveApp.label')}</div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {t('services.interactiveApp.title')}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">{t('services.interactiveApp.description')}</p>
-                  <ul className="space-y-2 text-muted-foreground ml-6 mb-4">
-                    <li className="list-disc">{t('services.interactiveApp.feature1')}</li>
-                    <li className="list-disc">{t('services.interactiveApp.feature2')}</li>
-                    <li className="list-disc">{t('services.interactiveApp.feature3')}</li>
-                  </ul>
-                  <p className="text-foreground font-semibold">
-                    {t('services.interactiveApp.highlight')}
-                  </p>
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  {t('services.quickStart.title')}
+                </h3>
+                <div className="text-3xl font-bold text-primary mb-4">
+                  {t('services.quickStart.price')}
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-primary border-border">
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <div className="text-sm font-semibold text-primary-foreground/80 mb-2">{t('services.completePackage.label')}</div>
-                  <h3 className="text-2xl font-bold text-primary-foreground mb-2">
-                    {t('services.completePackage.title')}
-                  </h3>
-                  <div className="text-3xl font-bold text-primary-foreground mb-4">
-                    {t('services.completePackage.price')}
-                  </div>
-                  <p className="text-primary-foreground/90 mb-4">{t('services.completePackage.subtitle')}</p>
-                  <div className="space-y-2 text-primary-foreground/90 mb-4">
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span><strong>{t('services.completePackage.feature1Title')}</strong> - {t('services.completePackage.feature1Desc')}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span><strong>{t('services.completePackage.feature2Title')}</strong> - {t('services.completePackage.feature2Desc')}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span><strong>{t('services.completePackage.feature3Title')}</strong> - {t('services.completePackage.feature3Desc')}</span>
-                    </div>
-                  </div>
-                  <p className="text-primary-foreground/90 mb-6">
-                    {t('services.completePackage.description')}
-                  </p>
+                <p className="text-muted-foreground mb-4">
+                  {t('services.quickStart.description')}
+                </p>
+                <p className="text-foreground font-semibold mb-2">
+                  {t('services.quickStart.subtitle')}
+                </p>
+                <ul className="space-y-2 text-muted-foreground ml-6 mb-4">
+                  <li className="list-disc">{t('services.quickStart.feature1')}</li>
+                  <li className="list-disc">{t('services.quickStart.feature2')}</li>
+                  <li className="list-disc">{t('services.quickStart.feature3')}</li>
+                </ul>
+                <p className="text-muted-foreground mb-6">
+                  {t('services.quickStart.highlight')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
                   <RequestAccessPopup>
-                    <Button variant="secondary" size="lg">
-                      {t('services.completePackage.button')}
+                    <Button variant="default" size="lg">
+                      {t('services.quickStart.button')}
                     </Button>
                   </RequestAccessPopup>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    onClick={() => window.open('https://kolejkowo.corballyconcepts.com/', '_blank')}
+                  >
+                    {t('services.quickStart.example')}
+                  </Button>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="bg-card border-border">
               <CardContent className="p-8">
-                <div className="mb-4">
-                  <div className="text-sm font-semibold text-primary mb-2">{t('services.custom.label')}</div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    {t('services.custom.title')}
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    {t('services.custom.description')}
-                  </p>
-                  <Button variant="outline" onClick={() => navigate('/contact')}>
-                    {t('services.custom.button')}
+                <div className="text-sm font-semibold text-primary mb-2">
+                  {t('services.interactiveApp.label')}
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  {t('services.interactiveApp.title')}
+                </h3>
+                <div className="text-3xl font-bold text-primary mb-4">
+                  {t('services.interactiveApp.price')}
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  {t('services.interactiveApp.description')}
+                </p>
+                <ul className="space-y-2 text-muted-foreground ml-6 mb-4">
+                  <li className="list-disc">{t('services.interactiveApp.feature1')}</li>
+                  <li className="list-disc">{t('services.interactiveApp.feature2')}</li>
+                  <li className="list-disc">{t('services.interactiveApp.feature3')}</li>
+                  <li className="list-disc">{t('services.interactiveApp.feature4')}</li>
+                </ul>
+                <p className="text-muted-foreground mb-6">
+                  {t('services.interactiveApp.highlight')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <RequestAccessPopup>
+                    <Button variant="default" size="lg">
+                      {t('services.interactiveApp.button')}
+                    </Button>
+                  </RequestAccessPopup>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    onClick={() => window.open('https://lead.corballyconcepts.com/', '_blank')}
+                  >
+                    {t('services.interactiveApp.example')}
                   </Button>
                 </div>
               </CardContent>
@@ -202,45 +194,127 @@ const UslugaPoc = () => {
 
             <Card className="bg-gradient-primary border-border">
               <CardContent className="p-8">
-                <div className="mb-6">
-                  <div className="text-sm font-semibold text-primary-foreground/80 mb-2">{t('services.websitePackage.label')}</div>
-                  <h3 className="text-2xl font-bold text-primary-foreground mb-2">
-                    {t('services.websitePackage.title')}
-                  </h3>
-                  <div className="text-3xl font-bold text-primary-foreground mb-4">
-                    {t('services.websitePackage.price')}
+                <div className="text-sm font-semibold text-primary-foreground/80 mb-2">
+                  {t('services.completePackage.label')}
+                </div>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-2">
+                  {t('services.completePackage.title')}
+                </h3>
+                <div className="text-3xl font-bold text-primary-foreground mb-4">
+                  {t('services.completePackage.price')}
+                </div>
+                <p className="text-primary-foreground/90 mb-4">
+                  {t('services.completePackage.subtitle')}
+                </p>
+                <div className="space-y-2 text-primary-foreground/90 mb-4">
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span><strong>{t('services.completePackage.feature1Title')}</strong> - {t('services.completePackage.feature1Desc')}</span>
                   </div>
-                  <p className="text-primary-foreground/90 mb-4">{t('services.websitePackage.subtitle')}</p>
-                  <div className="space-y-2 text-primary-foreground/90 mb-4">
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>{t('services.websitePackage.feature1')}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>{t('services.websitePackage.feature2')}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>{t('services.websitePackage.feature3')}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>{t('services.websitePackage.feature4')}</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="mr-2">✓</span>
-                      <span>{t('services.websitePackage.feature5')}</span>
-                    </div>
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span><strong>{t('services.completePackage.feature2Title')}</strong> - {t('services.completePackage.feature2Desc')}</span>
                   </div>
-                  <p className="text-primary-foreground/90 mb-6 font-semibold">
-                    {t('services.websitePackage.highlight')}
-                  </p>
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span><strong>{t('services.completePackage.feature3Title')}</strong> - {t('services.completePackage.feature3Desc')}</span>
+                  </div>
+                </div>
+                <p className="text-primary-foreground/90 mb-6">
+                  {t('services.completePackage.description')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <RequestAccessPopup>
+                    <Button variant="secondary" size="lg">
+                      {t('services.completePackage.button')}
+                    </Button>
+                  </RequestAccessPopup>
+                  <Button 
+                    variant="glass" 
+                    size="lg"
+                    onClick={() => window.open('https://poznaj.artopen.pl/produkt', '_blank')}
+                  >
+                    {t('services.completePackage.example')}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border">
+              <CardContent className="p-8">
+                <div className="text-sm font-semibold text-primary mb-2">
+                  {t('services.custom.label')}
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  {t('services.custom.title')}
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  {t('services.custom.description')}
+                </p>
+                <RequestAccessPopup>
+                  <Button variant="default" size="lg">
+                    {t('services.custom.button')}
+                  </Button>
+                </RequestAccessPopup>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-primary border-border">
+              <CardContent className="p-8">
+                <div className="text-sm font-semibold text-primary-foreground/80 mb-2">
+                  {t('services.websitePackage.label')}
+                </div>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-2">
+                  {t('services.websitePackage.title')}
+                </h3>
+                <div className="text-3xl font-bold text-primary-foreground mb-4">
+                  {t('services.websitePackage.price')}
+                </div>
+                <p className="text-primary-foreground/90 mb-4">
+                  {t('services.websitePackage.subtitle')}
+                </p>
+                <div className="space-y-2 text-primary-foreground/90 mb-4">
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>{t('services.websitePackage.feature1')}</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>{t('services.websitePackage.feature2')}</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>{t('services.websitePackage.feature3')}</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>{t('services.websitePackage.feature4')}</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>{t('services.websitePackage.feature5')}</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="mr-2">✓</span>
+                    <span>{t('services.websitePackage.feature6')}</span>
+                  </div>
+                </div>
+                <p className="text-primary-foreground/90 mb-6 font-semibold">
+                  {t('services.websitePackage.highlight')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
                   <RequestAccessPopup>
                     <Button variant="secondary" size="lg">
                       {t('services.websitePackage.button')}
                     </Button>
                   </RequestAccessPopup>
+                  <Button 
+                    variant="glass" 
+                    size="lg"
+                    onClick={() => window.open('https://poznaj.artopen.pl', '_blank')}
+                  >
+                    {t('services.websitePackage.example')}
+                  </Button>
                 </div>
               </CardContent>
             </Card>

@@ -22,24 +22,36 @@
   "services": {
     "title": "Nasze usługi",
     "quickStart": {
-      "label": "1. Szybki Start - Formularz PoC",
+      "label": "1. Szybki Start PoC - Działający Prototyp (24h)",
       "title": "Napisz, zobaczysz od razu efekt",
-      "description": "Wypełnij prosty formularz z opisem swojego pomysłu, a my natychmiast rozpoczniemy pracę nad Twoim prototypem."
+      "price": "1500 zł / 349 EUR",
+      "description": "Wypełnij prosty formularz z opisem swojego pomysłu, a my natychmiast rozpoczniemy pracę nad Twoim prototypem.",
+      "subtitle": "Co otrzymujesz:",
+      "feature1": "Klikalna aplikacja w React - gotowa do prezentacji",
+      "feature2": "Działający prototyp - który wygląda jak prawdziwa aplikacja",
+      "feature3": "Interaktywny interfejs - do pokazania inwestorom i pierwszym klientom",
+      "highlight": "To podstawowy pakiet, który pozwoli Ci szybko zweryfikować pomysł i zobaczyć, jak będzie wyglądał Twój produkt w praktyce.",
+      "button": "Zamów Prototyp PoC",
+      "example": "Zobacz przykład"
     },
     "interactiveApp": {
       "label": "2. Interaktywna Aplikacja PoC",
-      "title": "Klikalna aplikacja w React - gotowa do prezentacji",
+      "title": "Klikalna aplikacja w React - działająca jak normalna aplikacja (3 dni)",
+      "price": "2100 zł / 488 EUR",
       "description": "Stworzysz z nami:",
       "feature1": "Interfejs aplikacji webowej lub mobilnej",
-      "feature2": "Klikalne demo, które działa jak prawdziwa aplikacja",
-      "feature3": "Prototyp gotowy do pokazania inwestorom i klientom",
-      "highlight": "Twój produkt będzie wyglądał jak gotowa aplikacja, nie jak szkic na papierze."
+      "feature2": "Klikalne demo, które działa od razu jak normalna aplikacja",
+      "feature3": "System zbierania leadów - aplikacja przyjmuje zgłoszenia i dane kontaktowe",
+      "feature4": "Prototyp gotowy do pokazania inwestorom i zbierania prawdziwych klientów",
+      "highlight": "Twój produkt będzie nie tylko wyglądał jak gotowa aplikacja, ale faktycznie będzie działać i zbierać leady od pierwszego dnia.",
+      "button": "Zamów Aplikację PoC",
+      "example": "Zobacz przykład"
     },
     "completePackage": {
-      "label": "3. PAKIET KOMPLETNY",
-      "title": "Prezentacja Produktu",
-      "price": "2500 zł / 581 EUR",
-      "subtitle": "Wszystko, czego potrzebujesz do skutecznej prezentacji",
+      "label": "3. PAKIET KOMPLETNY PoC - Prezentacja Produktu",
+      "title": "Wszystko, czego potrzebujesz do skutecznej prezentacji (7 dni)",
+      "price": "2800 zł / 651 EUR",
+      "subtitle": "W pakiecie otrzymujesz:",
       "feature1Title": "Film explainer",
       "feature1Desc": "profesjonalne wideo prezentujące Twój produkt",
       "feature2Title": "Landing Page",
@@ -47,26 +59,29 @@
       "feature3Title": "Treść",
       "feature3Desc": "gotowe teksty sprzedażowe",
       "description": "To kompletne rozwiązanie do prezentacji produktu inwestorom, partnerom biznesowym lub pierwszym klientom.",
-      "button": "Zamów Pakiet Kompletny"
+      "button": "Zamów Pakiet Kompletny PoC",
+      "example": "Zobacz przykład"
     },
     "custom": {
-      "label": "4. Projekt Szytej na Miarę",
+      "label": "4. Projekt PoC Szyty na Miarę",
       "title": "Masz nietypowe wymagania? Skontaktuj się z nami",
       "description": "Każdy pomysł jest inny. Jeśli standardowe pakiety nie odpowiadają Twoim potrzebom, opracujemy indywidualną ofertę dopasowaną do Twojego projektu.",
       "button": "Skontaktuj się"
     },
     "websitePackage": {
-      "label": "5. PAKIET",
-      "title": "Profesjonalna Strona Internetowa",
-      "price": "3500 zł / 814 EUR",
-      "subtitle": "Twoja strona gotowa w godzinę",
+      "label": "5. PAKIET PoC - Profesjonalna Strona Internetowa z AI",
+      "title": "Twoja strona gotowa w (14 dni)",
+      "price": "16 400 zł / 3 814 EUR",
+      "subtitle": "Co otrzymujesz:",
       "feature1": "Nowoczesny, responsywny interfejs",
       "feature2": "Analitykę internetową do śledzenia użytkowników",
       "feature3": "Formularze kontaktowe zintegrowane z Twoim systemem",
       "feature4": "3-4 podstrony + dedykowana strona kontaktowa",
-      "feature5": "Działającą stronę gotową do publikacji w godzinę",
-      "highlight": "Zapomnij o miesiącach oczekiwania na stronę internetową.",
-      "button": "Zamów Stronę"
+      "feature5": "Asystent AI rozmawiający z klientami \"Twoim językiem firmy\" - wyszkolony w Twojej specyfice biznesowej, odpowiadający na pytania klientów 24/7",
+      "feature6": "Działającą stronę gotową do publikacji w 14 dni",
+      "highlight": "Zapomnij o miesiącach oczekiwania na stronę internetową. Twoja strona z inteligentnym asystentem AI gotowa w dwa tygodnie.",
+      "button": "Zamów Stronę z AI",
+      "example": "Zobacz przykład"
     }
   },
   "howItWorks": {
