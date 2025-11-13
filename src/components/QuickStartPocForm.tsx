@@ -530,44 +530,43 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               {renderStep()}
             </div>
 
-            <div className="flex justify-between gap-2 pt-4 sm:pt-6 border-t border-border mt-4 sm:mt-8">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={handleBack}
-                disabled={currentStep === 1}
-                size="sm"
-                className="sm:h-10"
-              >
-                <ArrowLeft className="w-4 h-4 sm:mr-2" />
-                <span className="hidden sm:inline">{t('buttons.back')}</span>
-              </Button>
+        <div className="flex flex-col sm:flex-row justify-between gap-2 pt-4 sm:pt-6 border-t border-border mt-4 sm:mt-8">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={handleBack}
+            disabled={currentStep === 1}
+            className="h-10 w-full sm:w-auto"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            {t('buttons.back')}
+          </Button>
 
-              {currentStep < 7 ? (
-                <Button 
-                  onClick={handleNext}
-                  size="sm"
-                  className="sm:h-10"
-                >
-                  <span className="hidden sm:inline">{t('buttons.next')}</span>
-                  <ArrowRight className="w-4 h-4 sm:ml-2" />
-                </Button>
+          {currentStep < 7 ? (
+            <Button 
+              onClick={handleNext}
+              className="h-10 w-full sm:w-auto"
+            >
+              {t('buttons.next')}
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          ) : (
+            <Button 
+              onClick={handleSubmit} 
+              disabled={isSubmitting}
+              className="h-10 w-full sm:w-auto text-sm px-4 sm:px-6"
+            >
+              {isSubmitting ? (
+                <span className="truncate">{t('step7.submitting')}</span>
               ) : (
-                <Button 
-                  onClick={handleSubmit} 
-                  disabled={isSubmitting}
-                  size="sm"
-                  className="sm:h-10 text-xs sm:text-sm"
-                >
-                  {isSubmitting ? t('step7.submitting') : (
-                    <>
-                      <span className="hidden sm:inline">{t('step7.confirmButton', { price: t('price') })}</span>
-                      <span className="sm:hidden">Wyślij</span>
-                    </>
-                  )}
-                </Button>
+                <>
+                  <span className="hidden sm:inline truncate">{t('step7.confirmButton', { price: t('price') })}</span>
+                  <span className="sm:hidden">Wyślij</span>
+                </>
               )}
-            </div>
+            </Button>
+          )}
+        </div>
           </div>
         </div>
       </DialogContent>
