@@ -62,7 +62,8 @@ const resources = {
       poc: enPoc,
       quickStartPoc: enQuickStartPoc,
       interactiveAppPoc: enInteractiveAppPoc,
-      completePackagePoc: enCompletePackagePoc,
+    completePackagePoc: enCompletePackagePoc,
+    professionalWebsitePoc: enProfessionalWebsitePoc,
   },
   pl: {
     common: plCommon,
@@ -83,7 +84,8 @@ const resources = {
       poc: plPoc,
       quickStartPoc: plQuickStartPoc,
       interactiveAppPoc: plInteractiveAppPoc,
-      completePackagePoc: plCompletePackagePoc,
+    completePackagePoc: plCompletePackagePoc,
+    professionalWebsitePoc: plProfessionalWebsitePoc,
   },
 };
 
