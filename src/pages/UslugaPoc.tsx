@@ -493,7 +493,8 @@ const UslugaPoc = () => {
                   size="lg"
                   className="font-semibold w-full md:w-auto max-w-lg"
                 >
-                  {t('howItWorks.howItLooksInPractice.footer')}
+                  <span className="md:hidden">{t('howItWorks.howItLooksInPractice.footerMobile')}</span>
+                  <span className="hidden md:inline">{t('howItWorks.howItLooksInPractice.footer')}</span>
                 </Button>
               </div>
               </div>

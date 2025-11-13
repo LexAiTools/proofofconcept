@@ -144,7 +144,8 @@
           "action": "Odbierasz i cieszysz się gotowym produktem"
         }
       },
-      "footer": "Zero stresu. Zero zgadywania. Zero ukrytych kosztów."
+      "footer": "Zero stresu. Zero zgadywania. Zero ukrytych kosztów.",
+      "footerMobile": "Zero zgadywania..."
     },
     "adminPanel": {
       "title": "Panel Administracyjny",

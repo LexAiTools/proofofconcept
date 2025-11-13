@@ -144,7 +144,8 @@
           "action": "You receive and enjoy the finished product"
         }
       },
-      "footer": "Zero stress. Zero guessing. Zero hidden costs."
+      "footer": "Zero stress. Zero guessing. Zero hidden costs.",
+      "footerMobile": "Zero guessing..."
     },
     "adminPanel": {
       "title": "Admin Panel",
