@@ -1919,12 +1919,12 @@ export const ProfessionalWebsitePocForm = ({ children }: ProfessionalWebsitePocF
             {currentStep <= 21 && renderLeftContent()}
             
             {/* Prawa kolumna - pola formularza */}
-            <div className="p-3 sm:p-6 lg:p-12 pb-8 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0 w-full max-w-full">
+            <div className="p-3 sm:p-6 lg:p-12 pb-32 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0 w-full max-w-full">
               {currentStep === 22 && <h2 className="text-2xl font-bold mb-4">{t('professionalWebsitePoc:title')}</h2>}
               {renderStepContent()}
               
               {/* Navigation buttons */}
-              <div className="flex gap-3 mt-8 flex-shrink-0 pt-4 bg-gradient-to-t from-background via-background to-transparent">
+              <div className="flex gap-3 mt-12 flex-shrink-0 pt-4 bg-gradient-to-t from-background via-background to-transparent">
                 {currentStep > 1 && (
                   <Button variant="outline" onClick={handleBack}>
                     <ArrowLeft className="mr-2 h-4 w-4" />
