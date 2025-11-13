@@ -7,11 +7,11 @@ interface PocProgressBarProps {
 export const PocProgressBar = ({ currentStep, steps, totalSteps }: PocProgressBarProps) => {
   return (
     <div className="w-full">
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center justify-between mb-2 sm:mb-3">
         {Array.from({ length: totalSteps }).map((_, index) => (
           <div key={index} className="flex items-center flex-1 last:flex-none">
             <div
-              className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-colors ${
+              className={`w-7 h-7 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs sm:text-base font-semibold transition-colors ${
                 currentStep >= index + 1
                   ? 'bg-primary text-primary-foreground'
                   : 'bg-muted text-muted-foreground'
@@ -21,7 +21,7 @@ export const PocProgressBar = ({ currentStep, steps, totalSteps }: PocProgressBa
             </div>
             {index < totalSteps - 1 && (
               <div
-                className={`h-0.5 flex-1 mx-2 transition-colors ${
+                className={`h-0.5 flex-1 mx-1 sm:mx-2 transition-colors ${
                   currentStep > index + 1 ? 'bg-primary' : 'bg-muted'
                 }`}
               />

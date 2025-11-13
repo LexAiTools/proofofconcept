@@ -206,7 +206,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
     switch (currentStep) {
       case 1:
         return (
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name">{t('step1.fields.name')}</Label>
               <Input
@@ -240,7 +240,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
 
       case 2:
         return (
-          <div className="space-y-4">
+          <div className="space-y-4 sm:space-y-6">
             <div className="space-y-2">
               <Label htmlFor="problem">{t('step2.field')}</Label>
               <Textarea
@@ -248,7 +248,8 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 value={formData.problem}
                 onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
                 placeholder={t('step2.placeholder')}
-                rows={8}
+                rows={5}
+                className="sm:min-h-[200px]"
                 maxLength={500}
               />
               <p className="text-sm text-muted-foreground">
@@ -260,7 +261,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
 
       case 3:
         return (
-          <div className="space-y-4">
+          <div className="space-y-4 sm:space-y-6">
             <div className="space-y-2">
               <Label htmlFor="audience">{t('step3.field')}</Label>
               <Textarea
@@ -268,12 +269,13 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
                 value={formData.targetAudience}
                 onChange={(e) => setFormData({ ...formData, targetAudience: e.target.value })}
                 placeholder={t('step3.placeholder')}
-                rows={6}
+                rows={4}
+                className="sm:min-h-[150px]"
               />
             </div>
             <div className="space-y-2">
               <p className="text-sm font-medium">{t('step3.suggestions.title')}</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {['entrepreneurs', 'students', 'parents', 'freelancers', 'b2b', 'b2c'].map((s) => (
                   <Button
                     key={s}
@@ -292,20 +294,22 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
 
       case 4:
         return (
-          <div className="space-y-4">
-            {formData.features.map((feature, index) => (
-              <div key={index} className="space-y-2">
-                <Label htmlFor={`feature-${index}`}>
-                  {index < 3 ? t(`step4.fields.feature${index + 1}`) : `Funkcja ${index + 1}`}
-                </Label>
-                <Input
-                  id={`feature-${index}`}
-                  value={feature}
-                  onChange={(e) => updateFeature(index, e.target.value)}
-                  placeholder={t(`step4.placeholders.feature${Math.min(index + 1, 3)}`)}
-                />
-              </div>
-            ))}
+          <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-3 sm:space-y-4">
+              {formData.features.map((feature, index) => (
+                <div key={index} className="space-y-2">
+                  <Label htmlFor={`feature-${index}`}>
+                    {index < 3 ? t(`step4.fields.feature${index + 1}`) : `Funkcja ${index + 1}`}
+                  </Label>
+                  <Input
+                    id={`feature-${index}`}
+                    value={feature}
+                    onChange={(e) => updateFeature(index, e.target.value)}
+                    placeholder={t(`step4.placeholders.feature${Math.min(index + 1, 3)}`)}
+                  />
+                </div>
+              ))}
+            </div>
             {formData.features.length < 6 && (
               <Button type="button" variant="outline" onClick={addFeature} className="w-full">
                 {t('step4.addMore')}
@@ -316,8 +320,8 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
 
       case 5:
         return (
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {(['modern', 'minimal', 'colorful', 'professional'] as const).map((style) => (
                 <VisualStyleCard
                   key={style}
@@ -343,7 +347,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
 
       case 6:
         return (
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <RadioGroup
               value={formData.timeline}
               onValueChange={(value: any) => setFormData({ ...formData, timeline: value })}
@@ -369,13 +373,15 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
             {formData.timeline === 'specific' && (
               <div className="space-y-2 pt-4">
                 <Label>{t('step6.selectDate')}</Label>
-                <Calendar
-                  mode="single"
-                  selected={formData.specificDate}
-                  onSelect={(date) => setFormData({ ...formData, specificDate: date })}
-                  disabled={(date) => date < new Date()}
-                  className="rounded-md border"
-                />
+                <div className="flex justify-center">
+                  <Calendar
+                    mode="single"
+                    selected={formData.specificDate}
+                    onSelect={(date) => setFormData({ ...formData, specificDate: date })}
+                    disabled={(date) => date < new Date()}
+                    className="rounded-md border scale-90 sm:scale-100"
+                  />
+                </div>
               </div>
             )}
           </div>
@@ -456,19 +462,43 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-6xl w-full p-0 overflow-hidden max-h-[90vh]">
-        <div className="grid lg:grid-cols-2 h-full max-h-[90vh]">
+      <DialogContent className="max-w-6xl w-[95vw] sm:w-full p-0 overflow-hidden max-h-[95vh] sm:max-h-[90vh]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 h-full max-h-[95vh] sm:max-h-[90vh]">
           {/* Left column - Question */}
-          <div className="bg-muted/30 p-8 lg:p-12 flex flex-col justify-between hidden lg:flex overflow-y-auto">
-            <div>
+          <div className="bg-muted/30 p-4 sm:p-6 lg:p-12 flex flex-col justify-between overflow-y-auto lg:min-h-0">
+            {/* Mobile: kompaktowy widok */}
+            <div className="lg:hidden mb-4">
+              <div className="flex items-center justify-between mb-3">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-lg">P</span>
+                </div>
+                <span className="text-sm font-semibold text-primary">
+                  Krok {currentStep}/7
+                </span>
+              </div>
+              {currentStep <= 6 && (
+                <div>
+                  <h2 className="text-xl font-bold text-foreground leading-tight mb-2">
+                    {t(`step${currentStep}.title`)}
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    {t(`step${currentStep}.description`)}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Desktop: pełny widok */}
+            <div className="hidden lg:block">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-8">
                 <span className="text-primary-foreground font-bold text-xl">P</span>
               </div>
               {currentStep <= 6 && renderLeftContent()}
             </div>
 
+            {/* Progress bar */}
             {currentStep <= 6 && (
-              <div className="mt-8">
+              <div className="mt-4 lg:mt-8">
                 <PocProgressBar
                   currentStep={currentStep}
                   steps={[
@@ -486,11 +516,11 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
           </div>
 
           {/* Right column - Form */}
-          <div className="p-8 lg:p-12 flex flex-col overflow-y-auto max-h-[90vh]">
+          <div className="p-4 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0">
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-4 top-4"
+              className="absolute right-2 top-2 sm:right-4 sm:top-4 z-10"
               onClick={handleClose}
             >
               <X className="w-4 h-4" />
@@ -500,25 +530,41 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               {renderStep()}
             </div>
 
-            <div className="flex justify-between pt-6 border-t border-border mt-8">
+            <div className="flex justify-between gap-2 pt-4 sm:pt-6 border-t border-border mt-4 sm:mt-8">
               <Button
                 type="button"
                 variant="outline"
                 onClick={handleBack}
                 disabled={currentStep === 1}
+                size="sm"
+                className="sm:h-10"
               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                {t('buttons.back')}
+                <ArrowLeft className="w-4 h-4 sm:mr-2" />
+                <span className="hidden sm:inline">{t('buttons.back')}</span>
               </Button>
 
               {currentStep < 7 ? (
-                <Button onClick={handleNext}>
-                  {t('buttons.next')}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <Button 
+                  onClick={handleNext}
+                  size="sm"
+                  className="sm:h-10"
+                >
+                  <span className="hidden sm:inline">{t('buttons.next')}</span>
+                  <ArrowRight className="w-4 h-4 sm:ml-2" />
                 </Button>
               ) : (
-                <Button onClick={handleSubmit} disabled={isSubmitting}>
-                  {isSubmitting ? t('step7.submitting') : t('step7.confirmButton', { price: t('price') })}
+                <Button 
+                  onClick={handleSubmit} 
+                  disabled={isSubmitting}
+                  size="sm"
+                  className="sm:h-10 text-xs sm:text-sm"
+                >
+                  {isSubmitting ? t('step7.submitting') : (
+                    <>
+                      <span className="hidden sm:inline">{t('step7.confirmButton', { price: t('price') })}</span>
+                      <span className="sm:hidden">Wyślij</span>
+                    </>
+                  )}
                 </Button>
               )}
             </div>
