@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { PlayCircle } from "lucide-react";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
@@ -328,31 +328,210 @@ const UslugaPoc = () => {
 
       {/* How It Works Section */}
       <section className="py-16 px-6 bg-muted/50">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-foreground text-center mb-12">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-foreground text-center mb-4">
             {t('howItWorks.title')}
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="item-1" className="border border-border rounded-lg px-6 bg-card">
-                <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-xl font-semibold">{t('howItWorks.payAndHave.title')}</span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {t('howItWorks.payAndHave.description')}
-                </AccordionContent>
-              </AccordionItem>
+          <p className="text-center text-muted-foreground mb-12">
+            {t('howItWorks.subtitle')}
+          </p>
 
-              <AccordionItem value="item-2" className="border border-border rounded-lg px-6 bg-card">
-                <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-xl font-semibold">{t('howItWorks.adminPanel.title')}</span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {t('howItWorks.adminPanel.description')}
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+          {/* Model "Płać i Miej" */}
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle className="text-2xl">{t('howItWorks.payAndHave.title')}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-muted-foreground">
+                {t('howItWorks.payAndHave.description')}
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Dlaczego to działa? */}
+          <div className="mb-8">
+            <h3 className="text-3xl font-bold text-foreground mb-6">
+              {t('howItWorks.whyItWorks.title')}
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">
+                    {t('howItWorks.whyItWorks.items.transparency.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    {t('howItWorks.whyItWorks.items.transparency.description')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">
+                    {t('howItWorks.whyItWorks.items.immediateStart.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    {t('howItWorks.whyItWorks.items.immediateStart.description')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">
+                    {t('howItWorks.whyItWorks.items.predictableTimeline.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    {t('howItWorks.whyItWorks.items.predictableTimeline.description')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">
+                    {t('howItWorks.whyItWorks.items.projectControl.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    {t('howItWorks.whyItWorks.items.projectControl.description')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="md:col-span-2">
+                <CardHeader>
+                  <CardTitle className="text-xl">
+                    {t('howItWorks.whyItWorks.items.qualityGuarantee.title')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    {t('howItWorks.whyItWorks.items.qualityGuarantee.description')}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
+
+          {/* Jak to wygląda w praktyce? */}
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle className="text-2xl">
+                {t('howItWorks.howItLooksInPractice.title')}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex gap-4 items-start">
+                  <div className="font-bold text-primary min-w-[140px]">
+                    {t('howItWorks.howItLooksInPractice.timeline.step1.time')}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {t('howItWorks.howItLooksInPractice.timeline.step1.action')}
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="font-bold text-primary min-w-[140px]">
+                    {t('howItWorks.howItLooksInPractice.timeline.step2.time')}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {t('howItWorks.howItLooksInPractice.timeline.step2.action')}
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="font-bold text-primary min-w-[140px]">
+                    {t('howItWorks.howItLooksInPractice.timeline.step3.time')}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {t('howItWorks.howItLooksInPractice.timeline.step3.action')}
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="font-bold text-primary min-w-[140px]">
+                    {t('howItWorks.howItLooksInPractice.timeline.step4.time')}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {t('howItWorks.howItLooksInPractice.timeline.step4.action')}
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="font-bold text-primary min-w-[140px]">
+                    {t('howItWorks.howItLooksInPractice.timeline.step5.time')}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {t('howItWorks.howItLooksInPractice.timeline.step5.action')}
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="font-bold text-primary min-w-[140px]">
+                    {t('howItWorks.howItLooksInPractice.timeline.step6.time')}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {t('howItWorks.howItLooksInPractice.timeline.step6.action')}
+                  </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-primary/10 rounded-lg">
+                  <p className="text-center font-semibold text-foreground">
+                    {t('howItWorks.howItLooksInPractice.footer')}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Panel Administracyjny */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl">{t('howItWorks.adminPanel.title')}</CardTitle>
+              <p className="text-muted-foreground">{t('howItWorks.adminPanel.subtitle')}</p>
+            </CardHeader>
+            <CardContent>
+              <p className="mb-4 font-semibold">{t('howItWorks.adminPanel.description')}</p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">✓</span>
+                  <span className="text-muted-foreground">
+                    {t('howItWorks.adminPanel.features.access')}
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">✓</span>
+                  <span className="text-muted-foreground">
+                    {t('howItWorks.adminPanel.features.dashboard')}
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">✓</span>
+                  <span className="text-muted-foreground">
+                    {t('howItWorks.adminPanel.features.communication')}
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">✓</span>
+                  <span className="text-muted-foreground">
+                    {t('howItWorks.adminPanel.features.notifications')}
+                  </span>
+                </li>
+              </ul>
+              <p className="text-muted-foreground italic">
+                {t('howItWorks.adminPanel.footer')}
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

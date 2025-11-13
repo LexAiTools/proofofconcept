@@ -86,13 +86,77 @@
   },
   "howItWorks": {
     "title": "Jak to działa?",
+    "subtitle": "Propozycja 3 (bez ikonek)",
     "payAndHave": {
       "title": "Model \"Płać i Miej\"",
-      "description": "Bez ukrytych kosztów, bez niespodzianek. Płacisz ustaloną cenę i natychmiast otrzymujesz działający prototyp. Proste, przejrzyste, skuteczne."
+      "description": "Bez ukrytych kosztów, bez niespodzianek. Płacisz ustaloną cenę i natychmiast otrzymujesz działający prototyp."
+    },
+    "whyItWorks": {
+      "title": "Dlaczego to działa?",
+      "items": {
+        "transparency": {
+          "title": "Transparentność cenowa",
+          "description": "Widzisz dokładną cenę przed zamówieniem. Nie ma \"dopiero po wycenie\" - płacisz dokładnie tyle, ile widzisz na stronie."
+        },
+        "immediateStart": {
+          "title": "Natychmiastowy start",
+          "description": "Nie czekasz na ofertę, spotkanie, negocjacje. Wypełniasz formularz, płacisz, i od razu zaczynamy pracę."
+        },
+        "predictableTimeline": {
+          "title": "Przewidywalny timeline",
+          "description": "Dokładnie wiesz, kiedy otrzymasz produkt. Nie \"kiedyś\", nie \"może za tydzień\" - konkretne daty w panelu administracyjnym."
+        },
+        "projectControl": {
+          "title": "Kontrola nad projektem",
+          "description": "Panel administracyjny daje Ci pełną kontrolę. Widzisz postęp, komunikujesz się z zespołem, zgłaszasz uwagi - wszystko w jednym miejscu."
+        },
+        "qualityGuarantee": {
+          "title": "Gwarancja jakości",
+          "description": "2 rundy poprawek w cenie. Nie odpuszczamy, dopóki nie będziesz zadowolony/a."
+        }
+      }
+    },
+    "howItLooksInPractice": {
+      "title": "Jak to wygląda w praktyce?",
+      "timeline": {
+        "step1": {
+          "time": "Dzisiaj o 14:00",
+          "action": "Wypełniasz formularz i płacisz"
+        },
+        "step2": {
+          "time": "Dzisiaj o 14:05",
+          "action": "Otrzymujesz dostęp do panelu i potwierdzenie"
+        },
+        "step3": {
+          "time": "Dzisiaj o 15:00",
+          "action": "Widzisz pierwszy draft (prototyp szybki start)"
+        },
+        "step4": {
+          "time": "LUB za 3-7 dni",
+          "action": "Otrzymujesz gotowy produkt (w zależności od pakietu)"
+        },
+        "step5": {
+          "time": "+24-48h",
+          "action": "Zgłaszasz uwagi, wprowadzamy poprawki"
+        },
+        "step6": {
+          "time": "Koniec",
+          "action": "Odbierasz i cieszysz się gotowym produktem"
+        }
+      },
+      "footer": "Zero stresu. Zero zgadywania. Zero ukrytych kosztów."
     },
     "adminPanel": {
       "title": "Panel Administracyjny",
-      "description": "Po zakupie otrzymujesz dostęp do panelu administracyjnego (admin.corballyconcepts.com), gdzie zarządzasz swoimi projektami i usługami PoC."
+      "subtitle": "Wszystko w jednym miejscu: admin.corballyconcepts.com",
+      "description": "Po zakupie automatycznie otrzymujesz:",
+      "features": {
+        "access": "Dostęp do panelu (zalogujesz poprzez twój email)",
+        "dashboard": "Dashboard z timeline projektu",
+        "communication": "Bezpośrednią komunikację z zespołem",
+        "notifications": "Powiadomienia o postępach"
+      },
+      "footer": "Nie musisz gonić nas emailami. Wszystko widzisz w panelu w czasie rzeczywistym."
     }
   },
   "targetAudience": {
