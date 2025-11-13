@@ -530,34 +530,34 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
               {renderStep()}
             </div>
 
-        <div className="flex flex-col sm:flex-row justify-between gap-2 pt-4 sm:pt-6 border-t border-border mt-4 sm:mt-8">
+        <div className="flex flex-row justify-between gap-2 pt-4 sm:pt-6 border-t border-border mt-4 sm:mt-8">
           <Button
             type="button"
             variant="outline"
             onClick={handleBack}
             disabled={currentStep === 1}
-            className="h-10 w-full sm:w-auto"
+            className="h-10 flex-1 sm:flex-none sm:w-auto px-3 sm:px-4"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            {t('buttons.back')}
+            <ArrowLeft className="w-4 h-4 mr-1 sm:mr-2" />
+            <span className="text-sm sm:text-base">{t('buttons.back')}</span>
           </Button>
 
           {currentStep < 7 ? (
             <Button 
               onClick={handleNext}
-              className="h-10 w-full sm:w-auto"
+              className="h-10 flex-1 sm:flex-none sm:w-auto px-3 sm:px-4"
             >
-              {t('buttons.next')}
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <span className="text-sm sm:text-base">{t('buttons.next')}</span>
+              <ArrowRight className="w-4 h-4 ml-1 sm:ml-2" />
             </Button>
           ) : (
             <Button 
               onClick={handleSubmit} 
               disabled={isSubmitting}
-              className="h-10 w-full sm:w-auto text-sm px-4 sm:px-6"
+              className="h-10 flex-1 sm:flex-none sm:w-auto text-sm px-3 sm:px-6"
             >
               {isSubmitting ? (
-                <span className="truncate">{t('step7.submitting')}</span>
+                <span className="truncate text-sm">{t('step7.submitting')}</span>
               ) : (
                 <>
                   <span className="hidden sm:inline truncate">{t('step7.confirmButton', { price: t('price') })}</span>
