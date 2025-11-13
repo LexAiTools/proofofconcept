@@ -188,7 +188,7 @@ const UslugaPoc = () => {
                   <Button
                     variant="outline" 
                     size="lg"
-                    onClick={() => window.open('https://lead.corballyconcepts.com/', '_blank')}
+                    onClick={() => window.open('https://developer-corballyconcepts.lovable.app', '_blank')}
                   >
                     {t('services.interactiveApp.example')}
                   </Button>
