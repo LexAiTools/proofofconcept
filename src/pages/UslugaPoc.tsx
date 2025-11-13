@@ -356,6 +356,51 @@ const UslugaPoc = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-foreground text-center mb-12">
+            {t('faq.title')}
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {Array.from({ length: 15 }).map((_, index) => (
+                <AccordionItem 
+                  key={`faq-${index}`} 
+                  value={`faq-${index}`} 
+                  className="border border-border rounded-lg px-6 bg-card"
+                >
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">
+                      {t(`faq.items.${index}.question`)}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {t(`faq.items.${index}.answer`)}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+        
+        {/* JSON-LD Structured Data for SEO */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": Array.from({ length: 15 }).map((_, index) => ({
+              "@type": "Question",
+              "name": t(`faq.items.${index}.question`),
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": t(`faq.items.${index}.answer`)
+              }
+            }))
+          })}
+        </script>
+      </section>
+
       {/* Target Audience Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">

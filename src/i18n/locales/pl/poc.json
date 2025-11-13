@@ -119,5 +119,70 @@
     "description": "Nie trać czasu na długie procesy rozwojowe. Zamień swój pomysł w działający produkt w godzinę i zacznij zbierać feedback od prawdziwych użytkowników.",
     "buttonForm": "Wypełnij Formularz PoC",
     "buttonContact": "Skontaktuj się z nami"
+  },
+  "faq": {
+    "title": "Najczęściej zadawane pytania (FAQ)",
+    "items": [
+      {
+        "question": "Czym różni się Szybki Start PoC od Interaktywnej Aplikacji PoC?",
+        "answer": "Szybki Start PoC (1500 zł) to podstawowy prototyp w React, gotowy w 24h - świetny do szybkiej weryfikacji pomysłu. Interaktywna Aplikacja PoC (2100 zł) to pełnoprawna aplikacja z systemem zbierania leadów, która działa jak normalna aplikacja i jest gotowa w 3 dni. Wybierz Quick Start jeśli chcesz tylko pokazać koncept, a Interactive App jeśli potrzebujesz działającego produktu do zbierania pierwszych klientów."
+      },
+      {
+        "question": "Ile kosztuje każdy pakiet PoC i co dokładnie jest w cenie?",
+        "answer": "1) Szybki Start PoC - 1500 zł (349 EUR, 24h): klikalna aplikacja React gotowa do prezentacji. 2) Interaktywna Aplikacja PoC - 2100 zł (488 EUR, 3 dni): działająca aplikacja z systemem leadów. 3) Pakiet Kompletny - 2800 zł (651 EUR, 7 dni): film explainer + landing page + treści sprzedażowe. 4) Projekt Custom - indywidualnie. 5) Profesjonalna Strona z AI - 16 400 zł (3814 EUR, 14 dni): pełna strona z asystentem AI 24/7. Wszystkie ceny są ostateczne - model 'Płać i Miej' bez ukrytych kosztów."
+      },
+      {
+        "question": "Jak długo trwa realizacja każdego z pakietów?",
+        "answer": "Szybki Start PoC - 24 godziny, Interaktywna Aplikacja PoC - 3 dni, Pakiet Kompletny - 7 dni, Profesjonalna Strona z AI - 14 dni. Projekt Custom zależy od zakresu. Realizacja rozpoczyna się natychmiast po wypełnieniu formularza i opłaceniu pakietu. Po zakończeniu otrzymujesz dostęp do panelu administracyjnego gdzie możesz zarządzać swoim projektem."
+      },
+      {
+        "question": "Co zawiera Pakiet Kompletny PoC?",
+        "answer": "Pakiet Kompletny (2800 zł / 651 EUR, 7 dni) to kompleksowe rozwiązanie do prezentacji produktu zawierające: 1) Profesjonalny film explainer prezentujący Twój produkt, 2) Landing page z systemem zbierania leadów, 3) Gotowe treści sprzedażowe dostosowane do Twojej branży. To idealne rozwiązanie do prezentacji inwestorom, partnerom biznesowym lub pierwszym klientom - otrzymujesz wszystko czego potrzebujesz w jednym pakiecie."
+      },
+      {
+        "question": "Czy pakiet Profesjonalna Strona z AI obejmuje chatbota AI?",
+        "answer": "Tak! Pakiet Profesjonalna Strona z AI (16 400 zł / 3814 EUR, 14 dni) zawiera inteligentnego asystenta AI wyszkolonego w specyfice Twojej firmy. Chatbot rozmawia 'Twoim językiem firmy', odpowiada na pytania klientów 24/7, zna Twoje produkty i usługi. Dodatkowo otrzymujesz: nowoczesny responsywny interfejs, analitykę, formularze kontaktowe, 3-4 podstrony + dedykowaną stronę kontaktową. Strona gotowa do publikacji w 14 dni."
+      },
+      {
+        "question": "Jakie technologie są używane do tworzenia prototypów PoC?",
+        "answer": "Wszystkie nasze prototypy PoC są tworzone w React - nowoczesnej i najpopularniejszej bibliotece JavaScript do tworzenia interfejsów użytkownika. Używamy również TypeScript dla bezpieczeństwa kodu, Tailwind CSS dla responsywnego designu oraz Vite dla szybkiego developmentu. Dla pakietów z backend'em wykorzystujemy Supabase (baza danych, autoryzacja, storage). Dzięki tym technologiom Twój prototyp może zostać łatwo rozbudowany do pełnej aplikacji produkcyjnej."
+      },
+      {
+        "question": "Czy otrzymam kod źródłowy mojej aplikacji lub prototypu?",
+        "answer": "Tak, otrzymujesz pełny dostęp do kodu źródłowego Twojego prototypu przez panel administracyjny (admin.corballyconcepts.com). Możesz pobrać kod, modyfikować go, rozbudowywać lub przekazać swojemu zespołowi developerów. Kod jest napisany w czytelny sposób z użyciem najlepszych praktyk, co ułatwia dalszy rozwój. Dodatkowo, jeśli wybierzesz rozbudowę do pełnej aplikacji, możemy kontynuować pracę na tym samym kodzie."
+      },
+      {
+        "question": "Czy mogę przetestować prototyp przed finalną akceptacją?",
+        "answer": "Oczywiście! Po utworzeniu prototypu otrzymujesz link do działającej wersji, którą możesz przetestować na dowolnym urządzeniu (komputer, tablet, telefon). Możesz pokazać prototyp potencjalnym klientom, zespołowi lub inwestorom i zebrać feedback. Jeśli coś wymaga poprawy, możemy wprowadzić modyfikacje. Naszym celem jest dostarczenie prototypu, który w 100% spełnia Twoje oczekiwania."
+      },
+      {
+        "question": "Jak wygląda proces zamówienia i realizacji pakietu PoC?",
+        "answer": "Proces jest prosty: 1) Wybierz odpowiedni pakiet i kliknij 'Zamów', 2) Wypełnij formularz z opisem swojego pomysłu (im więcej szczegółów, tym lepiej), 3) Opłać pakiet, 4) Natychmiast rozpoczynamy pracę, 5) Otrzymujesz regularny update o postępach, 6) Po zakończeniu dostajesz dostęp do panelu administracyjnego z Twoim prototypem, 7) Możesz testować i zgłaszać uwagi. Cały proces jest transparentny i szybki."
+      },
+      {
+        "question": "Co to znaczy model 'Płać i Miej'?",
+        "answer": "Model 'Płać i Miej' oznacza, że płacisz ustaloną cenę z góry i natychmiast otrzymujesz działający prototyp - bez ukrytych kosztów, bez niespodzianek, bez dodatkowych opłat. Nie ma godzinowych rozliczeń ani negocjacji. Wiedziesz dokładnie ile zapłacisz i co otrzymasz. To proste, przejrzyste i skuteczne podejście, które eliminuje ryzyko przekroczenia budżetu. Płacisz raz, masz produkt."
+      },
+      {
+        "question": "Czy mogę zamówić customowy pakiet dopasowany do moich potrzeb?",
+        "answer": "Absolutnie! Jeśli standardowe pakiety nie odpowiadają Twoim potrzebom, oferujemy Projekt PoC Szyty na Miarę. Każdy pomysł jest inny - niektóre projekty wymagają nietypowych funkcjonalności, integracji z zewnętrznymi systemami, specyficznego designu czy dłuższego czasu realizacji. Skontaktuj się z nami przez formularz lub email, opiszesz swoje wymagania, a my opracujemy indywidualną ofertę dopasowaną dokładnie do Twojego projektu i budżetu."
+      },
+      {
+        "question": "Czy mogę dalej rozwijać i modyfikować prototyp po dostawie?",
+        "answer": "Tak! Masz pełną kontrolę nad kodem i możesz go swobodnie modyfikować. Otrzymujesz dostęp do panelu administracyjnego oraz repozytorium kodu. Możesz: 1) Samodzielnie wprowadzać zmiany jeśli masz zespół developerów, 2) Zlecić nam dalszy rozwój - oferujemy usługi rozbudowy prototypu do pełnej aplikacji, 3) Przekazać kod innej firmie - jesteś właścicielem całego kodu. Prototyp jest Twój i możesz z nim zrobić co chcesz."
+      },
+      {
+        "question": "Czy istnieje możliwość rozbudowy PoC do pełnej aplikacji produkcyjnej?",
+        "answer": "Tak, to jest jeden z głównych celów naszych prototypów PoC! Wszystkie prototypy są tworzone z myślą o możliwości rozbudowy. Używamy profesjonalnych technologii (React, TypeScript, Supabase), które pozwalają na skalowanie. Po walidacji pomysłu na prototypie możemy go rozbudować o: pełny backend, zaawansowane funkcjonalności, integracje z płatnościami, system użytkowników, mobile apps i wiele więcej. To znacznie szybsze i tańsze niż budowa od zera."
+      },
+      {
+        "question": "Czy oferujecie wsparcie techniczne po dostawie projektu?",
+        "answer": "Tak, oferujemy wsparcie techniczne. Po dostawie prototypu: 1) Otrzymujesz dokumentację i instrukcje użytkowania, 2) Masz dostęp do panelu administracyjnego gdzie możesz zarządzać projektem, 3) W przypadku problemów technicznych możesz się z nami skontaktować przez email lub formularz kontaktowy, 4) Oferujemy płatne pakiety wsparcia jeśli potrzebujesz regularnej pomocy, 5) Możemy również przeszkolić Twój zespół w obsłudze systemu. Naszym celem jest zapewnienie, że odniesiesz sukces z naszym produktem."
+      },
+      {
+        "question": "Dla kogo są pakiety PoC? Kto może z nich skorzystać?",
+        "answer": "Pakiety PoC są idealne dla: 1) Startupów, które potrzebują MVP do prezentacji inwestorom bez wydawania dziesiątek tysięcy na pełny development, 2) Przedsiębiorców testujących nowe pomysły biznesowe przed dużą inwestycją, 3) Firm, które chcą szybko zweryfikować nową funkcjonalność lub produkt, 4) Innowatorów potrzebujących szybkiego prototypu do prezentacji na konkursach lub pitchach, 5) Każdego, kto ma pomysł na aplikację lub stronę i chce zobaczyć jak będzie wyglądać w praktyce - bez wiedzy technicznej czy programowania."
+      }
+    ]
   }
 }
