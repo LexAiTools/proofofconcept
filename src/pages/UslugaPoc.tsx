@@ -430,59 +430,59 @@ const UslugaPoc = () => {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <div className="flex gap-4 items-start">
-                  <div className="font-bold text-primary min-w-[140px]">
-                    {t('howItWorks.howItLooksInPractice.timeline.step1.time')}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {t('howItWorks.howItLooksInPractice.timeline.step1.action')}
-                  </div>
-                </div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
+            <div className="font-bold text-primary md:min-w-[140px] w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step1.time')}
+            </div>
+            <div className="text-muted-foreground w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step1.action')}
+            </div>
+          </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="font-bold text-primary min-w-[140px]">
-                    {t('howItWorks.howItLooksInPractice.timeline.step2.time')}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {t('howItWorks.howItLooksInPractice.timeline.step2.action')}
-                  </div>
-                </div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
+            <div className="font-bold text-primary md:min-w-[140px] w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step2.time')}
+            </div>
+            <div className="text-muted-foreground w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step2.action')}
+            </div>
+          </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="font-bold text-primary min-w-[140px]">
-                    {t('howItWorks.howItLooksInPractice.timeline.step3.time')}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {t('howItWorks.howItLooksInPractice.timeline.step3.action')}
-                  </div>
-                </div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
+            <div className="font-bold text-primary md:min-w-[140px] w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step3.time')}
+            </div>
+            <div className="text-muted-foreground w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step3.action')}
+            </div>
+          </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="font-bold text-primary min-w-[140px]">
-                    {t('howItWorks.howItLooksInPractice.timeline.step4.time')}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {t('howItWorks.howItLooksInPractice.timeline.step4.action')}
-                  </div>
-                </div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
+            <div className="font-bold text-primary md:min-w-[140px] w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step4.time')}
+            </div>
+            <div className="text-muted-foreground w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step4.action')}
+            </div>
+          </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="font-bold text-primary min-w-[140px]">
-                    {t('howItWorks.howItLooksInPractice.timeline.step5.time')}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {t('howItWorks.howItLooksInPractice.timeline.step5.action')}
-                  </div>
-                </div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
+            <div className="font-bold text-primary md:min-w-[140px] w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step5.time')}
+            </div>
+            <div className="text-muted-foreground w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step5.action')}
+            </div>
+          </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="font-bold text-primary min-w-[140px]">
-                    {t('howItWorks.howItLooksInPractice.timeline.step6.time')}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {t('howItWorks.howItLooksInPractice.timeline.step6.action')}
-                  </div>
-                </div>
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start">
+            <div className="font-bold text-primary md:min-w-[140px] w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step6.time')}
+            </div>
+            <div className="text-muted-foreground w-full md:w-auto">
+              {t('howItWorks.howItLooksInPractice.timeline.step6.action')}
+            </div>
+          </div>
 
                 <div className="mt-6 p-4 bg-primary/10 rounded-lg">
                   <p className="text-center font-semibold text-foreground">
