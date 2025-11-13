@@ -1655,10 +1655,10 @@ export const CompletePackagePocForm = ({ children }: CompletePackagePocFormProps
           
           {renderLeftContent()}
           
-          <div className="p-3 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0 w-full max-w-full">
+          <div className="p-3 sm:p-6 lg:p-12 pb-8 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0 w-full max-w-full">
             {renderStep()}
             
-            <div className="flex gap-3 mt-6 flex-shrink-0">
+            <div className="flex gap-3 mt-8 flex-shrink-0 pt-4 bg-gradient-to-t from-background via-background to-transparent">
               {currentStep > 1 && currentStep <= 14 && (
                 <Button variant="outline" onClick={handleBack}>
                   <ArrowLeft className="mr-2 h-4 w-4" />
