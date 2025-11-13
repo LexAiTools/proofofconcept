@@ -1,0 +1,523 @@
+{
+  "title": "Zamówienie: PAKIET KOMPLETNY PoC",
+  "subtitle": "Film explainer + Landing Page + Copywriting",
+  "price": "2800 zł / 651 EUR",
+  "steps": {
+    "contact": "Kontakt",
+    "product": "Produkt",
+    "client": "Klient",
+    "video": "Film",
+    "videoStyle": "Styl filmu",
+    "videoContent": "Treść filmu",
+    "landing": "Landing",
+    "landingGoal": "Cel LP",
+    "sections": "Sekcje LP",
+    "landingStyle": "Wygląd LP",
+    "tone": "Ton",
+    "benefits": "Korzyści",
+    "competition": "Konkurencja",
+    "timeline": "Termin"
+  },
+  "step1": {
+    "title": "Jak się nazywasz i jak możemy się z Tobą skontaktować?",
+    "description": "Potrzebujemy Twoich danych, aby przesłać Ci kompletny pakiet prezentacyjny i być w kontakcie podczas realizacji. Przykład: Jan Kowalski, Firma XYZ, jan@firma.pl, +48 123 456 789",
+    "sectionTitle": "Dane kontaktowe",
+    "fields": {
+      "name": "Imię i nazwisko",
+      "company": "Nazwa firmy",
+      "email": "Email",
+      "phone": "Numer telefonu"
+    },
+    "placeholders": {
+      "name": "Jan Kowalski",
+      "company": "Firma XYZ Sp. z o.o.",
+      "email": "jan@firma.pl",
+      "phone": "+48 123 456 789"
+    }
+  },
+  "step2": {
+    "title": "Czym jest Twój produkt?",
+    "description": "Opisz krótko, co oferujesz i jaki problem rozwiązuje Twój produkt. To podstawa do stworzenia wszystkich materiałów. Przykład: 'Aplikacja do zarządzania projektami, która automatyzuje raportowanie i oszczędza czas zespołom projektowym'",
+    "sectionTitle": "Podstawowe informacje o produkcie",
+    "fields": {
+      "productName": "Nazwa produktu",
+      "productDescription": "Krótki opis (2-3 zdania)",
+      "productProblem": "Jaki problem rozwiązuje?"
+    },
+    "placeholders": {
+      "productName": "np. TaskFlow Pro",
+      "productDescription": "Nasza aplikacja to...",
+      "productProblem": "Rozwiązujemy problem..."
+    }
+  },
+  "step3": {
+    "title": "Kto jest Twoją grupą docelową?",
+    "description": "Określ dokładnie, kim są Twoi klienci, jaka jest ich charakterystyka i dlaczego potrzebują Twojego produktu. Im lepiej poznamy Twoją grupę docelową, tym skuteczniejszą komunikację stworzymy.",
+    "sectionTitle": "Twoi klienci",
+    "fields": {
+      "targetCustomers": "Kim są Twoi klienci?",
+      "targetCharacteristics": "Jaka jest ich charakterystyka?",
+      "targetNeeds": "Dlaczego potrzebują Twojego produktu?"
+    },
+    "placeholders": {
+      "targetCustomers": "np. Właściciele małych firm zatrudniających 10-50 osób, którzy...",
+      "targetCharacteristics": "Wiek, branża, główne wyzwania, potrzeby...",
+      "targetNeeds": "Tracą czas na..., Mają problem z..., Potrzebują..."
+    }
+  },
+  "step4": {
+    "title": "Jaka ma być długość filmu?",
+    "description": "Wybierz optymalną długość filmu. Krótsze filmy (30-60s) są idealne do social media, dłuższe (90-120s) pozwalają szczegółowo wyjaśnić produkt. Rekomendujemy 60-90 sekund dla najlepszej konwersji.",
+    "sectionTitle": "Długość filmu explainer",
+    "recommended": "REKOMENDOWANE",
+    "options": {
+      "30": {
+        "title": "30 sekund",
+        "desc1": "Ultra-krótki, idealny do reklam",
+        "desc2": "Tylko najważniejsze informacje"
+      },
+      "60": {
+        "title": "60 sekund",
+        "desc1": "Zbalansowany czas",
+        "desc2": "Problem + Rozwiązanie + CTA"
+      },
+      "90": {
+        "title": "90 sekund",
+        "desc1": "Więcej szczegółów o produkcie",
+        "desc2": "Pełna historia + korzyści"
+      },
+      "120": {
+        "title": "120 sekund (2 minuty)",
+        "desc1": "Kompleksowa prezentacja",
+        "desc2": "Wszystkie funkcje i przypadki użycia"
+      }
+    }
+  },
+  "step5": {
+    "title": "Jaki styl filmu preferujesz?",
+    "description": "Wybierz rodzaj produkcji, który najlepiej pasuje do Twojej marki i budżetu. Możemy połączyć kilka stylów dla najlepszego efektu.",
+    "sectionTitle": "Styl produkcji filmu",
+    "styles": {
+      "animation2d": {
+        "title": "Animacja 2D",
+        "description": "Nowoczesne grafiki i ilustracje w ruchu"
+      },
+      "characters": {
+        "title": "Animacja postaci",
+        "description": "Animowane postacie opowiadające historię"
+      },
+      "screencast": {
+        "title": "Nagranie ekranu z lektorem",
+        "description": "Screen recording pokazujący działanie produktu"
+      },
+      "motion": {
+        "title": "Motion graphics",
+        "description": "Dynamiczne grafiki i efekty wizualne"
+      },
+      "whiteboard": {
+        "title": "Whiteboard animation",
+        "description": "Rysowanie na tablicy, edukacyjny styl"
+      },
+      "mixed": {
+        "title": "Mieszany",
+        "description": "Połączenie animacji i nagrań ekranu"
+      },
+      "custom": {
+        "title": "Mam własną wizję"
+      }
+    },
+    "customPlaceholder": "Chciałbym, żeby film..."
+  },
+  "step6": {
+    "title": "Jakie kluczowe informacje mają znaleźć się w filmie?",
+    "description": "Wybierz sekcje, które muszą być w filmie. Standardowo rekomendujemy strukturę: Problem → Rozwiązanie → Jak działa → Korzyści → CTA. Możesz zaznaczyć wszystkie potrzebne elementy.",
+    "sectionTitle": "Struktura filmu",
+    "content": {
+      "problem": {
+        "title": "Problem, który rozwiązujesz",
+        "description": "Hook - na czym polega problem klientów"
+      },
+      "presentation": {
+        "title": "Prezentacja produktu/rozwiązania",
+        "description": "Co oferujesz i jak to działa"
+      },
+      "howItWorks": {
+        "title": "Jak działa Twój produkt",
+        "description": "Krok po kroku lub główne funkcje"
+      },
+      "benefits": {
+        "title": "Korzyści dla klienta",
+        "description": "Dlaczego warto wybrać Twój produkt"
+      },
+      "socialProof": {
+        "title": "Social proof",
+        "description": "Liczby, statystyki, referencje"
+      },
+      "cta": {
+        "title": "Call to action",
+        "description": "Co klient ma zrobić dalej"
+      },
+      "caseStudy": {
+        "title": "Case study / przykład użycia",
+        "description": "Konkretny przykład zastosowania"
+      },
+      "comparison": {
+        "title": "Porównanie z konkurencją",
+        "description": "Dlaczego jesteś lepszy"
+      }
+    },
+    "notesLabel": "Dodatkowe uwagi",
+    "notesPlaceholder": "Czy są jakieś specjalne informacje, które muszą być w filmie?"
+  },
+  "step7": {
+    "title": "Jaki jest cel Landing Page?",
+    "description": "Określ główny cel strony. To pomoże nam zaprojektować odpowiednią strukturę i call-to-action. Landing page może mieć kilka celów, ale jeden powinien być główny.",
+    "sectionTitle": "Główny cel Landing Page",
+    "goals": {
+      "email": {
+        "title": "Zbieranie adresów email",
+        "description": "Budowanie bazy mailingowej, newsletter"
+      },
+      "leads": {
+        "title": "Generowanie leadów sprzedażowych",
+        "description": "Formularze kontaktowe, zapytania ofertowe"
+      },
+      "demo": {
+        "title": "Umówienie demo/konsultacji",
+        "description": "Rezerwacja spotkania, prezentacji produktu"
+      },
+      "sales": {
+        "title": "Sprzedaż produktu",
+        "description": "Bezpośrednia sprzedaż online"
+      },
+      "downloads": {
+        "title": "Pobieranie materiałów",
+        "description": "E-book, whitepaper, case study"
+      },
+      "webinar": {
+        "title": "Rejestracja na webinar/event",
+        "description": "Zapisy na wydarzenie online/offline"
+      }
+    },
+    "additionalLabel": "Dodatkowe cele",
+    "additionalPlaceholder": "Czy są jakieś dodatkowe cele strony?"
+  },
+  "step8": {
+    "title": "Jakie sekcje mają być na Landing Page?",
+    "description": "Wybierz sekcje, które mają znaleźć się na stronie. Standardowa landing page zawiera: Hero, Opis produktu, Korzyści, Social proof, CTA. Możesz dodać więcej sekcji według potrzeb.",
+    "sectionTitle": "Sekcje Landing Page",
+    "sections": {
+      "hero": {
+        "title": "Hero section (nagłówek)",
+        "description": "Główny przekaz i CTA na górze strony"
+      },
+      "description": {
+        "title": "Opis produktu",
+        "description": "Co oferujesz, jak działa"
+      },
+      "benefits": {
+        "title": "Korzyści / Features",
+        "description": "Dlaczego warto, główne zalety"
+      },
+      "cta": {
+        "title": "Call to action",
+        "description": "Wyraźne wezwanie do działania"
+      },
+      "socialProof": {
+        "title": "Social proof (opinie, liczby)",
+        "description": "Referencje klientów, statystyki"
+      },
+      "pricing": {
+        "title": "Cennik",
+        "description": "Pakiety i ceny produktu/usługi"
+      },
+      "faq": {
+        "title": "FAQ",
+        "description": "Najczęściej zadawane pytania"
+      },
+      "caseStudies": {
+        "title": "Case studies / Portfolio",
+        "description": "Przykłady realizacji, success stories"
+      },
+      "comparison": {
+        "title": "Porównanie pakietów",
+        "description": "Różne wersje produktu"
+      },
+      "contact": {
+        "title": "Formularz kontaktowy",
+        "description": "Bezpośredni kontakt"
+      },
+      "video": {
+        "title": "Video explainer",
+        "description": "Osadzony film prezentujący produkt"
+      },
+      "timeline": {
+        "title": "Timeline / Proces",
+        "description": "Jak wygląda współpraca krok po kroku"
+      }
+    },
+    "otherLabel": "Inne sekcje",
+    "otherPlaceholder": "Inne sekcje, które chcesz dodać..."
+  },
+  "step9": {
+    "title": "Czy masz preferencje wizualne dla Landing Page?",
+    "description": "Wybierz styl wizualny strony i podaj kolory firmowe, jeśli je posiadasz. Możemy również zainspirować się innymi stronami, które Ci się podobają.",
+    "sectionTitle": "Styl wizualny Landing Page",
+    "styleLabel": "Wybierz styl strony",
+    "colorsLabel": "Kolory i branding",
+    "logoLabel": "Logo",
+    "graphicsLabel": "Zdjęcia/grafiki",
+    "inspirationLabel": "Przykłady inspiracji",
+    "styles": {
+      "modern": {
+        "title": "Nowoczesny Tech",
+        "description": "Gradienty, animacje, futurystyczny - SaaS, technologia, innowacje"
+      },
+      "minimal": {
+        "title": "Minimalistyczny",
+        "description": "Czysto, dużo białej przestrzeni - Elegancja, prostota, premium"
+      },
+      "colorful": {
+        "title": "Kolorowy i Dynamiczny",
+        "description": "Żywe kolory, energia, młoda marka - Kreatywność, social media, lifestyle"
+      },
+      "professional": {
+        "title": "Profesjonalny Biznes",
+        "description": "Klasyczny, zaufanie, korporacyjny - B2B, consulting, finanse"
+      }
+    },
+    "primaryColorLabel": "Kolor główny",
+    "secondaryColorLabel": "Kolor dodatkowy",
+    "accentColorLabel": "Kolor akcentu/CTA",
+    "logoPlaceholder": "Przeciągnij logo tutaj lub kliknij, aby wybrać",
+    "logoFormats": "Formaty: SVG, PNG (przezroczyste tło preferowane)",
+    "graphicsPlaceholder": "Jeśli masz materiały graficzne, dodaj je tutaj",
+    "inspirationPlaceholder": "Podaj linki do stron, które Ci się podobają i napisz, co konkretnie...",
+    "filesSelected": "plików wybrano"
+  },
+  "step10": {
+    "title": "Jaki ton komunikacji preferujesz?",
+    "description": "Wybierz styl, w jakim mamy pisać teksty. To wpłynie na język filmu, treści na landing page i ogólną komunikację marki. Możesz wybrać kombinację stylów.",
+    "sectionTitle": "Styl komunikacji",
+    "tones": {
+      "formal": {
+        "title": "Formalny / Biznesowy",
+        "description": "Pan/Pani, profesjonalny język",
+        "for": "Dla: B2B, korporacje, finanse"
+      },
+      "friendly": {
+        "title": "Przyjazny / Swobodny",
+        "description": "Bezpośrednie 'Ty', luźniejszy ton",
+        "for": "Dla: B2C, startupy, lifestyle"
+      },
+      "technical": {
+        "title": "Techniczny / Ekspercki",
+        "description": "Branżowy żargon, szczegóły techniczne",
+        "for": "Dla: developerzy, specjaliści, IT"
+      },
+      "emotional": {
+        "title": "Emocjonalny / Motywujący",
+        "description": "Inspirujący, opowieść o transformacji",
+        "for": "Dla: coaching, edukacja, lifestyle"
+      },
+      "humorous": {
+        "title": "Humorystyczny / Kreatywny",
+        "description": "Lekkość, humor, nietypowe porównania",
+        "for": "Dla: młoda marka, social media"
+      }
+    },
+    "guidelinesLabel": "Dodatkowe wskazówki",
+    "guidelinesPlaceholder": "Czy są słowa/frazy, których mamy użyć lub unikać? Jakieś przykłady komunikacji, która Ci się podoba?"
+  },
+  "step11": {
+    "title": "Jakie są 3 główne korzyści Twojego produktu?",
+    "description": "Wymień najważniejsze korzyści dla klienta. Nie funkcje, ale konkretne korzyści - co klient zyska? Przykład: Zamiast 'Dashboard z analityką' → 'Oszczędzisz 5 godzin tygodniowo na raportowaniu'",
+    "sectionTitle": "Kluczowe korzyści dla klienta",
+    "benefitLabel": "Korzyść",
+    "placeholders": {
+      "title1": "np. Zaoszczędzisz 10 godzin tygodniowo na...",
+      "title2": "np. Zwiększysz konwersję o 40% dzięki...",
+      "title3": "np. Zautomatyzujesz procesy, które...",
+      "description": "Dlaczego to jest ważne? Jaki konkretny efekt?"
+    },
+    "addMore": "Dodaj kolejną korzyść"
+  },
+  "step12": {
+    "title": "Czy masz konkurencję? Czym się od nich różnisz?",
+    "description": "Wiedza o konkurencji pomoże nam lepiej wyeksponować Twoją unikalną wartość. Nie martw się, nie będziemy mówić źle o konkurencji - po prostu podkreślimy, co Cię wyróżnia.",
+    "sectionTitle": "Twoja unikalna wartość",
+    "fields": {
+      "competitors": "Główni konkurenci",
+      "competitiveAdvantage": "Twoja przewaga konkurencyjna",
+      "targetFit": "Dla kogo jesteś lepszym wyborem?"
+    },
+    "placeholders": {
+      "competitors": "np. Asana, Trello, Monday.com - narzędzia do zarządzania projektami",
+      "competitiveAdvantage": "Czym się różnisz? Co robisz lepiej? Co masz, czego inni nie mają? Przykład: 'Jesteśmy jedyni, którzy oferują AI-powered automatyzację raportowania'",
+      "targetFit": "Dla jakiego typu klientów jesteś idealnym rozwiązaniem?"
+    }
+  },
+  "step13": {
+    "title": "Jakie materiały możesz nam dostarczyć?",
+    "description": "Im więcej materiałów nam przekażesz, tym lepiej oddamy charakter Twojej marki. Zaznacz, co możesz dostarczyć - resztę stworzymy dla Ciebie.",
+    "sectionTitle": "Dostępne materiały",
+    "materials": {
+      "descriptions": {
+        "title": "Opisy produktów/usług",
+        "description": "Szczegółowe informacje o ofercie"
+      },
+      "companyInfo": {
+        "title": "Informacje o firmie",
+        "description": "Historia, misja, wartości"
+      },
+      "caseStudies": {
+        "title": "Case studies / Realizacje",
+        "description": "Przykłady współpracy z klientami"
+      },
+      "testimonials": {
+        "title": "Opinie klientów",
+        "description": "Referencje, testimoniale, recenzje"
+      },
+      "certificates": {
+        "title": "Certyfikaty / Nagrody",
+        "description": "Osiągnięcia, wyróżnienia"
+      },
+      "productPhotos": {
+        "title": "Zdjęcia produktu",
+        "description": "Screenshoty, fotografie"
+      },
+      "teamPhotos": {
+        "title": "Zdjęcia zespołu",
+        "description": "Fotografie pracowników, biura"
+      },
+      "logo": {
+        "title": "Logo w różnych formatach",
+        "description": "SVG, PNG, wersje kolorystyczne"
+      },
+      "brandGuidelines": {
+        "title": "Księga znaku",
+        "description": "Brand guidelines, kolory, fonty"
+      }
+    },
+    "uploadLabel": "Załącz pliki",
+    "uploadPlaceholder": "Przeciągnij pliki tutaj lub kliknij, aby wybrać",
+    "acceptedFormats": "Akceptujemy: PDF, DOC, DOCX, PNG, JPG, SVG",
+    "linksLabel": "Linki do materiałów",
+    "linksPlaceholder": "Jeśli materiały są online, podaj linki (Google Drive, Dropbox, itp.)",
+    "filesSelected": "plików załączono"
+  },
+  "step14": {
+    "title": "Do kiedy potrzebujesz gotowego pakietu?",
+    "description": "Standardowo realizujemy pakiet kompletny w ciągu 7-10 dni roboczych. Jeśli potrzebujesz szybciej lub masz konkretny deadline (np. prezentacja dla inwestorów, targi), daj nam znać.",
+    "sectionTitle": "Termin realizacji",
+    "recommended": "REKOMENDOWANE",
+    "options": {
+      "express": {
+        "title": "Express (5-7 dni)",
+        "desc1": "Priorytetowa realizacja",
+        "desc2": "Szybkie iteracje i feedback"
+      },
+      "standard": {
+        "title": "Standard (7-10 dni)",
+        "desc1": "Optymalny czas na jakość",
+        "desc2": "Czas na konsultacje i poprawki"
+      },
+      "comfort": {
+        "title": "Komfort (10-14 dni)",
+        "desc1": "Więcej czasu na dopracowanie detali",
+        "desc2": "Idealne dla większych projektów"
+      },
+      "specific": {
+        "title": "Mam konkretny deadline"
+      }
+    },
+    "keyDatesLabel": "Czy są jakieś kluczowe daty?",
+    "keyDatesPlaceholder": "np. 'Prezentacja inwestorom 15 grudnia', 'Targi branżowe 20 stycznia', 'Launch produktu w lutym'",
+    "notesLabel": "Dodatkowe uwagi",
+    "notesPlaceholder": "Wszystko, co powinniśmy wiedzieć o projekcie..."
+  },
+  "step15": {
+    "title": "Podsumowanie zamówienia",
+    "subtitle": "PAKIET KOMPLETNY PoC - Prezentacja Produktu",
+    "sections": {
+      "basic": "PODSTAWOWE INFORMACJE",
+      "video": "FILM EXPLAINER",
+      "landing": "LANDING PAGE",
+      "content": "TREŚĆ",
+      "materials": "MATERIAŁY",
+      "delivery": "REALIZACJA",
+      "price": "CENA"
+    },
+    "contact": "Dane kontaktowe",
+    "product": "Produkt",
+    "productName": "Nazwa",
+    "targetAudience": "Grupa docelowa",
+    "videoParams": "Parametry filmu",
+    "videoLength": "Długość",
+    "videoStyle": "Styl",
+    "videoStructure": "Struktura filmu",
+    "videoElements": "elementów",
+    "landingGoal": "Cel strony",
+    "landingSections": "Sekcje",
+    "landingStyle": "Styl wizualny",
+    "colors": "Kolory",
+    "logoAttached": "Logo załączone",
+    "communicationTone": "Ton komunikacji",
+    "keyBenefits": "Główne korzyści",
+    "competitiveAdvantage": "Przewaga konkurencyjna",
+    "providedMaterials": "Dostarczone materiały",
+    "materialsTypes": "typów materiałów",
+    "filesAttached": "plików załączonych",
+    "timeline": "Termin",
+    "keyDate": "Kluczowa data",
+    "edit": "Edytuj",
+    "priceDetails": {
+      "total": "Pakiet Kompletny PoC: 2800 zł / 651 EUR",
+      "includes": "W cenie:",
+      "item1": "Film explainer (60s)",
+      "item2": "Landing Page (responsywna)",
+      "item3": "Treści sprzedażowe (copywriting)",
+      "item4": "2 rundy poprawek",
+      "item5": "Pliki źródłowe"
+    }
+  },
+  "buttons": {
+    "next": "Dalej",
+    "back": "Wstecz",
+    "review": "Zobacz podsumowanie",
+    "submit": "Potwierdź i wyślij zamówienie za 2800 zł",
+    "submitting": "Wysyłanie...",
+    "close": "Zamknij"
+  },
+  "validation": {
+    "nameRequired": "Imię i nazwisko są wymagane (min. 2 znaki)",
+    "companyRequired": "Nazwa firmy jest wymagana (min. 2 znaki)",
+    "emailInvalid": "Nieprawidłowy adres email",
+    "phoneInvalid": "Nieprawidłowy numer telefonu",
+    "productNameRequired": "Nazwa produktu jest wymagana",
+    "productDescriptionTooShort": "Opis produktu musi mieć minimum 50 znaków",
+    "productProblemTooShort": "Opis problemu musi mieć minimum 50 znaków",
+    "targetCustomersTooShort": "Opis klientów musi mieć minimum 100 znaków",
+    "targetCharacteristicsTooShort": "Charakterystyka musi mieć minimum 50 znaków",
+    "targetNeedsTooShort": "Opis potrzeb musi mieć minimum 50 znaków",
+    "videoLengthRequired": "Wybierz długość filmu",
+    "videoStyleRequired": "Wybierz przynajmniej jeden styl filmu",
+    "videoContentRequired": "Wybierz przynajmniej jeden element treści filmu",
+    "landingGoalRequired": "Wybierz cel Landing Page",
+    "landingSectionsRequired": "Wybierz przynajmniej jedną sekcję Landing Page",
+    "landingStyleRequired": "Wybierz styl wizualny Landing Page",
+    "communicationToneRequired": "Wybierz ton komunikacji",
+    "benefitsMinRequired": "Dodaj minimum 3 korzyści (każda min. 5 znaków tytuł, 20 znaków opis)",
+    "competitiveAdvantageTooShort": "Przewaga konkurencyjna musi mieć minimum 100 znaków",
+    "timelineRequired": "Wybierz termin realizacji",
+    "specificDateRequired": "Wybierz konkretną datę z kalendarza"
+  },
+  "success": {
+    "title": "Zamówienie wysłane!",
+    "message": "Dziękujemy za zamówienie Pakietu Kompletnego PoC. Skontaktujemy się z Tobą w ciągu 24 godzin."
+  },
+  "error": {
+    "title": "Błąd",
+    "message": "Wystąpił błąd podczas wysyłania zamówienia. Spróbuj ponownie lub skontaktuj się z nami bezpośrednio."
+  }
+}

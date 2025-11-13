@@ -226,11 +226,11 @@ const UslugaPoc = () => {
                   {t('services.completePackage.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <RequestAccessPopup>
-                    <Button variant="secondary" size="lg">
-                      {t('services.completePackage.button')}
-                    </Button>
-                  </RequestAccessPopup>
+              <CompletePackagePocForm>
+                <Button variant="secondary" size="lg">
+                  {t('services.completePackage.button')}
+                </Button>
+              </CompletePackagePocForm>
                   <Button 
                     variant="glass" 
                     size="lg"
