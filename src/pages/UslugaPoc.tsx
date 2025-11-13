@@ -484,11 +484,18 @@ const UslugaPoc = () => {
             </div>
           </div>
 
-                <div className="mt-6 p-4 bg-primary/10 rounded-lg">
-                  <p className="text-center font-semibold text-foreground">
-                    {t('howItWorks.howItLooksInPractice.footer')}
-                  </p>
-                </div>
+              <div className="mt-6 flex justify-center">
+                <Button 
+                  onClick={() => navigate('/chat', { 
+                    state: { initialMessage: t('howItWorks.howItLooksInPractice.footer') }
+                  })}
+                  variant="default"
+                  size="lg"
+                  className="font-semibold"
+                >
+                  {t('howItWorks.howItLooksInPractice.footer')}
+                </Button>
+              </div>
               </div>
             </CardContent>
           </Card>
