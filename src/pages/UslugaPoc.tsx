@@ -14,6 +14,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { PlayCircle } from "lucide-react";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 import { QuickStartPocForm } from "@/components/QuickStartPocForm";
+import { InteractiveAppPocForm } from "@/components/InteractiveAppPocForm";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
@@ -177,12 +178,12 @@ const UslugaPoc = () => {
                   {t('services.interactiveApp.highlight')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <RequestAccessPopup>
+                  <InteractiveAppPocForm>
                     <Button variant="default" size="lg">
                       {t('services.interactiveApp.button')}
                     </Button>
-                  </RequestAccessPopup>
-                  <Button 
+                  </InteractiveAppPocForm>
+                  <Button
                     variant="outline" 
                     size="lg"
                     onClick={() => window.open('https://lead.corballyconcepts.com/', '_blank')}

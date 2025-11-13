@@ -19,6 +19,7 @@ import enChat from './locales/en/chat.json';
 import enLeads from './locales/en/leads.json';
 import enPoc from './locales/en/poc.json';
 import enQuickStartPoc from './locales/en/quickStartPoc.json';
+import enInteractiveAppPoc from './locales/en/interactiveAppPoc.json';
 
 import plCommon from './locales/pl/common.json';
 import plHome from './locales/pl/home.json';
@@ -37,6 +38,7 @@ import plChat from './locales/pl/chat.json';
 import plLeads from './locales/pl/leads.json';
 import plPoc from './locales/pl/poc.json';
 import plQuickStartPoc from './locales/pl/quickStartPoc.json';
+import plInteractiveAppPoc from './locales/pl/interactiveAppPoc.json';
 
 const resources = {
   en: {
@@ -57,6 +59,7 @@ const resources = {
       leads: enLeads,
       poc: enPoc,
       quickStartPoc: enQuickStartPoc,
+      interactiveAppPoc: enInteractiveAppPoc,
   },
   pl: {
     common: plCommon,
@@ -76,6 +79,7 @@ const resources = {
       leads: plLeads,
       poc: plPoc,
       quickStartPoc: plQuickStartPoc,
+      interactiveAppPoc: plInteractiveAppPoc,
   },
 };
 
@@ -86,7 +90,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads', 'poc', 'quickStartPoc'],
+    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads', 'poc', 'quickStartPoc', 'interactiveAppPoc'],
     
     detection: {
       order: ['localStorage', 'navigator'],

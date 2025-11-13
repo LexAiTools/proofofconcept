@@ -1,0 +1,245 @@
+{
+  "title": "Zamówienie: Interaktywna Aplikacja PoC",
+  "subtitle": "Wypełnij formularz i otrzymaj działającą aplikację",
+  "price": "2100 zł / 488 EUR",
+  "steps": {
+    "contact": "Klient",
+    "problem": "Problem",
+    "audience": "Grupa",
+    "features": "Funkcje",
+    "leads": "Leady",
+    "leadType": "Typ",
+    "appType": "Aplikacja",
+    "screens": "Ekrany",
+    "style": "Wygląd",
+    "timeline": "Termin"
+  },
+  "step1": {
+    "number": "1",
+    "title": "Jak się nazywasz i jak możemy się z Tobą skontaktować?",
+    "description": "Potrzebujemy Twoich danych, aby przesłać Ci gotową aplikację i być w kontakcie podczas realizacji. Przykład: Jan Kowalski, jan@firma.pl, +48 123 456 789",
+    "fields": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Numer telefonu"
+    },
+    "placeholders": {
+      "name": "Jan Kowalski",
+      "email": "jan@firma.pl",
+      "phone": "+48 123 456 789"
+    }
+  },
+  "step2": {
+    "number": "2",
+    "title": "Jaki problem rozwiązuje Twoja aplikacja?",
+    "description": "Opisz szczegółowo, jaki konkretny problem użytkowników chcesz rozwiązać. Im więcej szczegółów, tym lepiej zrozumiemy Twoje potrzeby. Przykład: \"Przedsiębiorcy tracą średnio 5 godzin tygodniowo na ręczne wystawianie faktur i śledzenie płatności\"",
+    "field": "Opis problemu",
+    "placeholder": "Moja aplikacja rozwiązuje problem...",
+    "charCounter": "{{current}}/{{max}} znaków",
+    "minChars": "Minimum 100 znaków"
+  },
+  "step3": {
+    "number": "3",
+    "title": "Kto jest Twoim klientem docelowym?",
+    "description": "Określ dokładnie, dla kogo jest Twoja aplikacja. Jaka jest ich charakterystyka? Przykład: \"Małe firmy zatrudniające 5-20 osób\" lub \"Studenci przygotowujący się do egzaminów\"",
+    "field": "Grupa docelowa",
+    "placeholder": "Moi klienci to...",
+    "suggestions": {
+      "title": "Wybierz z podpowiedzi:",
+      "entrepreneurs": "Przedsiębiorcy",
+      "students": "Studenci",
+      "parents": "Rodzice",
+      "freelancers": "Freelancerzy",
+      "b2b": "Firmy B2B",
+      "b2c": "Konsumenci B2C"
+    }
+  },
+  "step4": {
+    "number": "4",
+    "title": "Jakie funkcje ma zawierać aplikacja?",
+    "description": "Wymień wszystkie kluczowe funkcjonalności, które muszą być w aplikacji. Zaznacz te najważniejsze. Przykład: \"Rejestracja użytkownika\", \"Dashboard z statystykami\", \"Export danych do PDF\", \"Płatności online\", \"System powiadomień\"",
+    "fields": {
+      "feature": "Funkcja"
+    },
+    "placeholders": {
+      "feature1": "np. Rejestracja użytkownika",
+      "feature2": "np. Dashboard z danymi",
+      "feature3": "np. System płatności",
+      "feature4": "np. Powiadomienia email",
+      "feature5": "np. Export do PDF"
+    },
+    "importantLabel": "Najważniejsza",
+    "addMore": "+ Dodaj kolejną funkcję",
+    "maxFeatures": "Maksymalnie 6 funkcji"
+  },
+  "step5": {
+    "number": "5",
+    "title": "Jakiego typu leady chcesz zbierać?",
+    "description": "Określ, jakie dane kontaktowe i informacje o kliencie chcesz zbierać przez aplikację. To kluczowe dla późniejszego kontaktu z klientami.",
+    "basicContact": "Podstawowe dane kontaktowe:",
+    "additionalInfo": "Dodatkowe informacje:",
+    "fields": {
+      "email": "Email",
+      "phone": "Numer telefonu",
+      "company": "Nazwa firmy",
+      "position": "Stanowisko",
+      "budget": "Budżet projektu",
+      "timeline": "Preferowany termin realizacji",
+      "requirements": "Specyficzne wymagania",
+      "source": "Źródło informacji o nas"
+    },
+    "otherLabel": "Inne dane do zbierania",
+    "otherPlaceholder": "Inne informacje, które chcesz zbierać..."
+  },
+  "step6": {
+    "number": "6",
+    "title": "Jak ma wyglądać proces zbierania leadów?",
+    "description": "Wybierz sposób, w jaki aplikacja ma zbierać kontakty od użytkowników. Możesz wybrać kilka opcji.",
+    "types": {
+      "contact": {
+        "title": "Prosty formularz kontaktowy",
+        "description": "Podstawowy formularz z imieniem, emailem i wiadomością"
+      },
+      "registration": {
+        "title": "Rejestracja użytkownika",
+        "description": "Pełna rejestracja z tworzeniem konta"
+      },
+      "demo": {
+        "title": "Zapis na demo/konsultację",
+        "description": "Rezerwacja terminu spotkania/prezentacji"
+      },
+      "quote": {
+        "title": "Zapytanie ofertowe",
+        "description": "Szczegółowy formularz z opisem potrzeb i wymagań"
+      },
+      "subscription": {
+        "title": "Subskrypcja/Newsletter",
+        "description": "Zapis na newsletter lub listę mailingową"
+      },
+      "other": {
+        "title": "Inne",
+        "description": "Opisz dokładniej swój sposób zbierania leadów"
+      }
+    },
+    "otherLabel": "Opisz proces zbierania leadów",
+    "otherPlaceholder": "Opisz dokładniej, jak chcesz zbierać leady..."
+  },
+  "step7": {
+    "number": "7",
+    "title": "Czy aplikacja ma być webowa czy mobilna?",
+    "description": "Wybierz platformę, na której ma działać Twoja aplikacja. Aplikacja webowa działa w przeglądarce, mobilna wymaga instalacji.",
+    "types": {
+      "web": {
+        "title": "Aplikacja webowa (przeglądarka)",
+        "description": "Działa na każdym urządzeniu z przeglądarką",
+        "benefit1": "Brak potrzeby instalacji",
+        "benefit2": "Dostęp z każdego urządzenia"
+      },
+      "mobile": {
+        "title": "Aplikacja mobilna (iOS/Android)",
+        "description": "Natywny wygląd i działanie. Wymaga instalacji ze sklepu"
+      },
+      "both": {
+        "title": "Obie wersje (web + mobile)",
+        "description": "Maksymalne pokrycie użytkowników. Wyższy koszt realizacji"
+      }
+    }
+  },
+  "step8": {
+    "number": "8",
+    "title": "Jakie są główne ekrany/sekcje aplikacji?",
+    "description": "Wymień wszystkie widoki, które mają być w aplikacji. Przykład: \"Strona główna\", \"Dashboard\", \"Lista produktów\", \"Profil użytkownika\", \"Ustawienia\", \"Historia zamówień\"",
+    "screenLabel": "Ekran",
+    "placeholders": {
+      "screen1": "np. Strona główna / Landing page",
+      "screen2": "np. Dashboard z danymi",
+      "screen3": "np. Profil użytkownika",
+      "screen4": "np. Lista produktów / usług",
+      "screen5": "np. Ustawienia konta"
+    },
+    "descriptionLabel": "Dodatkowy opis ekranów",
+    "descriptionPlaceholder": "Opisz szczegółowo, co ma być na każdym ekranie...",
+    "addMore": "+ Dodaj kolejny ekran"
+  },
+  "step9": {
+    "number": "9",
+    "title": "Czy masz preferencje wizualne?",
+    "description": "Wybierz styl, który najlepiej pasuje do Twojej aplikacji. Jeśli masz kolory firmowe lub logo, podaj je poniżej.",
+    "styleLabel": "Styl wizualny",
+    "styles": {
+      "modern": {
+        "title": "Nowoczesny",
+        "description": "Czyste linie, gradienty, animacje"
+      },
+      "minimal": {
+        "title": "Minimalistyczny",
+        "description": "Dużo białej przestrzeni, prostota"
+      },
+      "colorful": {
+        "title": "Kolorowy",
+        "description": "Żywe kolory, dynamiczny design"
+      },
+      "professional": {
+        "title": "Profesjonalny",
+        "description": "Biznesowy, elegancki, zaufanie"
+      }
+    },
+    "primaryColorLabel": "Kolor główny",
+    "secondaryColorLabel": "Kolor dodatkowy",
+    "inspirationLabel": "Przykłady inspiracji (linki)",
+    "inspirationPlaceholder": "Podaj linki do aplikacji, które Ci się podobają..."
+  },
+  "step10": {
+    "number": "10",
+    "title": "Kiedy potrzebujesz gotowej aplikacji?",
+    "description": "Standardowo realizujemy aplikację PoC w ciągu 3-5 dni roboczych. Jeśli potrzebujesz szybciej lub masz konkretny deadline, daj nam znać.",
+    "options": {
+      "express": "Express (2-3 dni)",
+      "standard": "Standard (3-5 dni)",
+      "comfort": "Komfort (7-10 dni)",
+      "specific": "Mam konkretny deadline"
+    },
+    "expressDescription": "Priorytetowa realizacja",
+    "standardDescription": "Rekomendowany czas realizacji",
+    "comfortDescription": "Bez pośpiechu, więcej czasu na konsultacje",
+    "selectDate": "Wybierz datę",
+    "notesLabel": "Dodatkowe uwagi",
+    "notesPlaceholder": "Czy są jakieś kluczowe daty? (np. prezentacja inwestorom, targi, konferencja)"
+  },
+  "buttons": {
+    "next": "Dalej",
+    "back": "Wstecz",
+    "submit": "Potwierdź i wyślij zamówienie",
+    "close": "Zamknij"
+  },
+  "validation": {
+    "nameRequired": "Imię i nazwisko jest wymagane",
+    "nameMin": "Minimum 2 znaki",
+    "emailRequired": "Email jest wymagany",
+    "emailInvalid": "Nieprawidłowy adres email",
+    "phoneRequired": "Numer telefonu jest wymagany",
+    "phoneInvalid": "Nieprawidłowy numer telefonu",
+    "problemRequired": "Opis problemu jest wymagany",
+    "problemMin": "Minimum 100 znaków",
+    "problemMax": "Maksymalnie 1000 znaków",
+    "audienceRequired": "Grupa docelowa jest wymagana",
+    "audienceMin": "Minimum 20 znaków",
+    "featuresMin": "Podaj przynajmniej 3 funkcje (min 5 znaków każda)",
+    "leadsRequired": "Wybierz przynajmniej jeden rodzaj danych do zbierania",
+    "leadTypeRequired": "Wybierz typ procesu zbierania leadów",
+    "leadTypeOtherRequired": "Opisz proces zbierania leadów",
+    "appTypeRequired": "Wybierz typ aplikacji",
+    "screensMin": "Podaj przynajmniej 3 ekrany (min 5 znaków każdy)",
+    "styleRequired": "Wybierz styl wizualny",
+    "timelineRequired": "Wybierz preferowany termin",
+    "dateRequired": "Wybierz konkretną datę"
+  },
+  "success": {
+    "title": "Dziękujemy za zamówienie!",
+    "message": "Twoje zamówienie zostało przesłane. Skontaktujemy się z Tobą wkrótce."
+  },
+  "error": {
+    "title": "Wystąpił błąd",
+    "message": "Nie udało się wysłać zamówienia. Spróbuj ponownie."
+  }
+}
