@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowRight, ArrowLeft, X, Upload, Trash2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { PocProgressBar } from "./poc/PocProgressBar";
+import { CompactPocProgressBar } from "./poc/CompactPocProgressBar";
 import { VisualStyleCard } from "./poc/VisualStyleCard";
 import { Separator } from "@/components/ui/separator";
 
@@ -521,7 +521,7 @@ export const CompletePackagePocForm = ({ children }: CompletePackagePocFormProps
       
       {currentStep <= 14 && (
         <div className="mt-8 lg:mt-12">
-          <PocProgressBar
+          <CompactPocProgressBar
             currentStep={currentStep}
             steps={[
               t('steps.contact'),
