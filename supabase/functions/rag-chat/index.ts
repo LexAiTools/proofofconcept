@@ -141,6 +141,65 @@ function detectLanguage(text: string): string {
   return 'en'; // Final default
 }
 
+// Extract keywords from user message for intelligent search
+function extractKeywords(text: string, language: string): string[] {
+  const stopwords: Record<string, string[]> = {
+    pl: ['jest', 'i', 'w', 'na', 'z', 'do', 'czy', 'jak', 'co', 'się', 'że', 'ale', 'od', 'po', 'dla', 'przez', 'o', 'za', 'przy', 'ten', 'to', 'też', 'tak', 'nie', 'są'],
+    en: ['is', 'and', 'in', 'on', 'the', 'to', 'a', 'an', 'of', 'for', 'with', 'as', 'by', 'at', 'from', 'how', 'what', 'this', 'that', 'these', 'those', 'are', 'was', 'were']
+  };
+  
+  const currentStopwords = stopwords[language] || stopwords.en;
+  
+  // Extract words, remove punctuation, convert to lowercase
+  const words = text
+    .toLowerCase()
+    .replace(/[^\w\s]/g, ' ')
+    .split(/\s+/)
+    .filter(word => 
+      word.length > 2 && 
+      !currentStopwords.includes(word) &&
+      !/^\d+$/.test(word) // Remove pure numbers
+    );
+  
+  // Return unique keywords
+  return [...new Set(words)];
+}
+
+// Rank search results by relevance
+function rankByRelevance(results: any[], query: string, keywords: string[]): any[] {
+  return results
+    .map(item => {
+      let score = 0;
+      const content = `${item.title} ${item.content}`.toLowerCase();
+      const queryLower = query.toLowerCase();
+      
+      // Exact query match in title/content (highest score)
+      if (content.includes(queryLower)) {
+        score += 10;
+      }
+      
+      // Title matches (high priority)
+      const titleLower = item.title.toLowerCase();
+      if (titleLower.includes(queryLower)) {
+        score += 8;
+      }
+      
+      // Keyword matches
+      keywords.forEach(keyword => {
+        const keywordCount = (content.match(new RegExp(keyword, 'g')) || []).length;
+        score += keywordCount * 2;
+      });
+      
+      // Priority boost from metadata
+      if (item.metadata?.priority) {
+        score += item.metadata.priority;
+      }
+      
+      return { ...item, relevanceScore: score };
+    })
+    .sort((a, b) => b.relevanceScore - a.relevanceScore);
+}
+
 // Error messages in multiple languages
 const ERROR_MESSAGES = {
   rate_limit: {
@@ -171,14 +230,50 @@ serve(async (req) => {
 
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // 1. Search knowledge base for relevant content
-    const { data: knowledgeData, error: kbError } = await supabase
-      .from('knowledge_base')
-      .select('title, content')
-      .limit(5);
+    // 1. Detect language from current message first (needed for keyword extraction)
+    const detectedLanguage = detectLanguage(message);
+    
+    // 2. Extract keywords from user message for intelligent search
+    const keywords = extractKeywords(message, detectedLanguage);
+    console.log('Extracted keywords:', keywords);
 
-    if (kbError) {
-      console.error('Knowledge base error:', kbError);
+    // 3. Intelligent search in knowledge base with language filtering
+    let knowledgeData: any[] = [];
+    
+    if (keywords.length > 0) {
+      // Build OR conditions for keyword search
+      const keywordConditions = keywords.map(kw => `keywords.cs.{${kw}}`).join(',');
+      const contentSearchPattern = `%${keywords.join('%')}%`;
+      
+      const { data, error: kbError } = await supabase
+        .from('knowledge_base')
+        .select('title, content, keywords, metadata')
+        .eq('metadata->>language', detectedLanguage)
+        .or(`keywords.ov.{${keywords.join(',')}},content.ilike.${contentSearchPattern}`)
+        .limit(15);
+
+      if (kbError) {
+        console.error('Knowledge base error:', kbError);
+      } else if (data) {
+        // Rank results by relevance
+        const rankedResults = rankByRelevance(data, message, keywords);
+        knowledgeData = rankedResults.slice(0, 5); // Take top 5 most relevant
+        console.log('Found knowledge items:', knowledgeData.length, 'Relevance scores:', knowledgeData.map(d => d.relevanceScore));
+      }
+    }
+    
+    // Fallback: if no results with language filter, try without language constraint
+    if (knowledgeData.length === 0) {
+      console.log('No language-specific results, searching all languages');
+      const { data, error: kbError } = await supabase
+        .from('knowledge_base')
+        .select('title, content, keywords, metadata')
+        .limit(10);
+        
+      if (!kbError && data) {
+        const rankedResults = rankByRelevance(data, message, keywords);
+        knowledgeData = rankedResults.slice(0, 5);
+      }
     }
 
     // Build context from knowledge base
@@ -186,7 +281,7 @@ serve(async (req) => {
       ? knowledgeData.map(item => `${item.title}: ${item.content}`).join('\n\n')
       : '';
 
-    // 2. Get conversation history and metadata if conversationId exists
+    // 4. Get conversation history and metadata if conversationId exists
     let conversationHistory: any[] = [];
     let conversationLanguage = 'en';
     
@@ -215,13 +310,11 @@ serve(async (req) => {
       }
     }
 
-    // 3. Detect language from current message (always, not just on first message)
-    const detectedLanguage = detectLanguage(message);
-    
+    // Use detected language from earlier (line 234)
     console.log('=== Language Detection ===');
     console.log('User message:', message);
     console.log('Detected language:', detectedLanguage);
-    console.log('Previous language:', conversationLanguage);
+    console.log('Previous conversation language:', conversationLanguage);
     
     // 4. Create new conversation if needed OR update language if changed
     let finalConversationId = conversationId;
