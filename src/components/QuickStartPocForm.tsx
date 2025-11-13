@@ -467,10 +467,10 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-6xl w-[95vw] sm:w-full p-0 overflow-hidden overflow-x-hidden max-h-[95vh] sm:max-h-[90vh]">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 h-full max-h-[95vh] sm:max-h-[90vh]">
+      <DialogContent className="max-w-6xl w-[90vw] sm:w-full p-0 overflow-hidden max-h-[95vh] sm:max-h-[90vh]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 h-full max-h-[95vh] sm:max-h-[90vh] w-full max-w-full overflow-x-hidden">
           {/* Left column - Question */}
-          <div className="bg-muted/30 p-4 sm:p-6 lg:p-12 flex flex-col justify-between overflow-y-auto lg:min-h-0">
+          <div className="bg-muted/30 p-3 sm:p-6 lg:p-12 flex flex-col justify-between overflow-y-auto lg:min-h-0 w-full max-w-full">
             {/* Mobile: kompaktowy widok */}
             <div className="lg:hidden mb-4">
               <div className="flex items-center justify-between mb-3">
@@ -521,7 +521,7 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
           </div>
 
           {/* Right column - Form */}
-          <div className="p-3 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0">
+          <div className="p-3 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0 w-full max-w-full">
             <Button
               variant="ghost"
               size="icon"
