@@ -484,14 +484,14 @@ const UslugaPoc = () => {
             </div>
           </div>
 
-              <div className="mt-6 flex justify-center">
+              <div className="mt-6 flex justify-center px-4 md:px-0">
                 <Button 
                   onClick={() => navigate('/chat', { 
                     state: { initialMessage: t('howItWorks.howItLooksInPractice.footer') }
                   })}
                   variant="default"
                   size="lg"
-                  className="font-semibold"
+                  className="font-semibold w-full md:w-auto max-w-lg"
                 >
                   {t('howItWorks.howItLooksInPractice.footer')}
                 </Button>
