@@ -15,6 +15,7 @@ import { PlayCircle } from "lucide-react";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 import { QuickStartPocForm } from "@/components/QuickStartPocForm";
 import { InteractiveAppPocForm } from "@/components/InteractiveAppPocForm";
+import { CompletePackagePocForm } from "@/components/CompletePackagePocForm";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
