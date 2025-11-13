@@ -86,13 +86,77 @@
   },
   "howItWorks": {
     "title": "How does it work?",
+    "subtitle": "Proposal 3 (without icons)",
     "payAndHave": {
       "title": "\"Pay and Have\" Model",
-      "description": "No hidden costs, no surprises. You pay the agreed price and immediately receive a working prototype. Simple, transparent, effective."
+      "description": "No hidden costs, no surprises. You pay the agreed price and immediately receive a working prototype."
+    },
+    "whyItWorks": {
+      "title": "Why does it work?",
+      "items": {
+        "transparency": {
+          "title": "Price Transparency",
+          "description": "You see the exact price before ordering. No \"we'll quote you later\" - you pay exactly what you see on the page."
+        },
+        "immediateStart": {
+          "title": "Immediate Start",
+          "description": "No waiting for quotes, meetings, negotiations. You fill out the form, pay, and we start working right away."
+        },
+        "predictableTimeline": {
+          "title": "Predictable Timeline",
+          "description": "You know exactly when you'll receive the product. Not \"someday\", not \"maybe next week\" - specific dates in the admin panel."
+        },
+        "projectControl": {
+          "title": "Project Control",
+          "description": "The admin panel gives you full control. You see progress, communicate with the team, submit feedback - everything in one place."
+        },
+        "qualityGuarantee": {
+          "title": "Quality Guarantee",
+          "description": "2 rounds of revisions included in the price. We don't give up until you're satisfied."
+        }
+      }
+    },
+    "howItLooksInPractice": {
+      "title": "How does it look in practice?",
+      "timeline": {
+        "step1": {
+          "time": "Today at 2:00 PM",
+          "action": "You fill out the form and pay"
+        },
+        "step2": {
+          "time": "Today at 2:05 PM",
+          "action": "You receive access to the panel and confirmation"
+        },
+        "step3": {
+          "time": "Today at 3:00 PM",
+          "action": "You see the first draft (quick start prototype)"
+        },
+        "step4": {
+          "time": "OR in 3-7 days",
+          "action": "You receive the finished product (depending on the package)"
+        },
+        "step5": {
+          "time": "+24-48h",
+          "action": "You submit feedback, we make corrections"
+        },
+        "step6": {
+          "time": "The End",
+          "action": "You receive and enjoy the finished product"
+        }
+      },
+      "footer": "Zero stress. Zero guessing. Zero hidden costs."
     },
     "adminPanel": {
       "title": "Admin Panel",
-      "description": "After purchase, you get access to the admin panel (admin.corballyconcepts.com), where you manage your projects and PoC services."
+      "subtitle": "Everything in one place: admin.corballyconcepts.com",
+      "description": "After purchase, you automatically receive:",
+      "features": {
+        "access": "Access to the panel (login via your email)",
+        "dashboard": "Dashboard with project timeline",
+        "communication": "Direct communication with the team",
+        "notifications": "Progress notifications"
+      },
+      "footer": "You don't have to chase us with emails. You see everything in the panel in real-time."
     }
   },
   "targetAudience": {
