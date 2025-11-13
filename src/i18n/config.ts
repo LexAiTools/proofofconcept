@@ -21,6 +21,7 @@ import enPoc from './locales/en/poc.json';
 import enQuickStartPoc from './locales/en/quickStartPoc.json';
 import enInteractiveAppPoc from './locales/en/interactiveAppPoc.json';
 import enCompletePackagePoc from './locales/en/completePackagePoc.json';
+import enProfessionalWebsitePoc from './locales/en/professionalWebsitePoc.json';
 
 import plCommon from './locales/pl/common.json';
 import plHome from './locales/pl/home.json';
@@ -41,6 +42,7 @@ import plPoc from './locales/pl/poc.json';
 import plQuickStartPoc from './locales/pl/quickStartPoc.json';
 import plInteractiveAppPoc from './locales/pl/interactiveAppPoc.json';
 import plCompletePackagePoc from './locales/pl/completePackagePoc.json';
+import plProfessionalWebsitePoc from './locales/pl/professionalWebsitePoc.json';
 
 const resources = {
   en: {
@@ -96,7 +98,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads', 'poc', 'quickStartPoc', 'interactiveAppPoc', 'completePackagePoc'],
+    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads', 'poc', 'quickStartPoc', 'interactiveAppPoc', 'completePackagePoc', 'professionalWebsitePoc'],
     
     detection: {
       order: ['localStorage', 'navigator'],

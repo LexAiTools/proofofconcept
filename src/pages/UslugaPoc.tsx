@@ -16,6 +16,7 @@ import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 import { QuickStartPocForm } from "@/components/QuickStartPocForm";
 import { InteractiveAppPocForm } from "@/components/InteractiveAppPocForm";
 import { CompletePackagePocForm } from "@/components/CompletePackagePocForm";
+import { ProfessionalWebsitePocForm } from "@/components/ProfessionalWebsitePocForm";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
@@ -306,11 +307,11 @@ const UslugaPoc = () => {
                   {t('services.websitePackage.highlight')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <RequestAccessPopup>
+                  <ProfessionalWebsitePocForm>
                     <Button variant="secondary" size="lg">
                       {t('services.websitePackage.button')}
                     </Button>
-                  </RequestAccessPopup>
+                  </ProfessionalWebsitePocForm>
                   <Button 
                     variant="glass" 
                     size="lg"
