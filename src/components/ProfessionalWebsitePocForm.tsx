@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { CompactPocProgressBar } from "@/components/poc/CompactPocProgressBar";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { Upload, Loader2 } from "lucide-react";
+import { Upload, Loader2, X, ArrowLeft, ArrowRight } from "lucide-react";
 
 interface ProfessionalWebsitePocFormProps {
   children: React.ReactNode;
@@ -1873,97 +1873,92 @@ export const ProfessionalWebsitePocForm = ({ children }: ProfessionalWebsitePocF
     }
   };
 
+  const renderLeftContent = () => (
+    <div className="bg-muted/30 p-3 sm:p-6 lg:p-12 flex flex-col justify-between overflow-y-auto lg:min-h-0 w-full max-w-full">
+      <div>
+        {/* Logo "P" - mniejsze (12x12) */}
+        <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6">
+          <span className="text-primary text-2xl font-bold">P</span>
+        </div>
+        
+        {/* Duży numer kroku */}
+        <div className="text-6xl sm:text-7xl lg:text-8xl font-bold text-primary mb-6">
+          {currentStep}
+        </div>
+        
+        {/* Główne pytanie - większy tekst */}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 break-words">
+          {t(`professionalWebsitePoc:step${currentStep}.title`)}
+        </h2>
+        
+        {/* Wyjaśnienie/kontekst */}
+        <p className="text-muted-foreground text-sm sm:text-base break-words">
+          {t(`professionalWebsitePoc:step${currentStep}.description`)}
+        </p>
+      </div>
+      
+      {/* Progress bar - na dole lewej kolumny */}
+      <div className="mt-8 lg:mt-12">
+        <CompactPocProgressBar
+          currentStep={currentStep}
+          steps={stepLabels}
+          totalSteps={22}
+        />
+      </div>
+    </div>
+  );
+
   return (
     <>
       <div onClick={() => setIsOpen(true)}>{children}</div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-7xl max-h-[90vh] overflow-hidden p-0">
-          <div className="flex flex-col h-full">
-            {/* Header - TYLKO dla summary (krok 22) */}
-            {currentStep === 22 && (
-              <DialogHeader className="px-6 pt-6 pb-4 border-b">
-                <DialogTitle className="text-2xl">{t('professionalWebsitePoc:title')}</DialogTitle>
-              </DialogHeader>
-            )}
-
-            {/* Progress bar - TYLKO dla kroków 1-21 */}
-            {currentStep <= 21 && (
-              <div className="px-6 py-4 border-b">
-                <CompactPocProgressBar
-                  currentStep={currentStep}
-                  steps={stepLabels}
-                  totalSteps={22}
-                />
-              </div>
-            )}
-
-            <div className="flex-1 overflow-y-auto">
-              <div className={`${currentStep <= 21 ? 'grid grid-cols-1 lg:grid-cols-5 gap-6 p-6' : 'p-6'}`}>
-                {/* Lewa strona: 40% - Logo, numer, pytanie (TYLKO kroki 1-21) */}
-                {currentStep <= 21 && (
-                  <div className="lg:col-span-2 space-y-4">
-                    {/* Logo "P" */}
-                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                      <span className="text-3xl font-bold text-primary">P</span>
-                    </div>
-                    
-                    {/* Duży numer kroku */}
-                    <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-primary mb-4">
-                      {currentStep}
-                    </h2>
-                    
-                    {/* Główne pytanie */}
-                    <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-                      {t(`professionalWebsitePoc:step${currentStep}.title`)}
-                    </h3>
-                    
-                    {/* Wyjaśnienie/kontekst */}
-                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                      {t(`professionalWebsitePoc:step${currentStep}.description`)}
-                    </p>
-                  </div>
-                )}
-
-                {/* Prawa strona: 60% - Pola formularza (albo pełna szerokość dla summary) */}
-                <div className={currentStep <= 21 ? 'lg:col-span-3' : ''}>
-                  {renderStepContent()}
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation buttons */}
-            <div className="px-6 py-4 border-t flex justify-between">
-              <Button
-                variant="outline"
-                onClick={handleBack}
-                disabled={currentStep === 1}
-              >
-                {t('common:navigation.back')}
-              </Button>
+        <DialogContent className="max-w-6xl w-[90vw] sm:w-full p-0 overflow-hidden max-h-[95vh] sm:max-h-[90vh]">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 h-full max-h-[95vh] sm:max-h-[90vh] w-full max-w-full overflow-x-hidden">
+            
+            {/* Lewa kolumna - tylko dla kroków 1-21 */}
+            {currentStep <= 21 && renderLeftContent()}
+            
+            {/* Prawa kolumna - pola formularza */}
+            <div className="p-3 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0 w-full max-w-full">
+              {currentStep === 22 && <h2 className="text-2xl font-bold mb-4">{t('professionalWebsitePoc:title')}</h2>}
+              {renderStepContent()}
               
-              {currentStep < 22 ? (
-                <Button onClick={handleNext}>
-                  {t('common:navigation.next')}
-                </Button>
-              ) : (
-                <Button
-                  onClick={handleSubmit}
-                  disabled={!formData.gdprConsent || !formData.termsAccepted || isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      {t('common:actions.submitting')}
-                    </>
-                  ) : (
-                    <>
-                      {t('professionalWebsitePoc:summary.submit')} {calculateTotal().toLocaleString()} zł
-                    </>
-                  )}
-                </Button>
-              )}
+              {/* Navigation buttons */}
+              <div className="flex gap-3 mt-6 flex-shrink-0">
+                {currentStep > 1 && (
+                  <Button variant="outline" onClick={handleBack}>
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    {t('common:navigation.back')}
+                  </Button>
+                )}
+                {currentStep < 22 ? (
+                  <Button onClick={handleNext} className="flex-1">
+                    {t('common:navigation.next')}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                ) : (
+                  <Button onClick={handleSubmit} disabled={isSubmitting || !formData.gdprConsent || !formData.termsAccepted} className="flex-1">
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        {t('common:actions.submitting')}
+                      </>
+                    ) : (
+                      <>
+                        {t('professionalWebsitePoc:summary.submit')} {calculateTotal().toLocaleString()} zł
+                      </>
+                    )}
+                  </Button>
+                )}
+              </div>
             </div>
           </div>
+          
+          {/* Close button */}
+          <button onClick={() => setIsOpen(false)} className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+            <X className="h-6 w-6" />
+            <span className="sr-only">Close</span>
+          </button>
         </DialogContent>
       </Dialog>
     </>
