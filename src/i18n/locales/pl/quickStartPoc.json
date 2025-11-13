@@ -1,0 +1,153 @@
+{
+  "title": "Zamówienie: Szybki Start PoC",
+  "subtitle": "Wypełnij formularz i otrzymaj prototyp w 24h",
+  "price": "1500 zł",
+  "steps": {
+    "contact": "Klient",
+    "problem": "Problem",
+    "audience": "Grupa",
+    "features": "Funkcje",
+    "style": "Wygląd",
+    "timeline": "Termin"
+  },
+  "step1": {
+    "number": "1",
+    "title": "Jak się nazywasz i jak możemy się z Tobą skontaktować?",
+    "description": "Potrzebujemy Twoich danych, aby przesłać Ci gotowy prototyp i być w kontakcie podczas realizacji. Przykład: Jan Kowalski, jan@firma.pl, +48 123 456 789",
+    "fields": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Numer telefonu"
+    },
+    "placeholders": {
+      "name": "Jan Kowalski",
+      "email": "jan@firma.pl",
+      "phone": "+48 123 456 789"
+    }
+  },
+  "step2": {
+    "number": "2",
+    "title": "Jaki problem rozwiązuje Twoja aplikacja?",
+    "description": "Opisz krótko, jaki konkretny problem użytkowników chcesz rozwiązać. Przykład: \"Przedsiębiorcy tracą czas na ręczne wystawianie faktur\" lub \"Studenci nie wiedzą, jak zaplanować naukę przed egzaminami\"",
+    "field": "Opis problemu",
+    "placeholder": "Moja aplikacja rozwiązuje problem...",
+    "charCounter": "{{current}}/{{max}} znaków",
+    "minChars": "Minimum 50 znaków"
+  },
+  "step3": {
+    "number": "3",
+    "title": "Kto jest Twoim klientem docelowym?",
+    "description": "Określ dokładnie, dla kogo jest Twoja aplikacja. Przykład: \"Małe firmy zatrudniające 5-20 osób\" lub \"Studenci przygotowujący się do egzaminów\"",
+    "field": "Grupa docelowa",
+    "placeholder": "Moi klienci to...",
+    "suggestions": {
+      "title": "Wybierz z podpowiedzi:",
+      "entrepreneurs": "Przedsiębiorcy",
+      "students": "Studenci",
+      "parents": "Rodzice",
+      "freelancers": "Freelancerzy",
+      "b2b": "Firmy B2B",
+      "b2c": "Konsumenci B2C"
+    }
+  },
+  "step4": {
+    "number": "4",
+    "title": "Jakie są 3 najważniejsze funkcje Twojej aplikacji?",
+    "description": "Wymień najważniejsze funkcjonalności, które muszą być w prototypie. Przykład: \"Rejestracja użytkownika\", \"Dashboard z statystykami\", \"Export danych do PDF\"",
+    "fields": {
+      "feature1": "Funkcja 1",
+      "feature2": "Funkcja 2",
+      "feature3": "Funkcja 3"
+    },
+    "placeholders": {
+      "feature1": "np. Rejestracja użytkownika",
+      "feature2": "np. Dashboard z danymi",
+      "feature3": "np. Export do PDF"
+    },
+    "addMore": "+ Dodaj kolejną funkcję",
+    "maxFeatures": "Maksymalnie 6 funkcji"
+  },
+  "step5": {
+    "number": "5",
+    "title": "Jak wyobrażasz sobie wygląd aplikacji?",
+    "description": "Wybierz styl, który najlepiej pasuje do Twojej aplikacji, lub podaj przykłady stron/aplikacji, które Ci się podobają.",
+    "styles": {
+      "modern": {
+        "title": "Nowoczesny",
+        "description": "Czyste linie, gradienty, animacje"
+      },
+      "minimal": {
+        "title": "Minimalistyczny",
+        "description": "Dużo białej przestrzeni, prostota"
+      },
+      "colorful": {
+        "title": "Kolorowy",
+        "description": "Żywe kolory, dynamiczny design"
+      },
+      "professional": {
+        "title": "Profesjonalny",
+        "description": "Biznesowy, elegancki, zaufanie"
+      }
+    },
+    "inspirationField": "Lub podaj linki do inspiracji (opcjonalnie)",
+    "inspirationPlaceholder": "https://..."
+  },
+  "step6": {
+    "number": "6",
+    "title": "Do kiedy potrzebujesz prototypu?",
+    "description": "Standardowo realizujemy prototyp w ciągu 1-2 dni roboczych. Jeśli potrzebujesz szybciej lub masz konkretny deadline, daj nam znać.",
+    "options": {
+      "asap": "Jak najszybciej (1 dzień)",
+      "standard": "Standard (2-3 dni)",
+      "flexible": "Mam czas (7 dni)",
+      "specific": "Konkretna data:"
+    },
+    "selectDate": "Wybierz datę"
+  },
+  "step7": {
+    "number": "7",
+    "title": "Podsumowanie zamówienia",
+    "description": "Sprawdź wprowadzone dane przed wysłaniem zamówienia",
+    "sections": {
+      "contact": "Dane kontaktowe",
+      "problem": "Problem do rozwiązania",
+      "audience": "Grupa docelowa",
+      "features": "Kluczowe funkcje",
+      "style": "Styl wizualny",
+      "timeline": "Termin realizacji"
+    },
+    "editButton": "Edytuj",
+    "confirmButton": "Potwierdź i wyślij zamówienie za {{price}}",
+    "submitting": "Wysyłanie..."
+  },
+  "buttons": {
+    "next": "Dalej",
+    "back": "Wstecz",
+    "close": "Zamknij"
+  },
+  "validation": {
+    "nameRequired": "Imię i nazwisko jest wymagane",
+    "nameMin": "Minimum 2 znaki",
+    "emailRequired": "Email jest wymagany",
+    "emailInvalid": "Nieprawidłowy adres email",
+    "phoneRequired": "Numer telefonu jest wymagany",
+    "phoneInvalid": "Nieprawidłowy numer telefonu",
+    "problemRequired": "Opis problemu jest wymagany",
+    "problemMin": "Minimum 50 znaków",
+    "problemMax": "Maksymalnie 500 znaków",
+    "audienceRequired": "Grupa docelowa jest wymagana",
+    "audienceMin": "Minimum 20 znaków",
+    "featureRequired": "Ta funkcja jest wymagana",
+    "featureMin": "Minimum 5 znaków",
+    "styleRequired": "Wybierz styl wizualny",
+    "timelineRequired": "Wybierz preferowany termin"
+  },
+  "success": {
+    "title": "Dziękujemy za zamówienie!",
+    "message": "Twoje zamówienie zostało przesłane. Skontaktujemy się z Tobą wkrótce."
+  },
+  "error": {
+    "title": "Wystąpił błąd",
+    "message": "Nie udało się wysłać zamówienia. Spróbuj ponownie."
+  }
+}

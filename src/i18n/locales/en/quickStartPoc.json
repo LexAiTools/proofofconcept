@@ -1,0 +1,153 @@
+{
+  "title": "Order: Quick Start PoC",
+  "subtitle": "Fill out the form and receive your prototype within 24h",
+  "price": "€349",
+  "steps": {
+    "contact": "Client",
+    "problem": "Problem",
+    "audience": "Audience",
+    "features": "Features",
+    "style": "Style",
+    "timeline": "Timeline"
+  },
+  "step1": {
+    "number": "1",
+    "title": "What's your name and how can we contact you?",
+    "description": "We need your details to send you the finished prototype and stay in touch during development. Example: John Doe, john@company.com, +48 123 456 789",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone number"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@company.com",
+      "phone": "+48 123 456 789"
+    }
+  },
+  "step2": {
+    "number": "2",
+    "title": "What problem does your application solve?",
+    "description": "Briefly describe the specific user problem you want to solve. Example: \"Entrepreneurs waste time on manual invoicing\" or \"Students don't know how to plan their exam preparation\"",
+    "field": "Problem description",
+    "placeholder": "My application solves the problem of...",
+    "charCounter": "{{current}}/{{max}} characters",
+    "minChars": "Minimum 50 characters"
+  },
+  "step3": {
+    "number": "3",
+    "title": "Who is your target customer?",
+    "description": "Define exactly who your application is for. Example: \"Small businesses employing 5-20 people\" or \"Students preparing for exams\"",
+    "field": "Target audience",
+    "placeholder": "My customers are...",
+    "suggestions": {
+      "title": "Choose from suggestions:",
+      "entrepreneurs": "Entrepreneurs",
+      "students": "Students",
+      "parents": "Parents",
+      "freelancers": "Freelancers",
+      "b2b": "B2B Companies",
+      "b2c": "B2C Consumers"
+    }
+  },
+  "step4": {
+    "number": "4",
+    "title": "What are the 3 most important features of your application?",
+    "description": "List the key functionalities that must be in the prototype. Example: \"User registration\", \"Dashboard with statistics\", \"Export data to PDF\"",
+    "fields": {
+      "feature1": "Feature 1",
+      "feature2": "Feature 2",
+      "feature3": "Feature 3"
+    },
+    "placeholders": {
+      "feature1": "e.g. User registration",
+      "feature2": "e.g. Data dashboard",
+      "feature3": "e.g. Export to PDF"
+    },
+    "addMore": "+ Add another feature",
+    "maxFeatures": "Maximum 6 features"
+  },
+  "step5": {
+    "number": "5",
+    "title": "How do you envision the application's appearance?",
+    "description": "Choose the style that best fits your application, or provide examples of websites/apps you like.",
+    "styles": {
+      "modern": {
+        "title": "Modern",
+        "description": "Clean lines, gradients, animations"
+      },
+      "minimal": {
+        "title": "Minimalist",
+        "description": "Lots of white space, simplicity"
+      },
+      "colorful": {
+        "title": "Colorful",
+        "description": "Vibrant colors, dynamic design"
+      },
+      "professional": {
+        "title": "Professional",
+        "description": "Business-like, elegant, trustworthy"
+      }
+    },
+    "inspirationField": "Or provide inspiration links (optional)",
+    "inspirationPlaceholder": "https://..."
+  },
+  "step6": {
+    "number": "6",
+    "title": "When do you need the prototype?",
+    "description": "We typically deliver prototypes within 1-2 business days. If you need it faster or have a specific deadline, let us know.",
+    "options": {
+      "asap": "As soon as possible (1 day)",
+      "standard": "Standard (2-3 days)",
+      "flexible": "I have time (7 days)",
+      "specific": "Specific date:"
+    },
+    "selectDate": "Select date"
+  },
+  "step7": {
+    "number": "7",
+    "title": "Order Summary",
+    "description": "Review your details before submitting the order",
+    "sections": {
+      "contact": "Contact Details",
+      "problem": "Problem to Solve",
+      "audience": "Target Audience",
+      "features": "Key Features",
+      "style": "Visual Style",
+      "timeline": "Timeline"
+    },
+    "editButton": "Edit",
+    "confirmButton": "Confirm and submit order for {{price}}",
+    "submitting": "Submitting..."
+  },
+  "buttons": {
+    "next": "Next",
+    "back": "Back",
+    "close": "Close"
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "nameMin": "Minimum 2 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Invalid phone number",
+    "problemRequired": "Problem description is required",
+    "problemMin": "Minimum 50 characters",
+    "problemMax": "Maximum 500 characters",
+    "audienceRequired": "Target audience is required",
+    "audienceMin": "Minimum 20 characters",
+    "featureRequired": "This feature is required",
+    "featureMin": "Minimum 5 characters",
+    "styleRequired": "Select a visual style",
+    "timelineRequired": "Select preferred timeline"
+  },
+  "success": {
+    "title": "Thank you for your order!",
+    "message": "Your order has been submitted. We will contact you shortly."
+  },
+  "error": {
+    "title": "An error occurred",
+    "message": "Failed to submit order. Please try again."
+  }
+}

@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { PlayCircle } from "lucide-react";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
+import { QuickStartPocForm } from "@/components/QuickStartPocForm";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
@@ -136,11 +137,11 @@ const UslugaPoc = () => {
                   {t('services.quickStart.highlight')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <RequestAccessPopup>
+                  <QuickStartPocForm>
                     <Button variant="default" size="lg">
                       {t('services.quickStart.button')}
                     </Button>
-                  </RequestAccessPopup>
+                  </QuickStartPocForm>
                   <Button 
                     variant="outline" 
                     size="lg"
