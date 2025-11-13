@@ -536,25 +536,25 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
             variant="outline"
             onClick={handleBack}
             disabled={currentStep === 1}
-            className="h-10 flex-1 sm:flex-none sm:w-auto px-3 sm:px-4"
+            className="h-10 w-10 sm:w-auto px-0 sm:px-4"
           >
-            <ArrowLeft className="w-4 h-4 mr-1 sm:mr-2" />
-            <span className="text-sm sm:text-base">{t('buttons.back')}</span>
+            <ArrowLeft className="w-4 h-4 sm:mr-2" />
+            <span className="hidden sm:inline">{t('buttons.back')}</span>
           </Button>
 
           {currentStep < 7 ? (
             <Button 
               onClick={handleNext}
-              className="h-10 flex-1 sm:flex-none sm:w-auto px-3 sm:px-4"
+              className="h-10 flex-1 sm:flex-none sm:w-auto px-4 sm:px-6"
             >
-              <span className="text-sm sm:text-base">{t('buttons.next')}</span>
-              <ArrowRight className="w-4 h-4 ml-1 sm:ml-2" />
+              <span className="hidden sm:inline sm:mr-2">{t('buttons.next')}</span>
+              <ArrowRight className="w-4 h-4" />
             </Button>
           ) : (
             <Button 
               onClick={handleSubmit} 
               disabled={isSubmitting}
-              className="h-10 flex-1 sm:flex-none sm:w-auto text-sm px-3 sm:px-6"
+              className="h-10 flex-1 sm:flex-none sm:w-auto text-sm px-4 sm:px-6"
             >
               {isSubmitting ? (
                 <span className="truncate text-sm">{t('step7.submitting')}</span>
