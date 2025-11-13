@@ -1879,39 +1879,59 @@ export const ProfessionalWebsitePocForm = ({ children }: ProfessionalWebsitePocF
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-7xl max-h-[90vh] overflow-hidden p-0">
           <div className="flex flex-col h-full">
-            <DialogHeader className="px-6 pt-6 pb-4 border-b">
-              <DialogTitle className="text-2xl">{t('professionalWebsitePoc:title')}</DialogTitle>
-            </DialogHeader>
+            {/* Header - TYLKO dla summary (krok 22) */}
+            {currentStep === 22 && (
+              <DialogHeader className="px-6 pt-6 pb-4 border-b">
+                <DialogTitle className="text-2xl">{t('professionalWebsitePoc:title')}</DialogTitle>
+              </DialogHeader>
+            )}
 
-            <div className="px-6 py-4 border-b">
-              <CompactPocProgressBar
-                currentStep={currentStep}
-                steps={stepLabels}
-                totalSteps={22}
-              />
-            </div>
+            {/* Progress bar - TYLKO dla kroków 1-21 */}
+            {currentStep <= 21 && (
+              <div className="px-6 py-4 border-b">
+                <CompactPocProgressBar
+                  currentStep={currentStep}
+                  steps={stepLabels}
+                  totalSteps={22}
+                />
+              </div>
+            )}
 
             <div className="flex-1 overflow-y-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 p-6">
-                <div className="lg:col-span-2 space-y-4">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-primary">P</span>
-                  </div>
-                  <div>
-                    <div className="text-6xl font-bold text-primary mb-2">{currentStep}</div>
-                    <h3 className="text-2xl font-bold mb-3">
+              <div className={`${currentStep <= 21 ? 'grid grid-cols-1 lg:grid-cols-5 gap-6 p-6' : 'p-6'}`}>
+                {/* Lewa strona: 40% - Logo, numer, pytanie (TYLKO kroki 1-21) */}
+                {currentStep <= 21 && (
+                  <div className="lg:col-span-2 space-y-4">
+                    {/* Logo "P" */}
+                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                      <span className="text-3xl font-bold text-primary">P</span>
+                    </div>
+                    
+                    {/* Duży numer kroku */}
+                    <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-primary mb-4">
+                      {currentStep}
+                    </h2>
+                    
+                    {/* Główne pytanie */}
+                    <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
                       {t(`professionalWebsitePoc:step${currentStep}.title`)}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    
+                    {/* Wyjaśnienie/kontekst */}
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                       {t(`professionalWebsitePoc:step${currentStep}.description`)}
                     </p>
                   </div>
-                </div>
+                )}
 
-                <div className="lg:col-span-3">{renderStepContent()}</div>
+                {/* Prawa strona: 60% - Pola formularza (albo pełna szerokość dla summary) */}
+                <div className={currentStep <= 21 ? 'lg:col-span-3' : ''}>
+                  {renderStepContent()}
+                </div>
               </div>
             </div>
 
+            {/* Navigation buttons */}
             <div className="px-6 py-4 border-t flex justify-between">
               <Button
                 variant="outline"
@@ -1920,6 +1940,7 @@ export const ProfessionalWebsitePocForm = ({ children }: ProfessionalWebsitePocF
               >
                 {t('common:navigation.back')}
               </Button>
+              
               {currentStep < 22 ? (
                 <Button onClick={handleNext}>
                   {t('common:navigation.next')}

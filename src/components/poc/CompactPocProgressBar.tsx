@@ -17,20 +17,22 @@ export const CompactPocProgressBar = ({ currentStep, steps, totalSteps }: Compac
   useEffect(() => {
     // Calculate which steps to show (5 visible at a time)
     let visibleStartIndex = 0;
+    const numInputSteps = totalSteps - 1;
     
     if (currentStep <= 3) {
       visibleStartIndex = 0; // Show steps 1-5
-    } else if (currentStep >= 13) {
-      visibleStartIndex = 9; // Show steps 10-14
+    } else if (currentStep >= numInputSteps - 1) {
+      visibleStartIndex = Math.max(0, numInputSteps - 5); // Show last 5 steps
     } else {
       visibleStartIndex = currentStep - 3; // Show currentStep centered
     }
     
     setOffset(visibleStartIndex * stepWidth);
-  }, [currentStep]);
+  }, [currentStep, totalSteps]);
 
-  const inputSteps = steps.slice(0, 14); // Steps 1-14
-  const summaryStep = steps[14]; // Step 15
+  const numInputSteps = totalSteps - 1;
+  const inputSteps = steps.slice(0, numInputSteps); // All input steps
+  const summaryStep = steps[numInputSteps]; // Last step (Summary)
 
   // Scroll logic
   const maxOffset = Math.max(0, (inputSteps.length - 5) * stepWidth);
@@ -82,7 +84,7 @@ export const CompactPocProgressBar = ({ currentStep, steps, totalSteps }: Compac
           </button>
         )}
 
-        {/* Sliding container for steps 1-14 with padding to prevent clipping */}
+        {/* Sliding container for input steps with padding to prevent clipping */}
         <div className="flex-1 overflow-hidden px-10 py-2" ref={containerRef}>
           <div 
             className="flex items-center transition-transform duration-300 ease-in-out touch-pan-x"
@@ -125,18 +127,18 @@ export const CompactPocProgressBar = ({ currentStep, steps, totalSteps }: Compac
         {/* Separator */}
         <div className="h-10 w-px bg-border mx-2 flex-shrink-0" />
 
-        {/* Fixed step 15 - Summary */}
+        {/* Fixed summary step */}
         <div className="flex-shrink-0 py-2">
           <div
             className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold transition-all ${
-              currentStep === 15
+              currentStep === totalSteps
                 ? 'bg-primary text-primary-foreground ring-4 ring-primary/20 scale-110'
-                : currentStep > 15
+                : currentStep > totalSteps
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-muted text-muted-foreground'
             }`}
           >
-            15
+            {totalSteps}
           </div>
         </div>
 
@@ -154,34 +156,76 @@ export const CompactPocProgressBar = ({ currentStep, steps, totalSteps }: Compac
       
       {/* Step labels - hidden on mobile, shown on larger screens */}
       <div className="hidden lg:flex justify-between text-xs font-medium mt-3 px-1">
-        <span
-          className={`transition-colors flex-1 text-center ${
-            currentStep >= 1 && currentStep <= 5 ? 'text-foreground' : 'text-muted-foreground'
-          }`}
-        >
-          Kroki 1-5
-        </span>
-        <span
-          className={`transition-colors flex-1 text-center ${
-            currentStep >= 6 && currentStep <= 10 ? 'text-foreground' : 'text-muted-foreground'
-          }`}
-        >
-          Kroki 6-10
-        </span>
-        <span
-          className={`transition-colors flex-1 text-center ${
-            currentStep >= 11 && currentStep <= 14 ? 'text-foreground' : 'text-muted-foreground'
-          }`}
-        >
-          Kroki 11-14
-        </span>
-        <span
-          className={`transition-colors ${
-            currentStep === 15 ? 'text-foreground' : 'text-muted-foreground'
-          }`}
-        >
-          Podsumowanie
-        </span>
+        {totalSteps === 15 ? (
+          <>
+            <span
+              className={`transition-colors flex-1 text-center ${
+                currentStep >= 1 && currentStep <= 5 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Kroki 1-5
+            </span>
+            <span
+              className={`transition-colors flex-1 text-center ${
+                currentStep >= 6 && currentStep <= 10 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Kroki 6-10
+            </span>
+            <span
+              className={`transition-colors flex-1 text-center ${
+                currentStep >= 11 && currentStep <= 14 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Kroki 11-14
+            </span>
+            <span
+              className={`transition-colors ${
+                currentStep === 15 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Podsumowanie
+            </span>
+          </>
+        ) : (
+          <>
+            <span
+              className={`transition-colors flex-1 text-center ${
+                currentStep >= 1 && currentStep <= 5 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Kroki 1-5
+            </span>
+            <span
+              className={`transition-colors flex-1 text-center ${
+                currentStep >= 6 && currentStep <= 10 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Kroki 6-10
+            </span>
+            <span
+              className={`transition-colors flex-1 text-center ${
+                currentStep >= 11 && currentStep <= 15 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Kroki 11-15
+            </span>
+            <span
+              className={`transition-colors flex-1 text-center ${
+                currentStep >= 16 && currentStep <= 21 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Kroki 16-21
+            </span>
+            <span
+              className={`transition-colors ${
+                currentStep === 22 ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Podsumowanie
+            </span>
+          </>
+        )}
       </div>
     </div>
   );
