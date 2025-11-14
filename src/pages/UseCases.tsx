@@ -93,6 +93,7 @@ const UseCases = () => {
                 description: string;
                 details: string;
                 stat: string;
+                chatQuestion: string;
               }>).map((useCase, index) => {
                 const Icon = useCaseIcons[index];
                 const gradients = [
@@ -124,7 +125,10 @@ const UseCases = () => {
                             </span>
                           </div>
                           
-                          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                          <h3 
+                            className="text-2xl md:text-3xl font-bold text-foreground mb-4 cursor-pointer hover:text-primary transition-colors duration-300 underline decoration-primary/50 hover:decoration-primary underline-offset-4"
+                            onClick={() => handleMessageSubmit(useCase.chatQuestion)}
+                          >
                             {useCase.title}
                           </h3>
                           
