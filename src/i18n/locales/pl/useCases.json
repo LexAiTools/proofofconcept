@@ -34,21 +34,24 @@
       "title": "Zapytaj AI",
       "description": "Osadź czat AI w dokumentacji i produktach",
       "details": "Gotowe, konfigurowalne widżety witryn internetowych, boty Slack/Discord i SDK API do tworzenia niestandardowych rozwiązań",
-      "stat": "+90% szybszy onboarding użytkowników, wyższy CSAT, niższa rezygnacja użytkowników"
+      "stat": "+90% szybszy onboarding użytkowników, wyższy CSAT, niższa rezygnacja użytkowników",
+      "chatQuestion": "Dlaczego jest +90% szybszy onboarding użytkowników, wyższy CSAT, niższa rezygnacja użytkowników?"
     },
     {
       "subtitle": "Dane wewnętrzne",
       "title": "Deflektor zgłoszeń",
       "description": "Natychmiastowe zmniejszenie liczby zgłoszeń wsparcia",
       "details": "Prosta integracja za pomocą jednej linii skryptu z istniejącym formularzem wsparcia",
-      "stat": "20-40% przychodzących zgłoszeń wsparcia jest odrzucanych"
+      "stat": "20-40% przychodzących zgłoszeń wsparcia jest odrzucanych",
+      "chatQuestion": "Dlaczego z waszym RAG klienci są lepiej obsługiwani a zgłoszenia nie są odrzucane?"
     },
     {
       "subtitle": "Dane wewnętrzne",
       "title": "Wewnętrzny asystent techniczny",
       "description": "Czat wewnętrzny zoptymalizowany dla zespołów",
       "details": "Bezpieczna aplikacja czatu, która ma dostęp do Twoich wewnętrznych źródeł",
-      "stat": "6 godzin zaoszczędzonych na AE, SDR, Wsparcie i CSM"
+      "stat": "6 godzin zaoszczędzonych na AE, SDR, Wsparcie i CSM",
+      "chatQuestion": "W jaki sposób aplikacja czatu, która ma dostęp do naszych wewnętrznych źródeł jest dobra dla naszego zespołu i po co?"
     }
   ]
 }
