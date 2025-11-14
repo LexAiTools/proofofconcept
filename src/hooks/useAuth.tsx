@@ -121,6 +121,44 @@ export function useAuth() {
     }
   };
 
+  const resetPassword = async (email: string) => {
+    try {
+      setLoading(true);
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/reset-password`,
+      });
+
+      if (error) throw error;
+
+      toast.success('Link do resetowania hasła został wysłany na email');
+      return { error: null };
+    } catch (error: any) {
+      toast.error(error.message || 'Błąd podczas resetowania hasła');
+      return { error };
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const updatePassword = async (newPassword: string) => {
+    try {
+      setLoading(true);
+      const { error } = await supabase.auth.updateUser({
+        password: newPassword,
+      });
+
+      if (error) throw error;
+
+      toast.success('Hasło zostało zmienione pomyślnie');
+      return { error: null };
+    } catch (error: any) {
+      toast.error(error.message || 'Błąd podczas zmiany hasła');
+      return { error };
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return {
     user,
     session,
@@ -130,5 +168,7 @@ export function useAuth() {
     signIn,
     signInWithOAuth,
     signOut,
+    resetPassword,
+    updatePassword,
   };
 }
