@@ -24,6 +24,15 @@ const Engine = () => {
     navigate('/chat', { state: { initialMessage: 'Chce zapytać o demo' } });
   };
 
+  const handleFeatureClick = (featureKey: string) => {
+    navigate('/chat', { 
+      state: { 
+        initialMessage: `Wyjaśnij funkcję: ${featureKey}`,
+        featureKey: featureKey 
+      } 
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -180,7 +189,10 @@ const Engine = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Features Grid */}
             <div className="space-y-8">
-              <Card className="bg-card border-border">
+              <Card 
+                className="bg-card border-border cursor-pointer hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+                onClick={() => handleFeatureClick('multiProduct')}
+              >
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {t('engine:howItWorks.features.multiProduct.title')}
@@ -197,7 +209,10 @@ const Engine = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-card border-border">
+              <Card 
+                className="bg-card border-border cursor-pointer hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+                onClick={() => handleFeatureClick('queryUnderstanding')}
+              >
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {t('engine:howItWorks.features.queryUnderstanding.title')}
@@ -218,7 +233,10 @@ const Engine = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-card border-border">
+              <Card 
+                className="bg-card border-border cursor-pointer hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+                onClick={() => handleFeatureClick('multilingual')}
+              >
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {t('engine:howItWorks.features.multilingual.title')}
@@ -237,7 +255,10 @@ const Engine = () => {
             </div>
 
             <div className="space-y-8">
-              <Card className="bg-card border-border">
+              <Card 
+                className="bg-card border-border cursor-pointer hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+                onClick={() => handleFeatureClick('groundedAnswers')}
+              >
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {t('engine:howItWorks.features.groundedAnswers.title')}
@@ -254,7 +275,10 @@ const Engine = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-card border-border">
+              <Card 
+                className="bg-card border-border cursor-pointer hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+                onClick={() => handleFeatureClick('knowledgeSources')}
+              >
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {t('engine:howItWorks.features.knowledgeSources.title')}
@@ -271,7 +295,10 @@ const Engine = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-card border-border">
+              <Card 
+                className="bg-card border-border cursor-pointer hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+                onClick={() => handleFeatureClick('staysOnTopic')}
+              >
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {t('engine:howItWorks.features.staysOnTopic.title')}

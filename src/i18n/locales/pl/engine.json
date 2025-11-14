@@ -98,6 +98,14 @@
           "answer": "Przepraszam, ale jako asystent AI dla ExampleDB, jestem dostrojony do odpowiadania na pytania dotyczące ExampleDB."
         }
       }
+    },
+    "featureExplanations": {
+      "multiProduct": "Silnik Odpowiedzi obsługuje zapytania dotyczące różnych wersji produktów i opcji wdrożenia. Niezależnie czy używasz wersji open-source czy self-hosted, czy planujesz migrację między wersjami - system automatycznie dostarcza odpowiedzi dostosowane do Twojego środowiska. Przykładowo, jeśli zapytasz 'Jak rozpocząć pracę z ExampleDB?', otrzymasz instrukcje uwzględniające zarówno wersję open-source jak i self-hosted, wraz z różnicami między nimi.",
+      "queryUnderstanding": "Silnik rozkłada trudne i niejasne zapytania użytkowników na konkretne podzapytania, aby dostarczyć kompleksową odpowiedź. Użytkownicy często zadają ogólne pytania jak 'Jak tego użyć?' - system automatycznie rozpoznaje, że potrzebują kroków konfiguracji, wymagań wstępnych oraz linków do tutoriali. Dzięki temu otrzymujesz pełną, strukturalną odpowiedź zamiast jednego fragmentu informacji.",
+      "multilingual": "Silnik przetwarza treści w jednym języku i odpowiada w preferowanym języku użytkownika. Obsługujemy ponad 60 języków - jeśli użytkownik zadaje pytanie po portugalsku, otrzyma odpowiedź również po portugalsku, nawet jeśli źródłowa dokumentacja jest w języku angielskim. To znacząco podnosi jakość obsługi dla międzynarodowych użytkowników.",
+      "groundedAnswers": "Każda odpowiedź Silnika jest oparta wyłącznie na Twojej bazie wiedzy i zawiera bezpośrednie odniesienia do źródeł. Redukuje to halucynacje AI i buduje zaufanie użytkowników. Przykładowo, odpowiadając na pytanie o tworzenie tabeli, system nie tylko podaje polecenie CREATE TABLE, ale również linkuje do konkretnej sekcji dokumentacji, aby użytkownik mógł zgłębić szczegóły.",
+      "knowledgeSources": "Silnik syntetyzuje informacje z wielu źródeł, aby zapewnić kompleksowe odpowiedzi. W przypadku błędów, system łączy informacje z dokumentacji technicznej, Github Issues, Stack Overflow i innych źródeł, dostarczając użytkownikowi wszystkie możliwe rozwiązania w jednej odpowiedzi. To oszczędza czas i eliminuje konieczność przeszukiwania wielu miejsc.",
+      "staysOnTopic": "Silnik odpowiada tylko na pytania dotyczące Twojego produktu. Jeśli użytkownik pyta o konkurencyjny produkt lub niezwiązane tematy, asystent grzecznie odmawia i wskazuje swój obszar specjalizacji. To zapobiega sytuacjom, gdzie AI mógłby przypadkowo pomóc użytkownikowi w przejściu do konkurencji lub dostarczać nieweryfikowane informacje poza zakresem Twojej dokumentacji."
     }
   },
   "faq": {

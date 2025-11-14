@@ -98,6 +98,14 @@
           "answer": "I'm sorry, but as an AI assistant for ExampleDB, I'm tuned to answer questions about ExampleDB."
         }
       }
+    },
+    "featureExplanations": {
+      "multiProduct": "The Answer Engine handles queries across different product versions and deployment options. Whether you use open-source, self-hosted, or planning migration between versions - the system automatically delivers answers tailored to your environment. For example, if you ask 'How do I get started with ExampleDB?', you'll receive instructions covering both open-source and self-hosted versions, along with the differences between them.",
+      "queryUnderstanding": "The Engine breaks down challenging and vague user queries into specific sub-questions to deliver comprehensive answers. Users often ask general questions like 'How do I use it?' - the system automatically recognizes they need setup steps, prerequisites, and links to tutorials. This way you receive a complete, structured answer instead of a single piece of information.",
+      "multilingual": "The Engine processes content in one language and responds in the user's preferred language. We support over 60 languages - if a user asks a question in Portuguese, they'll receive an answer in Portuguese too, even if the source documentation is in English. This significantly improves service quality for international users.",
+      "groundedAnswers": "Every Engine answer is based solely on your knowledge base and includes direct source references. This reduces AI hallucinations and builds user trust. For example, when answering a question about creating tables, the system not only provides the CREATE TABLE command, but also links to the specific documentation section so users can explore details.",
+      "knowledgeSources": "The Engine synthesizes information from multiple sources to provide comprehensive answers. In case of errors, the system combines information from technical documentation, GitHub Issues, Stack Overflow, and other sources, providing users with all possible solutions in one answer. This saves time and eliminates the need to search multiple places.",
+      "staysOnTopic": "The Engine only answers questions about your product. If a user asks about a competing product or unrelated topics, the assistant politely declines and indicates its area of expertise. This prevents situations where AI could accidentally help users switch to competitors or provide unverified information outside the scope of your documentation."
     }
   },
   "faq": {

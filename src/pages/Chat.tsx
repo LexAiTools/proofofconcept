@@ -17,7 +17,7 @@ interface Message {
 }
 
 export default function Chat() {
-  const { t } = useTranslation('chat');
+  const { t } = useTranslation(['chat', 'engine']);
   const location = useLocation();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -67,7 +67,26 @@ export default function Chat() {
   // Handle initial message from navigation
   useEffect(() => {
     const initialMessage = location.state?.initialMessage;
+    const featureKey = location.state?.featureKey;
+    
     if (initialMessage && messages.length === 0 && !isLoading) {
+      // If featureKey exists, show explanation directly from translations
+      if (featureKey) {
+        const explanation = t(`engine:howItWorks.featureExplanations.${featureKey}`, { defaultValue: '' });
+        
+        if (explanation) {
+          // Don't send to API, just display the explanation
+          setMessages([
+            { 
+              role: 'assistant', 
+              content: explanation 
+            }
+          ]);
+          return;
+        }
+      }
+      
+      // Otherwise, send the initial message to the API as before
       setInput(initialMessage);
       // Small delay to ensure textarea is rendered
       setTimeout(() => {
