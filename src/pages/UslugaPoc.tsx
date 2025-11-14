@@ -152,13 +152,37 @@ const UslugaPoc = () => {
                       {t('services.quickStart.button')}
                     </Button>
                   </QuickStartPocForm>
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    onClick={() => window.open('https://kolejkowo.corballyconcepts.com/', '_blank')}
-                  >
-                    {t('services.quickStart.example')}
-                  </Button>
+                  <Select onValueChange={(value) => window.open(value, '_blank')}>
+                    <SelectTrigger className="w-full sm:w-auto h-11 border-input bg-background hover:bg-accent transition-colors">
+                      <SelectValue placeholder={t('services.quickStart.example')} />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border">
+                      <SelectItem 
+                        value="https://kolejkowo.corballyconcepts.com/"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 1: Kolejkowo Corbally Concepts
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://landing-corbally.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 2: Landing Corbally
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://ankieta.lexai.tools/"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 3: Ankieta LexAI Tools
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://meal-insight-compass.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 4: Meal Insight Compass
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </CardContent>
             </Card>
