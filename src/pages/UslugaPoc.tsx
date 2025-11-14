@@ -9,6 +9,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { PlayCircle } from "lucide-react";
@@ -233,13 +240,31 @@ const UslugaPoc = () => {
                   {t('services.completePackage.button')}
                 </Button>
               </CompletePackagePocForm>
-                  <Button 
-                    variant="glass" 
-                    size="lg"
-                    onClick={() => window.open('https://poznaj.artopen.pl/produkt', '_blank')}
-                  >
-                    {t('services.completePackage.example')}
-                  </Button>
+                  <Select onValueChange={(value) => window.open(value, '_blank')}>
+                    <SelectTrigger className="w-full sm:w-auto h-11 bg-glass backdrop-blur-sm border-white/20 text-primary-foreground hover:bg-white/10 transition-colors">
+                      <SelectValue placeholder={t('services.completePackage.example')} />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border z-50">
+                      <SelectItem 
+                        value="https://poznaj.artopen.pl/produkt"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 1: Artopen PoC
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://wrlds-ai-integration-1689.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 2: WRLDS AI Integration
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://sklep-sprzedaz-live.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 3: Sklep Sprzedaż Live
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </CardContent>
             </Card>
