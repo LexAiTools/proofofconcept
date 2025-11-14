@@ -252,7 +252,7 @@ const UslugaPoc = () => {
                         Przykład 1: Artopen PoC
                       </SelectItem>
                       <SelectItem 
-                        value="https://wrlds-ai-integration-1689.lovable.app"
+                        value="https://pocexapmle.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
                         Przykład 2: WRLDS AI Integration
