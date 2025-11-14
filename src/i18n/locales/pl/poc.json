@@ -32,7 +32,13 @@
       "feature3": "Interaktywny interfejs - do pokazania inwestorom i pierwszym klientom",
       "highlight": "To podstawowy pakiet, który pozwoli Ci szybko zweryfikować pomysł i zobaczyć, jak będzie wyglądał Twój produkt w praktyce.",
       "button": "Zamów Prototyp PoC",
-      "example": "Zobacz przykład"
+      "example": "Zobacz przykład",
+      "examples": {
+        "example1": "Przykład 1: Kolejkowo Corbally Concepts",
+        "example2": "Przykład 2: Landing Corbally",
+        "example3": "Przykład 3: Ankieta LexAI Tools",
+        "example4": "Przykład 4: Meal Insight Compass"
+      }
     },
     "interactiveApp": {
       "label": "2. Interaktywna Aplikacja PoC",
@@ -45,7 +51,12 @@
       "feature4": "Prototyp gotowy do pokazania inwestorom i zbierania prawdziwych klientów",
       "highlight": "Twój produkt będzie nie tylko wyglądał jak gotowa aplikacja, ale faktycznie będzie działać i zbierać leady od pierwszego dnia.",
       "button": "Zamów Aplikację PoC",
-      "example": "Zobacz przykład"
+      "example": "Zobacz przykład",
+      "examples": {
+        "example1": "Przykład 1: Developer Corbally Concepts",
+        "example2": "Przykład 2: Corbally Concepts Lead",
+        "example3": "Przykład 3: Terapia Gestalt"
+      }
     },
     "completePackage": {
       "label": "3. PAKIET KOMPLETNY PoC - Prezentacja Produktu",
@@ -60,7 +71,12 @@
       "feature3Desc": "gotowe teksty sprzedażowe",
       "description": "To kompletne rozwiązanie do prezentacji produktu inwestorom, partnerom biznesowym lub pierwszym klientom.",
       "button": "Zamów Pakiet Kompletny PoC",
-      "example": "Zobacz przykład"
+      "example": "Zobacz przykład",
+      "examples": {
+        "example1": "Przykład 1: Artopen PoC",
+        "example2": "Przykład 2: WRLDS AI Integration",
+        "example3": "Przykład 3: Sklep Sprzedaż Live"
+      }
     },
     "custom": {
       "label": "4. Projekt PoC Szyty na Miarę",
@@ -81,7 +97,12 @@
       "feature6": "Działającą stronę gotową do publikacji w 14 dni",
       "highlight": "Zapomnij o miesiącach oczekiwania na stronę internetową. Twoja strona z inteligentnym asystentem AI gotowa w dwa tygodnie.",
       "button": "Zamów Stronę z AI",
-      "example": "Zobacz przykład"
+      "example": "Zobacz przykład",
+      "examples": {
+        "example1": "Przykład 1: Artopen",
+        "example2": "Przykład 2: Decentral Art PoC",
+        "example3": "Przykład 3: Kurs Corbally Concepts"
+      }
     }
   },
   "howItWorks": {
