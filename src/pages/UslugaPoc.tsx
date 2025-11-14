@@ -192,13 +192,31 @@ const UslugaPoc = () => {
                       {t('services.interactiveApp.button')}
                     </Button>
                   </InteractiveAppPocForm>
-                  <Button
-                    variant="outline" 
-                    size="lg"
-                    onClick={() => window.open('https://developer-corballyconcepts.lovable.app', '_blank')}
-                  >
-                    {t('services.interactiveApp.example')}
-                  </Button>
+                  <Select onValueChange={(value) => window.open(value, '_blank')}>
+                    <SelectTrigger className="w-full sm:w-auto h-11 border-input bg-background hover:bg-accent transition-colors">
+                      <SelectValue placeholder={t('services.interactiveApp.example')} />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border">
+                      <SelectItem 
+                        value="https://developer-corballyconcepts.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 1: Developer Corbally Concepts
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://corballyconcepts-lead.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 2: Corbally Concepts Lead
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://terapia-gestalt.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 3: Terapia Gestalt
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </CardContent>
             </Card>
