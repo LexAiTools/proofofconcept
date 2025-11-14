@@ -73,15 +73,26 @@ export default function Chat() {
       // If featureKey exists, show explanation directly from translations
       if (featureKey) {
         const explanation = t(`engine:howItWorks.featureExplanations.${featureKey}`, { defaultValue: '' });
+        const followupQuestion = t(`engine:howItWorks.featureFollowupQuestions.${featureKey}`, { defaultValue: '' });
         
         if (explanation) {
-          // Don't send to API, just display the explanation
-          setMessages([
+          // Display explanation + followup question as two separate messages
+          const messagesToAdd = [
             { 
-              role: 'assistant', 
+              role: 'assistant' as const, 
               content: explanation 
             }
-          ]);
+          ];
+          
+          // Add followup question if it exists
+          if (followupQuestion) {
+            messagesToAdd.push({
+              role: 'assistant' as const,
+              content: followupQuestion
+            });
+          }
+          
+          setMessages(messagesToAdd);
           return;
         }
       }
