@@ -337,13 +337,31 @@ const UslugaPoc = () => {
                       {t('services.websitePackage.button')}
                     </Button>
                   </ProfessionalWebsitePocForm>
-                  <Button 
-                    variant="glass" 
-                    size="lg"
-                    onClick={() => window.open('https://poznaj.artopen.pl', '_blank')}
-                  >
-                    {t('services.websitePackage.example')}
-                  </Button>
+                  <Select onValueChange={(value) => window.open(value, '_blank')}>
+                    <SelectTrigger className="w-full sm:w-auto h-11 bg-glass backdrop-blur-sm border-white/20 text-primary-foreground hover:bg-white/10 transition-colors">
+                      <SelectValue placeholder={t('services.websitePackage.example')} />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border">
+                      <SelectItem 
+                        value="https://poznaj.artopen.pl"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 1: Artopen
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://decentral-art-poc.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 2: Decentral Art PoC
+                      </SelectItem>
+                      <SelectItem 
+                        value="https://kurs-corbally-concepts.lovable.app"
+                        className="cursor-pointer hover:bg-accent"
+                      >
+                        Przykład 3: Kurs Corbally Concepts
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </CardContent>
             </Card>
