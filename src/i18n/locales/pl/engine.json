@@ -106,14 +106,6 @@
       "groundedAnswers": "Każda odpowiedź Silnika jest oparta wyłącznie na Twojej bazie wiedzy i zawiera bezpośrednie odniesienia do źródeł. Redukuje to halucynacje AI i buduje zaufanie użytkowników. Przykładowo, odpowiadając na pytanie o tworzenie tabeli, system nie tylko podaje polecenie CREATE TABLE, ale również linkuje do konkretnej sekcji dokumentacji, aby użytkownik mógł zgłębić szczegóły.",
       "knowledgeSources": "Silnik syntetyzuje informacje z wielu źródeł, aby zapewnić kompleksowe odpowiedzi. W przypadku błędów, system łączy informacje z dokumentacji technicznej, Github Issues, Stack Overflow i innych źródeł, dostarczając użytkownikowi wszystkie możliwe rozwiązania w jednej odpowiedzi. To oszczędza czas i eliminuje konieczność przeszukiwania wielu miejsc.",
       "staysOnTopic": "Silnik odpowiada tylko na pytania dotyczące Twojego produktu. Jeśli użytkownik pyta o konkurencyjny produkt lub niezwiązane tematy, asystent grzecznie odmawia i wskazuje swój obszar specjalizacji. To zapobiega sytuacjom, gdzie AI mógłby przypadkowo pomóc użytkownikowi w przejściu do konkurencji lub dostarczać nieweryfikowane informacje poza zakresem Twojej dokumentacji."
-    },
-    "featureFollowupQuestions": {
-      "multiProduct": "Czy chcesz dowiedzieć się, jak wdrożyć obsługę wielu wersji produktu w Twoim przypadku?",
-      "queryUnderstanding": "Masz pytania o to, jak system rozumie i przetwarza złożone zapytania użytkowników?",
-      "multilingual": "Interesuje Cię wsparcie dla konkretnego języka lub chcesz wiedzieć więcej o wielojęzyczności?",
-      "groundedAnswers": "Chcesz zobaczyć przykład tego, jak działają cytaty i odniesienia do źródeł w praktyce?",
-      "knowledgeSources": "Zastanawiasz się, jakie konkretne źródła wiedzy możesz podłączyć do swojego asystenta?",
-      "staysOnTopic": "Chcesz wiedzieć więcej o tym, jak asystent chroni Twój brand i pozostaje w zakresie tematycznym?"
     }
   },
   "faq": {
