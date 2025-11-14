@@ -161,25 +161,25 @@ const UslugaPoc = () => {
                         value="https://kolejkowo.corballyconcepts.com/"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 1: Kolejkowo Corbally Concepts
+                        {t('services.quickStart.examples.example1')}
                       </SelectItem>
                       <SelectItem 
                         value="https://landing-corbally.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 2: Landing Corbally
+                        {t('services.quickStart.examples.example2')}
                       </SelectItem>
                       <SelectItem 
                         value="https://ankieta.lexai.tools/"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 3: Ankieta LexAI Tools
+                        {t('services.quickStart.examples.example3')}
                       </SelectItem>
                       <SelectItem 
                         value="https://meal-insight-compass.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 4: Meal Insight Compass
+                        {t('services.quickStart.examples.example4')}
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -225,19 +225,19 @@ const UslugaPoc = () => {
                         value="https://developer-corballyconcepts.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 1: Developer Corbally Concepts
+                        {t('services.interactiveApp.examples.example1')}
                       </SelectItem>
                       <SelectItem 
                         value="https://corballyconcepts-lead.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 2: Corbally Concepts Lead
+                        {t('services.interactiveApp.examples.example2')}
                       </SelectItem>
                       <SelectItem 
                         value="https://terapia-gestalt.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 3: Terapia Gestalt
+                        {t('services.interactiveApp.examples.example3')}
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -291,19 +291,19 @@ const UslugaPoc = () => {
                         value="https://poznaj.artopen.pl/produkt"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 1: Artopen PoC
+                        {t('services.completePackage.examples.example1')}
                       </SelectItem>
                       <SelectItem 
                         value="https://pocexapmle.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 2: WRLDS AI Integration
+                        {t('services.completePackage.examples.example2')}
                       </SelectItem>
                       <SelectItem 
                         value="https://sklep-sprzedaz-live.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 3: Sklep Sprzedaż Live
+                        {t('services.completePackage.examples.example3')}
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -388,19 +388,19 @@ const UslugaPoc = () => {
                         value="https://poznaj.artopen.pl"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 1: Artopen
+                        {t('services.websitePackage.examples.example1')}
                       </SelectItem>
                       <SelectItem 
                         value="https://decentral-art-poc.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 2: Decentral Art PoC
+                        {t('services.websitePackage.examples.example2')}
                       </SelectItem>
                       <SelectItem 
                         value="https://kurs-corbally-concepts.lovable.app"
                         className="cursor-pointer hover:bg-accent"
                       >
-                        Przykład 3: Kurs Corbally Concepts
+                        {t('services.websitePackage.examples.example3')}
                       </SelectItem>
                     </SelectContent>
                   </Select>

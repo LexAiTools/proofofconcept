@@ -32,7 +32,13 @@
       "feature3": "Interactive interface - to show investors and first customers",
       "highlight": "This is the basic package that will allow you to quickly verify your idea and see what your product will look like in practice.",
       "button": "Order PoC Prototype",
-      "example": "See Example"
+      "example": "See Example",
+      "examples": {
+        "example1": "Example 1: Kolejkowo Corbally Concepts",
+        "example2": "Example 2: Landing Corbally",
+        "example3": "Example 3: LexAI Tools Survey",
+        "example4": "Example 4: Meal Insight Compass"
+      }
     },
     "interactiveApp": {
       "label": "2. Interactive PoC Application",
@@ -45,7 +51,12 @@
       "feature4": "Prototype ready to show investors and collect real customers",
       "highlight": "Your product will not only look like a finished application, but will actually work and collect leads from day one.",
       "button": "Order PoC Application",
-      "example": "See Example"
+      "example": "See Example",
+      "examples": {
+        "example1": "Example 1: Developer Corbally Concepts",
+        "example2": "Example 2: Corbally Concepts Lead",
+        "example3": "Example 3: Gestalt Therapy"
+      }
     },
     "completePackage": {
       "label": "3. COMPLETE PoC PACKAGE - Product Presentation",
@@ -60,7 +71,12 @@
       "feature3Desc": "ready-made sales copy",
       "description": "This is a complete solution for presenting your product to investors, business partners, or first customers.",
       "button": "Order Complete PoC Package",
-      "example": "See Example"
+      "example": "See Example",
+      "examples": {
+        "example1": "Example 1: Artopen PoC",
+        "example2": "Example 2: WRLDS AI Integration",
+        "example3": "Example 3: Live Sales Shop"
+      }
     },
     "custom": {
       "label": "4. Custom Tailored PoC Project",
@@ -81,7 +97,12 @@
       "feature6": "Working website ready for publication in 14 days",
       "highlight": "Forget about months of waiting for a website. Your website with intelligent AI assistant ready in two weeks.",
       "button": "Order Website with AI",
-      "example": "See Example"
+      "example": "See Example",
+      "examples": {
+        "example1": "Example 1: Artopen",
+        "example2": "Example 2: Decentral Art PoC",
+        "example3": "Example 3: Corbally Concepts Course"
+      }
     }
   },
   "howItWorks": {
