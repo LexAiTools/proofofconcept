@@ -11,6 +11,19 @@
     "titleLine3": "practitioners.",
     "cta": "Book Demo"
   },
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Rapid prototyping",
+        "description": "Transform an idea into a working prototype in hours, not weeks. Our RAG enables immediate concept testing with real data, eliminating the need for time-consuming coding from scratch. Validate business assumptions before investing in full development."
+      },
+      {
+        "title": "Fast application interface development",
+        "description": "Create intelligent conversational interfaces without advanced ML knowledge. Ready-made components and intuitive API enable AI integration with your application in minutes. From chatbots to internal assistants - all in one tool."
+      }
+    ]
+  },
   "deployment": {
     "title": "Deploy PoC where your",
     "titleLine2": "customers and team members",
