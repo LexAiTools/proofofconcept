@@ -57,7 +57,7 @@ const UslugaPoc = () => {
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube.com/embed/YXzHFuPhN9I"
                     title="PoC Demo Video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
