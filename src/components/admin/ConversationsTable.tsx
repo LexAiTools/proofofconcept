@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
 import { pl } from "date-fns/locale";
-import { Eye, MessageSquare, Link as LinkIcon } from "lucide-react";
+import { Eye, MessageSquare, Link as LinkIcon, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -147,6 +147,35 @@ export function ConversationsTable({ searchQuery, onRefresh, highlightConversati
     }
   };
 
+  const handleDelete = async (conversationId: string) => {
+    if (!confirm("Czy na pewno chcesz usunąć tę rozmowę? Ta operacja jest nieodwracalna.")) {
+      return;
+    }
+
+    try {
+      const { error: messagesError } = await supabase
+        .from("chat_messages")
+        .delete()
+        .eq("conversation_id", conversationId);
+
+      if (messagesError) throw messagesError;
+
+      const { error: convError } = await supabase
+        .from("chat_conversations")
+        .delete()
+        .eq("id", conversationId);
+
+      if (convError) throw convError;
+
+      toast.success("Rozmowa została usunięta");
+      fetchConversations();
+      onRefresh();
+    } catch (error) {
+      console.error("Error deleting conversation:", error);
+      toast.error("Błąd podczas usuwania rozmowy");
+    }
+  };
+
   const filteredConversations = conversations.filter((conv) => {
     if (!searchQuery) return true;
     const search = searchQuery.toLowerCase();
@@ -218,28 +247,35 @@ export function ConversationsTable({ searchQuery, onRefresh, highlightConversati
                       </Badge>
                     )}
                   </TableCell>
-                  <TableCell className="text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => toggleExpand(conv.id)}
-                      >
-                        <Eye className="h-4 w-4 mr-1" />
-                        {t('conversations.table.viewTranscript')}
-                      </Button>
-                      {conv.lead_id && (
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => navigate('/admin', { state: { highlightLead: conv.lead_id } })}
-                        >
-                          <LinkIcon className="h-4 w-4 mr-1" />
-                          {t('conversations.table.viewLead')}
-                        </Button>
-                      )}
-                    </div>
-                  </TableCell>
+              <TableCell className="text-right">
+                <div className="flex items-center justify-end gap-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => toggleExpand(conv.id)}
+                  >
+                    <Eye className="h-4 w-4 mr-1" />
+                    {t('conversations.table.viewTranscript')}
+                  </Button>
+                  {conv.lead_id && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => navigate('/admin', { state: { highlightLead: conv.lead_id } })}
+                    >
+                      <LinkIcon className="h-4 w-4 mr-1" />
+                      {t('conversations.table.viewLead')}
+                    </Button>
+                  )}
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => handleDelete(conv.id)}
+                  >
+                    <Trash2 className="h-4 w-4 text-destructive" />
+                  </Button>
+                </div>
+              </TableCell>
                 </TableRow>
                 {expandedConvId === conv.id && (
                   <TableRow>
