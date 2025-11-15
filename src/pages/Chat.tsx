@@ -319,14 +319,14 @@ export default function Chat() {
                    detectLeadTrigger(message.content) && 
                    showLeadForm !== index && (
                     <div className="flex justify-start ml-14">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setShowLeadForm(index)}
-                        className="text-sm"
-                      >
-                        {t('leads:actions.showForm')}
-                      </Button>
+                <Button
+                  variant="default"
+                  size="sm"
+                  onClick={() => setShowLeadForm(index)}
+                  className="text-sm"
+                >
+                  {t('leads:actions.showForm')}
+                </Button>
                     </div>
                   )}
                   
