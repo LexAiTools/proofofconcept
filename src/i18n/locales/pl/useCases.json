@@ -1,20 +1,10 @@
 {
   "trusted": {
-    "title": "Zaufało nam ponad",
-    "titleLine2": "200 wiodących",
+    "title": "Sprawdzone rozwiązania",
+    "titleLine2": "dla wiodących",
     "titleLine3": "zespołów"
   },
-  "companies": [
-    "Logitech",
-    "OpenAI",
-    "Docker",
-    "Reddit",
-    "Juniper",
-    "Amplitude",
-    "Monday.com",
-    "CircleCI",
-    "Netlify"
-  ],
+  "companies": ["Logitech", "OpenAI", "Docker", "Reddit", "Juniper", "Amplitude", "Monday.com", "CircleCI", "Netlify"],
   "hero": {
     "title": "Ten sam RAG,",
     "titleLine2": "którego używają",
