@@ -4,8 +4,7 @@
   "fields": {
     "name": "Name",
     "email": "Email",
-    "phone": "Phone (optional)",
-    "message": "Additional message (optional)"
+    "phone": "Phone (optional)"
   },
   "actions": {
     "submit": "Send",
