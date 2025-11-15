@@ -74,21 +74,30 @@ export const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center gap-3">
             <LanguageSwitcher />
-            {isAdmin ? (
-              <Button variant="default" onClick={() => navigate('/admin')}>
+            <Button 
+              variant="ghost" 
+              onClick={() => navigate('/usluga-poc')}
+              className="flex-shrink-0"
+            >
+              POC
+            </Button>
+            <Button 
+              variant="default" 
+              onClick={() => navigate('/book-demo')}
+              className="flex-shrink-0"
+            >
+              {t('buttons.bookDemo')}
+            </Button>
+            {isAdmin && (
+              <Button 
+                variant="secondary" 
+                onClick={() => navigate('/admin')}
+                className="flex-shrink-0"
+              >
                 {t('buttons.adminPanel')}
               </Button>
-            ) : (
-              <>
-                <Button variant="ghost" onClick={() => navigate('/usluga-poc')}>
-                  POC
-                </Button>
-                <Button variant="default" onClick={() => navigate('/book-demo')}>
-                  {t('buttons.bookDemo')}
-                </Button>
-              </>
             )}
           </div>
 
@@ -125,9 +134,29 @@ export const Header = () => {
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <LanguageSwitcher />
-                {isAdmin ? (
+                <Button 
+                  variant="ghost" 
+                  className="justify-start w-full"
+                  onClick={() => {
+                    navigate('/usluga-poc');
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  POC
+                </Button>
+                <Button 
+                  variant="default" 
+                  className="justify-start w-full"
+                  onClick={() => {
+                    navigate('/book-demo');
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {t('buttons.bookDemo')}
+                </Button>
+                {isAdmin && (
                   <Button 
-                    variant="default" 
+                    variant="secondary" 
                     className="justify-start w-full"
                     onClick={() => {
                       navigate('/admin');
@@ -136,29 +165,6 @@ export const Header = () => {
                   >
                     {t('buttons.adminPanel')}
                   </Button>
-                ) : (
-                  <>
-                    <Button 
-                      variant="ghost" 
-                      className="justify-start w-full"
-                      onClick={() => {
-                        navigate('/usluga-poc');
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      POC
-                    </Button>
-                    <Button 
-                      variant="default" 
-                      className="justify-start w-full"
-                      onClick={() => {
-                        navigate('/book-demo');
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      {t('buttons.bookDemo')}
-                    </Button>
-                  </>
                 )}
               </div>
             </nav>
