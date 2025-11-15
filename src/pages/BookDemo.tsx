@@ -294,7 +294,7 @@ const BookDemo = () => {
 
             <p className="text-center text-sm text-muted-foreground mt-6">
               {t('bookDemo:demoForm.privacy.text')}{" "}
-              <a href="/privacy" className="text-primary hover:underline">{t('bookDemo:demoForm.privacy.link')}</a> {t('bookDemo:demoForm.privacy.suffix')}
+              <a href="/privacy-policy" className="text-primary hover:underline">{t('bookDemo:demoForm.privacy.link')}</a> {t('bookDemo:demoForm.privacy.suffix')}
             </p>
           </div>
         </div>
