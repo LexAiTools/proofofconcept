@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { MessageSquare, Users, CheckCircle2, XCircle } from "lucide-react";
 import { DashboardCard } from "@/components/admin/DashboardCard";
@@ -23,6 +23,8 @@ export default function AdminConversations() {
   });
   const { user, loading } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const conversationIdFromUrl = searchParams.get('id');
   const hasCheckedRef = useRef(false);
 
   useEffect(() => {
@@ -229,7 +231,11 @@ export default function AdminConversations() {
             </div>
 
             <div>
-              <ConversationsTable searchQuery={searchQuery} onRefresh={fetchStats} />
+              <ConversationsTable 
+                searchQuery={searchQuery} 
+                onRefresh={fetchStats}
+                highlightConversationId={conversationIdFromUrl}
+              />
             </div>
           </div>
         </SidebarInset>
