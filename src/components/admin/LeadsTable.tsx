@@ -64,6 +64,164 @@ const formLabels: Record<string, string> = {
   "professional-website-poc": "Professional Website PoC",
 };
 
+const renderMetadata = (metadata: any, sourceForm: string) => {
+  if (!metadata || typeof metadata !== 'object') return null;
+
+  const renderValue = (value: any, key?: string): JSX.Element | string => {
+    if (value === null || value === undefined) return "-";
+    
+    // Color preview
+    if (key && (key.includes('color') || key.includes('Color')) && typeof value === 'string') {
+      return (
+        <div className="flex items-center gap-2">
+          <div 
+            className="w-6 h-6 rounded border border-border" 
+            style={{ backgroundColor: value }}
+          />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    // Array
+    if (Array.isArray(value)) {
+      if (value.length === 0) return "-";
+      return (
+        <ul className="list-disc list-inside space-y-1">
+          {value.map((item, idx) => (
+            <li key={idx} className="text-sm">
+              {typeof item === 'object' ? renderObject(item) : String(item)}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+    // Object
+    if (typeof value === 'object') {
+      return renderObject(value);
+    }
+
+    // Price/amount
+    if (key && (key.includes('price') || key.includes('amount') || key.includes('budget'))) {
+      return <span className="font-semibold">{String(value)}</span>;
+    }
+
+    return String(value);
+  };
+
+  const renderObject = (obj: any): JSX.Element => (
+    <div className="pl-4 space-y-2 border-l-2 border-border">
+      {Object.entries(obj).map(([k, v]) => (
+        <div key={k}>
+          <span className="text-xs font-medium text-muted-foreground">
+            {k.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:
+          </span>
+          <div className="mt-1">{renderValue(v, k)}</div>
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderSection = (title: string, data: any) => {
+    if (!data) return null;
+    return (
+      <div className="space-y-2">
+        <div className="text-sm font-semibold text-foreground">{title}</div>
+        <div className="text-sm text-muted-foreground">
+          {renderValue(data)}
+        </div>
+      </div>
+    );
+  };
+
+  // Filter out conversation_id and other internal fields
+  const filteredMetadata = { ...metadata };
+  delete filteredMetadata.conversation_id;
+
+  // Quick Start PoC
+  if (sourceForm === 'quick-start-poc') {
+    return (
+      <div className="space-y-4">
+        {metadata.targetAudience && renderSection("Grupa docelowa", metadata.targetAudience)}
+        {metadata.keyFeatures && renderSection("Kluczowe funkcje", metadata.keyFeatures)}
+        {metadata.visualStyle && renderSection("Styl wizualny", metadata.visualStyle)}
+        {metadata.inspirations && renderSection("Inspiracje", metadata.inspirations)}
+        {metadata.preferredDate && renderSection("Preferowany termin", metadata.preferredDate)}
+      </div>
+    );
+  }
+
+  // Interactive App PoC
+  if (sourceForm === 'interactive-app-poc') {
+    return (
+      <div className="space-y-4">
+        {metadata.targetAudience && renderSection("Grupa docelowa", metadata.targetAudience)}
+        {metadata.appFeatures && renderSection("Funkcje aplikacji", metadata.appFeatures)}
+        {metadata.leadData && renderSection("Dane lead", metadata.leadData)}
+        {metadata.appType && renderSection("Typ aplikacji", metadata.appType)}
+        {metadata.screens && renderSection("Ekrany", metadata.screens)}
+        {metadata.visualStyle && renderSection("Styl wizualny", metadata.visualStyle)}
+        {metadata.colors && renderSection("Kolory", metadata.colors)}
+        {metadata.timeline && renderSection("Timeline", metadata.timeline)}
+        {metadata.pricing && renderSection("Cena", metadata.pricing)}
+      </div>
+    );
+  }
+
+  // Complete Package PoC
+  if (sourceForm === 'complete-package-poc') {
+    return (
+      <div className="space-y-4">
+        {metadata.product && renderSection("Produkt", metadata.product)}
+        {metadata.targetAudience && renderSection("Grupa docelowa", metadata.targetAudience)}
+        {metadata.video && renderSection("Film", metadata.video)}
+        {metadata.landingPage && renderSection("Landing Page", metadata.landingPage)}
+        {metadata.communication && renderSection("Komunikacja", metadata.communication)}
+        {metadata.materials && renderSection("Materiały", metadata.materials)}
+        {metadata.timeline && renderSection("Termin", metadata.timeline)}
+        {metadata.pricing && renderSection("Cena", metadata.pricing)}
+      </div>
+    );
+  }
+
+  // Professional Website PoC
+  if (sourceForm === 'professional-website-poc') {
+    return (
+      <div className="space-y-4">
+        {metadata.industry && renderSection("Branża", metadata.industry)}
+        {metadata.products && renderSection("Produkty/Usługi", metadata.products)}
+        {metadata.clientType && renderSection("Typ klienta", metadata.clientType)}
+        {metadata.subpages && renderSection("Podstrony", metadata.subpages)}
+        {metadata.websiteGoal && renderSection("Cel strony", metadata.websiteGoal)}
+        {metadata.userActions && renderSection("Akcje użytkownika", metadata.userActions)}
+        {metadata.formTypes && renderSection("Typy formularzy", metadata.formTypes)}
+        {metadata.integrations && renderSection("Integracje", metadata.integrations)}
+        {metadata.ai && renderSection("Funkcje AI", metadata.ai)}
+        {metadata.colors && renderSection("Kolory", metadata.colors)}
+        {metadata.timeline && renderSection("Timeline", metadata.timeline)}
+        {metadata.pricing && renderSection("Cena", metadata.pricing)}
+      </div>
+    );
+  }
+
+  // Generic fallback for other forms
+  return (
+    <div className="space-y-3">
+      {Object.entries(filteredMetadata).map(([key, value]) => (
+        <div key={key}>
+          <div className="text-sm font-semibold text-foreground mb-1">
+            {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+          </div>
+          <div className="text-sm text-muted-foreground">
+            {renderValue(value, key)}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export function LeadsTable() {
   const navigate = useNavigate();
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -251,6 +409,20 @@ export function LeadsTable() {
                             </div>
                           )}
                         </div>
+
+                        {lead.metadata && Object.keys(lead.metadata).length > 0 && (
+                          <div className="mt-6 pt-6 border-t border-border">
+                            <div className="text-sm font-semibold text-foreground mb-4 flex items-center gap-2">
+                              <span>Szczegółowe dane z formularza</span>
+                              <Badge variant="outline" className="text-xs">
+                                {formLabels[lead.source_form] || lead.source_form}
+                              </Badge>
+                            </div>
+                            <div className="bg-background p-4 rounded-md">
+                              {renderMetadata(lead.metadata, lead.source_form)}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </TableCell>
                   </TableRow>
