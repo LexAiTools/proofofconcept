@@ -123,6 +123,7 @@ export type Database = {
           content: string
           created_at: string
           id: string
+          keywords: string[] | null
           metadata: Json | null
           title: string
           updated_at: string
@@ -131,6 +132,7 @@ export type Database = {
           content: string
           created_at?: string
           id?: string
+          keywords?: string[] | null
           metadata?: Json | null
           title: string
           updated_at?: string
@@ -139,6 +141,7 @@ export type Database = {
           content?: string
           created_at?: string
           id?: string
+          keywords?: string[] | null
           metadata?: Json | null
           title?: string
           updated_at?: string
