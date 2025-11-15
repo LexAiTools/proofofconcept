@@ -3,7 +3,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Mail, User, Phone, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -13,7 +12,6 @@ const leadCaptureSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().optional(),
-  message: z.string().optional(),
 });
 
 export type LeadCaptureData = z.infer<typeof leadCaptureSchema>;
@@ -22,14 +20,12 @@ interface LeadCaptureFormProps {
   conversationId: string;
   onSuccess?: () => void;
   onCancel?: () => void;
-  lastUserMessage?: string;
 }
 
 export const LeadCaptureForm = ({ 
   conversationId, 
   onSuccess, 
-  onCancel,
-  lastUserMessage 
+  onCancel
 }: LeadCaptureFormProps) => {
   const { t } = useTranslation('leads');
   const { submitLead, isSubmitting } = useLeadCapture();
@@ -40,7 +36,6 @@ export const LeadCaptureForm = ({
       name: "",
       email: "",
       phone: "",
-      message: lastUserMessage || "",
     },
   });
 
@@ -136,24 +131,6 @@ export const LeadCaptureForm = ({
                       {...field} 
                     />
                   </div>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-sm">{t('fields.message')}</FormLabel>
-                <FormControl>
-                  <Textarea 
-                    placeholder={t('fields.message')}
-                    className="min-h-[80px] resize-none"
-                    {...field} 
-                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

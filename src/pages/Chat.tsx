@@ -336,7 +336,6 @@ export default function Chat() {
                         conversationId={conversationId}
                         onSuccess={handleLeadFormSuccess}
                         onCancel={() => setShowLeadForm(null)}
-                        lastUserMessage={messages[messages.length - 1]?.content}
                       />
                     </div>
                   )}
