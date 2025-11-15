@@ -48,6 +48,40 @@ export const WaitlistPopup = ({ open, onOpenChange, source }: WaitlistPopupProps
     }
   }, [open]);
 
+  // Real-time updates for waitlist count
+  useEffect(() => {
+    if (!open) return;
+
+    const channel = supabase
+      .channel('waitlist-changes')
+      .on(
+        'postgres_changes',
+        {
+          event: '*', // Listen to INSERT, UPDATE, DELETE
+          schema: 'public',
+          table: 'plugin_waitlist'
+        },
+        async (payload) => {
+          console.log('Waitlist change detected:', payload);
+          
+          // Refetch the count from database
+          const { count } = await supabase
+            .from('plugin_waitlist')
+            .select('*', { count: 'exact', head: true });
+          
+          if (count !== null) {
+            setSignedUpCount(count + INITIAL_OFFSET);
+          }
+        }
+      )
+      .subscribe();
+
+    // Cleanup subscription when popup closes
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [open]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
