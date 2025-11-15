@@ -150,11 +150,11 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>{t('admin.conversations.table.date')}</TableHead>
-            <TableHead>{t('admin.conversations.table.contact')}</TableHead>
-            <TableHead>{t('admin.conversations.table.messages')}</TableHead>
-            <TableHead>{t('admin.conversations.table.leadStatus')}</TableHead>
-            <TableHead className="text-right">{t('admin.conversations.table.actions')}</TableHead>
+            <TableHead>{t('conversations.table.date')}</TableHead>
+            <TableHead>{t('conversations.table.contact')}</TableHead>
+            <TableHead>{t('conversations.table.messages')}</TableHead>
+            <TableHead>{t('conversations.table.leadStatus')}</TableHead>
+            <TableHead className="text-right">{t('conversations.table.actions')}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -190,11 +190,11 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
                   <TableCell>
                     {conv.lead_id ? (
                       <Badge className="bg-green-500/10 text-green-500 hover:bg-green-500/20">
-                        {t('admin.conversations.status.withLead')}
+                        {t('conversations.status.withLead')}
                       </Badge>
                     ) : (
                       <Badge variant="outline" className="text-muted-foreground">
-                        {t('admin.conversations.status.withoutLead')}
+                        {t('conversations.status.withoutLead')}
                       </Badge>
                     )}
                   </TableCell>
@@ -206,7 +206,7 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
                         onClick={() => toggleExpand(conv.id)}
                       >
                         <Eye className="h-4 w-4 mr-1" />
-                        {t('admin.conversations.table.viewTranscript')}
+                        {t('conversations.table.viewTranscript')}
                       </Button>
                       {conv.lead_id && (
                         <Button
@@ -215,7 +215,7 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
                           onClick={() => navigate('/admin', { state: { highlightLead: conv.lead_id } })}
                         >
                           <LinkIcon className="h-4 w-4 mr-1" />
-                          {t('admin.conversations.table.viewLead')}
+                          {t('conversations.table.viewLead')}
                         </Button>
                       )}
                     </div>
@@ -226,7 +226,7 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
                     <TableCell colSpan={5} className="bg-muted/50">
                       <div className="p-4 space-y-4">
                         <div className="font-semibold text-sm">
-                          {t('admin.conversations.transcript.title')}
+                          {t('conversations.transcript.title')}
                         </div>
                         {loadingMessages ? (
                           <div className="text-center py-4 text-muted-foreground">
@@ -234,7 +234,7 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
                           </div>
                         ) : messages.length === 0 ? (
                           <div className="text-center py-4 text-muted-foreground">
-                            {t('admin.conversations.transcript.noMessages')}
+                            {t('conversations.transcript.noMessages')}
                           </div>
                         ) : (
                           <div className="space-y-3 max-h-[500px] overflow-y-auto">
@@ -252,8 +252,8 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
                                 >
                                   <div className="text-xs font-semibold mb-1 opacity-70">
                                     {msg.role === 'user' 
-                                      ? t('admin.conversations.transcript.user')
-                                      : t('admin.conversations.transcript.assistant')
+                                      ? t('conversations.transcript.user')
+                                      : t('conversations.transcript.assistant')
                                     }
                                   </div>
                                   <div className="text-sm whitespace-pre-wrap">{msg.content}</div>

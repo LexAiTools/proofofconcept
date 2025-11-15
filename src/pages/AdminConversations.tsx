@@ -151,7 +151,7 @@ export default function AdminConversations() {
 
   const statsData = [
     {
-      title: t('admin.conversations.stats.total'),
+      title: t('conversations.stats.total'),
       value: stats.totalConversations.toString(),
       change: "",
       changeType: 'positive' as const,
@@ -160,7 +160,7 @@ export default function AdminConversations() {
       bgColor: "bg-blue-500/10",
     },
     {
-      title: t('admin.conversations.stats.withLeads'),
+      title: t('conversations.stats.withLeads'),
       value: stats.withLeads.toString(),
       change: "",
       changeType: 'positive' as const,
@@ -169,7 +169,7 @@ export default function AdminConversations() {
       bgColor: "bg-green-500/10",
     },
     {
-      title: t('admin.conversations.stats.withoutLeads'),
+      title: t('conversations.stats.withoutLeads'),
       value: stats.withoutLeads.toString(),
       change: "",
       changeType: 'negative' as const,
@@ -178,7 +178,7 @@ export default function AdminConversations() {
       bgColor: "bg-orange-500/10",
     },
     {
-      title: t('admin.conversations.stats.today'),
+      title: t('conversations.stats.today'),
       value: stats.today.toString(),
       change: "",
       changeType: 'positive' as const,
@@ -193,7 +193,7 @@ export default function AdminConversations() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">{t('admin.dashboard.loading')}</p>
+          <p className="text-muted-foreground">{t('dashboard.loading')}</p>
         </div>
       </div>
     );
@@ -215,10 +215,10 @@ export default function AdminConversations() {
           <div className="p-6 space-y-6">
             <div>
               <h1 className="text-3xl font-bold text-foreground mb-2">
-                {t('admin.conversations.title')}
+                {t('conversations.title')}
               </h1>
               <p className="text-muted-foreground">
-                {t('admin.dashboard.subtitle')}
+                {t('dashboard.subtitle')}
               </p>
             </div>
 
