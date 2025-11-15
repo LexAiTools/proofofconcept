@@ -12,8 +12,9 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
 import { pl } from "date-fns/locale";
-import { Eye, Trash2, Mail } from "lucide-react";
+import { Eye, Trash2, Mail, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 interface Lead {
   id: string;
@@ -31,6 +32,7 @@ interface Lead {
   service: string | null;
   appointment_date: string | null;
   appointment_time: string | null;
+  metadata: any;
 }
 
 const statusColors: Record<string, string> = {
@@ -54,9 +56,11 @@ const formLabels: Record<string, string> = {
   "book-demo": "Demo",
   pricing: "Pricing",
   "request-access": "Spotkanie",
+  "chat_ai_collected": "Chat AI",
 };
 
 export function LeadsTable() {
+  const navigate = useNavigate();
   const [leads, setLeads] = useState<Lead[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedLeadId, setExpandedLeadId] = useState<string | null>(null);
@@ -100,6 +104,10 @@ export function LeadsTable() {
 
   const toggleExpand = (id: string) => {
     setExpandedLeadId(expandedLeadId === id ? null : id);
+  };
+
+  const handleGoToConversation = (conversationId: string) => {
+    navigate(`/admin/conversations?id=${conversationId}`);
   };
 
   if (loading) {
@@ -158,6 +166,16 @@ export function LeadsTable() {
                   </TableCell>
                   <TableCell className="text-right">
                     <div className="flex items-center justify-end gap-2">
+                      {lead.metadata?.conversation_id && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => handleGoToConversation(lead.metadata.conversation_id)}
+                          title="Przejdź do rozmowy"
+                        >
+                          <MessageSquare className="h-4 w-4 text-blue-500" />
+                        </Button>
+                      )}
                       <Button
                         variant="ghost"
                         size="sm"

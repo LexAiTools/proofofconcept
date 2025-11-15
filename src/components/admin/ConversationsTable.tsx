@@ -40,9 +40,10 @@ interface Conversation {
 interface ConversationsTableProps {
   searchQuery: string;
   onRefresh: () => void;
+  highlightConversationId?: string | null;
 }
 
-export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTableProps) {
+export function ConversationsTable({ searchQuery, onRefresh, highlightConversationId }: ConversationsTableProps) {
   const { t } = useTranslation('admin');
   const navigate = useNavigate();
   const [conversations, setConversations] = useState<Conversation[]>([]);
@@ -101,6 +102,21 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
   useEffect(() => {
     fetchConversations();
   }, []);
+
+  useEffect(() => {
+    if (highlightConversationId && conversations.length > 0 && expandedConvId !== highlightConversationId) {
+      const conv = conversations.find(c => c.id === highlightConversationId);
+      if (conv) {
+        toggleExpand(highlightConversationId);
+        setTimeout(() => {
+          document.getElementById(`conv-${highlightConversationId}`)?.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+          });
+        }, 300);
+      }
+    }
+  }, [highlightConversationId, conversations]);
 
   const fetchMessages = async (conversationId: string) => {
     setLoadingMessages(true);
@@ -167,7 +183,11 @@ export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTabl
           ) : (
             filteredConversations.map((conv) => (
               <>
-                <TableRow key={conv.id}>
+                <TableRow 
+                  key={conv.id} 
+                  id={`conv-${conv.id}`}
+                  className={highlightConversationId === conv.id ? "bg-blue-500/10" : ""}
+                >
                   <TableCell>
                     {format(new Date(conv.created_at), "dd.MM.yyyy, HH:mm", { locale: pl })}
                   </TableCell>
