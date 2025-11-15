@@ -35,6 +35,11 @@ const menuItems = [
     icon: MessageSquare,
   },
   {
+    title: "Waitlist",
+    url: "/admin/waitlist",
+    icon: Users,
+  },
+  {
     title: "Podcast",
     url: "/admin/podcasts",
     icon: Mic,

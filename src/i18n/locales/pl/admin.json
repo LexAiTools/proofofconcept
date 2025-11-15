@@ -104,5 +104,27 @@
       "assistant": "Asystent",
       "noMessages": "Brak wiadomości"
     }
+  },
+  "waitlist": {
+    "title": "Lista oczekujących",
+    "stats": {
+      "total": "Zapisanych (DB)",
+      "displayed": "Wyświetlana liczba",
+      "spotsLeft": "Pozostałe miejsca",
+      "today": "Dzisiaj"
+    },
+    "table": {
+      "email": "Email",
+      "source": "Źródło",
+      "date": "Data zapisu",
+      "language": "Język",
+      "actions": "Akcje"
+    },
+    "export": "Eksportuj CSV",
+    "deleteConfirm": "Czy na pewno chcesz usunąć ten wpis?",
+    "deleteSuccess": "Wpis usunięty",
+    "deleteError": "Błąd usuwania",
+    "exportSuccess": "Lista eksportowana",
+    "empty": "Brak zapisów"
   }
 }
