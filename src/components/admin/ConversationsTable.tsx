@@ -43,7 +43,7 @@ interface ConversationsTableProps {
 }
 
 export function ConversationsTable({ searchQuery, onRefresh }: ConversationsTableProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('admin');
   const navigate = useNavigate();
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [loading, setLoading] = useState(true);

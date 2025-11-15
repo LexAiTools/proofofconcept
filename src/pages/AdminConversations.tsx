@@ -11,7 +11,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
 
 export default function AdminConversations() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('admin');
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isChecking, setIsChecking] = useState(true);
