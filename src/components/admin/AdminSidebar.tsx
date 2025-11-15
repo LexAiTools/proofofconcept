@@ -17,7 +17,8 @@ import {
   BarChart,
   LogOut,
   Mic,
-  FileText
+  FileText,
+  MessageSquare
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
@@ -27,6 +28,11 @@ const menuItems = [
     title: "Dashboard",
     url: "/admin",
     icon: LayoutDashboard,
+  },
+  {
+    title: "Rozmowy",
+    url: "/admin/conversations",
+    icon: MessageSquare,
   },
   {
     title: "Podcast",

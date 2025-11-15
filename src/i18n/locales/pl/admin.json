@@ -7,6 +7,7 @@
   "sidebar": {
     "dashboard": "Panel główny",
     "leads": "Leady",
+    "conversations": "Rozmowy",
     "documents": "Dokumenty",
     "podcasts": "Podcasty",
     "logout": "Wyloguj"
@@ -74,5 +75,34 @@
     "uploadError": "Błąd przesyłania podcastu",
     "deleteSuccess": "Podcast usunięty pomyślnie",
     "deleteError": "Błąd usuwania podcastu"
+  },
+  "conversations": {
+    "title": "Rozmowy z czatu",
+    "stats": {
+      "total": "Wszystkie rozmowy",
+      "withLeads": "Z leadami",
+      "withoutLeads": "Bez leadów",
+      "today": "Dzisiaj"
+    },
+    "table": {
+      "date": "Data",
+      "contact": "Kontakt",
+      "messages": "Wiadomości",
+      "leadStatus": "Lead",
+      "actions": "Akcje",
+      "viewTranscript": "Zobacz transkrypcję",
+      "linkToLead": "Połącz z leadem",
+      "viewLead": "Zobacz lead"
+    },
+    "status": {
+      "withLead": "Z Leadem",
+      "withoutLead": "Bez Leada"
+    },
+    "transcript": {
+      "title": "Transkrypcja rozmowy",
+      "user": "Użytkownik",
+      "assistant": "Asystent",
+      "noMessages": "Brak wiadomości"
+    }
   }
 }
