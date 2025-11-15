@@ -21,6 +21,7 @@ import Admin from "./pages/Admin";
 import AdminPodcasts from "./pages/AdminPodcasts";
 import AdminDocuments from "./pages/AdminDocuments";
 import AdminConversations from "./pages/AdminConversations";
+import AdminWaitlist from "./pages/AdminWaitlist";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/chat" element={<Chat />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/conversations" element={<AdminConversations />} />
+          <Route path="/admin/waitlist" element={<AdminWaitlist />} />
           <Route path="/admin/podcasts" element={<AdminPodcasts />} />
           <Route path="/admin/documents" element={<AdminDocuments />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
