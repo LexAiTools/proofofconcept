@@ -30,6 +30,11 @@ const menuItems = [
     icon: LayoutDashboard,
   },
   {
+    title: "Leady",
+    url: "/admin/leads",
+    icon: Mail,
+  },
+  {
     title: "Rozmowy",
     url: "/admin/conversations",
     icon: MessageSquare,

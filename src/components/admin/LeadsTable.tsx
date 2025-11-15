@@ -57,6 +57,11 @@ const formLabels: Record<string, string> = {
   pricing: "Pricing",
   "request-access": "Spotkanie",
   "chat_ai_collected": "Chat AI",
+  "chat-lead-capture": "Chat Lead",
+  "quick-start-poc": "Quick Start PoC",
+  "interactive-app-poc": "Interactive App PoC",
+  "complete-package-poc": "Complete Package PoC",
+  "professional-website-poc": "Professional Website PoC",
 };
 
 export function LeadsTable() {
