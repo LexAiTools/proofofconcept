@@ -7,6 +7,7 @@
   "sidebar": {
     "dashboard": "Dashboard",
     "leads": "Leads",
+    "conversations": "Conversations",
     "documents": "Documents",
     "podcasts": "Podcasts",
     "logout": "Logout"
@@ -74,5 +75,34 @@
     "uploadError": "Error uploading podcast",
     "deleteSuccess": "Podcast deleted successfully",
     "deleteError": "Error deleting podcast"
+  },
+  "conversations": {
+    "title": "Chat Conversations",
+    "stats": {
+      "total": "Total Conversations",
+      "withLeads": "With Leads",
+      "withoutLeads": "Without Leads",
+      "today": "Today"
+    },
+    "table": {
+      "date": "Date",
+      "contact": "Contact",
+      "messages": "Messages",
+      "leadStatus": "Lead",
+      "actions": "Actions",
+      "viewTranscript": "View Transcript",
+      "linkToLead": "Link to Lead",
+      "viewLead": "View Lead"
+    },
+    "status": {
+      "withLead": "With Lead",
+      "withoutLead": "Without Lead"
+    },
+    "transcript": {
+      "title": "Conversation Transcript",
+      "user": "User",
+      "assistant": "Assistant",
+      "noMessages": "No messages"
+    }
   }
 }
