@@ -11,6 +11,19 @@
     "titleLine3": "najlepsi praktycy AI.",
     "cta": "Umów demo"
   },
+  "applications": {
+    "title": "Zastosowania",
+    "items": [
+      {
+        "title": "Szybkie budowanie prototypów",
+        "description": "Przekształć pomysł w działający prototyp w ciągu godzin, nie tygodni. Nasz RAG pozwala na natychmiastowe testowanie koncepcji z rzeczywistymi danymi, eliminując potrzebę czasochłonnego kodowania od zera. Waliduj założenia biznesowe zanim zainwestujesz w pełen development."
+      },
+      {
+        "title": "Szybkie budowanie interfejsów aplikacji",
+        "description": "Twórz inteligentne interfejsy konwersacyjne bez zaawansowanej wiedzy ML. Gotowe komponenty i intuicyjne API umożliwiają integrację AI z Twoją aplikacją w minuty. Od chatbotów po asystentów wewnętrznych - wszystko w jednym narzędziu."
+      }
+    ]
+  },
   "deployment": {
     "title": "Wdróż PoC tam, gdzie",
     "titleLine2": "Twoi klienci i członkowie zespołu",
