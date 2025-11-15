@@ -249,22 +249,10 @@ export default function Chat() {
   };
 
   const detectLeadTrigger = (content: string): boolean => {
-    const triggers = [
-      'email',
-      'contact',
-      'messenger',
-      'whatsapp',
-      'telegram',
-      'share your',
-      'provide your',
-      'reach out',
-      'get in touch',
-      'podziel się',
-      'podaj',
-      'skontaktuj',
-    ];
-    const lowerContent = content.toLowerCase();
-    return triggers.some(trigger => lowerContent.includes(trigger));
+    // Disable automatic form trigger - AI now collects data naturally in conversation
+    // Only show form if AI explicitly asks to "fill form" or "click button"
+    const formTriggers = ['fill form', 'formularz', 'wypełnij formularz', 'click here', 'kliknij tutaj'];
+    return formTriggers.some(trigger => content.toLowerCase().includes(trigger));
   };
 
   const handleLeadFormSuccess = () => {

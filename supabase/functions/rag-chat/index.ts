@@ -44,9 +44,10 @@ CONVERSION STRATEGY:
    ✓ User asks "how to start?"
    ✓ Clear interest signals
    
-   OPTIONS:
-   → Primary: "Share your email or messenger (WhatsApp/Telegram), our team will contact you within 24h"
-   → Secondary: "Schedule a quick demo to see how it works - click 'Schedule Demo'"
+   APPROACH:
+   → Primary: ASK FOR EMAIL naturally (see CONTACT DATA COLLECTION STRATEGY below)
+   → Use value-driven phrasing: "So I can send you materials...", "So our team can prepare..."
+   → NEVER use generic "share your contact" - be specific about WHY and WHAT you'll send
 
 PACKAGES (always mention prices in user's currency):
 
@@ -105,7 +106,92 @@ NEVER make up information - if you don't have the answer in the knowledge base, 
 CONVERSATION GOALS:
 🎯 Primary: Obtain contact details (email/messenger)
 🎯 Secondary: Schedule demo
-🎯 Ultimate: Convert to paying customer`;
+🎯 Ultimate: Convert to paying customer
+
+CONTACT DATA COLLECTION STRATEGY:
+
+GOAL: Collect email, company name, and phone number GRADUALLY and NATURALLY
+
+PRINCIPLES:
+1. NEVER ask for all information at once
+2. ALWAYS frame requests in context of VALUE for the client
+3. COLLECT PROGRESSIVELY: Email → Company Name → Phone (only if needed)
+4. Each request must feel like a natural part of helping the client
+
+WHEN TO COLLECT:
+
+📧 EMAIL - Priority #1 (collect in messages 2-4):
+TRIGGERS:
+- User asks about services/pricing
+- User describes their project/needs
+- User shows clear interest
+- User asks "how to start?"
+
+HOW TO ASK (examples by language):
+
+Polish:
+✅ "Świetnie! Mogę wysłać Ci szczegółowy materiał o pakietach na maila - jaki adres będzie najlepszy?"
+✅ "Chętnie przygotuję dla Ciebie spersonalizowaną ofertę. Na jaki email mogę ją wysłać?"
+✅ "Żeby nasz zespół mógł się z Tobą skontaktować w ciągu 24h, podaj proszę swojego maila"
+✅ "Super! Wyślę Ci case studies podobnych projektów - jaki masz email?"
+
+English:
+✅ "Great! I can send you detailed package materials - what email works best?"
+✅ "I'd love to prepare a personalized offer for you. What email should I send it to?"
+✅ "So our team can reach you within 24h, please share your email"
+✅ "Perfect! I'll send you case studies of similar projects - what's your email?"
+
+❌ DON'T: "Give me your email" / "Provide contact info" / "Fill out a form"
+✅ DO: Always explain WHY (to send materials, to contact, to prepare offer)
+
+🏢 COMPANY NAME - Priority #2 (collect after email, when context allows):
+TRIGGERS:
+- After receiving email
+- User talks about business needs
+- Discussion about B2B solutions
+
+HOW TO ASK:
+
+Polish:
+✅ "Żeby lepiej dopasować ofertę - z jakiej firmy Pan/Pani jest?"
+✅ "Świetnie! Dla jakiej firmy to będzie?"
+✅ "Super! Jaka firma będzie korzystać z tego rozwiązania?"
+
+English:
+✅ "To better tailor the offer - what company are you with?"
+✅ "Great! Which company is this for?"
+✅ "Perfect! What company will be using this solution?"
+
+📱 PHONE - Priority #3 (OPTIONAL, only when user is very interested):
+TRIGGERS:
+- User ready for demo/call
+- Complex project requiring discussion
+- User explicitly interested in call
+
+HOW TO ASK:
+
+Polish:
+✅ "Gdyby nasz ekspert chciał umówić szybką rozmowę (5-10 min) - jakiego numeru użyć?"
+✅ "Nasz specjalista może zadzwonić i wszystko omówić - jaki numer będzie najlepszy?"
+✅ "Jeśli wolisz krótką rozmowę telefoniczną zamiast maili - podaj numer"
+
+English:
+✅ "If our expert wanted to schedule a quick call (5-10 min) - what number to use?"
+✅ "Our specialist can call and discuss everything - what's the best number?"
+✅ "If you prefer a quick phone call instead of emails - share your number"
+
+CRITICAL RULES:
+1. Start with EMAIL - it's the easiest and most natural
+2. Only ask for phone if user seems very interested or asks for a call
+3. ALWAYS explain the benefit: "so we can send", "to prepare offer", "for quick contact"
+4. NEVER sound pushy - if user doesn't provide info, continue helping
+5. Maximum 1 data request per message
+6. If user gives email/phone/company in their message without asking - acknowledge and thank them!
+
+DETECTING USER RESPONSES:
+- When user provides email/phone/company in their message → extract and confirm
+- Examples: "mój email to jan@firma.pl" / "jestem z firmy ABC" / "mój numer 123456789"
+- Respond: "Świetnie, zapisałem {email/firmę/numer}! {continue conversation}"`;
 
 // Language detection function - improved with better patterns
 function detectLanguage(text: string): string {
@@ -198,6 +284,69 @@ function rankByRelevance(results: any[], query: string, keywords: string[]): any
       return { ...item, relevanceScore: score };
     })
     .sort((a, b) => b.relevanceScore - a.relevanceScore);
+}
+
+// Extract email from text using regex
+function extractEmail(text: string): string | null {
+  const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/;
+  const match = text.match(emailRegex);
+  return match ? match[0] : null;
+}
+
+// Extract phone number (PL and international formats)
+function extractPhone(text: string): string | null {
+  // Match: +48 123456789, 123-456-789, 123 456 789, (48) 123456789
+  const phoneRegex = /(?:\+?48)?[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{3}|\+?\d{9,15}/;
+  const match = text.match(phoneRegex);
+  return match ? match[0].replace(/[\s-()]/g, '') : null;
+}
+
+// Detect if message contains company name
+function extractCompanyName(text: string, language: string): string | null {
+  const patterns = language === 'pl' 
+    ? [
+        /(?:z firmy|dla firmy|firma|company)\s+([A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż\s]+)/i,
+        /(?:jestem z|pracuję w|reprezentuję)\s+([A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż\s]+)/i,
+      ]
+    : [
+        /(?:from|at|with|for)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/i,
+        /(?:company|firm):\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/i,
+      ];
+  
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match && match[1]) return match[1].trim();
+  }
+  return null;
+}
+
+// Update conversation with contact data
+async function updateConversationData(
+  supabase: any,
+  conversationId: string,
+  data: { email?: string; name?: string; phone?: string }
+) {
+  // Get current conversation data
+  const { data: currentConv } = await supabase
+    .from('chat_conversations')
+    .select('email, name, phone')
+    .eq('id', conversationId)
+    .single();
+  
+  // Merge new data with existing (don't overwrite if already set)
+  const updates: any = {};
+  if (data.email && !currentConv?.email) updates.email = data.email;
+  if (data.name && !currentConv?.name) updates.name = data.name;
+  if (data.phone && !currentConv?.phone) updates.phone = data.phone;
+  
+  if (Object.keys(updates).length > 0) {
+    await supabase
+      .from('chat_conversations')
+      .update(updates)
+      .eq('id', conversationId);
+    
+    console.log('Updated conversation data:', updates);
+  }
 }
 
 // Error messages in multiple languages
@@ -369,6 +518,78 @@ serve(async (req) => {
           role: 'user',
           content: message
         });
+    }
+
+    // 4.5. Extract and save contact data from user message
+    if (finalConversationId) {
+      const extractedData: { email?: string; name?: string; phone?: string } = {};
+      
+      const email = extractEmail(message);
+      if (email) extractedData.email = email;
+      
+      const phone = extractPhone(message);
+      if (phone) extractedData.phone = phone;
+      
+      const companyName = extractCompanyName(message, conversationLanguage);
+      if (companyName) extractedData.name = companyName;
+      
+      if (Object.keys(extractedData).length > 0) {
+        await updateConversationData(supabase, finalConversationId, extractedData);
+      }
+    }
+
+    // 4.6. Auto-create lead when we have complete contact data
+    if (finalConversationId) {
+      const { data: conv } = await supabase
+        .from('chat_conversations')
+        .select('email, name, phone, metadata')
+        .eq('id', finalConversationId)
+        .single();
+      
+      // If we have at least email and this conversation doesn't have a lead yet
+      if (conv?.email && !conv?.metadata?.lead_id) {
+        // Check if lead already exists for this conversation
+        const { data: existingLead } = await supabase
+          .from('leads')
+          .select('id')
+          .eq('metadata->>conversation_id', finalConversationId)
+          .single();
+        
+        if (!existingLead) {
+          // Create lead
+          const { data: newLead } = await supabase
+            .from('leads')
+            .insert({
+              email: conv.email,
+              name: conv.name,
+              phone: conv.phone,
+              source_form: 'chat_ai_collected',
+              metadata: {
+                conversation_id: finalConversationId,
+                collected_via: 'natural_conversation',
+                collected_at: new Date().toISOString()
+              }
+            })
+            .select('id')
+            .single();
+          
+          if (newLead) {
+            // Update conversation with lead_id
+            await supabase
+              .from('chat_conversations')
+              .update({
+                metadata: {
+                  ...conv.metadata,
+                  lead_id: newLead.id,
+                  lead_created_at: new Date().toISOString()
+                }
+              })
+              .eq('id', finalConversationId);
+            
+            console.log('Auto-created lead:', newLead.id);
+          }
+        }
+      }
     }
 
     // 5. Build messages for AI with CRITICAL language context
