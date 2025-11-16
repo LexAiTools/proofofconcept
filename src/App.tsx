@@ -16,6 +16,7 @@ import AdminLogin from "./pages/AdminLogin";
 import ResetPassword from "./pages/ResetPassword";
 import SuperadminSetup from "./pages/SuperadminSetup";
 import Podcast from "./pages/Podcast";
+import PodcastEpisode from "./pages/PodcastEpisode";
 import Chat from "./pages/Chat";
 import Admin from "./pages/Admin";
 import AdminPodcasts from "./pages/AdminPodcasts";
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/superadmin-setup" element={<SuperadminSetup />} />
           <Route path="/podcast" element={<Podcast />} />
+          <Route path="/podcast/:id" element={<PodcastEpisode />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/leads" element={<AdminLeads />} />
