@@ -175,6 +175,7 @@ const AdminPodcasts = () => {
       const podcastData = {
         episode_number: parseInt(formData.episode_number),
         title: formData.title,
+        episode_film_title: formData.episode_film_title,
         description: formData.description,
         host_name: formData.host_name,
         host_role: formData.host_role,
@@ -184,6 +185,8 @@ const AdminPodcasts = () => {
         company_color: formData.company_color,
         episode_date: formData.episode_date,
         youtube_url: formData.youtube_url,
+        language: formData.language,
+        platform_name: formData.platform_name,
       };
 
       if (editingPodcast) {
