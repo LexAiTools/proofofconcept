@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -12,30 +13,37 @@ interface PodcastEpisode {
   id: string;
   episode_number: number;
   title: string;
+  episode_film_title?: string;
   description: string;
   host_name: string;
   host_role: string;
-  guest_name: string;
-  guest_role: string;
+  guest_name?: string;
+  guest_role?: string;
   company: string;
   company_color: string;
   episode_date: string;
   youtube_url: string;
+  language: string;
+  platform_name: string;
 }
 
 const Podcast = () => {
+  const { i18n } = useTranslation();
   const [podcastEpisodes, setPodcastEpisodes] = useState<PodcastEpisode[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchPodcasts();
-  }, []);
+  }, [i18n.language]);
 
   const fetchPodcasts = async () => {
     try {
+      const currentLanguage = i18n.language;
+      
       const { data, error } = await supabase
         .from("podcasts")
         .select("*")
+        .eq("language", currentLanguage)
         .order("episode_number", { ascending: false });
 
       if (error) throw error;
@@ -106,7 +114,7 @@ const Podcast = () => {
                           <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
                             <span className="text-white font-bold text-sm">N</span>
                           </div>
-                          <span className="font-semibold">NestAi.tools</span>
+                          <span className="font-semibold">{episode.platform_name}</span>
                         </div>
                         <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
                           <span className="text-sm font-medium">{episode.company}</span>
@@ -114,7 +122,7 @@ const Podcast = () => {
                       </div>
 
                       <h3 className="text-2xl font-bold mb-6 leading-tight">
-                        {episode.title}
+                        {episode.episode_film_title || episode.title}
                       </h3>
 
                       <div className="flex items-center space-x-6 mt-auto">
@@ -128,6 +136,7 @@ const Podcast = () => {
                           </div>
                         </div>
                         
+                      {episode.guest_name && episode.guest_role && (
                         <div className="flex items-center space-x-3">
                           <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                             <User className="w-5 h-5" />
@@ -137,6 +146,7 @@ const Podcast = () => {
                             <p className="text-xs text-white/80">{episode.guest_role}</p>
                           </div>
                         </div>
+                      )}
                       </div>
                     </div>
 
