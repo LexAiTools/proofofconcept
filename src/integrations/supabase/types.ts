@@ -239,12 +239,15 @@ export type Database = {
           created_at: string
           description: string
           episode_date: string
+          episode_film_title: string | null
           episode_number: number
-          guest_name: string
-          guest_role: string
+          guest_name: string | null
+          guest_role: string | null
           host_name: string
           host_role: string
           id: string
+          language: string
+          platform_name: string
           title: string
           updated_at: string
           youtube_url: string
@@ -255,12 +258,15 @@ export type Database = {
           created_at?: string
           description: string
           episode_date: string
+          episode_film_title?: string | null
           episode_number: number
-          guest_name: string
-          guest_role: string
+          guest_name?: string | null
+          guest_role?: string | null
           host_name: string
           host_role: string
           id?: string
+          language?: string
+          platform_name?: string
           title: string
           updated_at?: string
           youtube_url: string
@@ -271,12 +277,15 @@ export type Database = {
           created_at?: string
           description?: string
           episode_date?: string
+          episode_film_title?: string | null
           episode_number?: number
-          guest_name?: string
-          guest_role?: string
+          guest_name?: string | null
+          guest_role?: string | null
           host_name?: string
           host_role?: string
           id?: string
+          language?: string
+          platform_name?: string
           title?: string
           updated_at?: string
           youtube_url?: string

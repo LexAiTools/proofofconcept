@@ -23,15 +23,18 @@ interface Podcast {
   id: string;
   episode_number: number;
   title: string;
+  episode_film_title?: string;
   description: string;
   host_name: string;
   host_role: string;
-  guest_name: string;
-  guest_role: string;
+  guest_name?: string;
+  guest_role?: string;
   company: string;
   company_color: string;
   episode_date: string;
   youtube_url: string;
+  language: string;
+  platform_name: string;
 }
 
 const AdminPodcasts = () => {
@@ -47,6 +50,7 @@ const AdminPodcasts = () => {
   const [formData, setFormData] = useState({
     episode_number: "",
     title: "",
+    episode_film_title: "",
     description: "",
     host_name: "",
     host_role: "",
@@ -56,6 +60,8 @@ const AdminPodcasts = () => {
     company_color: "",
     episode_date: "",
     youtube_url: "",
+    language: "pl",
+    platform_name: "NestAi.tools",
   });
 
   useEffect(() => {
@@ -245,15 +251,18 @@ const AdminPodcasts = () => {
     setFormData({
       episode_number: podcast.episode_number.toString(),
       title: podcast.title,
+      episode_film_title: podcast.episode_film_title || "",
       description: podcast.description,
       host_name: podcast.host_name,
       host_role: podcast.host_role,
-      guest_name: podcast.guest_name,
-      guest_role: podcast.guest_role,
+      guest_name: podcast.guest_name || "",
+      guest_role: podcast.guest_role || "",
       company: podcast.company,
       company_color: podcast.company_color,
       episode_date: podcast.episode_date,
       youtube_url: podcast.youtube_url,
+      language: podcast.language,
+      platform_name: podcast.platform_name,
     });
     setIsDialogOpen(true);
   };
@@ -263,6 +272,7 @@ const AdminPodcasts = () => {
     setFormData({
       episode_number: "",
       title: "",
+      episode_film_title: "",
       description: "",
       host_name: "",
       host_role: "",
@@ -272,6 +282,8 @@ const AdminPodcasts = () => {
       company_color: "",
       episode_date: "",
       youtube_url: "",
+      language: "pl",
+      platform_name: "NestAi.tools",
     });
   };
 
@@ -351,6 +363,16 @@ const AdminPodcasts = () => {
                     </div>
 
                     <div>
+                      <Label htmlFor="episode_film_title">Episode Film Title (opcjonalny)</Label>
+                      <Input
+                        id="episode_film_title"
+                        value={formData.episode_film_title}
+                        onChange={(e) => setFormData({ ...formData, episode_film_title: e.target.value })}
+                        placeholder="Tytuł wyświetlany na karcie wideo"
+                      />
+                    </div>
+
+                    <div>
                       <Label htmlFor="description">Description</Label>
                       <Textarea
                         id="description"
@@ -390,25 +412,23 @@ const AdminPodcasts = () => {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="guest_name">Guest Name</Label>
+                        <Label htmlFor="guest_name">Guest Name (opcjonalny)</Label>
                         <Input
                           id="guest_name"
                           value={formData.guest_name}
                           onChange={(e) =>
                             setFormData({ ...formData, guest_name: e.target.value })
                           }
-                          required
                         />
                       </div>
                       <div>
-                        <Label htmlFor="guest_role">Guest Role</Label>
+                        <Label htmlFor="guest_role">Guest Role (opcjonalny)</Label>
                         <Input
                           id="guest_role"
                           value={formData.guest_role}
                           onChange={(e) =>
                             setFormData({ ...formData, guest_role: e.target.value })
                           }
-                          required
                         />
                       </div>
                     </div>
@@ -451,6 +471,35 @@ const AdminPodcasts = () => {
                         placeholder="https://www.youtube.com/watch?v=..."
                         required
                       />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="language">Language</Label>
+                        <select
+                          id="language"
+                          value={formData.language}
+                          onChange={(e) => setFormData({ ...formData, language: e.target.value })}
+                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                          required
+                        >
+                          <option value="pl">Polski (PL)</option>
+                          <option value="en">English (EN)</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <Label htmlFor="platform_name">Platform Name</Label>
+                        <Input
+                          id="platform_name"
+                          value={formData.platform_name}
+                          onChange={(e) =>
+                            setFormData({ ...formData, platform_name: e.target.value })
+                          }
+                          placeholder="NestAi.tools"
+                          required
+                        />
+                      </div>
                     </div>
 
                     <div className="flex justify-end gap-2 pt-4">
