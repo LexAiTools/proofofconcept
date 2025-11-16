@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface PodcastEpisode {
@@ -41,6 +41,7 @@ const Podcast = () => {
   const fetchPodcasts = async () => {
     try {
       const currentLanguage = i18n.language;
+      console.log("Fetching podcasts for language:", currentLanguage);
       
       const { data, error } = await supabase
         .from("podcasts")
@@ -49,6 +50,7 @@ const Podcast = () => {
         .order("episode_number", { ascending: false });
 
       if (error) throw error;
+      console.log("Fetched podcasts:", data?.length || 0, "episodes");
       setPodcastEpisodes(data || []);
     } catch (error) {
       console.error("Error fetching podcasts:", error);
@@ -75,7 +77,7 @@ const Podcast = () => {
         <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-secondary">
+      <section className="pt-32 pb-16 bg-gradient-secondary relative">
         <div className="container mx-auto px-6 text-center">
           {/* Host Avatars */}
           <div className="flex justify-center items-center mb-8">
@@ -99,23 +101,33 @@ const Podcast = () => {
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
+          
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <ChevronDown className="w-8 h-8 text-primary" />
+          </div>
         </div>
       </section>
 
       {/* Episodes Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-24 min-h-screen">
         <div className="container mx-auto px-6">
           {loading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            <div className="flex flex-col items-center justify-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+              <p className="text-muted-foreground">Ładowanie odcinków...</p>
+            </div>
+          ) : podcastEpisodes.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground text-lg">Brak dostępnych odcinków</p>
             </div>
           ) : (
             <div className="space-y-12">
               {podcastEpisodes.map((episode) => (
                 <Card key={episode.id} className="overflow-hidden border-border bg-card/50 backdrop-blur-sm">
-                  <div className="grid lg:grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                     {/* Episode Card */}
-                    <div className={`bg-gradient-to-br ${episode.company_color} p-8 text-white relative`}>
+                    <div className={`bg-gradient-to-br ${episode.company_color} p-4 md:p-8 text-white relative`}>
                       <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
@@ -158,7 +170,7 @@ const Podcast = () => {
                     </div>
 
                     {/* Episode Details */}
-                    <div className="p-8">
+                    <div className="p-4 md:p-8">
                       <div className="flex items-center justify-between mb-4">
                         <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
                           {t('episode.badge')}{episode.episode_number}
