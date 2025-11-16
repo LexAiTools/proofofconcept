@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { generateSlug } from "@/lib/slugify";
 
 interface PodcastEpisode {
   id: string;
@@ -25,10 +26,11 @@ interface PodcastEpisode {
   youtube_url: string;
   language: string;
   platform_name: string;
+  slug?: string;
 }
 
 const PodcastEpisode = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id, slug } = useParams<{ id: string; slug?: string }>();
   const navigate = useNavigate();
   const { t } = useTranslation('podcast');
   const [episode, setEpisode] = useState<PodcastEpisode | null>(null);
@@ -36,7 +38,7 @@ const PodcastEpisode = () => {
 
   useEffect(() => {
     fetchEpisode();
-  }, [id]);
+  }, [id, slug]);
 
   const fetchEpisode = async () => {
     if (!id) return;
@@ -49,6 +51,16 @@ const PodcastEpisode = () => {
         .single();
 
       if (error) throw error;
+      
+      // Redirect to correct slug if provided slug doesn't match
+      if (data && slug) {
+        const correctSlug = generateSlug(data.title);
+        if (slug !== correctSlug) {
+          navigate(`/podcast/${id}/${correctSlug}`, { replace: true });
+          return;
+        }
+      }
+      
       setEpisode(data);
     } catch (error) {
       console.error("Error fetching episode:", error);
@@ -127,7 +139,7 @@ const PodcastEpisode = () => {
         <meta property="og:video:width" content="1280" />
         <meta property="og:video:height" content="720" />
         <meta property="og:image" content={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} />
-        <meta property="og:url" content={`https://app.proof-of-concept.pl/podcast/${episode.id}`} />
+        <meta property="og:url" content={`https://app.proof-of-concept.pl/podcast/${episode.id}/${generateSlug(episode.title)}`} />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="player" />
@@ -139,7 +151,7 @@ const PodcastEpisode = () => {
         <meta name="twitter:player:height" content="720" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href={`https://app.proof-of-concept.pl/podcast/${episode.id}`} />
+        <link rel="canonical" href={`https://app.proof-of-concept.pl/podcast/${episode.id}/${generateSlug(episode.title)}`} />
         
         {/* Structured Data */}
         <script type="application/ld+json">

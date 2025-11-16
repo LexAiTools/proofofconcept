@@ -248,6 +248,7 @@ export type Database = {
           id: string
           language: string
           platform_name: string
+          slug: string | null
           title: string
           updated_at: string
           youtube_url: string
@@ -267,6 +268,7 @@ export type Database = {
           id?: string
           language?: string
           platform_name?: string
+          slug?: string | null
           title: string
           updated_at?: string
           youtube_url: string
@@ -286,6 +288,7 @@ export type Database = {
           id?: string
           language?: string
           platform_name?: string
+          slug?: string | null
           title?: string
           updated_at?: string
           youtube_url?: string

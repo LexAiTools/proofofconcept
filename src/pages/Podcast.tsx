@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 import { Calendar, User, ArrowRight, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { generateSlug } from "@/lib/slugify";
 
 interface PodcastEpisode {
   id: string;
@@ -26,6 +27,7 @@ interface PodcastEpisode {
   youtube_url: string;
   language: string;
   platform_name: string;
+  slug?: string;
 }
 
 const Podcast = () => {
@@ -194,7 +196,7 @@ const Podcast = () => {
                       </p>
 
                       <Button 
-                        onClick={() => navigate(`/podcast/${episode.id}`)}
+                        onClick={() => navigate(`/podcast/${episode.id}/${generateSlug(episode.title)}`)}
                         variant="default" 
                         className="group"
                       >

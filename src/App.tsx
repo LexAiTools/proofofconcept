@@ -51,7 +51,7 @@ const App = () => (
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/superadmin-setup" element={<SuperadminSetup />} />
           <Route path="/podcast" element={<Podcast />} />
-          <Route path="/podcast/:id" element={<PodcastEpisode />} />
+          <Route path="/podcast/:id/:slug?" element={<PodcastEpisode />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/leads" element={<AdminLeads />} />
