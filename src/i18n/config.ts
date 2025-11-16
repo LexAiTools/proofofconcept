@@ -22,6 +22,7 @@ import enQuickStartPoc from './locales/en/quickStartPoc.json';
 import enInteractiveAppPoc from './locales/en/interactiveAppPoc.json';
 import enCompletePackagePoc from './locales/en/completePackagePoc.json';
 import enProfessionalWebsitePoc from './locales/en/professionalWebsitePoc.json';
+import enPodcast from './locales/en/podcast.json';
 
 import plCommon from './locales/pl/common.json';
 import plHome from './locales/pl/home.json';
@@ -43,6 +44,7 @@ import plQuickStartPoc from './locales/pl/quickStartPoc.json';
 import plInteractiveAppPoc from './locales/pl/interactiveAppPoc.json';
 import plCompletePackagePoc from './locales/pl/completePackagePoc.json';
 import plProfessionalWebsitePoc from './locales/pl/professionalWebsitePoc.json';
+import plPodcast from './locales/pl/podcast.json';
 
 const resources = {
   en: {
@@ -66,6 +68,7 @@ const resources = {
       interactiveAppPoc: enInteractiveAppPoc,
     completePackagePoc: enCompletePackagePoc,
     professionalWebsitePoc: enProfessionalWebsitePoc,
+    podcast: enPodcast,
   },
   pl: {
     common: plCommon,
@@ -88,6 +91,7 @@ const resources = {
       interactiveAppPoc: plInteractiveAppPoc,
     completePackagePoc: plCompletePackagePoc,
     professionalWebsitePoc: plProfessionalWebsitePoc,
+    podcast: plPodcast,
   },
 };
 
@@ -98,7 +102,7 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads', 'poc', 'quickStartPoc', 'interactiveAppPoc', 'completePackagePoc', 'professionalWebsitePoc'],
+    ns: ['common', 'home', 'forms', 'admin', 'messages', 'pages', 'about', 'testimonials', 'contact', 'pricing', 'useCases', 'bookDemo', 'engine', 'chat', 'leads', 'poc', 'quickStartPoc', 'interactiveAppPoc', 'completePackagePoc', 'professionalWebsitePoc', 'podcast'],
     
     detection: {
       order: ['localStorage', 'navigator'],
