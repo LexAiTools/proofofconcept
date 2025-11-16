@@ -80,17 +80,17 @@
   ],
   "testimonials": [
     {
-      "quote": "CorballyConcepts to jedyny system oparty na LLM, któremu ufam, aby pokazać go naszym klientom",
+      "quote": "CorballyConcepts wybrał i wdrożył dla nas idealny model LLM. Dzięki nim mamy pewność, że pokazujemy klientom najlepsze rozwiązanie dla naszych potrzeb",
       "author": "Rusty Wilson",
       "position": "VP Wsparcia @ Sonatype"
     },
     {
-      "quote": "Nasz zespół zrobił wszystko, aby zaskoczyć CorballyConcepts, a raz za razem dostarczał pomocne, dokładne odpowiedzi.",
+      "quote": "Nasz zespół testował różne LLM-y, ale CorballyConcepts za każdym razem proponował lepsze rozwiązanie. Dokładnie wiedzieli, który model pasuje do naszego przypadku",
       "author": "Michael Ellis",
       "position": "Lider Deweloperów @ Ionic"
     },
     {
-      "quote": "CorballyConcepts jest znacznie lepszy w odpowiadaniu na pytania o Prisma niż ChatGPT",
+      "quote": "CorballyConcepts zintegrował dla nas model, który odpowiada na pytania o Prisma znacznie lepiej niż standardowy ChatGPT. To mistrzostwo w doborze odpowiedniego LLM",
       "author": "Soren Schmidt",
       "position": "CEO @ Prisma"
     }
