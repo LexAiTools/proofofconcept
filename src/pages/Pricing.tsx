@@ -25,9 +25,17 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 const Pricing = () => {
-  const { t } = useTranslation(['pricing', 'common']);
+  const { t, i18n } = useTranslation(['pricing', 'common']);
+  const location = useLocation();
+  
+  const currentUrl = `https://app.proof-of-concept.pl${location.pathname}`;
+  const altLang = i18n.language === 'pl' ? 'en' : 'pl';
+  const altUrl = i18n.language === 'pl' ? `https://app.proof-of-concept.pl/en${location.pathname}` : `https://app.proof-of-concept.pl${location.pathname}`;
+  
   const [formData, setFormData] = useState({
     email: "",
     problem: ""
@@ -72,6 +80,44 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{t('pricing:meta.title')}</title>
+        <meta name="description" content={t('pricing:meta.description')} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('pricing:meta.title')} />
+        <meta property="og:description" content={t('pricing:meta.description')} />
+        <meta property="og:url" content={currentUrl} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('pricing:meta.title')} />
+        <meta name="twitter:description" content={t('pricing:meta.description')} />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Hreflang tags */}
+        <link rel="alternate" hrefLang={i18n.language} href={currentUrl} />
+        <link rel="alternate" hrefLang={altLang} href={altUrl} />
+        <link rel="alternate" hrefLang="x-default" href="https://app.proof-of-concept.pl/pricing" />
+        
+        {/* Structured Data - Offer */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "Proof of Concept Service",
+            "description": "Get your PoC in an hour, not months",
+            "url": "https://app.proof-of-concept.pl/pricing",
+            "seller": {
+              "@type": "Organization",
+              "name": "NestAi & Corbally Concepts"
+            }
+          })}
+        </script>
+      </Helmet>
       <Header />
       
       {/* Main Content */}

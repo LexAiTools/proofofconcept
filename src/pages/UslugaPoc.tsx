@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { 
   Accordion,
@@ -24,13 +24,42 @@ import { QuickStartPocForm } from "@/components/QuickStartPocForm";
 import { InteractiveAppPocForm } from "@/components/InteractiveAppPocForm";
 import { CompletePackagePocForm } from "@/components/CompletePackagePocForm";
 import { ProfessionalWebsitePocForm } from "@/components/ProfessionalWebsitePocForm";
+import { Helmet } from "react-helmet-async";
 
 const UslugaPoc = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation('poc');
+  const { t, i18n } = useTranslation('poc');
+  const location = useLocation();
+  
+  const currentUrl = `https://app.proof-of-concept.pl${location.pathname}`;
+  const altLang = i18n.language === 'pl' ? 'en' : 'pl';
+  const altUrl = i18n.language === 'pl' ? `https://app.proof-of-concept.pl/en${location.pathname}` : `https://app.proof-of-concept.pl${location.pathname}`;
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{t('poc:meta.title')}</title>
+        <meta name="description" content={t('poc:meta.description')} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('poc:meta.title')} />
+        <meta property="og:description" content={t('poc:meta.description')} />
+        <meta property="og:url" content={currentUrl} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('poc:meta.title')} />
+        <meta name="twitter:description" content={t('poc:meta.description')} />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Hreflang tags */}
+        <link rel="alternate" hrefLang={i18n.language} href={currentUrl} />
+        <link rel="alternate" hrefLang={altLang} href={altUrl} />
+        <link rel="alternate" hrefLang="x-default" href="https://app.proof-of-concept.pl/usluga-poc" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

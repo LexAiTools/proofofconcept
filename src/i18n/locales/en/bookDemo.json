@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Book a Demo - WordPress AI Plugin | Proof of Concept",
+    "description": "Get a personalized demo of our WordPress AI plugin. Integrate advanced AI chat, RAG knowledge base, and credit management into your WordPress site."
+  },
   "hero": {
     "title": "Experience Our AI",
     "titleHighlight": "WordPress Plugin",

@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "AI Engine - Powerful NLP & Knowledge Management | Proof of Concept",
+    "description": "Advanced AI engine for technical documentation, knowledge management, and automated support. Natural language processing that understands your business context."
+  },
   "hero": {
     "title": "Accuracy is everything.",
     "description": "We optimize kapa for one thing: providing the <strong>most accurate answers</strong> about your product. That system is what we call the <strong>Answer Engine</strong>.",

@@ -11,9 +11,17 @@ import { toast } from "sonner";
 import { DocumentsSection } from "@/components/documents/DocumentsSection";
 import { useTranslation } from "react-i18next";
 import { WaitlistPopup } from "@/components/WaitlistPopup";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 const BookDemo = () => {
-  const { t } = useTranslation(['bookDemo', 'common']);
+  const { t, i18n } = useTranslation(['bookDemo', 'common']);
+  const location = useLocation();
+  
+  const currentUrl = `https://app.proof-of-concept.pl${location.pathname}`;
+  const altLang = i18n.language === 'pl' ? 'en' : 'pl';
+  const altUrl = i18n.language === 'pl' ? `https://app.proof-of-concept.pl/en${location.pathname}` : `https://app.proof-of-concept.pl${location.pathname}`;
+  
   const [formData, setFormData] = useState({
     source: '',
     email: '',
@@ -53,6 +61,29 @@ const BookDemo = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{t('bookDemo:meta.title')}</title>
+        <meta name="description" content={t('bookDemo:meta.description')} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('bookDemo:meta.title')} />
+        <meta property="og:description" content={t('bookDemo:meta.description')} />
+        <meta property="og:url" content={currentUrl} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('bookDemo:meta.title')} />
+        <meta name="twitter:description" content={t('bookDemo:meta.description')} />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Hreflang tags */}
+        <link rel="alternate" hrefLang={i18n.language} href={currentUrl} />
+        <link rel="alternate" hrefLang={altLang} href={altUrl} />
+        <link rel="alternate" hrefLang="x-default" href="https://app.proof-of-concept.pl/book-demo" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

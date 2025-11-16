@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Zarezerwuj demo - Wtyczka AI dla WordPress | Proof of Concept",
+    "description": "Zdobądź spersonalizowane demo naszej wtyczki AI dla WordPress. Zintegruj zaawansowany chat AI, bazę wiedzy RAG i zarządzanie kredytami w swojej stronie WordPress."
+  },
   "hero": {
     "title": "Poznaj naszą wtyczkę AI dla",
     "titleHighlight": "WordPress",

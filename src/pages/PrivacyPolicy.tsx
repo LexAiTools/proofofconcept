@@ -1,9 +1,42 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 export default function PrivacyPolicy() {
+  const { t, i18n } = useTranslation('pages');
+  const location = useLocation();
+  
+  const currentUrl = `https://app.proof-of-concept.pl${location.pathname}`;
+  const altLang = i18n.language === 'pl' ? 'en' : 'pl';
+  const altUrl = i18n.language === 'pl' ? `https://app.proof-of-concept.pl/en${location.pathname}` : `https://app.proof-of-concept.pl${location.pathname}`;
+  
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{t('pages:meta.privacyPolicy.title')}</title>
+        <meta name="description" content={t('pages:meta.privacyPolicy.description')} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('pages:meta.privacyPolicy.title')} />
+        <meta property="og:description" content={t('pages:meta.privacyPolicy.description')} />
+        <meta property="og:url" content={currentUrl} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('pages:meta.privacyPolicy.title')} />
+        <meta name="twitter:description" content={t('pages:meta.privacyPolicy.description')} />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Hreflang tags */}
+        <link rel="alternate" hrefLang={i18n.language} href={currentUrl} />
+        <link rel="alternate" hrefLang={altLang} href={altUrl} />
+        <link rel="alternate" hrefLang="x-default" href="https://app.proof-of-concept.pl/privacy-policy" />
+      </Helmet>
       <Header />
 
       <main className="container mx-auto px-6 py-24">
