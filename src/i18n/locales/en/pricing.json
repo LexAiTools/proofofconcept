@@ -80,17 +80,17 @@
   ],
   "testimonials": [
     {
-      "quote": "CorballyConcepts is the only LLM-based system I trust to put in front of our customers",
+      "quote": "CorballyConcepts selected and implemented the perfect LLM model for us. Thanks to them, we're confident we're showing our customers the best solution for our needs",
       "author": "Rusty Wilson",
       "position": "VP Support @ Sonatype"
     },
     {
-      "quote": "Our team did its best to stump CorballyConcepts, and time and time again, it delivered helpful, accurate responses.",
+      "quote": "Our team tested various LLMs, but CorballyConcepts consistently proposed better solutions. They knew exactly which model fit our use case",
       "author": "Michael Ellis",
       "position": "Developer Lead @ Ionic"
     },
     {
-      "quote": "CorballyConcepts is much better at answering questions about Prisma than ChatGPT is",
+      "quote": "CorballyConcepts integrated a model for us that answers questions about Prisma much better than standard ChatGPT. It's mastery in selecting the right LLM",
       "author": "Soren Schmidt",
       "position": "CEO @ Prisma"
     }
