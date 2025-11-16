@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import { Linkedin, Github, Youtube, Send, Globe, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -21,17 +21,59 @@ export const Footer = () => {
               Transforming businesses with intelligent AI solutions that deliver real results.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.youtube.com/@webConceptsAI" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/showcase/corbally-concepts/?originalSubdomain=pl" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a 
+                href="https://nestai.tools/pl" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="NestAi Tools"
+              >
+                <Globe className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://corballyconcepts.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Corbally Concepts"
+              >
+                <ExternalLink className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://t.me/DecArtTom" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Telegram"
+              >
+                <Send className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://github.com/LexAiTools" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub"
+              >
                 <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
