@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
-import { Play, Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface PodcastEpisode {
@@ -28,6 +29,7 @@ interface PodcastEpisode {
 }
 
 const Podcast = () => {
+  const navigate = useNavigate();
   const { i18n, t } = useTranslation('podcast');
   const [podcastEpisodes, setPodcastEpisodes] = useState<PodcastEpisode[]>([]);
   const [loading, setLoading] = useState(true);
@@ -62,8 +64,15 @@ const Podcast = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <Helmet>
+        <title>Proof of Concept Podcast - {t('hero.description')}</title>
+        <meta name="description" content={t('hero.description')} />
+        <link rel="canonical" href="https://app.proof-of-concept.pl/podcast" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-secondary">
@@ -172,25 +181,14 @@ const Podcast = () => {
                         {episode.description}
                       </p>
 
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button variant="default" className="group">
-                            <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                            {t('episode.watchButton')}
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-4xl w-full p-0 overflow-hidden">
-                          <div className="aspect-video">
-                            <iframe
-                              src={`https://www.youtube.com/embed/${extractYouTubeId(episode.youtube_url)}`}
-                              title={episode.title}
-                              className="w-full h-full"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                            />
-                          </div>
-                        </DialogContent>
-                      </Dialog>
+                      <Button 
+                        onClick={() => navigate(`/podcast/${episode.id}`)}
+                        variant="default" 
+                        className="group"
+                      >
+                        {t('episode.watchButton')}
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </Button>
                     </div>
                   </div>
                 </Card>
@@ -219,7 +217,8 @@ const Podcast = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

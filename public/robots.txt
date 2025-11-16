@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://app.proof-of-concept.pl/sitemap.xml
+Sitemap: https://app.proof-of-concept.pl/video-sitemap.xml
