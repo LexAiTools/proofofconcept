@@ -3,14 +3,20 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Ticket, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { VercelV0Chat } from "@/components/VercelV0Chat";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const UseCases = () => {
-  const { t } = useTranslation(['useCases', 'common']);
+  const { t, i18n } = useTranslation(['useCases', 'common']);
   const navigate = useNavigate();
+  const location = useLocation();
+  
+  const currentUrl = `https://app.proof-of-concept.pl${location.pathname}`;
+  const altLang = i18n.language === 'pl' ? 'en' : 'pl';
+  const altUrl = i18n.language === 'pl' ? `https://app.proof-of-concept.pl/en${location.pathname}` : `https://app.proof-of-concept.pl${location.pathname}`;
 
   const handleMessageSubmit = (message: string) => {
     navigate('/chat', { state: { initialMessage: message } });
@@ -20,6 +26,29 @@ const UseCases = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{t('useCases:meta.title')}</title>
+        <meta name="description" content={t('useCases:meta.description')} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('useCases:meta.title')} />
+        <meta property="og:description" content={t('useCases:meta.description')} />
+        <meta property="og:url" content={currentUrl} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('useCases:meta.title')} />
+        <meta name="twitter:description" content={t('useCases:meta.description')} />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Hreflang tags */}
+        <link rel="alternate" hrefLang={i18n.language} href={currentUrl} />
+        <link rel="alternate" hrefLang={altLang} href={altUrl} />
+        <link rel="alternate" hrefLang="x-default" href="https://app.proof-of-concept.pl/use-cases" />
+      </Helmet>
       <Header />
       
       {/* Main Content */}

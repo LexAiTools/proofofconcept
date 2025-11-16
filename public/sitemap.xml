@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Home -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://app.proof-of-concept.pl/home</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/home" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/home" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/home" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/about</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/about" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Pricing -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/pricing" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Use Cases -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/use-cases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/use-cases" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/use-cases" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Engine -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/engine</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/engine" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/engine" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/engine" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Book Demo -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/book-demo</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/book-demo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/book-demo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/book-demo" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- PoC Service -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/usluga-poc</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/usluga-poc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/usluga-poc" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/usluga-poc" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Podcast -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/podcast</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/podcast" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/podcast" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/podcast" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/privacy-policy" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://app.proof-of-concept.pl/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://app.proof-of-concept.pl/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.proof-of-concept.pl/en/terms-of-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.proof-of-concept.pl/terms-of-service" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>

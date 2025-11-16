@@ -1,4 +1,14 @@
 {
+  "meta": {
+    "privacyPolicy": {
+      "title": "Polityka Prywatności - Ochrona danych i bezpieczeństwo | Proof of Concept",
+      "description": "Nasza polityka prywatności wyjaśnia jak zbieramy, wykorzystujemy i chronimy Twoje dane osobowe. Zgodność z RODO. Bezpieczeństwo klasy korporacyjnej."
+    },
+    "termsOfService": {
+      "title": "Warunki korzystania - Regulamin i zasady prawne | Proof of Concept",
+      "description": "Zapoznaj się z naszymi warunkami korzystania z usługi obejmującymi licencję, własność intelektualną, odpowiedzialność i obowiązki użytkowników."
+    }
+  },
   "about": {
     "title": "O nas",
     "subtitle": "Dowiedz się więcej o naszej misji i zespole"

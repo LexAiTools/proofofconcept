@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Silnik AI - Zaawansowane NLP i zarządzanie wiedzą | Proof of Concept",
+    "description": "Zaawansowany silnik AI do dokumentacji technicznej, zarządzania wiedzą i automatycznego wsparcia. Przetwarzanie języka naturalnego dostosowane do Twojego biznesu."
+  },
   "hero": {
     "title": "Dokładność to wszystko.",
     "description": "Optymalizujemy kapa pod jednym kątem: dostarczanie <strong>najdokładniejszych odpowiedzi</strong> dotyczących Twojego produktu. Ten system nazywamy <strong>Silnikiem Odpowiedzi</strong>.",
