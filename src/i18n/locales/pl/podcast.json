@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Poznaj podcast",
+    "titleHighlight": "Proof of Concept",
+    "description": "Dołącz do nas w rozmowach z wizjonerami branży technologicznej, którzy przekształcają pomysły w rzeczywistość. Odkryj historie innowacji, wyzwań i sukcesów od liderów, którzy wyprzedzają przyszłość."
+  },
+  "episode": {
+    "badge": "Odcinek #",
+    "watchButton": "Zobacz odcinek",
+    "host": "Gospodarz",
+    "guest": "Gość",
+    "date": "Data"
+  },
+  "cta": {
+    "title": "Zacznij poprawiać doświadczenie deweloperów swojej organizacji",
+    "description": "NestAi.tools to platforma usprawniająca komunikację z dokumentacją techniczną oraz dostarczająca inteligentne narzędzia do zarządzania wiedzą dla zespołów deweloperskich.",
+    "button": "Poproś o dostęp"
+  }
+}

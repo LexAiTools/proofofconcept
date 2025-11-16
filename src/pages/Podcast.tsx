@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { RequestAccessPopup } from "@/components/RequestAccessPopup";
-import { Play, Calendar, User } from "lucide-react";
+import { Play, Calendar, User, ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface PodcastEpisode {
@@ -28,7 +28,7 @@ interface PodcastEpisode {
 }
 
 const Podcast = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('podcast');
   const [podcastEpisodes, setPodcastEpisodes] = useState<PodcastEpisode[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -84,13 +84,11 @@ const Podcast = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Meet <span className="text-primary">Proof of Concept</span> podcast
+            {t('hero.title')} <span className="text-primary">{t('hero.titleHighlight')}</span> podcast
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Join industry leaders as they interview forward-thinking developer community 
-            builders, machine learning experts, and innovators from across our portfolio of brands - 
-            all united under the <span className="text-primary font-semibold">Proof of Concept</span> vision.
+            {t('hero.description')}
           </p>
         </div>
       </section>
@@ -154,11 +152,11 @@ const Podcast = () => {
                     <div className="p-8">
                       <div className="flex items-center justify-between mb-4">
                         <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                          Episode #{episode.episode_number}
+                          {t('episode.badge')}{episode.episode_number}
                         </div>
                         <div className="flex items-center text-muted-foreground text-sm">
                           <Calendar className="w-4 h-4 mr-2" />
-                          {new Date(episode.episode_date).toLocaleDateString('en-US', { 
+                          {new Date(episode.episode_date).toLocaleDateString(i18n.language === 'pl' ? 'pl-PL' : 'en-US', {
                             year: 'numeric', 
                             month: 'short', 
                             day: 'numeric' 
@@ -178,7 +176,7 @@ const Podcast = () => {
                         <DialogTrigger asChild>
                           <Button variant="default" className="group">
                             <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                            Watch Episode
+                            {t('episode.watchButton')}
                           </Button>
                         </DialogTrigger>
                         <DialogContent className="max-w-4xl w-full p-0 overflow-hidden">
@@ -206,18 +204,15 @@ const Podcast = () => {
       <section className="py-24 bg-gradient-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Start improving developer experience
-            <br />
-            and reducing support now.
+            {t('cta.title')}
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Explore NestAi.tools with the founding team and spin up a demo 
-            environment in less than 24 hours.
+            {t('cta.description')}
           </p>
           <RequestAccessPopup>
             <Button variant="hero" size="xl" className="group">
-              Request Access
-              <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              {t('cta.button')}
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </RequestAccessPopup>
         </div>

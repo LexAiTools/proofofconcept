@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Discover the",
+    "titleHighlight": "Proof of Concept",
+    "description": "Join us for conversations with tech industry visionaries who transform ideas into reality. Discover stories of innovation, challenges, and success from leaders shaping the future."
+  },
+  "episode": {
+    "badge": "Episode #",
+    "watchButton": "Watch Episode",
+    "host": "Host",
+    "guest": "Guest",
+    "date": "Date"
+  },
+  "cta": {
+    "title": "Start improving your organization's developer experience",
+    "description": "NestAi.tools is a platform that streamlines communication with technical documentation and provides intelligent knowledge management tools for development teams.",
+    "button": "Request Access"
+  }
+}
