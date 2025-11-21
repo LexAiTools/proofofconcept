@@ -6,6 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export const Header = () => {
   const { t } = useTranslation('common');
@@ -75,6 +76,7 @@ export const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
+            <ThemeSwitcher />
             <LanguageSwitcher />
             <Button 
               variant="ghost" 
@@ -133,7 +135,10 @@ export const Header = () => {
                 {t('nav.chat')}
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
-                <LanguageSwitcher />
+                <div className="flex gap-2">
+                  <ThemeSwitcher />
+                  <LanguageSwitcher />
+                </div>
                 <Button 
                   variant="ghost" 
                   className="justify-start w-full"

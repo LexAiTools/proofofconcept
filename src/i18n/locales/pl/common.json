@@ -27,7 +27,10 @@
     "cancel": "Anuluj",
     "delete": "Usuń",
     "edit": "Edytuj",
-    "viewAll": "Zobacz wszystko"
+    "viewAll": "Zobacz wszystko",
+    "toggleTheme": "Przełącz motyw",
+    "lightMode": "Jasny motyw",
+    "darkMode": "Ciemny motyw"
   },
   "footer": {
     "solutions": "Rozwiązania",
