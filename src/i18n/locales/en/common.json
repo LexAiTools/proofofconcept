@@ -27,7 +27,10 @@
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "toggleTheme": "Toggle theme",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode"
   },
   "footer": {
     "solutions": "Solutions",
