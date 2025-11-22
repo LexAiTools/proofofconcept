@@ -1,65 +1,65 @@
 {
   "nav": {
-    "useCases": "Use Cases",
-    "pricing": "Pricing",
+    "useCases": "Anwendungsfälle",
+    "pricing": "Preise",
     "engine": "Engine",
-    "about": "About",
-    "contact": "Contact",
+    "about": "Über uns",
+    "contact": "Kontakt",
     "chat": "Chat",
     "podcast": "Podcast",
-    "documents": "Documents"
+    "documents": "Dokumente"
   },
   "buttons": {
-    "getStarted": "Get Started Now",
-    "watchDemo": "Watch Demo",
-    "bookDemo": "Book Demo",
-    "logIn": "Log In",
-    "adminPanel": "Admin Panel",
-    "back": "Back",
-    "next": "Next",
-    "submit": "Submit",
-    "send": "Send",
-    "schedule": "Schedule Meeting",
-    "close": "Close",
-    "download": "Download",
-    "upload": "Upload",
-    "save": "Save",
-    "cancel": "Cancel",
-    "delete": "Delete",
-    "edit": "Edit",
-    "viewAll": "View All",
-    "toggleTheme": "Toggle theme",
-    "lightMode": "Light mode",
-    "darkMode": "Dark mode"
+    "getStarted": "Jetzt starten",
+    "watchDemo": "Demo ansehen",
+    "bookDemo": "Demo buchen",
+    "logIn": "Anmelden",
+    "adminPanel": "Admin-Panel",
+    "back": "Zurück",
+    "next": "Weiter",
+    "submit": "Absenden",
+    "send": "Senden",
+    "schedule": "Termin vereinbaren",
+    "close": "Schließen",
+    "download": "Herunterladen",
+    "upload": "Hochladen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "viewAll": "Alle anzeigen",
+    "toggleTheme": "Design wechseln",
+    "lightMode": "Heller Modus",
+    "darkMode": "Dunkler Modus"
   },
   "footer": {
-    "solutions": "Solutions",
-    "company": "Company",
-    "resources": "Resources",
-    "legal": "Legal",
-    "copyright": "All rights reserved.",
+    "solutions": "Lösungen",
+    "company": "Unternehmen",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "copyright": "Alle Rechte vorbehalten.",
     "solutionsLinks": {
       "wordpressPlugin": "WordPress AI Plugin",
-      "aiAnalytics": "AI Analytics",
+      "aiAnalytics": "KI-Analytik",
       "predictiveModeling": "Predictive Modeling",
-      "automationPlatform": "Automation Platform"
+      "automationPlatform": "Automatisierungsplattform"
     },
     "companyLinks": {
-      "about": "About",
-      "careers": "Careers",
-      "contact": "Contact",
+      "about": "Über uns",
+      "careers": "Karriere",
+      "contact": "Kontakt",
       "blog": "Blog"
     },
     "resourcesLinks": {
-      "documentation": "Documentation",
+      "documentation": "Dokumentation",
       "support": "Support",
       "community": "Community",
-      "pricing": "Pricing"
+      "pricing": "Preise"
     },
     "legalLinks": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "security": "Security"
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "security": "Sicherheit"
     }
   }
 }
