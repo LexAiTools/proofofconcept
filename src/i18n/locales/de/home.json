@@ -1,65 +1,65 @@
 {
   "meta": {
-    "title": "Proof of Concept - AI-Powered Business Intelligence | NestAi",
-    "description": "Get your Proof of Concept in an hour, not months. Working app prototypes, AI-powered websites, and explainer videos. Transform ideas into reality with enterprise-grade AI solutions."
+    "title": "Proof of Concept - KI-gestützte Business Intelligence | NestAi",
+    "description": "Erhalten Sie Ihren Proof of Concept in einer Stunde, nicht in Monaten. Funktionsfähige App-Prototypen, KI-gestützte Websites und Erklärvideos. Verwandeln Sie Ideen in Realität mit KI-Lösungen auf Enterprise-Niveau."
   },
   "hero": {
-    "trustedBy": "Trusted by 500+ Enterprise Clients",
-    "headline": "Transform Your Business with",
-    "headlineHighlight": "Intelligent AI",
-    "subheadline": "Build advanced AI solutions that deliver real results in days, not months. Trusted by leading enterprises for data-driven insights and automated decision-making.",
+    "trustedBy": "Vertrauen von über 500 Unternehmenskunden",
+    "headline": "Transformieren Sie Ihr Unternehmen mit",
+    "headlineHighlight": "Intelligenter KI",
+    "subheadline": "Entwickeln Sie fortschrittliche KI-Lösungen, die in Tagen echte Ergebnisse liefern, nicht in Monaten. Vertraut von führenden Unternehmen für datengestützte Erkenntnisse und automatisierte Entscheidungsfindung.",
     "stats": {
-      "clients": "Enterprise Clients",
-      "dataPoints": "Data Points Processed",
-      "uptime": "Uptime Guaranteed",
-      "support": "Expert Support"
+      "clients": "Unternehmenskunden",
+      "dataPoints": "Verarbeitete Datenpunkte",
+      "uptime": "Garantierte Verfügbarkeit",
+      "support": "Experten-Support"
     }
   },
   "vercelChat": {
-    "placeholder": "Ask me anything about our AI solutions...",
+    "placeholder": "Fragen Sie mich alles über unsere KI-Lösungen...",
     "examplePrompts": {
-      "integration": "How do I integrate your AI into my system?",
-      "pricing": "What are your pricing options?",
-      "security": "Tell me about your security features"
+      "integration": "Wie integriere ich Ihre KI in mein System?",
+      "pricing": "Was sind Ihre Preisoptionen?",
+      "security": "Erzählen Sie mir über Ihre Sicherheitsfunktionen"
     }
   },
   "features": {
-    "title": "Built for Enterprise Scale",
-    "subtitle": "Our AI platform combines cutting-edge technology with enterprise-grade security to deliver solutions that grow with your business.",
+    "title": "Entwickelt für Enterprise-Skalierung",
+    "subtitle": "Unsere KI-Plattform kombiniert modernste Technologie mit Sicherheit auf Enterprise-Niveau, um Lösungen zu liefern, die mit Ihrem Unternehmen wachsen.",
     "advancedAI": {
-      "title": "Advanced AI Models",
-      "description": "Cutting-edge machine learning algorithms tailored to your business needs with continuous learning capabilities."
+      "title": "Fortschrittliche KI-Modelle",
+      "description": "Hochmoderne Machine-Learning-Algorithmen, die auf Ihre Geschäftsanforderungen zugeschnitten sind, mit kontinuierlichen Lernfähigkeiten."
     },
     "lightning": {
-      "title": "Lightning Fast Processing",
-      "description": "Process millions of data points in real-time with our optimized infrastructure and edge computing."
+      "title": "Blitzschnelle Verarbeitung",
+      "description": "Verarbeiten Sie Millionen von Datenpunkten in Echtzeit mit unserer optimierten Infrastruktur und Edge Computing."
     },
     "enterpriseSecurity": {
-      "title": "Enterprise Security",
-      "description": "Bank-level security with end-to-end encryption, SOC 2 compliance, and dedicated infrastructure."
+      "title": "Enterprise-Sicherheit",
+      "description": "Sicherheit auf Bankniveau mit Ende-zu-Ende-Verschlüsselung, SOC 2-Konformität und dedizierter Infrastruktur."
     },
     "seamlessIntegration": {
-      "title": "Seamless Integration",
-      "description": "Connect with your existing tools and workflows through our robust API and pre-built integrations."
+      "title": "Nahtlose Integration",
+      "description": "Verbinden Sie sich mit Ihren bestehenden Tools und Workflows über unsere robuste API und vorgefertigte Integrationen."
     },
     "realtime": {
-      "title": "Real-time Analytics",
-      "description": "Monitor performance and gain insights instantly with our comprehensive analytics dashboard."
+      "title": "Echtzeit-Analytik",
+      "description": "Überwachen Sie die Leistung und gewinnen Sie sofort Erkenntnisse mit unserem umfassenden Analyse-Dashboard."
     },
     "support": {
-      "title": "24/7 Expert Support",
-      "description": "Dedicated support team available around the clock to ensure your success."
+      "title": "24/7 Experten-Support",
+      "description": "Engagiertes Support-Team rund um die Uhr verfügbar, um Ihren Erfolg sicherzustellen."
     }
   },
   "testimonials": {
-    "title": "What Our Clients Say",
-    "subtitle": "Join thousands of satisfied customers who have transformed their business with our AI solutions.",
-    "cta": "Ready to transform your business?",
-    "ctaButton": "Start Your Free Trial"
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Schließen Sie sich Tausenden zufriedener Kunden an, die ihr Geschäft mit unseren KI-Lösungen transformiert haben.",
+    "cta": "Bereit, Ihr Unternehmen zu transformieren?",
+    "ctaButton": "Starten Sie Ihre kostenlose Testversion"
   },
   "cta": {
-    "title": "Ready to Get Started?",
-    "subtitle": "Join leading enterprises already using our AI platform",
-    "button": "Schedule a Demo"
+    "title": "Bereit loszulegen?",
+    "subtitle": "Schließen Sie sich führenden Unternehmen an, die bereits unsere KI-Plattform nutzen",
+    "button": "Demo vereinbaren"
   }
 }
