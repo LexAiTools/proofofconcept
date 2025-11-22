@@ -95,19 +95,19 @@ const Contact = () => {
       </Helmet>
       <Header />
       
-      <section className="pt-20 pb-16">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <section className="pt-24 sm:pt-20 pb-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left Column - Form */}
-            <div className="bg-gradient-to-br from-muted/50 to-background p-8 rounded-2xl border border-border/50">
+            <div className="bg-gradient-to-br from-muted/50 to-background p-4 sm:p-6 lg:p-8 rounded-2xl border border-border/50">
               <div className="mb-8">
-                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
                   {t('contact:title')} <br />
                   <span className="text-transparent bg-clip-text bg-gradient-primary">
                     {t('contact:titleHighlight')}
                   </span> {t('contact:titleEnd')}
                 </h1>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-base sm:text-lg">
                   {t('contact:subtitle')}
                 </p>
               </div>
@@ -188,7 +188,7 @@ const Contact = () => {
               </form>
 
               {/* Features */}
-              <div className="flex flex-wrap gap-6 mt-8 pt-8 border-t border-border/50">
+              <div className="flex flex-wrap gap-4 sm:gap-6 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-border/50">
                 {[
                   t('contact:features.consultation'),
                   t('contact:features.solutions'),
