@@ -1,21 +1,21 @@
 {
-  "title": "Loved by Industry Leaders",
-  "subtitle": "See what our clients say about their transformation journey with CorballyConcepts.",
+  "title": "Von Branchenführern geschätzt",
+  "subtitle": "Erfahren Sie, was unsere Kunden über ihre Transformation mit CorballyConcepts sagen.",
   "testimonials": {
     "sarahChen": {
       "name": "Sarah Chen",
-      "role": "CTO at TechCorp",
-      "content": "CorballyConcepts transformed our data strategy completely. We're now processing 10x more data with half the resources."
+      "role": "CTO bei TechCorp",
+      "content": "CorballyConcepts hat unsere Datenstrategie vollständig transformiert. Wir verarbeiten jetzt 10-mal mehr Daten mit der Hälfte der Ressourcen."
     },
     "michaelRodriguez": {
       "name": "Michael Rodriguez",
-      "role": "VP of Analytics at DataFlow",
-      "content": "The AI insights we get are incredibly accurate. It's like having a team of data scientists working 24/7."
+      "role": "VP of Analytics bei DataFlow",
+      "content": "Die KI-Erkenntnisse, die wir erhalten, sind unglaublich präzise. Es ist, als hätte man ein Team von Data Scientists, das rund um die Uhr arbeitet."
     },
     "jenniferWu": {
       "name": "Jennifer Wu",
-      "role": "CEO at InnovateLabs",
-      "content": "Implementation was seamless and the ROI was visible within weeks. Exactly what we needed for scaling our operations."
+      "role": "CEO bei InnovateLabs",
+      "content": "Die Implementierung verlief reibungslos und der ROI war innerhalb weniger Wochen sichtbar. Genau das, was wir für die Skalierung unserer Abläufe brauchten."
     }
   }
 }
