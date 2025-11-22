@@ -9,11 +9,11 @@
   "quickActions": {
     "needApp": {
       "message": "I need an MVP app, how can I start?",
-      "label": "I need an app"
+      "label": "Where to start?"
     },
     "technologies": {
-      "message": "What technologies do you use to build apps?",
-      "label": "What technologies?"
+      "message": "How does the collaboration process work?",
+      "label": "Collaboration process"
     },
     "pricing": {
       "message": "How much does it cost to build an MVP app?",
