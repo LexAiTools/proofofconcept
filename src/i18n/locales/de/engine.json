@@ -1,25 +1,25 @@
 {
   "meta": {
-    "title": "AI Engine - Powerful NLP & Knowledge Management | Proof of Concept",
-    "description": "Advanced AI engine for technical documentation, knowledge management, and automated support. Natural language processing that understands your business context."
+    "title": "KI-Engine - Leistungsstarke NLP & Wissensmanagement | Proof of Concept",
+    "description": "Fortschrittliche KI-Engine für technische Dokumentation, Wissensmanagement und automatisierten Support. Natürliche Sprachverarbeitung, die Ihren Geschäftskontext versteht."
   },
   "hero": {
-    "title": "Accuracy is everything.",
-    "description": "We optimize kapa for one thing: providing the <strong>most accurate answers</strong> about your product. That system is what we call the <strong>Answer Engine</strong>.",
+    "title": "Genauigkeit ist alles.",
+    "description": "Wir optimieren kapa für eine Sache: die Bereitstellung der <strong>genauesten Antworten</strong> zu Ihrem Produkt. Dieses System nennen wir die <strong>Answer Engine</strong>.",
     "stats": {
       "answers": {
         "value": "+250k",
-        "label": "AI answers generated per month by NestAi.tools."
+        "label": "KI-Antworten werden monatlich von NestAi.tools generiert."
       },
       "companies": {
         "value": "+100",
-        "label": "Companies trust NestAi.tools in production."
+        "label": "Unternehmen vertrauen NestAi.tools im produktiven Einsatz."
       }
     }
   },
   "cta": {
-    "title": "Turn your knowledge base into a production-ready AI assistant",
-    "subtitle": "Request a demo to try NestAi.tools on your data sources today",
-    "button": "Request Demo →"
+    "title": "Verwandeln Sie Ihre Wissensdatenbank in einen produktionsreifen KI-Assistenten",
+    "subtitle": "Fordern Sie eine Demo an, um NestAi.tools noch heute mit Ihren Datenquellen zu testen",
+    "button": "Demo anfordern →"
   }
 }
