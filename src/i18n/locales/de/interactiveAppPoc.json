@@ -9,7 +9,251 @@
     "features": "Features",
     "leads": "Leads",
     "leadType": "Type",
+    "app{
+  "title": "Bestellung: Interaktive App PoC",
+  "subtitle": "Füllen Sie das Formular aus und erhalten Sie eine funktionierende Anwendung",
+  "price": "2100 PLN / 488 EUR",
+  "steps": {
+    "contact": "Kontakt",
+    "problem": "Problem",
+    "audience": "Zielgruppe",
+    "features": "Funktionen",
+    "leads": "Leads",
+    "leadType": "Typ",
     "appType": "App",
+    "screens": "Ansichten",
+    "style": "Stil",
+    "timeline": "Zeitplan"
+  },
+  "step1": {
+    "number": "1",
+    "title": "Wie ist Ihr Name und wie können wir Sie kontaktieren?",
+    "description": "Wir benötigen Ihre Daten, um Ihnen die fertige Anwendung zu senden und während der Entwicklung in Kontakt zu bleiben. Beispiel: Max Mustermann, max@firma.de, +49 123 456 789",
+    "fields": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefonnummer"
+    },
+    "placeholders": {
+      "name": "Max Mustermann",
+      "email": "max@firma.de",
+      "phone": "+49 123 456 789"
+    }
+  },
+  "step2": {
+    "number": "2",
+    "title": "Welches Problem löst Ihre App?",
+    "description": "Beschreiben Sie detailliert, welches spezifische Benutzerproblem Sie lösen möchten. Je mehr Details, desto besser verstehen wir Ihre Anforderungen. Beispiel: \"Unternehmer verlieren durchschnittlich 5 Stunden pro Woche mit der manuellen Erstellung von Rechnungen und der Nachverfolgung von Zahlungen\"",
+    "field": "Problembeschreibung",
+    "placeholder": "Meine App löst das Problem von...",
+    "charCounter": "{{current}}/{{max}} Zeichen",
+    "minChars": "Mindestens 100 Zeichen"
+  },
+  "step3": {
+    "number": "3",
+    "title": "Wer ist Ihr Zielkunde?",
+    "description": "Definieren Sie genau, für wen Ihre App bestimmt ist. Was sind deren Merkmale? Beispiel: \"Kleine Unternehmen mit 5-20 Mitarbeitern\" oder \"Studenten, die sich auf Prüfungen vorbereiten\"",
+    "field": "Zielgruppe",
+    "placeholder": "Meine Kunden sind...",
+    "suggestions": {
+      "title": "Aus Vorschlägen wählen:",
+      "entrepreneurs": "Unternehmer",
+      "students": "Studenten",
+      "parents": "Eltern",
+      "freelancers": "Freiberufler",
+      "b2b": "B2B-Unternehmen",
+      "b2c": "B2C-Verbraucher"
+    }
+  },
+  "step4": {
+    "number": "4",
+    "title": "Welche Funktionen soll die App enthalten?",
+    "description": "Listen Sie alle wichtigen Funktionalitäten auf, die in der App enthalten sein müssen. Markieren Sie die wichtigsten. Beispiel: \"Benutzerregistrierung\", \"Dashboard mit Statistiken\", \"Datenexport als PDF\", \"Online-Zahlungen\", \"Benachrichtigungssystem\"",
+    "fields": {
+      "feature": "Funktion"
+    },
+    "placeholders": {
+      "feature1": "z.B. Benutzerregistrierung",
+      "feature2": "z.B. Daten-Dashboard",
+      "feature3": "z.B. Zahlungssystem",
+      "feature4": "z.B. E-Mail-Benachrichtigungen",
+      "feature5": "z.B. PDF-Export"
+    },
+    "importantLabel": "Am wichtigsten",
+    "addMore": "+ Weitere Funktion hinzufügen",
+    "maxFeatures": "Maximum 6 Funktionen"
+  },
+  "step5": {
+    "number": "5",
+    "title": "Welche Art von Leads möchten Sie sammeln?",
+    "description": "Geben Sie an, welche Kontaktdaten und Kundeninformationen Sie über die App sammeln möchten. Dies ist entscheidend für den späteren Kundenkontakt.",
+    "basicContact": "Grundlegende Kontaktdaten:",
+    "additionalInfo": "Zusätzliche Informationen:",
+    "fields": {
+      "email": "E-Mail",
+      "phone": "Telefonnummer",
+      "company": "Firmenname",
+      "position": "Position",
+      "budget": "Projektbudget",
+      "timeline": "Bevorzugter Zeitplan",
+      "requirements": "Spezifische Anforderungen",
+      "source": "Wie haben Sie von uns erfahren"
+    },
+    "otherLabel": "Weitere zu sammelnde Daten",
+    "otherPlaceholder": "Weitere Informationen, die Sie sammeln möchten..."
+  },
+  "step6": {
+    "number": "6",
+    "title": "Wie soll der Lead-Erfassungsprozess aussehen?",
+    "description": "Wählen Sie aus, wie die App Kontakte von Benutzern sammeln soll. Sie können mehrere Optionen auswählen.",
+    "types": {
+      "contact": {
+        "title": "Einfaches Kontaktformular",
+        "description": "Grundlegendes Formular mit Name, E-Mail und Nachricht"
+      },
+      "registration": {
+        "title": "Benutzerregistrierung",
+        "description": "Vollständige Registrierung mit Kontoerstellung"
+      },
+      "demo": {
+        "title": "Demo-/Beratungstermin",
+        "description": "Terminvereinbarung für Meeting/Präsentation"
+      },
+      "quote": {
+        "title": "Angebotsanfrage",
+        "description": "Detailliertes Formular mit Bedarfs- und Anforderungsbeschreibung"
+      },
+      "subscription": {
+        "title": "Abonnement/Newsletter",
+        "description": "Anmeldung für Newsletter oder Mailingliste"
+      },
+      "other": {
+        "title": "Andere",
+        "description": "Beschreiben Sie Ihre Methode zur Lead-Erfassung"
+      }
+    },
+    "otherLabel": "Beschreiben Sie den Lead-Erfassungsprozess",
+    "otherPlaceholder": "Beschreiben Sie detailliert, wie Sie Leads sammeln möchten..."
+  },
+  "step7": {
+    "number": "7",
+    "title": "Soll die App web- oder mobilbasiert sein?",
+    "description": "Wählen Sie die Plattform, auf der Ihre App laufen soll. Web-Apps funktionieren in Browsern, mobile Apps erfordern Installation.",
+    "types": {
+      "web": {
+        "title": "Webanwendung (Browser)",
+        "description": "Funktioniert auf jedem Gerät mit Browser",
+        "benefit1": "Keine Installation erforderlich",
+        "benefit2": "Zugriff von jedem Gerät"
+      },
+      "mobile": {
+        "title": "Mobile App (iOS/Android)",
+        "description": "Native Look & Feel. Erfordert Installation aus App Store"
+      },
+      "both": {
+        "title": "Beide Versionen (Web + Mobil)",
+        "description": "Maximale Benutzerabdeckung. Höhere Entwicklungskosten"
+      }
+    }
+  },
+  "step8": {
+    "number": "8",
+    "title": "Was sind die Hauptansichten/Bereiche der App?",
+    "description": "Listen Sie alle Ansichten auf, die in der App enthalten sein sollten. Beispiel: \"Startseite\", \"Dashboard\", \"Produktliste\", \"Benutzerprofil\", \"Einstellungen\", \"Bestellhistorie\"",
+    "screenLabel": "Ansicht",
+    "placeholders": {
+      "screen1": "z.B. Startseite / Landing Page",
+      "screen2": "z.B. Daten-Dashboard",
+      "screen3": "z.B. Benutzerprofil",
+      "screen4": "z.B. Produkt-/Dienstleistungsliste",
+      "screen5": "z.B. Kontoeinstellungen"
+    },
+    "descriptionLabel": "Zusätzliche Ansichtsbeschreibung",
+    "descriptionPlaceholder": "Beschreiben Sie detailliert, was auf jeder Ansicht sein sollte...",
+    "addMore": "+ Weitere Ansicht hinzufügen"
+  },
+  "step9": {
+    "number": "9",
+    "title": "Haben Sie visuelle Präferenzen?",
+    "description": "Wählen Sie den Stil, der am besten zu Ihrer App passt. Wenn Sie Markenfarben oder ein Logo haben, geben Sie diese unten an.",
+    "styleLabel": "Visueller Stil",
+    "styles": {
+      "modern": {
+        "title": "Modern",
+        "description": "Klare Linien, Verläufe, Animationen"
+      },
+      "minimal": {
+        "title": "Minimalistisch",
+        "description": "Viel Weißraum, Einfachheit"
+      },
+      "colorful": {
+        "title": "Farbenfroh",
+        "description": "Lebendige Farben, dynamisches Design"
+      },
+      "professional": {
+        "title": "Professionell",
+        "description": "Business-like, elegant, vertrauenswürdig"
+      }
+    },
+    "primaryColorLabel": "Primärfarbe",
+    "secondaryColorLabel": "Sekundärfarbe",
+    "inspirationLabel": "Inspirationsbeispiele (Links)",
+    "inspirationPlaceholder": "Geben Sie Links zu Apps an, die Ihnen gefallen..."
+  },
+  "step10": {
+    "number": "10",
+    "title": "Wann benötigen Sie die fertige App?",
+    "description": "Wir liefern PoC-Apps in der Regel innerhalb von 3-5 Werktagen. Wenn Sie es schneller benötigen oder eine bestimmte Frist haben, teilen Sie uns dies mit.",
+    "options": {
+      "express": "Express (2-3 Tage)",
+      "standard": "Standard (3-5 Tage)",
+      "comfort": "Komfort (7-10 Tage)",
+      "specific": "Ich habe eine bestimmte Frist"
+    },
+    "expressDescription": "Prioritätsentwicklung",
+    "standardDescription": "Empfohlener Zeitrahmen",
+    "comfortDescription": "Keine Eile, mehr Zeit für Beratungen",
+    "selectDate": "Datum wählen",
+    "notesLabel": "Zusätzliche Anmerkungen",
+    "notesPlaceholder": "Gibt es wichtige Termine? (z.B. Investorenpräsentation, Messe, Konferenz)"
+  },
+  "buttons": {
+    "next": "Weiter",
+    "back": "Zurück",
+    "submit": "Bestätigen und Bestellung absenden",
+    "close": "Schließen"
+  },
+  "validation": {
+    "nameRequired": "Vollständiger Name ist erforderlich",
+    "nameMin": "Mindestens 2 Zeichen",
+    "emailRequired": "E-Mail ist erforderlich",
+    "emailInvalid": "Ungültige E-Mail-Adresse",
+    "phoneRequired": "Telefonnummer ist erforderlich",
+    "phoneInvalid": "Ungültige Telefonnummer",
+    "problemRequired": "Problembeschreibung ist erforderlich",
+    "problemMin": "Mindestens 100 Zeichen",
+    "problemMax": "Maximum 1000 Zeichen",
+    "audienceRequired": "Zielgruppe ist erforderlich",
+    "audienceMin": "Mindestens 20 Zeichen",
+    "featuresMin": "Geben Sie mindestens 3 Funktionen an (min. 5 Zeichen pro Funktion)",
+    "leadsRequired": "Wählen Sie mindestens eine Art von zu sammelnden Daten",
+    "leadTypeRequired": "Wählen Sie den Typ des Lead-Erfassungsprozesses",
+    "leadTypeOtherRequired": "Beschreiben Sie den Lead-Erfassungsprozess",
+    "appTypeRequired": "Wählen Sie den App-Typ",
+    "screensMin": "Geben Sie mindestens 3 Ansichten an (min. 5 Zeichen pro Ansicht)",
+    "styleRequired": "Wählen Sie einen visuellen Stil",
+    "timelineRequired": "Wählen Sie den bevorzugten Zeitrahmen",
+    "dateRequired": "Wählen Sie ein bestimmtes Datum"
+  },
+  "success": {
+    "title": "Vielen Dank für Ihre Bestellung!",
+    "message": "Ihre Bestellung wurde übermittelt. Wir werden uns bald bei Ihnen melden."
+  },
+  "error": {
+    "title": "Ein Fehler ist aufgetreten",
+    "message": "Die Bestellung konnte nicht übermittelt werden. Bitte versuchen Sie es erneut."
+  }
+}ype": "App",
     "screens": "Screens",
     "style": "Style",
     "timeline": "Timeline"
