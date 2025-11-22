@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "privacyPolicy": {
+      "title": "Privacy Policy - Data Protection & Security | Proof of Concept",
+      "description": "Our privacy policy explains how we collect, use, and protect your personal data. GDPR compliant. Enterprise-grade security and data protection standards."
+    },
+    "termsOfService": {
+      "title": "Terms of Service - Legal Terms & Conditions | Proof of Concept",
+      "description": "Read our terms of service covering usage license, intellectual property, liability, and user responsibilities. Clear, transparent legal terms."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Learn more about our mission and team"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the plan that's right for you"
+  },
+  "useCases": {
+    "title": "Use Cases",
+    "subtitle": "See how our AI solutions can help your business"
+  },
+  "engine": {
+    "title": "AI Engine",
+    "subtitle": "Explore our powerful AI engine capabilities"
+  },
+  "chat": {
+    "title": "AI Chat",
+    "subtitle": "Chat with our AI assistant"
+  },
+  "podcast": {
+    "title": "Podcasts",
+    "subtitle": "Listen to our latest episodes"
+  },
+  "documents": {
+    "title": "Documents",
+    "subtitle": "Browse our resource library"
+  },
+  "bookDemo": {
+    "title": "Book a Demo",
+    "subtitle": "Schedule a personalized demonstration"
+  },
+  "signin": {
+    "title": "Sign In",
+    "subtitle": "Access your account",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "forgotPassword": "Forgot Password?"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Oops! Page not found",
+    "button": "Return to Home"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Order: Interactive App PoC",
+  "subtitle": "Fill out the form and get a working application",
+  "price": "2100 PLN / 488 EUR",
+  "steps": {
+    "contact": "Contact",
+    "problem": "Problem",
+    "audience": "Audience",
+    "features": "Features",
+    "leads": "Leads",
+    "leadType": "Type",
+    "appType": "App",
+    "screens": "Screens",
+    "style": "Style",
+    "timeline": "Timeline"
+  },
+  "buttons": {
+    "next": "Next",
+    "back": "Back",
+    "submit": "Confirm and submit order",
+    "close": "Close"
+  },
+  "validation": {
+    "nameRequired": "Full name is required",
+    "nameMin": "Minimum 2 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address"
+  },
+  "success": {
+    "title": "Thank you for your order!",
+    "message": "Your order has been submitted. We'll contact you soon."
+  },
+  "error": {
+    "title": "An error occurred",
+    "message": "Failed to submit order. Please try again."
+  }
+}

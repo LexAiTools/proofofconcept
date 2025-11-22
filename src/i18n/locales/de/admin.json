@@ -1,0 +1,130 @@
+{
+  "dashboard": {
+    "welcome": "Welcome to Admin Panel",
+    "subtitle": "Manage leads and users of your platform",
+    "loading": "Loading dashboard..."
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "leads": "Leads",
+    "conversations": "Conversations",
+    "documents": "Documents",
+    "podcasts": "Podcasts",
+    "logout": "Logout"
+  },
+  "stats": {
+    "allLeads": "All Leads",
+    "newLeads": "New Leads",
+    "converted": "Converted",
+    "thisMonth": "This Month",
+    "fromLastMonth": "from last month"
+  },
+  "leads": {
+    "title": "Recent Leads",
+    "viewAll": "View All Leads",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service",
+      "date": "Date",
+      "time": "Time",
+      "status": "Status",
+      "comments": "Comments",
+      "actions": "Actions"
+    },
+    "status": {
+      "new": "New",
+      "contacted": "Contacted",
+      "qualified": "Qualified",
+      "converted": "Converted",
+      "lost": "Lost"
+    },
+    "empty": "No leads found"
+  },
+  "documents": {
+    "title": "Document Management",
+    "upload": "Upload Document",
+    "uploadSuccess": "Document uploaded successfully",
+    "uploadError": "Error uploading document",
+    "deleteSuccess": "Document deleted successfully",
+    "deleteError": "Error deleting document",
+    "table": {
+      "title": "Title",
+      "category": "Category",
+      "uploadedAt": "Uploaded",
+      "actions": "Actions"
+    },
+    "form": {
+      "title": "Document Title",
+      "category": "Category",
+      "file": "Select File",
+      "selectCategory": "Select a category"
+    },
+    "categories": {
+      "whitepaper": "Whitepaper",
+      "caseStudy": "Case Study",
+      "guide": "Guide",
+      "technical": "Technical Documentation"
+    }
+  },
+  "podcasts": {
+    "title": "Podcast Management",
+    "upload": "Upload Podcast",
+    "uploadSuccess": "Podcast uploaded successfully",
+    "uploadError": "Error uploading podcast",
+    "deleteSuccess": "Podcast deleted successfully",
+    "deleteError": "Error deleting podcast"
+  },
+  "conversations": {
+    "title": "Chat Conversations",
+    "stats": {
+      "total": "Total Conversations",
+      "withLeads": "With Leads",
+      "withoutLeads": "Without Leads",
+      "today": "Today"
+    },
+    "table": {
+      "date": "Date",
+      "contact": "Contact",
+      "messages": "Messages",
+      "leadStatus": "Lead",
+      "actions": "Actions",
+      "viewTranscript": "View Transcript",
+      "linkToLead": "Link to Lead",
+      "viewLead": "View Lead"
+    },
+    "status": {
+      "withLead": "With Lead",
+      "withoutLead": "Without Lead"
+    },
+    "transcript": {
+      "title": "Conversation Transcript",
+      "user": "User",
+      "assistant": "Assistant",
+      "noMessages": "No messages"
+    }
+  },
+  "waitlist": {
+    "title": "Waitlist",
+    "stats": {
+      "total": "Signed up (DB)",
+      "displayed": "Displayed count",
+      "spotsLeft": "Spots left",
+      "today": "Today"
+    },
+    "table": {
+      "email": "Email",
+      "source": "Source",
+      "date": "Signed up",
+      "language": "Language",
+      "actions": "Actions"
+    },
+    "export": "Export CSV",
+    "deleteConfirm": "Are you sure you want to delete this entry?",
+    "deleteSuccess": "Entry deleted",
+    "deleteError": "Error deleting",
+    "exportSuccess": "List exported",
+    "empty": "No entries"
+  }
+}

@@ -46,6 +46,28 @@ import plCompletePackagePoc from './locales/pl/completePackagePoc.json';
 import plProfessionalWebsitePoc from './locales/pl/professionalWebsitePoc.json';
 import plPodcast from './locales/pl/podcast.json';
 
+import deCommon from './locales/de/common.json';
+import deHome from './locales/de/home.json';
+import deForms from './locales/de/forms.json';
+import deAdmin from './locales/de/admin.json';
+import deMessages from './locales/de/messages.json';
+import dePages from './locales/de/pages.json';
+import deAbout from './locales/de/about.json';
+import deTestimonials from './locales/de/testimonials.json';
+import deContact from './locales/de/contact.json';
+import dePricing from './locales/de/pricing.json';
+import deUseCases from './locales/de/useCases.json';
+import deBookDemo from './locales/de/bookDemo.json';
+import deEngine from './locales/de/engine.json';
+import deChat from './locales/de/chat.json';
+import deLeads from './locales/de/leads.json';
+import dePoc from './locales/de/poc.json';
+import deQuickStartPoc from './locales/de/quickStartPoc.json';
+import deInteractiveAppPoc from './locales/de/interactiveAppPoc.json';
+import deCompletePackagePoc from './locales/de/completePackagePoc.json';
+import deProfessionalWebsitePoc from './locales/de/professionalWebsitePoc.json';
+import dePodcast from './locales/de/podcast.json';
+
 const resources = {
   en: {
     common: enCommon,
@@ -92,6 +114,29 @@ const resources = {
     completePackagePoc: plCompletePackagePoc,
     professionalWebsitePoc: plProfessionalWebsitePoc,
     podcast: plPodcast,
+  },
+  de: {
+    common: deCommon,
+    home: deHome,
+    forms: deForms,
+    admin: deAdmin,
+    messages: deMessages,
+    pages: dePages,
+    about: deAbout,
+    testimonials: deTestimonials,
+    contact: deContact,
+    pricing: dePricing,
+    useCases: deUseCases,
+    bookDemo: deBookDemo,
+    engine: deEngine,
+    chat: deChat,
+    leads: deLeads,
+    poc: dePoc,
+    quickStartPoc: deQuickStartPoc,
+    interactiveAppPoc: deInteractiveAppPoc,
+    completePackagePoc: deCompletePackagePoc,
+    professionalWebsitePoc: deProfessionalWebsitePoc,
+    podcast: dePodcast,
   },
 };
 

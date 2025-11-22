@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Use Cases - Real-World AI Applications | Proof of Concept",
+    "description": "Explore AI use cases: Ask AI, Ticket Deflector, Internal Tech Assistant. See how enterprises use AI to improve efficiency, reduce costs, and enhance customer experience."
+  },
+  "trusted": {
+    "title": "Trusted solutions",
+    "titleLine2": "for leading",
+    "titleLine3": "teams"
+  },
+  "companies": ["Logitech", "OpenAI", "Docker", "Reddit", "Juniper", "Amplitude", "Monday.com", "CircleCI", "Netlify"],
+  "hero": {
+    "title": "The same RAG",
+    "titleLine2": "used by top AI",
+    "titleLine3": "practitioners.",
+    "cta": "Book Demo"
+  },
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Rapid prototyping",
+        "description": "Transform an idea into a working prototype in hours, not weeks. Our RAG enables immediate concept testing with real data, eliminating the need for time-consuming coding from scratch. Validate business assumptions before investing in full development."
+      },
+      {
+        "title": "Fast application interface development",
+        "description": "Create intelligent conversational interfaces without advanced ML knowledge. Ready-made components and intuitive API enable AI integration with your application in minutes. From chatbots to internal assistants - all in one tool."
+      }
+    ]
+  },
+  "deployment": {
+    "title": "Deploy PoC where your",
+    "titleLine2": "customers and team members",
+    "titleLine3": "will ask questions",
+    "subtitle": "Instant technical answers that increase your company's value.",
+    "cta": "Start Free Trial"
+  }
+}

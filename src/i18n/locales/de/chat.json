@@ -1,0 +1,30 @@
+{
+  "welcome": {
+    "title": "Chat with our assistant",
+    "description": "Ask about our services, technologies, cooperation process, or pricing. We'll help you understand how we can bring your MVP project to life together."
+  },
+  "input": {
+    "placeholder": "Type your message..."
+  },
+  "quickActions": {
+    "needApp": {
+      "message": "I need an MVP app, how can I start?",
+      "label": "I need an app"
+    },
+    "technologies": {
+      "message": "What technologies do you use to build apps?",
+      "label": "What technologies?"
+    },
+    "pricing": {
+      "message": "How much does it cost to build an MVP app?",
+      "label": "How much does it cost?"
+    },
+    "timeline": {
+      "message": "How long does it take to build an MVP app?",
+      "label": "How long does it take?"
+    }
+  },
+  "errors": {
+    "general": "An error occurred"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "AI Engine - Powerful NLP & Knowledge Management | Proof of Concept",
+    "description": "Advanced AI engine for technical documentation, knowledge management, and automated support. Natural language processing that understands your business context."
+  },
+  "hero": {
+    "title": "Accuracy is everything.",
+    "description": "We optimize kapa for one thing: providing the <strong>most accurate answers</strong> about your product. That system is what we call the <strong>Answer Engine</strong>.",
+    "stats": {
+      "answers": {
+        "value": "+250k",
+        "label": "AI answers generated per month by NestAi.tools."
+      },
+      "companies": {
+        "value": "+100",
+        "label": "Companies trust NestAi.tools in production."
+      }
+    }
+  },
+  "cta": {
+    "title": "Turn your knowledge base into a production-ready AI assistant",
+    "subtitle": "Request a demo to try NestAi.tools on your data sources today",
+    "button": "Request Demo →"
+  }
+}
