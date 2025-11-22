@@ -1,64 +1,64 @@
 {
   "meta": {
-    "title": "Use Cases - Real-World AI Applications | Proof of Concept",
-    "description": "Explore AI use cases: Ask AI, Ticket Deflector, Internal Tech Assistant. See how enterprises use AI to improve efficiency, reduce costs, and enhance customer experience."
+    "title": "Anwendungsfälle - KI-Anwendungen aus der Praxis | Proof of Concept",
+    "description": "Entdecken Sie KI-Anwendungsfälle: Ask AI, Ticket Deflector, Interner Tech-Assistent. Erfahren Sie, wie Unternehmen KI nutzen, um Effizienz zu steigern, Kosten zu senken und die Customer Experience zu verbessern."
   },
   "trusted": {
-    "title": "Trusted solutions",
-    "titleLine2": "for leading",
-    "titleLine3": "teams"
+    "title": "Vertrauenswürdige Lösungen",
+    "titleLine2": "für führende",
+    "titleLine3": "Teams"
   },
   "companies": ["Logitech", "OpenAI", "Docker", "Reddit", "Juniper", "Amplitude", "Monday.com", "CircleCI", "Netlify"],
   "hero": {
-    "title": "The same RAG",
-    "titleLine2": "used by top AI",
-    "titleLine3": "practitioners.",
-    "cta": "Book Demo"
+    "title": "Das gleiche RAG,",
+    "titleLine2": "das von führenden",
+    "titleLine3": "KI-Experten genutzt wird.",
+    "cta": "Demo buchen"
   },
   "applications": {
-    "title": "Applications",
+    "title": "Anwendungen",
     "items": [
       {
-        "title": "Rapid prototyping",
-        "description": "Transform an idea into a working prototype in hours, not weeks. Our RAG enables immediate concept testing with real data, eliminating the need for time-consuming coding from scratch. Validate business assumptions before investing in full development."
+        "title": "Schnelles Prototyping",
+        "description": "Verwandeln Sie eine Idee in einen funktionierenden Prototyp in Stunden, nicht Wochen. Unser RAG ermöglicht sofortiges Konzepttesten mit echten Daten und eliminiert zeitaufwendiges Programmieren von Grund auf. Validieren Sie Geschäftsannahmen, bevor Sie in die vollständige Entwicklung investieren."
       },
       {
-        "title": "Fast application interface development",
-        "description": "Create intelligent conversational interfaces without advanced ML knowledge. Ready-made components and intuitive API enable AI integration with your application in minutes. From chatbots to internal assistants - all in one tool."
+        "title": "Schnelle Entwicklung von Anwendungsschnittstellen",
+        "description": "Erstellen Sie intelligente Konversationsschnittstellen ohne fortgeschrittenes ML-Wissen. Vorgefertigte Komponenten und intuitive API ermöglichen KI-Integration in Ihre Anwendung in Minuten. Von Chatbots bis zu internen Assistenten - alles in einem Tool."
       }
     ]
   },
   "deployment": {
-    "title": "Deploy PoC where your",
-    "titleLine2": "customers and team members",
-    "titleLine3": "will ask questions",
-    "subtitle": "Instant technical answers that increase your company's value.",
-    "cta": "Start Free Trial"
+    "title": "Setzen Sie PoC dort ein,",
+    "titleLine2": "wo Ihre Kunden und",
+    "titleLine3": "Teammitglieder Fragen stellen",
+    "subtitle": "Sofortige technische Antworten, die den Wert Ihres Unternehmens steigern.",
+    "cta": "Kostenlose Testversion starten"
   },
   "cases": [
     {
-      "subtitle": "External Data",
+      "subtitle": "Externe Daten",
       "title": "Ask AI",
-      "description": "Embed AI chat in docs and products",
-      "details": "Ready-made, configurable website widgets, Slack/Discord bots, and API SDKs for building custom solutions",
-      "stat": "+90% faster user onboarding, higher CSAT, lower user churn",
-      "chatQuestion": "Why is user onboarding +90% faster with higher CSAT and lower user churn?"
+      "description": "KI-Chat in Docs und Produkte einbetten",
+      "details": "Vorgefertigte, konfigurierbare Website-Widgets, Slack/Discord-Bots und API-SDKs zum Erstellen individueller Lösungen",
+      "stat": "+90% schnelleres User-Onboarding, höhere CSAT, geringere User-Abwanderung",
+      "chatQuestion": "Warum ist das User-Onboarding mit höherer CSAT und geringerer User-Abwanderung um +90% schneller?"
     },
     {
-      "subtitle": "Internal Data",
+      "subtitle": "Interne Daten",
       "title": "Ticket Deflector",
-      "description": "Instantly reduce support tickets",
-      "details": "Simple 1-line script integration with existing support form",
-      "stat": "20-40% of incoming support tickets are deflected",
-      "chatQuestion": "Why are customers better served with your RAG and support tickets are deflected?"
+      "description": "Support-Tickets sofort reduzieren",
+      "details": "Einfache 1-Zeilen-Skript-Integration mit bestehendem Support-Formular",
+      "stat": "20-40% der eingehenden Support-Tickets werden abgefangen",
+      "chatQuestion": "Warum werden Kunden mit Ihrem RAG besser bedient und Support-Tickets abgefangen?"
     },
     {
-      "subtitle": "Internal Data",
-      "title": "Internal Technical Assistant",
-      "description": "Internal chat optimized for teams",
-      "details": "Secure chat app that has access to your internal sources",
-      "stat": "6 hours saved per AE, SDRs, Support, and CSMs",
-      "chatQuestion": "How does a chat application with access to our internal sources benefit our team and why?"
+      "subtitle": "Interne Daten",
+      "title": "Interner technischer Assistent",
+      "description": "Interner Chat optimiert für Teams",
+      "details": "Sichere Chat-App mit Zugriff auf Ihre internen Quellen",
+      "stat": "6 Stunden gespart pro AE, SDR, Support und CSM",
+      "chatQuestion": "Wie profitiert unser Team von einer Chat-Anwendung mit Zugriff auf unsere internen Quellen und warum?"
     }
   ]
 }
