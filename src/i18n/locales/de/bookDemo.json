@@ -1,126 +1,114 @@
 {
   "meta": {
-    "title": "Book a Demo - WordPress AI Plugin | Proof of Concept",
-    "description": "Get a personalized demo of our WordPress AI plugin. Integrate advanced AI chat, RAG knowledge base, and credit management into your WordPress site."
+    "title": "Demo buchen - WordPress AI Plugin | Proof of Concept",
+    "description": "Erhalten Sie eine personalisierte Demo unseres WordPress AI Plugins. Integrieren Sie erweiterten AI Chat, RAG-Wissensdatenbank und Credit-Management in Ihre WordPress-Website."
   },
   "hero": {
-    "title": "Experience Our AI",
+    "title": "Erleben Sie unser AI",
     "titleHighlight": "WordPress Plugin",
-    "subtitle": "Transform your WordPress site with our powerful AI assistant. Download, install, and start using advanced AI capabilities in minutes.",
-    "downloadButton": "Download Plugin",
-    "documentationButton": "View Documentation"
+    "subtitle": "Transformieren Sie Ihre WordPress-Website mit unserem leistungsstarken AI-Assistenten. Herunterladen, installieren und erweiterte AI-Funktionen in Minuten nutzen.",
+    "downloadButton": "Plugin herunterladen",
+    "documentationButton": "Dokumentation anzeigen"
   },
   "features": {
-    "title": "WordPress Plugin Features",
-    "subtitle": "Our NestAI WordPress plugin brings enterprise-grade AI capabilities directly to your website with easy setup and powerful features.",
+    "title": "WordPress Plugin Funktionen",
+    "subtitle": "Unser NestAI WordPress Plugin bringt AI-Funktionen auf Enterprise-Niveau direkt auf Ihre Website mit einfacher Einrichtung und leistungsstarken Features.",
     "integration": {
-      "title": "Integration Settings",
-      "description": "Configure your AI assistant with custom settings including system name, API key integration, and response style preferences.",
-      "items": [
-        "Custom assistant name",
-        "Secure API key management",
-        "Response style customization"
-      ]
+      "title": "Integrationseinstellungen",
+      "description": "Konfigurieren Sie Ihren AI-Assistenten mit benutzerdefinierten Einstellungen wie Systemname, API-Schlüssel-Integration und Präferenzen für den Antwortstil.",
+      "items": ["Individueller Assistentenname", "Sichere API-Schlüsselverwaltung", "Anpassung des Antwortstils"]
     },
     "credits": {
-      "title": "Credit Management",
-      "description": "Monitor your AI usage with real-time credit tracking and flexible top-up packages to suit your needs.",
-      "available": "Available Credits",
-      "credits": "credits"
+      "title": "Credit-Verwaltung",
+      "description": "Überwachen Sie Ihre AI-Nutzung mit Echtzeit-Credit-Tracking und flexiblen Aufladepaketen für Ihre Bedürfnisse.",
+      "available": "Verfügbare Credits",
+      "credits": "Credits"
     },
     "knowledgeBase": {
-      "title": "Knowledge Base RAG",
-      "description": "Upload and manage your knowledge base with support for multiple file formats and intelligent document processing.",
-      "items": [
-        "PDF, TXT, CSV, DOCX, XLSX",
-        "Drag & drop upload",
-        "WordPress data integration"
-      ]
+      "title": "Wissensdatenbank RAG",
+      "description": "Laden Sie Ihre Wissensdatenbank hoch und verwalten Sie sie mit Unterstützung für mehrere Dateiformate und intelligenter Dokumentenverarbeitung.",
+      "items": ["PDF, TXT, CSV, DOCX, XLSX", "Drag & Drop Upload", "WordPress-Datenintegration"]
     }
   },
   "installation": {
-    "title": "Easy Installation Process",
+    "title": "Einfacher Installationsprozess",
     "steps": [
       {
-        "title": "Download the Plugin",
-        "description": "Download the NestAI WordPress plugin from our secure server. The plugin is regularly updated with new features and security improvements."
+        "title": "Plugin herunterladen",
+        "description": "Laden Sie das NestAI WordPress Plugin von unserem sicheren Server herunter. Das Plugin wird regelmäßig mit neuen Funktionen und Sicherheitsverbesserungen aktualisiert."
       },
       {
-        "title": "Install in WordPress",
-        "description": "Upload the plugin through your WordPress admin panel or via FTP. Activate it with one click and access the configuration panel."
+        "title": "In WordPress installieren",
+        "description": "Laden Sie das Plugin über Ihr WordPress-Admin-Panel oder per FTP hoch. Aktivieren Sie es mit einem Klick und greifen Sie auf das Konfigurationspanel zu."
       },
       {
-        "title": "Configure Your AI",
-        "description": "Set up your AI assistant name, add your API key, and customize the response style to match your brand voice and requirements."
+        "title": "Ihre AI konfigurieren",
+        "description": "Richten Sie den Namen Ihres AI-Assistenten ein, fügen Sie Ihren API-Schlüssel hinzu und passen Sie den Antwortstil an Ihre Marke und Anforderungen an."
       },
       {
-        "title": "Start Using AI",
-        "description": "Begin leveraging AI capabilities immediately. Upload documents to your knowledge base and start providing intelligent responses to your users."
+        "title": "AI nutzen",
+        "description": "Nutzen Sie AI-Funktionen sofort. Laden Sie Dokumente in Ihre Wissensdatenbank hoch und beginnen Sie, Ihren Nutzern intelligente Antworten zu liefern."
       }
     ]
   },
   "demoForm": {
-    "title": "Start Using AI in Your",
-    "titleHighlight": "Content Today",
-    "subtitle": "Request a personalized demo and see how our AI can transform your WordPress site with intelligent content generation and user interactions.",
+    "title": "Nutzen Sie AI in Ihrem",
+    "titleHighlight": "Content noch heute",
+    "subtitle": "Fordern Sie eine personalisierte Demo an und sehen Sie, wie unsere AI Ihre WordPress-Website mit intelligenter Content-Generierung und Nutzerinteraktionen transformieren kann.",
     "fields": {
       "dataSources": {
-        "label": "What data sources do you want to use?",
-        "placeholder": "Documentation, help center, reports, wiki etc."
+        "label": "Welche Datenquellen möchten Sie nutzen?",
+        "placeholder": "Dokumentation, Hilfe-Center, Berichte, Wiki etc."
       },
       "email": {
-        "label": "Business email address",
-        "placeholder": "Your business email address"
+        "label": "Geschäftliche E-Mail-Adresse",
+        "placeholder": "Ihre geschäftliche E-Mail-Adresse"
       },
       "company": {
-        "label": "Company name",
-        "placeholder": "Your company name"
+        "label": "Firmenname",
+        "placeholder": "Ihr Firmenname"
       },
       "requirements": {
-        "label": "Additional requirements",
-        "placeholder": "Tell us about your specific needs and use cases..."
+        "label": "Zusätzliche Anforderungen",
+        "placeholder": "Erzählen Sie uns von Ihren spezifischen Bedürfnissen und Anwendungsfällen..."
       }
     },
-    "submit": "Request Demo & Proof-of-Concept",
-    "benefits": [
-      "7-day free trial",
-      "Full content access",
-      "SOC II compliant"
-    ],
+    "submit": "Demo & Proof-of-Concept anfordern",
+    "benefits": ["7 Tage kostenlose Testversion", "Voller Content-Zugang", "SOC II konform"],
     "privacy": {
-      "text": "By clicking \"Request Demo\", you agree to the processing of your data in accordance with our",
-      "link": "Privacy Policy",
-      "suffix": "for marketing purposes."
+      "text": "Mit Klick auf \"Demo anfordern\" stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer",
+      "link": "Datenschutzerklärung",
+      "suffix": "für Marketingzwecke zu."
     }
   },
   "messages": {
-    "success": "Thank you! We will contact you shortly.",
-    "error": "An error occurred. Please try again."
+    "success": "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
   },
   "waitlist": {
-    "title": "Join the Waitlist",
-    "subtitle": "Get early access to our WordPress AI plugin",
-    "info": "Those who sign up will receive the plugin for free first. Limited spots available!",
+    "title": "Der Warteliste beitreten",
+    "subtitle": "Erhalten Sie frühen Zugang zu unserem WordPress AI Plugin",
+    "info": "Angemeldete erhalten das Plugin zuerst kostenlos. Begrenzte Plätze verfügbar!",
     "counter": {
       "max": "Max",
-      "signedUp": "Signed up",
-      "spotsLeft": "spots left"
+      "signedUp": "Angemeldet",
+      "spotsLeft": "Plätze übrig"
     },
     "form": {
-      "email": "Your email address",
-      "emailPlaceholder": "name@company.com",
-      "submit": "Join Waitlist",
-      "submitting": "Joining..."
+      "email": "Ihre E-Mail-Adresse",
+      "emailPlaceholder": "name@firma.de",
+      "submit": "Warteliste beitreten",
+      "submitting": "Wird angemeldet..."
     },
     "success": {
-      "title": "You're on the list! 🎉",
-      "message": "Thank you for joining our waitlist. We'll notify you as soon as the plugin is available.",
-      "reminder": "Check your inbox for confirmation."
+      "title": "Sie sind auf der Liste! 🎉",
+      "message": "Vielen Dank für Ihre Anmeldung zur Warteliste. Wir benachrichtigen Sie, sobald das Plugin verfügbar ist.",
+      "reminder": "Prüfen Sie Ihren Posteingang für die Bestätigung."
     },
     "errors": {
-      "invalidEmail": "Please enter a valid email address",
-      "alreadyRegistered": "This email is already on the waitlist",
-      "failed": "Failed to join waitlist. Please try again."
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "alreadyRegistered": "Diese E-Mail ist bereits auf der Warteliste",
+      "failed": "Beitritt zur Warteliste fehlgeschlagen. Bitte versuchen Sie es erneut."
     }
   }
 }
