@@ -1,19 +1,19 @@
 {
   "hero": {
-    "title": "Discover the",
+    "title": "Entdecken Sie den",
     "titleHighlight": "Proof of Concept",
-    "description": "Join us for conversations with tech industry visionaries who transform ideas into reality. Discover stories of innovation, challenges, and success from leaders shaping the future."
+    "description": "Begleiten Sie uns bei Gesprächen mit Visionären der Tech-Branche, die Ideen in die Realität umsetzen. Entdecken Sie Geschichten von Innovation, Herausforderungen und Erfolg von Führungskräften, die die Zukunft gestalten."
   },
   "episode": {
     "badge": "Episode #",
-    "watchButton": "Watch Episode",
-    "host": "Host",
-    "guest": "Guest",
-    "date": "Date"
+    "watchButton": "Episode ansehen",
+    "host": "Moderator",
+    "guest": "Gast",
+    "date": "Datum"
   },
   "cta": {
-    "title": "Start improving your organization's developer experience",
-    "description": "NestAi.tools is a platform that streamlines communication with technical documentation and provides intelligent knowledge management tools for development teams.",
-    "button": "Request Access"
+    "title": "Beginnen Sie damit, die Developer Experience Ihrer Organisation zu verbessern",
+    "description": "NestAi.tools ist eine Plattform, die die Kommunikation mit technischer Dokumentation optimiert und intelligente Wissensmanagement-Tools für Entwicklungsteams bereitstellt.",
+    "button": "Zugang anfordern"
   }
 }
