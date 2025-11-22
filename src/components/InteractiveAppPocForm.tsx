@@ -820,7 +820,7 @@ export const InteractiveAppPocForm = ({ children }: InteractiveAppPocFormProps) 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-7xl w-[90vw] max-h-[90vh] overflow-y-auto p-0">
+      <DialogContent className="max-w-7xl w-[95vw] sm:w-[90vw] lg:w-full max-h-[90vh] overflow-y-auto p-0 mx-2 sm:mx-4">
         <div className="relative">
           <button
             onClick={handleClose}

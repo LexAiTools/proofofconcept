@@ -9,12 +9,12 @@ export const CTA = () => {
   
   return (
     <section className="py-24 bg-gradient-secondary">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 break-words px-2">
             {t('cta.title')}
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-12 leading-relaxed px-2">
             {t('cta.subtitle')}
           </p>
           

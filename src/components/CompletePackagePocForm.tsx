@@ -1650,7 +1650,7 @@ export const CompletePackagePocForm = ({ children }: CompletePackagePocFormProps
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-6xl w-[90vw] sm:w-full p-0 overflow-hidden max-h-[95vh] sm:max-h-[90vh]">
+      <DialogContent className="max-w-6xl w-[95vw] sm:w-[90vw] lg:w-full p-0 overflow-hidden max-h-[95vh] sm:max-h-[90vh] mx-2 sm:mx-4">
         <div className="flex flex-col lg:grid lg:grid-cols-2 h-full max-h-[95vh] sm:max-h-[90vh] w-full max-w-full overflow-x-hidden">
           
           {renderLeftContent()}

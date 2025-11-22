@@ -39,20 +39,20 @@ export const Footer = () => {
   
   return (
     <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">P</span>
               </div>
-              <span className="text-xl font-bold text-foreground">ProofOfConcepts</span>
+              <span className="text-xl font-bold text-foreground break-words">ProofOfConcepts</span>
             </div>
             <p className="text-muted-foreground">
               Transforming businesses with intelligent AI solutions that deliver real results.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               <a 
                 href="https://www.youtube.com/@webConceptsAI" 
                 target="_blank" 
@@ -141,11 +141,11 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-muted-foreground text-sm">
+        <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-muted-foreground text-sm text-center sm:text-left">
             © 2024 ProofOfConcepts. {t('footer.copyright')}
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 mt-4 md:mt-0 items-center">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 items-center justify-center sm:justify-end">
             <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t('footer.legalLinks.privacy')}
             </Link>

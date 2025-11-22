@@ -182,10 +182,10 @@ const UslugaPoc = () => {
                     </Button>
                   </QuickStartPocForm>
                   <Select onValueChange={(value) => window.open(value, '_blank')}>
-                    <SelectTrigger className="w-full sm:w-auto h-11 border-input bg-background hover:bg-accent transition-colors">
+                    <SelectTrigger className="w-full sm:w-auto h-11 border-input bg-background hover:bg-accent transition-colors max-w-full">
                       <SelectValue placeholder={t('services.quickStart.example')} />
                     </SelectTrigger>
-                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border">
+                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border z-50">
                       <SelectItem 
                         value="https://kolejkowo.corballyconcepts.com/"
                         className="cursor-pointer hover:bg-accent"
@@ -246,10 +246,10 @@ const UslugaPoc = () => {
                     </Button>
                   </InteractiveAppPocForm>
                   <Select onValueChange={(value) => window.open(value, '_blank')}>
-                    <SelectTrigger className="w-full sm:w-auto h-11 border-input bg-background hover:bg-accent transition-colors">
+                    <SelectTrigger className="w-full sm:w-auto h-11 border-input bg-background hover:bg-accent transition-colors max-w-full">
                       <SelectValue placeholder={t('services.interactiveApp.example')} />
                     </SelectTrigger>
-                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border">
+                    <SelectContent className="bg-background/95 backdrop-blur-sm border-border z-50">
                       <SelectItem 
                         value="https://developer-corballyconcepts.lovable.app"
                         className="cursor-pointer hover:bg-accent"
@@ -312,7 +312,7 @@ const UslugaPoc = () => {
                 </Button>
               </CompletePackagePocForm>
                   <Select onValueChange={(value) => window.open(value, '_blank')}>
-                    <SelectTrigger className="w-full sm:w-auto h-11 bg-glass backdrop-blur-sm border-white/20 text-primary-foreground hover:bg-white/10 transition-colors">
+                    <SelectTrigger className="w-full sm:w-auto h-11 bg-glass backdrop-blur-sm border-white/20 text-primary-foreground hover:bg-white/10 transition-colors max-w-full">
                       <SelectValue placeholder={t('services.completePackage.example')} />
                     </SelectTrigger>
                     <SelectContent className="bg-background/95 backdrop-blur-sm border-border z-50">
