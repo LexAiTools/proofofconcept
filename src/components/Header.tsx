@@ -24,42 +24,42 @@ export const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-8">
+            <Link to="/use-cases" className="text-sm xl:text-base text-muted-foreground hover:text-foreground transition-colors truncate">
               {t('nav.useCases')}
             </Link>
-            <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/pricing" className="text-sm xl:text-base text-muted-foreground hover:text-foreground transition-colors truncate">
               {t('nav.pricing')}
             </Link>
-            <Link to="/engine" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/engine" className="text-sm xl:text-base text-muted-foreground hover:text-foreground transition-colors truncate">
               {t('nav.engine')}
             </Link>
-            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/about" className="text-sm xl:text-base text-muted-foreground hover:text-foreground transition-colors truncate">
               {t('nav.about')}
             </Link>
-            <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/contact" className="text-sm xl:text-base text-muted-foreground hover:text-foreground transition-colors truncate">
               {t('nav.contact')}
             </Link>
-            <Link to="/chat" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/chat" className="text-sm xl:text-base text-muted-foreground hover:text-foreground transition-colors truncate">
               {t('nav.chat')}
             </Link>
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3">
             <ThemeSwitcher />
             <LanguageSwitcher />
             <Button 
               variant="ghost" 
               onClick={() => navigate('/usluga-poc')}
-              className="flex-shrink-0"
+              className="text-sm xl:text-base flex-shrink-0"
             >
               POC
             </Button>
             <Button 
               variant="default" 
               onClick={() => navigate('/book-demo')}
-              className="flex-shrink-0"
+              className="text-sm xl:text-base flex-shrink-0"
             >
               {t('buttons.bookDemo')}
             </Button>
@@ -67,7 +67,7 @@ export const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -76,7 +76,7 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 mt-4">
               <Link to="/use-cases" className="text-muted-foreground hover:text-foreground transition-colors">
                 {t('nav.useCases')}

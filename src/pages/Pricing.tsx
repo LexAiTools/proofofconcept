@@ -125,17 +125,17 @@ const Pricing = () => {
         
         {/* Hero Section */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
               
               {/* Left Column - Content */}
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 break-words">
                   {t('pricing:hero.title')} <br />
                   {t('pricing:hero.titleHighlight')}
                 </h1>
                 
-                <p className="text-xl text-muted-foreground mb-8">
+                <p className="text-lg sm:text-xl text-muted-foreground mb-8">
                   {t('pricing:hero.subtitle')}
                 </p>
 
@@ -211,12 +211,12 @@ const Pricing = () => {
 
         {/* Trusted By Stats Section */}
         <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+          <div className="container mx-auto px-4 sm:px-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
               {t('pricing:trustedBy.title')}
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               {(t('pricing:stats', { returnObjects: true }) as Array<{number: string, description: string, company: string}>).map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-4">
@@ -236,12 +236,12 @@ const Pricing = () => {
 
         {/* Why Companies Choose Section */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+          <div className="container mx-auto px-4 sm:px-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
               {t('pricing:whyChoose.title')}
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {(t('pricing:features', { returnObjects: true }) as Array<{title: string, description: string}>).map((feature, index) => {
                 const Icon = features[index];
                 return (
@@ -268,8 +268,8 @@ const Pricing = () => {
 
         {/* Testimonials Section */}
         <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
               {(t('pricing:testimonials', { returnObjects: true }) as Array<{quote: string, author: string, position: string}>).map((testimonial, index) => (
                 <Card key={index} className="bg-card border-border">
                   <CardContent className="p-8">

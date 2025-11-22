@@ -127,17 +127,17 @@ const BookDemo = () => {
 
       {/* Plugin Features */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-6">
               {t('bookDemo:features.title')}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               {t('bookDemo:features.subtitle')}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             <Card className="border-border bg-card">
               <CardHeader>
                 <Settings className="w-12 h-12 text-primary mb-4" />

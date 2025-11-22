@@ -23,14 +23,14 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </div>
 
-      <div className="relative container mx-auto px-6 text-center">
+      <div className="relative container mx-auto px-4 sm:px-6 text-center">
         {/* Trusted by badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-muted-foreground mb-8">
           {t('hero.trustedBy')}
         </div>
 
         {/* Main headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight break-words px-2">
           {t('hero.headline')}{" "}
           <span className="bg-gradient-primary bg-clip-text text-transparent">
             {t('hero.headlineHighlight')}
@@ -38,7 +38,7 @@ export const Hero = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-[90%] sm:max-w-4xl mx-auto leading-relaxed px-2">
           {t('hero.subheadline')}
         </p>
 
@@ -76,22 +76,22 @@ export const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center mb-16 max-w-5xl mx-auto">
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-            <div className="text-muted-foreground">{t('hero.stats.clients')}</div>
+            <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">500+</div>
+            <div className="text-muted-foreground text-sm sm:text-base">{t('hero.stats.clients')}</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10M+</div>
-            <div className="text-muted-foreground">{t('hero.stats.dataPoints')}</div>
+            <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">10M+</div>
+            <div className="text-muted-foreground text-sm sm:text-base">{t('hero.stats.dataPoints')}</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">99.9%</div>
-            <div className="text-muted-foreground">{t('hero.stats.uptime')}</div>
+            <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">99.9%</div>
+            <div className="text-muted-foreground text-sm sm:text-base">{t('hero.stats.uptime')}</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
-            <div className="text-muted-foreground">{t('hero.stats.support')}</div>
+            <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">24/7</div>
+            <div className="text-muted-foreground text-sm sm:text-base">{t('hero.stats.support')}</div>
           </div>
         </div>
       </div>

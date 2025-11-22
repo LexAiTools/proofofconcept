@@ -76,10 +76,10 @@ const UseCases = () => {
         </section>
 
         {/* Hero Gradient Section */}
-        <section className="py-20 mx-6 my-16 rounded-3xl bg-gradient-primary relative overflow-hidden">
+        <section className="py-20 mx-4 sm:mx-6 my-16 rounded-3xl bg-gradient-primary relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-hero opacity-50"></div>
-          <div className="container mx-auto px-6 relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 max-w-4xl mx-auto leading-tight">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 max-w-4xl mx-auto leading-tight break-words">
               {t('useCases:hero.title')} <br />
               {t('useCases:hero.titleLine2')} <br />
               {t('useCases:hero.titleLine3')}
@@ -100,13 +100,13 @@ const UseCases = () => {
 
         {/* Applications Section */}
         <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
                 {t('useCases:applications.title')}
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {(t('useCases:applications.items', { returnObjects: true }) as Array<{
                   title: string;
                   description: string;
