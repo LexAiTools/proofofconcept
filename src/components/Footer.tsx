@@ -1,9 +1,41 @@
 import { Linkedin, Github, Youtube, Send, Globe, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Footer = () => {
   const { t } = useTranslation('common');
+  const [isAdmin, setIsAdmin] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkAdminStatus = async () => {
+      if (!user) {
+        setIsAdmin(false);
+        return;
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from("user_roles")
+          .select("role")
+          .eq("user_id", user.id)
+          .eq("role", "admin")
+          .maybeSingle();
+
+        setIsAdmin(!!data);
+      } catch (error) {
+        console.error("Error checking admin status:", error);
+        setIsAdmin(false);
+      }
+    };
+
+    checkAdminStatus();
+  }, [user]);
   
   return (
     <footer className="bg-card border-t border-border">
@@ -113,13 +145,22 @@ export const Footer = () => {
           <div className="text-muted-foreground text-sm">
             © 2024 ProofOfConcepts. {t('footer.copyright')}
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 mt-4 md:mt-0 items-center">
             <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t('footer.legalLinks.privacy')}
             </Link>
             <Link to="/terms-of-service" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t('footer.legalLinks.terms')}
             </Link>
+            {isAdmin && (
+              <Button 
+                variant="link" 
+                onClick={() => navigate('/admin')}
+                className="h-auto p-0 text-sm text-muted-foreground hover:text-foreground"
+              >
+                {t('buttons.adminPanel')}
+              </Button>
+            )}
           </div>
         </div>
       </div>

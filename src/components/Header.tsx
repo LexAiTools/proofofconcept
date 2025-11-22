@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
@@ -11,34 +9,7 @@ import { ThemeSwitcher } from "./ThemeSwitcher";
 export const Header = () => {
   const { t } = useTranslation('common');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const { user } = useAuth();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const checkAdminStatus = async () => {
-      if (!user) {
-        setIsAdmin(false);
-        return;
-      }
-
-      try {
-        const { data, error } = await supabase
-          .from("user_roles")
-          .select("role")
-          .eq("user_id", user.id)
-          .eq("role", "admin")
-          .maybeSingle();
-
-        setIsAdmin(!!data);
-      } catch (error) {
-        console.error("Error checking admin status:", error);
-        setIsAdmin(false);
-      }
-    };
-
-    checkAdminStatus();
-  }, [user]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -92,15 +63,6 @@ export const Header = () => {
             >
               {t('buttons.bookDemo')}
             </Button>
-            {isAdmin && (
-              <Button 
-                variant="secondary" 
-                onClick={() => navigate('/admin')}
-                className="flex-shrink-0"
-              >
-                {t('buttons.adminPanel')}
-              </Button>
-            )}
           </div>
 
           {/* Mobile menu button */}
@@ -159,18 +121,6 @@ export const Header = () => {
                 >
                   {t('buttons.bookDemo')}
                 </Button>
-                {isAdmin && (
-                  <Button 
-                    variant="secondary" 
-                    className="justify-start w-full"
-                    onClick={() => {
-                      navigate('/admin');
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {t('buttons.adminPanel')}
-                  </Button>
-                )}
               </div>
             </nav>
           </div>
