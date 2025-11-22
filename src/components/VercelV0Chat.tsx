@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea";
 import { ArrowUpIcon, Paperclip, PlusIcon, Lightbulb, Settings, DollarSign, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 interface VercelV0ChatProps {
   onMessageSubmit?: (message: string) => void;
@@ -13,6 +14,7 @@ interface VercelV0ChatProps {
 
 export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
   const [value, setValue] = useState("");
+  const { t } = useTranslation('chat');
   const { textareaRef, adjustHeight } = useAutoResizeTextarea({
     minHeight: 60,
     maxHeight: 200,
@@ -35,7 +37,7 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col items-center space-y-4 p-4 py-24 sm:space-y-8">
-      <h1 className="text-foreground text-center text-2xl font-bold sm:text-4xl">What can I help you ship?</h1>
+      <h1 className="text-foreground text-center text-2xl font-bold sm:text-4xl">{t('vercelChat.heading')}</h1>
 
       <div className="w-full">
         <div className="border-border bg-secondary/20 relative rounded-xl border">
@@ -48,7 +50,7 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
                 adjustHeight();
               }}
               onKeyDown={handleKeyDown}
-              placeholder="Ask a question..."
+              placeholder={t('vercelChat.placeholder')}
               className={cn(
                 "w-full px-4 py-3",
                 "resize-none",
@@ -110,23 +112,23 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
           <div className="flex flex-col flex-wrap items-start gap-2 sm:flex-row sm:items-center sm:justify-center sm:gap-3 sm:overflow-x-auto sm:pb-2">
             <ActionButton
               icon={<Lightbulb className="h-4 w-4" />}
-              label="Potrzebuję aplikację"
-              onClick={() => onMessageSubmit?.("Potrzebuję aplikację MVP, jak mogę zacząć?")}
+              label={t('quickActions.needApp.label')}
+              onClick={() => onMessageSubmit?.(t('quickActions.needApp.message'))}
             />
             <ActionButton
               icon={<Settings className="h-4 w-4" />}
-              label="Jakie technologie?"
-              onClick={() => onMessageSubmit?.("Jakie technologie używacie do tworzenia aplikacji?")}
+              label={t('quickActions.technologies.label')}
+              onClick={() => onMessageSubmit?.(t('quickActions.technologies.message'))}
             />
             <ActionButton
               icon={<DollarSign className="h-4 w-4" />}
-              label="Ile to kosztuje?"
-              onClick={() => onMessageSubmit?.("Ile kosztuje stworzenie aplikacji MVP?")}
+              label={t('quickActions.pricing.label')}
+              onClick={() => onMessageSubmit?.(t('quickActions.pricing.message'))}
             />
             <ActionButton
               icon={<Clock className="h-4 w-4" />}
-              label="Jak długo trwa?"
-              onClick={() => onMessageSubmit?.("Jak długo trwa stworzenie aplikacji MVP?")}
+              label={t('quickActions.timeline.label')}
+              onClick={() => onMessageSubmit?.(t('quickActions.timeline.message'))}
             />
           </div>
         </div>

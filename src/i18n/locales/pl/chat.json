@@ -6,6 +6,10 @@
   "input": {
     "placeholder": "Wpisz swoją wiadomość..."
   },
+  "vercelChat": {
+    "heading": "W czym mogę Ci pomóc?",
+    "placeholder": "Zadaj pytanie..."
+  },
   "quickActions": {
     "needApp": {
       "message": "Potrzebuję aplikację MVP, jak mogę zacząć?",
