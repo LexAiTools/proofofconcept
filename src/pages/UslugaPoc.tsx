@@ -24,6 +24,7 @@ import { QuickStartPocForm } from "@/components/QuickStartPocForm";
 import { InteractiveAppPocForm } from "@/components/InteractiveAppPocForm";
 import { CompletePackagePocForm } from "@/components/CompletePackagePocForm";
 import { ProfessionalWebsitePocForm } from "@/components/ProfessionalWebsitePocForm";
+import { PocInterestedUsers } from "@/components/PocInterestedUsers";
 import { Helmet } from "react-helmet-async";
 
 const UslugaPoc = () => {
@@ -96,6 +97,15 @@ const UslugaPoc = () => {
                 </div>
               </DialogContent>
             </Dialog>
+          </div>
+        </div>
+      </section>
+
+      {/* Interested Users Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-center">
+            <PocInterestedUsers />
           </div>
         </div>
       </section>
