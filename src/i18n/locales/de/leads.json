@@ -1,19 +1,19 @@
 {
-  "title": "Share Your Contact Details",
-  "description": "We'll reach out within 24 hours",
+  "title": "Teilen Sie Ihre Kontaktdaten",
+  "description": "Wir melden uns innerhalb von 24 Stunden",
   "fields": {
     "name": "Name",
-    "email": "Email",
-    "phone": "Phone (optional)"
+    "email": "E-Mail",
+    "phone": "Telefon (optional)"
   },
   "actions": {
-    "submit": "Send",
-    "submitting": "Sending...",
-    "cancel": "Maybe Later",
-    "showForm": "Leave Contact"
+    "submit": "Senden",
+    "submitting": "Wird gesendet...",
+    "cancel": "Vielleicht später",
+    "showForm": "Kontakt hinterlassen"
   },
-  "success": "Thank you! We'll contact you soon.",
-  "successDescription": "Our team will reach out within 24 hours.",
-  "error": "Failed to submit",
-  "errorDescription": "Please try again or contact us directly."
+  "success": "Vielen Dank! Wir werden uns bald bei Ihnen melden.",
+  "successDescription": "Unser Team wird sich innerhalb von 24 Stunden bei Ihnen melden.",
+  "error": "Übermittlung fehlgeschlagen",
+  "errorDescription": "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
 }
