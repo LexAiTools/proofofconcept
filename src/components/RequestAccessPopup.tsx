@@ -90,7 +90,7 @@ export const RequestAccessPopup = ({ children }: RequestAccessPopupProps) => {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-5xl w-full p-0 overflow-hidden bg-background border-border max-h-[90vh] md:max-h-[80vh]">
+      <DialogContent className="max-w-5xl w-[95vw] sm:w-[90vw] lg:w-full p-0 mx-2 sm:mx-4 overflow-hidden bg-background border-border max-h-[90vh] md:max-h-[80vh]">
         <div className="grid lg:grid-cols-2 h-full max-h-[90vh] md:max-h-[80vh] overflow-hidden">
           {/* Left sidebar */}
           <div className="bg-gray-50 p-4 md:p-8 text-gray-900 flex flex-col justify-between relative lg:flex hidden">
