@@ -1,26 +1,18 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Textarea } from '@/components/ui/textarea';
-import { cn } from '@/lib/utils';
-import { useAutoResizeTextarea } from '@/hooks/use-auto-resize-textarea';
-import {
-  ArrowUpIcon,
-  Paperclip,
-  PlusIcon,
-  Lightbulb,
-  Settings,
-  DollarSign,
-  Clock,
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
+import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea";
+import { ArrowUpIcon, Paperclip, PlusIcon, Lightbulb, Settings, DollarSign, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface VercelV0ChatProps {
   onMessageSubmit?: (message: string) => void;
 }
 
 export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const { textareaRef, adjustHeight } = useAutoResizeTextarea({
     minHeight: 60,
     maxHeight: 200,
@@ -29,13 +21,13 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
   const handleSubmit = () => {
     if (value.trim() && onMessageSubmit) {
       onMessageSubmit(value.trim());
-      setValue('');
+      setValue("");
       adjustHeight(true);
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSubmit();
     }
@@ -43,9 +35,7 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col items-center space-y-4 p-4 py-24 sm:space-y-8">
-      <h1 className="text-foreground text-center text-2xl font-bold sm:text-4xl">
-        What can I help you ship?
-      </h1>
+      <h1 className="text-foreground text-center text-2xl font-bold sm:text-4xl">What can I help you ship?</h1>
 
       <div className="w-full">
         <div className="border-border bg-secondary/20 relative rounded-xl border">
@@ -58,20 +48,20 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
                 adjustHeight();
               }}
               onKeyDown={handleKeyDown}
-              placeholder="Ask v0 a question..."
+              placeholder="Ask a question..."
               className={cn(
-                'w-full px-4 py-3',
-                'resize-none',
-                'bg-transparent',
-                'border-none',
-                'text-sm',
-                'focus:outline-none',
-                'focus-visible:ring-0 focus-visible:ring-offset-0',
-                'placeholder:text-sm',
-                'min-h-[60px]',
+                "w-full px-4 py-3",
+                "resize-none",
+                "bg-transparent",
+                "border-none",
+                "text-sm",
+                "focus:outline-none",
+                "focus-visible:ring-0 focus-visible:ring-offset-0",
+                "placeholder:text-sm",
+                "min-h-[60px]",
               )}
               style={{
-                overflow: 'hidden',
+                overflow: "hidden",
               }}
             />
           </div>
@@ -105,16 +95,11 @@ export function VercelV0Chat({ onMessageSubmit }: VercelV0ChatProps) {
                 onClick={handleSubmit}
                 disabled={!value.trim()}
                 className={cn(
-                  'border-border flex items-center justify-between gap-1 rounded-lg border px-1.5 py-1.5 text-sm transition-colors',
-                  value.trim() ? 'bg-white text-black hover:bg-gray-100' : 'text-zinc-400 cursor-not-allowed',
+                  "border-border flex items-center justify-between gap-1 rounded-lg border px-1.5 py-1.5 text-sm transition-colors",
+                  value.trim() ? "bg-white text-black hover:bg-gray-100" : "text-zinc-400 cursor-not-allowed",
                 )}
               >
-                <ArrowUpIcon
-                  className={cn(
-                    'h-4 w-4',
-                    value.trim() ? 'text-black' : 'text-zinc-400',
-                  )}
-                />
+                <ArrowUpIcon className={cn("h-4 w-4", value.trim() ? "text-black" : "text-zinc-400")} />
                 <span className="sr-only">Send</span>
               </button>
             </div>
