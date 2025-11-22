@@ -1,820 +1,820 @@
 {
-  "title": "PAKIET PoC - Profesjonalna Strona Internetowa z AI",
-  "subtitle": "Strona internetowa z wbudowanym Asystentem AI",
-  "price": "16 400 zł / 3 814 EUR",
+  "title": "PoC PACKAGE - Professional Website with AI",
+  "subtitle": "Website with built-in AI Assistant",
+  "price": "16,400 PLN / 3,814 EUR",
   "steps": {
-    "contact": "Kontakt",
-    "company": "Firma",
-    "clients": "Klienci",
-    "subpages": "Podstrony",
-    "goal": "Cel",
-    "actions": "Akcje",
-    "forms": "Formularze",
-    "integrations": "Integracje",
-    "aiLanguage": "AI - Język",
-    "aiQuestions": "AI - Pytania",
-    "aiActions": "AI - Akcje",
-    "aiAvailability": "AI - Dostępność",
-    "colors": "Kolory",
-    "materials": "Materiały",
-    "inspirations": "Inspiracje",
-    "content": "Treści",
-    "analytics": "Analityka",
-    "reports": "Raporty",
-    "timeline": "Termin",
-    "additional": "Dodatkowe",
-    "projectContact": "Kontakt",
-    "summary": "Podsumowanie"
+    "contact": "Contact",
+    "company": "Company",
+    "clients": "Clients",
+    "subpages": "Subpages",
+    "goal": "Goal",
+    "actions": "Actions",
+    "forms": "Forms",
+    "integrations": "Integrations",
+    "aiLanguage": "AI - Language",
+    "aiQuestions": "AI - Questions",
+    "aiActions": "AI - Actions",
+    "aiAvailability": "AI - Availability",
+    "colors": "Colors",
+    "materials": "Materials",
+    "inspirations": "Inspirations",
+    "content": "Content",
+    "analytics": "Analytics",
+    "reports": "Reports",
+    "timeline": "Timeline",
+    "additional": "Additional",
+    "projectContact": "Contact",
+    "summary": "Summary"
   },
   "step1": {
-    "title": "Jak się nazywasz i jak możemy się z Tobą skontaktować?",
-    "description": "Potrzebujemy Twoich danych kontaktowych oraz informacji o firmie, aby stworzyć stronę dopasowaną do Twojej marki.",
-    "sectionTitle": "Dane kontaktowe",
+    "title": "What is your name and how can we contact you?",
+    "description": "We need your contact details and company information to create a website tailored to your brand.",
+    "sectionTitle": "Contact details",
     "fields": {
-      "name": "Imię i nazwisko",
-      "company": "Nazwa firmy",
-      "currentWebsite": "Obecna strona internetowa (jeśli posiadasz)",
+      "name": "Full name",
+      "company": "Company name",
+      "currentWebsite": "Current website (if you have one)",
       "email": "Email",
-      "phone": "Numer telefonu"
+      "phone": "Phone number"
     },
     "placeholders": {
-      "name": "Jan Kowalski",
-      "company": "Firma XYZ Sp. z o.o.",
-      "currentWebsite": "www.firma.pl",
-      "email": "jan@firma.pl",
-      "phone": "+48 123 456 789"
+      "name": "John Smith",
+      "company": "XYZ Company LLC",
+      "currentWebsite": "www.company.com",
+      "email": "john@company.com",
+      "phone": "+1 123 456 789"
     }
   },
   "step2": {
-    "title": "Czym zajmuje się Twoja firma?",
-    "description": "Opisz swoją działalność, główne produkty lub usługi oraz branżę.",
-    "sectionTitle": "Profil firmy",
+    "title": "What does your company do?",
+    "description": "Describe your business, main products or services, and industry.",
+    "sectionTitle": "Company profile",
     "fields": {
-      "industry": "Branża",
-      "mainProducts": "Główne produkty/usługi",
-      "businessDescription": "Krótki opis działalności",
-      "yearsOnMarket": "Ile lat na rynku?",
-      "companySize": "Wielkość firmy"
+      "industry": "Industry",
+      "mainProducts": "Main products/services",
+      "businessDescription": "Brief business description",
+      "yearsOnMarket": "How many years on the market?",
+      "companySize": "Company size"
     },
     "placeholders": {
-      "industry": "np. IT, E-commerce, Consulting",
-      "mainProducts": "Co oferujesz? Wymień 3-5 głównych produktów...",
-      "businessDescription": "Kim jesteście? Co robicie?",
-      "yearsOnMarket": "np. 5 lat, od 2019 roku"
+      "industry": "e.g. IT, E-commerce, Consulting",
+      "mainProducts": "What do you offer? List 3-5 main products...",
+      "businessDescription": "Who are you? What do you do?",
+      "yearsOnMarket": "e.g. 5 years, since 2019"
     },
     "labels": {
-      "employees": "pracowników"
+      "employees": "employees"
     }
   },
   "step3": {
-    "title": "Kim są Twoi klienci?",
-    "description": "Określ dokładnie, kto jest Twoją grupą docelową.",
-    "sectionTitle": "Twoi klienci",
+    "title": "Who are your clients?",
+    "description": "Define exactly who your target audience is.",
+    "sectionTitle": "Your clients",
     "fields": {
-      "clientType": "Typ klientów",
-      "clientCharacteristics": "Charakterystyka klientów",
-      "frequentQuestions": "Ich najczęstsze pytania",
-      "clientNeeds": "Ich główne potrzeby/problemy"
+      "clientType": "Client type",
+      "clientCharacteristics": "Client characteristics",
+      "frequentQuestions": "Their most common questions",
+      "clientNeeds": "Their main needs/problems"
     },
     "placeholders": {
-      "clientCharacteristics": "Kim są Twoi klienci? Jaka branża, wielkość firm?",
-      "frequentQuestions": "Jakie pytania najczęściej zadają?",
-      "clientNeeds": "Jakie problemy mają Twoi klienci?"
+      "clientCharacteristics": "Who are your clients? What industry, company size?",
+      "frequentQuestions": "What questions do they ask most often?",
+      "clientNeeds": "What problems do your clients have?"
     },
     "labels": {
-      "businesses": "firmy",
-      "consumers": "konsumenci",
-      "mixed": "Mieszany (B2B + B2C)"
+      "businesses": "businesses",
+      "consumers": "consumers",
+      "mixed": "Mixed (B2B + B2C)"
     }
   },
   "step4": {
-    "title": "Jakie podstrony mają być na stronie?",
-    "description": "Wybierz podstrony, które mają znaleźć się na Twojej stronie internetowej.",
-    "sectionTitle": "Podstrony witryny",
+    "title": "What subpages should be on the website?",
+    "description": "Select the subpages that should be included on your website.",
+    "sectionTitle": "Website subpages",
     "pages": {
-      "home": "Strona główna (OBOWIĄZKOWA)",
-      "contact": "Kontakt (OBOWIĄZKOWA)",
-      "about": "O nas / O firmie",
-      "offer": "Oferta / Usługi / Produkty",
-      "portfolio": "Realizacje / Portfolio",
-      "blog": "Blog / Aktualności",
-      "pricing": "Cennik",
+      "home": "Home page (REQUIRED)",
+      "contact": "Contact (REQUIRED)",
+      "about": "About us / About the company",
+      "offer": "Offer / Services / Products",
+      "portfolio": "Portfolio / Projects",
+      "blog": "Blog / News",
+      "pricing": "Pricing",
       "faq": "FAQ",
-      "career": "Kariera / Praca",
-      "privacy": "Polityka prywatności",
-      "terms": "Regulamin"
+      "career": "Career / Jobs",
+      "privacy": "Privacy policy",
+      "terms": "Terms and conditions"
     },
     "fields": {
-      "customSubpage": "Inna podstrona"
+      "customSubpage": "Other subpage"
     },
     "placeholders": {
-      "customSubpage": "Nazwa podstrony",
-      "customContent": "Co ma zawierać?"
+      "customSubpage": "Subpage name",
+      "customContent": "What should it contain?"
     },
-    "selected": "Wybrane podstrony"
+    "selected": "Selected subpages"
   },
   "step5": {
-    "title": "Jaki jest główny cel strony?",
-    "description": "Określ, co ma osiągnąć Twoja strona internetowa.",
-    "sectionTitle": "Główny cel witryny",
+    "title": "What is the main goal of the website?",
+    "description": "Define what your website should achieve.",
+    "sectionTitle": "Main website goal",
     "goals": {
       "leads": {
-        "title": "Generowanie leadów",
-        "description": "Zbieranie kontaktów potencjalnych klientów"
+        "title": "Lead generation",
+        "description": "Collecting potential customer contacts"
       },
       "sales": {
-        "title": "Sprzedaż produktów/usług online",
-        "description": "Bezpośrednia sprzedaż przez stronę"
+        "title": "Selling products/services online",
+        "description": "Direct sales through the website"
       },
       "branding": {
-        "title": "Budowanie wizerunku marki",
-        "description": "Profesjonalna prezentacja firmy"
+        "title": "Brand building",
+        "description": "Professional company presentation"
       },
       "information": {
-        "title": "Informowanie o usługach",
-        "description": "Edukacja klientów, prezentacja oferty"
+        "title": "Informing about services",
+        "description": "Customer education, offer presentation"
       },
       "recruitment": {
-        "title": "Rekrutacja pracowników",
-        "description": "Przyciąganie talentów"
+        "title": "Employee recruitment",
+        "description": "Attracting talent"
       },
       "support": {
-        "title": "Wsparcie klientów",
-        "description": "Baza wiedzy, pomoc techniczna"
+        "title": "Customer support",
+        "description": "Knowledge base, technical help"
       },
       "other": {
-        "title": "Inne",
-        "description": "Opisz swój cel"
+        "title": "Other",
+        "description": "Describe your goal"
       }
     },
     "fields": {
-      "additionalGoals": "Dodatkowe cele"
+      "additionalGoals": "Additional goals"
     },
     "placeholders": {
-      "other": "Opisz cel",
-      "additionalGoals": "Czy są jakieś dodatkowe cele?"
+      "other": "Describe the goal",
+      "additionalGoals": "Are there any additional goals?"
     }
   },
   "step6": {
-    "title": "Jakie działania mają podejmować odwiedzający?",
-    "description": "Określ najważniejsze call-to-action na stronie.",
+    "title": "What actions should visitors take?",
+    "description": "Define the most important call-to-action on the website.",
     "sectionTitle": "Call to Action (CTA)",
     "actions": {
       "contact_form": {
-        "title": "Wypełnienie formularza kontaktowego",
-        "description": "Standardowy formularz zapytania"
+        "title": "Fill out contact form",
+        "description": "Standard inquiry form"
       },
       "newsletter": {
-        "title": "Zapis na newsletter",
-        "description": "Budowanie bazy mailingowej"
+        "title": "Newsletter signup",
+        "description": "Building mailing list"
       },
       "download": {
-        "title": "Pobranie materiałów",
-        "description": "E-book, cennik, case study"
+        "title": "Download materials",
+        "description": "E-book, pricing, case study"
       },
       "consultation": {
-        "title": "Umówienie konsultacji/demo",
-        "description": "Rezerwacja spotkania"
+        "title": "Schedule consultation/demo",
+        "description": "Meeting reservation"
       },
       "purchase": {
-        "title": "Zakup online",
-        "description": "Bezpośrednia sprzedaż"
+        "title": "Online purchase",
+        "description": "Direct sales"
       },
       "ai_chat": {
-        "title": "Rozmowa z Asystentem AI",
-        "description": "Interakcja z chatem AI"
+        "title": "Chat with AI Assistant",
+        "description": "AI chat interaction"
       },
       "call": {
-        "title": "Zadzwonienie",
+        "title": "Make a call",
         "description": "Click-to-call"
       },
       "application": {
-        "title": "Aplikacja o pracę",
-        "description": "Formularz rekrutacyjny"
+        "title": "Job application",
+        "description": "Recruitment form"
       },
       "event_signup": {
-        "title": "Zapis na webinar/event",
-        "description": "Rejestracja na wydarzenie"
+        "title": "Webinar/event signup",
+        "description": "Event registration"
       }
     },
     "fields": {
-      "otherActions": "Inne akcje",
-      "priority": "Priorytet akcji"
+      "otherActions": "Other actions",
+      "priority": "Action priority"
     },
     "placeholders": {
-      "otherActions": "Inne działania...",
-      "priority": "Które akcje są NAJWAŻNIEJSZE?"
+      "otherActions": "Other actions...",
+      "priority": "Which actions are MOST IMPORTANT?"
     }
   },
   "step7": {
-    "title": "Jakie formularze kontaktowe potrzebujesz?",
-    "description": "Określ, jakie formularze mają być na stronie.",
-    "sectionTitle": "Formularze na stronie",
+    "title": "What contact forms do you need?",
+    "description": "Define what forms should be on the website.",
+    "sectionTitle": "Forms on the website",
     "forms": {
       "simple": {
-        "title": "Prosty formularz kontaktowy",
-        "description": "Imię, Email, Wiadomość"
+        "title": "Simple contact form",
+        "description": "Name, Email, Message"
       },
       "quote": {
-        "title": "Formularz zapytania ofertowego",
-        "description": "+ Firma, Telefon, Budżet"
+        "title": "Quote request form",
+        "description": "+ Company, Phone, Budget"
       },
       "consultation": {
-        "title": "Formularz zapisu na konsultację",
-        "description": "+ Preferowany termin"
+        "title": "Consultation signup form",
+        "description": "+ Preferred date"
       },
       "calculator": {
-        "title": "Kalkulator/Wycena online",
-        "description": "Interaktywny formularz"
+        "title": "Calculator/Online quote",
+        "description": "Interactive form"
       },
       "recruitment": {
-        "title": "Formularz rekrutacyjny",
+        "title": "Recruitment form",
         "description": "+ CV upload"
       },
       "newsletter": {
-        "title": "Formularz zapisu na newsletter",
-        "description": "Tylko email"
+        "title": "Newsletter signup form",
+        "description": "Email only"
       },
       "booking": {
-        "title": "Formularz rezerwacji",
-        "description": "+ Data, Godzina"
+        "title": "Booking form",
+        "description": "+ Date, Time"
       }
     },
     "fields": {
-      "additionalFields": "Dodatkowe pola w formularzach",
-      "destination": "Gdzie mają trafiać zgłoszenia?"
+      "additionalFields": "Additional fields in forms",
+      "destination": "Where should submissions go?"
     },
     "placeholders": {
-      "additionalFields": "Jakie specyficzne pola?",
-      "destination": "Na jaki email? Do CRM?"
+      "additionalFields": "What specific fields?",
+      "destination": "Which email? To CRM?"
     }
   },
   "step8": {
-    "title": "Jakie integracje są potrzebne?",
-    "description": "Określ, z jakimi zewnętrznymi systemami ma się łączyć Twoja strona.",
-    "sectionTitle": "Integracje zewnętrzne",
+    "title": "What integrations are needed?",
+    "description": "Define what external systems your website should connect with.",
+    "sectionTitle": "External integrations",
     "integrations": {
-      "analytics": "Google Analytics (STANDARDOWO)",
+      "analytics": "Google Analytics (STANDARD)",
       "crm": "CRM (HubSpot, Salesforce, Pipedrive)",
       "email_marketing": "Email Marketing (MailChimp, GetResponse)",
       "facebook_pixel": "Facebook Pixel",
       "google_tag_manager": "Google Tag Manager",
       "linkedin_tag": "LinkedIn Insight Tag",
-      "calendar": "Kalendarz rezerwacji (Calendly, Cal.com)",
+      "calendar": "Booking calendar (Calendly, Cal.com)",
       "live_chat": "Live Chat (Intercom, Drift, Tidio)",
-      "payments": "Płatności online (Stripe, PayU)",
-      "accounting": "Systemy księgowe (Fakturownia)"
+      "payments": "Online payments (Stripe, PayU)",
+      "accounting": "Accounting systems (QuickBooks)"
     },
     "fields": {
-      "other": "Inne integracje"
+      "other": "Other integrations"
     },
     "placeholders": {
-      "system": "Jaki system?",
-      "other": "Jakie integracje?"
+      "system": "Which system?",
+      "other": "What integrations?"
     }
   },
   "step9": {
-    "title": "Jaki ma być \"język firmy\" Asystenta AI?",
-    "description": "Asystent AI będzie rozmawiał z Twoimi klientami w stylu, który wybierzesz.",
-    "sectionTitle": "Ton komunikacji Asystenta AI",
+    "title": "What should be the AI Assistant's company language?",
+    "description": "The AI Assistant will talk to your clients in the style you choose.",
+    "sectionTitle": "AI Assistant communication tone",
     "tones": {
       "formal": {
-        "title": "Formalny / Profesjonalny",
-        "for": "Dla: kancelarie, banki, korporacje",
-        "example": "Przykład: 'Dzień dobry, w czym mogę Panu/Pani pomóc?'"
+        "title": "Formal / Professional",
+        "for": "For: law firms, banks, corporations",
+        "example": "Example: 'Good day, how may I assist you?'"
       },
       "friendly": {
-        "title": "Przyjazny / Swobodny",
-        "for": "Dla: startupy, małe firmy, e-commerce",
-        "example": "Przykład: 'Cześć! Jak mogę Ci dzisiaj pomóc?'"
+        "title": "Friendly / Casual",
+        "for": "For: startups, small businesses, e-commerce",
+        "example": "Example: 'Hi! How can I help you today?'"
       },
       "expert": {
-        "title": "Ekspercki / Techniczny",
-        "for": "Dla: IT, tech, agencje",
-        "example": "Przykład: 'Witam! Jakie rozwiązanie Cię interesuje?'"
+        "title": "Expert / Technical",
+        "for": "For: IT, tech, agencies",
+        "example": "Example: 'Hello! Which solution interests you?'"
       },
       "motivating": {
-        "title": "Motywujący / Inspirujący",
-        "for": "Dla: coaching, edukacja, wellness",
-        "example": "Przykład: 'Super, że tu jesteś!'"
+        "title": "Motivating / Inspiring",
+        "for": "For: coaching, education, wellness",
+        "example": "Example: 'Great to have you here!'"
       },
       "direct": {
-        "title": "Bezpośredni / Konkretny",
-        "for": "Dla: usługi lokalne, handel",
-        "example": "Przykład: 'Dzień dobry. Czego potrzebujesz?'"
+        "title": "Direct / Concrete",
+        "for": "For: local services, trade",
+        "example": "Example: 'Good day. What do you need?'"
       }
     },
     "fields": {
-      "guidelines": "Dodatkowe wskazówki",
-      "values": "Wartości firmy w komunikacji"
+      "guidelines": "Additional guidelines",
+      "values": "Company values in communication"
     },
     "placeholders": {
-      "guidelines": "Czy są słowa/zwroty, których AI ma używać lub unikać?",
-      "values": "Co jest ważne w Waszej komunikacji?"
+      "guidelines": "Are there words/phrases AI should use or avoid?",
+      "values": "What is important in your communication?"
     }
   },
   "step10": {
-    "title": "Na jakie pytania ma odpowiadać Asystent AI?",
-    "description": "Wymień 5-10 najczęstszych pytań od klientów.",
-    "sectionTitle": "Najczęstsze pytania klientów",
+    "title": "What questions should the AI Assistant answer?",
+    "description": "List 5-10 most common customer questions.",
+    "sectionTitle": "Most common customer questions",
     "fields": {
-      "question": "Pytanie",
-      "answer": "Jak AI ma odpowiedzieć?",
-      "additionalTopics": "Dodatkowe tematy"
+      "question": "Question",
+      "answer": "How should AI respond?",
+      "additionalTopics": "Additional topics"
     },
     "placeholders": {
-      "question1": "np. Ile kosztują Wasze usługi?",
-      "question2": "np. Jak długo trwa realizacja?",
-      "question3": "np. Czy oferujecie wsparcie?",
-      "answer": "Krótka odpowiedź...",
-      "additionalTopics": "Inne tematy, o których AI powinien wiedzieć..."
+      "question1": "e.g. How much do your services cost?",
+      "question2": "e.g. How long does implementation take?",
+      "question3": "e.g. Do you offer support?",
+      "answer": "Brief answer...",
+      "additionalTopics": "Other topics AI should know about..."
     },
-    "addQuestion": "Dodaj kolejne pytanie",
-    "tip": "AI będzie również uczył się z treści na stronie."
+    "addQuestion": "Add another question",
+    "tip": "AI will also learn from content on the website."
   },
   "step11": {
-    "title": "Jakie akcje ma wykonywać Asystent AI?",
-    "description": "Określ, co AI ma robić poza udzielaniem odpowiedzi.",
-    "sectionTitle": "Funkcje Asystenta AI",
+    "title": "What actions should the AI Assistant perform?",
+    "description": "Define what AI should do besides answering questions.",
+    "sectionTitle": "AI Assistant functions",
     "functions": {
       "answer_questions": {
-        "title": "Odpowiadanie na pytania o produkty/usługi",
-        "description": "Podstawowa funkcja"
+        "title": "Answer questions about products/services",
+        "description": "Basic function"
       },
       "help_choose": {
-        "title": "Pomoc w wyborze oferty",
-        "description": "Rekomendacje"
+        "title": "Help choose offer",
+        "description": "Recommendations"
       },
       "collect_data": {
-        "title": "Zbieranie danych kontaktowych",
-        "description": "Generowanie leadów"
+        "title": "Collect contact data",
+        "description": "Lead generation"
       },
       "schedule_meetings": {
-        "title": "Umawianie spotkań/konsultacji",
-        "description": "Integracja z kalendarzem"
+        "title": "Schedule meetings/consultations",
+        "description": "Calendar integration"
       },
       "qualify_leads": {
-        "title": "Kwalifikacja leadów",
-        "description": "Pytania sprawdzające"
+        "title": "Qualify leads",
+        "description": "Qualifying questions"
       },
       "redirect_support": {
-        "title": "Przekierowywanie do działu obsługi",
-        "description": "Gdy wymaga interwencji"
+        "title": "Redirect to support team",
+        "description": "When intervention required"
       },
       "send_materials": {
-        "title": "Wysyłanie materiałów",
-        "description": "Dostarczanie PDF"
+        "title": "Send materials",
+        "description": "Deliver PDFs"
       },
       "handle_faq": {
-        "title": "Obsługa FAQ",
-        "description": "Popularne pytania"
+        "title": "Handle FAQ",
+        "description": "Popular questions"
       },
       "help_navigation": {
-        "title": "Pomoc w nawigacji",
-        "description": "Kierowanie użytkowników"
+        "title": "Help with navigation",
+        "description": "Guiding users"
       },
       "collect_feedback": {
-        "title": "Zbieranie feedbacku",
-        "description": "Ankieta po rozmowie"
+        "title": "Collect feedback",
+        "description": "Post-conversation survey"
       }
     },
     "fields": {
-      "specialCases": "Szczególne przypadki",
-      "limits": "Granice AI"
+      "specialCases": "Special cases",
+      "limits": "AI limits"
     },
     "placeholders": {
-      "specialCases": "Czy są sytuacje specjalne?",
-      "limits": "Czego AI NIE POWINIEN robić?"
+      "specialCases": "Are there special situations?",
+      "limits": "What should AI NOT do?"
     }
   },
   "step12": {
-    "title": "Kiedy Asystent AI ma być aktywny?",
-    "description": "Określ, kiedy chatbot ma być dostępny dla klientów.",
-    "sectionTitle": "Godziny pracy Asystenta AI",
+    "title": "When should the AI Assistant be active?",
+    "description": "Define when the chatbot should be available to customers.",
+    "sectionTitle": "AI Assistant working hours",
     "availability": {
       "24/7": {
-        "title": "24/7 (zawsze dostępny) REKOMENDOWANE",
-        "description": "AI dostępny zawsze"
+        "title": "24/7 (always available) RECOMMENDED",
+        "description": "AI always available"
       },
       "business": {
-        "title": "W godzinach pracy firmy",
-        "description": "Określ godziny"
+        "title": "During business hours",
+        "description": "Define hours"
       },
       "after": {
-        "title": "Tylko poza godzinami pracy",
-        "description": "AI przejmuje gdy zespół niedostępny"
+        "title": "Only outside business hours",
+        "description": "AI takes over when team unavailable"
       },
       "always": {
-        "title": "Zawsze widoczny, ale z informacją",
-        "description": "AI zawsze + info o zespole"
+        "title": "Always visible, but with information",
+        "description": "AI always + team info"
       }
     },
     "fields": {
-      "from": "Od",
-      "to": "Do",
-      "days": "Dni tygodnia",
-      "welcomeMessage": "Wiadomość powitalna AI",
-      "outOfHoursMessage": "Wiadomość poza godzinami"
+      "from": "From",
+      "to": "To",
+      "days": "Days of the week",
+      "welcomeMessage": "AI welcome message",
+      "outOfHoursMessage": "After-hours message"
     },
     "days": {
-      "mon": "Pn",
-      "tue": "Wt",
-      "wed": "Śr",
-      "thu": "Czw",
-      "fri": "Pt",
-      "sat": "Sb",
-      "sun": "Nd"
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
     },
     "placeholders": {
-      "welcomeMessage": "np. 'Cześć! Jestem AI asistentem...'",
-      "outOfHoursMessage": "Co AI mówi poza godzinami?"
+      "welcomeMessage": "e.g. 'Hi! I'm the AI assistant...'",
+      "outOfHoursMessage": "What does AI say outside hours?"
     }
   },
   "step13": {
-    "title": "Jakie są kolory Twojej marki?",
-    "description": "Podaj kolory firmowe, które mamy użyć na stronie.",
-    "sectionTitle": "Identyfikacja wizualna",
+    "title": "What are your brand colors?",
+    "description": "Provide company colors to be used on the website.",
+    "sectionTitle": "Visual identity",
     "fields": {
-      "primaryColor": "Kolor główny (primary)",
-      "secondaryColor": "Kolor dodatkowy (secondary)",
-      "accentColor": "Kolor akcentu/CTA",
-      "colorScheme": "Schemat kolorów",
-      "hasBrandBook": "Mamy księgę znaku - zachowajcie wytyczne"
+      "primaryColor": "Primary color",
+      "secondaryColor": "Secondary color",
+      "accentColor": "Accent/CTA color",
+      "colorScheme": "Color scheme",
+      "hasBrandBook": "We have brand guidelines - please follow them"
     },
     "descriptions": {
-      "primary": "Główne przyciski, nagłówki, akcenty",
-      "secondary": "Drugi poziom ważności",
-      "accent": "Call-to-action, alerty"
+      "primary": "Main buttons, headers, accents",
+      "secondary": "Second level importance",
+      "accent": "Call-to-action, alerts"
     },
     "schemes": {
-      "light": "Jasny (light mode)",
-      "dark": "Ciemny (dark mode)",
-      "auto": "Automatyczny"
+      "light": "Light (light mode)",
+      "dark": "Dark (dark mode)",
+      "auto": "Automatic"
     }
   },
   "step14": {
-    "title": "Czy masz logo i materiały graficzne?",
-    "description": "Im więcej materiałów przekażesz, tym lepsza spójność wizualna.",
-    "sectionTitle": "Dostępne materiały",
+    "title": "Do you have a logo and graphic materials?",
+    "description": "The more materials you provide, the better visual consistency.",
+    "sectionTitle": "Available materials",
     "materials": {
-      "logo": "Logo w różnych formatach",
-      "product_photos": "Zdjęcia produktów",
-      "team_photos": "Zdjęcia zespołu",
-      "icons": "Ikony / Grafiki",
-      "videos": "Video / Animacje",
-      "certificates": "Certyfikaty / Nagrody",
-      "infographics": "Infografiki"
+      "logo": "Logo in different formats",
+      "product_photos": "Product photos",
+      "team_photos": "Team photos",
+      "icons": "Icons / Graphics",
+      "videos": "Video / Animations",
+      "certificates": "Certificates / Awards",
+      "infographics": "Infographics"
     },
     "fields": {
-      "links": "Linki do materiałów",
-      "photography": "Nie mam wszystkich - proszę użyć stock photos",
-      "graphics": "Potrzebuję projektów graficznych"
+      "links": "Links to materials",
+      "photography": "I don't have everything - please use stock photos",
+      "graphics": "I need graphic designs"
     },
     "placeholders": {
       "links": "Google Drive, Dropbox..."
     }
   },
   "step15": {
-    "title": "Jakie strony są dla Ciebie inspiracją?",
-    "description": "Podaj 2-5 przykładów stron internetowych, które Ci się podobają.",
-    "sectionTitle": "Inspiracje wizualne",
+    "title": "What websites are your inspiration?",
+    "description": "Provide 2-5 examples of websites you like.",
+    "sectionTitle": "Visual inspirations",
     "fields": {
-      "website": "Przykładowa strona",
-      "notes": "Co Ci się podoba?",
-      "disliked": "Strony, które NIE podobają się",
-      "style": "Preferowany styl"
+      "website": "Example website",
+      "notes": "What do you like?",
+      "disliked": "Websites you DON'T like",
+      "style": "Preferred style"
     },
     "placeholders": {
-      "notes": "np. 'Minimalistyczny design', 'Płynne animacje'...",
-      "disliked": "Co konkretnie przeszkadza?"
+      "notes": "e.g. 'Minimalist design', 'Smooth animations'...",
+      "disliked": "What specifically bothers you?"
     },
     "styles": {
       "minimalist": {
-        "title": "Minimalistyczny",
-        "description": "Dużo białej przestrzeni, prostota"
+        "title": "Minimalist",
+        "description": "Lots of white space, simplicity"
       },
       "modern": {
-        "title": "Nowoczesny Tech",
-        "description": "Gradienty, animacje"
+        "title": "Modern Tech",
+        "description": "Gradients, animations"
       },
       "corporate": {
-        "title": "Korporacyjny",
-        "description": "Klasyczny, profesjonalny"
+        "title": "Corporate",
+        "description": "Classic, professional"
       },
       "creative": {
-        "title": "Kreatywny",
-        "description": "Odważny, kolorowy"
+        "title": "Creative",
+        "description": "Bold, colorful"
       },
       "editorial": {
         "title": "Editorial",
-        "description": "Typografia, magazynowy"
+        "description": "Typography, magazine-style"
       }
     },
-    "addInspiration": "Dodaj kolejny przykład"
+    "addInspiration": "Add another example"
   },
   "step16": {
-    "title": "Czy masz gotowe teksty na stronę?",
-    "description": "Określ, ile treści możesz dostarczyć.",
-    "sectionTitle": "Teksty i treści",
+    "title": "Do you have ready-made texts for the website?",
+    "description": "Define how much content you can provide.",
+    "sectionTitle": "Texts and content",
     "status": {
       "complete": {
-        "title": "Tak, wszystkie teksty gotowe",
-        "description": "Kompletne treści"
+        "title": "Yes, all texts ready",
+        "description": "Complete content"
       },
       "partial": {
-        "title": "Częściowo, potrzebuję pomocy",
-        "description": "Niektóre opisy gotowe"
+        "title": "Partially, I need help",
+        "description": "Some descriptions ready"
       },
       "needed": {
-        "title": "Nie, potrzebuję pełnego copywritingu",
-        "description": "Napisz wszystkie treści"
+        "title": "No, I need full copywriting",
+        "description": "Write all content"
       },
       "structure": {
-        "title": "Stwórzcie strukturę, ja uzupełnię",
-        "description": "Placeholdery i wytyczne"
+        "title": "Create structure, I'll fill in",
+        "description": "Placeholders and guidelines"
       }
     },
     "fields": {
-      "available": "Jakie materiały możesz dostarczyć?",
-      "keyMessages": "Kluczowe komunikaty"
+      "available": "What materials can you provide?",
+      "keyMessages": "Key messages"
     },
     "content": {
-      "product_descriptions": "Opisy produktów/usług",
-      "company_info": "Informacje o firmie",
-      "case_studies": "Case studies / Realizacje",
-      "testimonials": "Opinie klientów",
-      "certificates": "Certyfikaty - opisy",
-      "faq": "Teksty do FAQ",
-      "blog_articles": "Artykuły na blog",
-      "privacy_policy": "Polityka prywatności",
-      "terms": "Regulamin"
+      "product_descriptions": "Product/service descriptions",
+      "company_info": "Company information",
+      "case_studies": "Case studies / Projects",
+      "testimonials": "Customer testimonials",
+      "certificates": "Certificates - descriptions",
+      "faq": "FAQ texts",
+      "blog_articles": "Blog articles",
+      "privacy_policy": "Privacy policy",
+      "terms": "Terms and conditions"
     },
     "placeholders": {
-      "keyMessages": "Co chcesz, żeby klienci zapamiętali?"
+      "keyMessages": "What do you want customers to remember?"
     }
   },
   "step17": {
-    "title": "Jakie metryki są dla Ciebie najważniejsze?",
-    "description": "Określ, co chcesz śledzić na stronie.",
-    "sectionTitle": "Kluczowe metryki (KPI)",
+    "title": "What metrics are most important to you?",
+    "description": "Define what you want to track on the website.",
+    "sectionTitle": "Key Performance Indicators (KPI)",
     "metrics": {
       "visits": {
-        "title": "Liczba odwiedzin",
-        "description": "Ile osób wchodzi"
+        "title": "Number of visits",
+        "description": "How many people visit"
       },
       "traffic_sources": {
-        "title": "Źródła ruchu",
-        "description": "Skąd przychodzą"
+        "title": "Traffic sources",
+        "description": "Where they come from"
       },
       "time_on_site": {
-        "title": "Czas spędzony na stronie",
-        "description": "Jak długo zostają"
+        "title": "Time on site",
+        "description": "How long they stay"
       },
       "bounce_rate": {
         "title": "Bounce rate",
-        "description": "Współczynnik odrzuceń"
+        "description": "Bounce rate"
       },
       "form_submissions": {
-        "title": "Liczba wypełnionych formularzy",
-        "description": "Konwersje"
+        "title": "Number of form submissions",
+        "description": "Conversions"
       },
       "cta_clicks": {
-        "title": "Kliknięcia w przyciski CTA",
-        "description": "Tracking przycisków"
+        "title": "CTA button clicks",
+        "description": "Button tracking"
       },
       "downloads": {
-        "title": "Pobrania materiałów",
-        "description": "Ile razy pobrano"
+        "title": "Material downloads",
+        "description": "Download count"
       },
       "ai_conversations": {
-        "title": "Rozmowy z AI",
-        "description": "Użycie chatbota"
+        "title": "AI conversations",
+        "description": "Chatbot usage"
       },
       "conversions": {
-        "title": "Konwersje",
-        "description": "Finalizacja celów"
+        "title": "Conversions",
+        "description": "Goal completion"
       },
       "scroll_depth": {
         "title": "Scroll depth",
-        "description": "Jak daleko scrollują"
+        "description": "How far they scroll"
       },
       "heatmaps": {
-        "title": "Heatmapy",
-        "description": "Gdzie klikają"
+        "title": "Heatmaps",
+        "description": "Where they click"
       }
     },
     "fields": {
-      "goals": "Cele konwersji",
-      "value": "Wartość konwersji"
+      "goals": "Conversion goals",
+      "value": "Conversion value"
     },
     "placeholders": {
-      "goals": "Zdefiniuj, co jest konwersją...",
-      "value": "Wartość jednego leada?"
+      "goals": "Define what counts as conversion...",
+      "value": "Value of one lead?"
     }
   },
   "step18": {
-    "title": "Czy potrzebujesz raportowania?",
-    "description": "Możemy wysyłać Ci regularne raporty z analityki.",
-    "sectionTitle": "Raporty i dostęp do danych",
+    "title": "Do you need reporting?",
+    "description": "We can send you regular analytics reports.",
+    "sectionTitle": "Reports and data access",
     "frequency": {
       "weekly": {
-        "title": "Tak, cotygodniowe raporty email",
-        "description": "Podsumowania co tydzień"
+        "title": "Yes, weekly email reports",
+        "description": "Weekly summaries"
       },
       "monthly": {
-        "title": "Tak, comiesięczne raporty email",
-        "description": "Rozbudowane raporty"
+        "title": "Yes, monthly email reports",
+        "description": "Comprehensive reports"
       },
       "none": {
-        "title": "Nie, sam będę sprawdzał w Analytics",
-        "description": "Dostęp do GA"
+        "title": "No, I'll check Analytics myself",
+        "description": "GA access"
       },
       "dashboard": {
-        "title": "Dashboard z live danymi",
-        "description": "Własny panel"
+        "title": "Dashboard with live data",
+        "description": "Custom panel"
       }
     },
     "fields": {
-      "content": "Co ma być w raportach?",
-      "access": "Kto ma dostęp do Analytics?",
-      "training": "Chcę szkolenie z Google Analytics (1h)",
-      "looker": "Chcę dostęp do Looker Studio"
+      "content": "What should be in reports?",
+      "access": "Who has Analytics access?",
+      "training": "I want Google Analytics training (1h)",
+      "looker": "I want Looker Studio access"
     },
     "placeholders": {
-      "content": "Jakie informacje są najważniejsze?",
-      "access": "Adresy email osób"
+      "content": "What information is most important?",
+      "access": "Email addresses"
     }
   },
   "step19": {
-    "title": "Kiedy potrzebujesz gotowej strony?",
-    "description": "Standardowo realizujemy stronę w ciągu 7 dni roboczych.",
-    "sectionTitle": "Termin realizacji",
+    "title": "When do you need the website ready?",
+    "description": "We typically deliver websites within 7 business days.",
+    "sectionTitle": "Implementation timeline",
     "timeline": {
       "express": {
-        "title": "Express (5 dni) - +2000 zł",
-        "description": "Priorytetowa realizacja"
+        "title": "Express (5 days) - +2,000 PLN",
+        "description": "Priority implementation"
       },
       "standard": {
-        "title": "Standard (7 dni) REKOMENDOWANE",
-        "description": "Optymalny czas"
+        "title": "Standard (7 days) RECOMMENDED",
+        "description": "Optimal time"
       },
       "comfort": {
-        "title": "Komfort (10 dni)",
-        "description": "Więcej czasu na dopracowanie"
+        "title": "Comfort (10 days)",
+        "description": "More time for refinement"
       },
       "specific": {
-        "title": "Mam konkretny deadline",
-        "description": "Wybierz datę"
+        "title": "I have a specific deadline",
+        "description": "Choose date"
       }
     },
     "fields": {
-      "date": "Wybierz datę",
-      "keyDates": "Kluczowe daty",
-      "priority": "Priorytet"
+      "date": "Choose date",
+      "keyDates": "Key dates",
+      "priority": "Priority"
     },
     "placeholders": {
-      "keyDates": "Czy są ważne wydarzenia?"
+      "keyDates": "Any important events?"
     },
     "priority": {
-      "speed": "Szybkość",
-      "quality": "Jakość",
-      "balance": "Balans"
+      "speed": "Speed",
+      "quality": "Quality",
+      "balance": "Balance"
     }
   },
   "step20": {
-    "title": "Czy masz dodatkowe wymagania?",
-    "description": "Specjalne wymagania, które nie zostały uwzględnione.",
-    "sectionTitle": "Specjalne wymagania",
+    "title": "Do you have additional requirements?",
+    "description": "Special requirements not previously covered.",
+    "sectionTitle": "Special requirements",
     "requirements": {
       "gdpr": {
-        "title": "Zgodność z RODO",
+        "title": "GDPR compliance",
         "description": "Privacy policy, cookies"
       },
       "wcag": {
-        "title": "Dostępność WCAG 2.1",
-        "description": "Dla osób niepełnosprawnych"
+        "title": "WCAG 2.1 accessibility",
+        "description": "For people with disabilities"
       },
       "multilingual": {
-        "title": "Wielojęzyczność",
-        "description": "Wiele wersji językowych"
+        "title": "Multilingual",
+        "description": "Multiple language versions"
       },
       "mobile_first": {
-        "title": "Wersja mobilna first",
-        "description": "Priorytet na mobile"
+        "title": "Mobile first version",
+        "description": "Mobile priority"
       },
       "performance": {
-        "title": "Szybkość ładowania < 2s",
-        "description": "Optymalizacja"
+        "title": "Loading speed < 2s",
+        "description": "Optimization"
       },
       "seo": {
-        "title": "SEO on-page",
-        "description": "Optymalizacja pod wyszukiwarki"
+        "title": "On-page SEO",
+        "description": "Search engine optimization"
       }
     },
     "fields": {
-      "languages": "Jakie języki?",
-      "technology": "Specyficzne technologie",
-      "legal": "Ograniczenia lub wymagania prawne",
-      "premium": "Funkcje premium / custom",
-      "hosting": "Hosting w cenie (od 200 zł/rok)",
-      "domain": "Domena w cenie (od 50 zł/rok)"
+      "languages": "What languages?",
+      "technology": "Specific technologies",
+      "legal": "Legal restrictions or requirements",
+      "premium": "Premium / custom features",
+      "hosting": "Hosting included (from 200 PLN/year)",
+      "domain": "Domain included (from 50 PLN/year)"
     },
     "placeholders": {
-      "languages": "np. Polski, Angielski, Niemiecki",
-      "technology": "Konkretna technologia?",
-      "legal": "Branżowe regulacje?",
-      "premium": "Specjalne funkcje?"
+      "languages": "e.g. Polish, English, German",
+      "technology": "Specific technology?",
+      "legal": "Industry regulations?",
+      "premium": "Special features?"
     }
   },
   "step21": {
-    "title": "Kto będzie osobą kontaktową po Twojej stronie?",
-    "description": "Określ, z kim będziemy się kontaktować podczas realizacji.",
-    "sectionTitle": "Kontakt projektowy",
+    "title": "Who will be the contact person on your side?",
+    "description": "Define who we will communicate with during implementation.",
+    "sectionTitle": "Project contact",
     "fields": {
-      "name": "Osoba kontaktowa - Imię i nazwisko",
-      "role": "Rola w firmie",
+      "name": "Contact person - Full name",
+      "role": "Role in company",
       "email": "Email",
-      "phone": "Telefon",
-      "channel": "Preferowany kanał komunikacji",
-      "decisionMakers": "Kto jeszcze w proces zatwierdzania?",
-      "process": "Proces decyzyjny",
-      "expectations": "Oczekiwania od komunikacji"
+      "phone": "Phone",
+      "channel": "Preferred communication channel",
+      "decisionMakers": "Who else in approval process?",
+      "process": "Decision-making process",
+      "expectations": "Communication expectations"
     },
     "placeholders": {
-      "name": "Jan Kowalski",
+      "name": "John Smith",
       "role": "CEO / Marketing Manager",
-      "email": "jan@firma.pl",
-      "phone": "+48 123 456 789",
-      "decisionMakers": "Inne osoby do zaakceptowania?",
-      "expectations": "Jak często chcesz update?"
+      "email": "john@company.com",
+      "phone": "+1 123 456 789",
+      "decisionMakers": "Other people to approve?",
+      "expectations": "How often do you want updates?"
     },
     "channels": {
       "email": "Email",
-      "phone": "Telefon",
+      "phone": "Phone",
       "slack": "Slack",
       "teams": "Teams",
       "whatsapp": "WhatsApp",
-      "other": "Inne"
+      "other": "Other"
     },
     "process": {
-      "solo": "Decyduję sam/sama",
-      "duo": "Decydujemy 2 osoby",
-      "team": "Decyduje zespół (3+)",
-      "board": "Wymaga zatwierdzenia zarządu"
+      "solo": "I decide alone",
+      "duo": "We decide together (2 people)",
+      "team": "Team decides (3+)",
+      "board": "Requires board approval"
     }
   },
   "step22": {
-    "title": "Dodatkowe uwagi lub pytania",
-    "description": "Ostatnia szansa na dodanie ważnych informacji.",
+    "title": "Additional notes or questions",
+    "description": "Last chance to add important information.",
     "fields": {
-      "finalNotes": "Wszystko, co powinniśmy wiedzieć",
-      "concerns": "Jakie są Twoje największe obawy?",
-      "important": "Co jest dla Ciebie najważniejsze?",
-      "additionalServices": "Chcę propozycję dodatkowych usług (SEO, reklamy)",
-      "terms": "Zapoznałem się z regulaminem",
-      "gdpr": "Wyrażam zgodę na przetwarzanie danych (RODO)"
+      "finalNotes": "Everything we should know",
+      "concerns": "What are your biggest concerns?",
+      "important": "What is most important to you?",
+      "additionalServices": "I want proposals for additional services (SEO, ads)",
+      "terms": "I have read the terms and conditions",
+      "gdpr": "I consent to data processing (GDPR)"
     },
     "placeholders": {
-      "finalNotes": "Szczególne oczekiwania, obawy, pytania...",
-      "concerns": "Czego obawiasz się najbardziej?",
-      "important": "1-3 najważniejsze rzeczy?"
+      "finalNotes": "Special expectations, concerns, questions...",
+      "concerns": "What worries you most?",
+      "important": "1-3 most important things?"
     }
   },
   "summary": {
-    "title": "Podsumowanie zamówienia",
-    "edit": "Edytuj",
+    "title": "Order summary",
+    "edit": "Edit",
     "sections": {
-      "company": "DANE FIRMY",
-      "structure": "STRUKTURA STRONY",
-      "forms": "FORMULARZE I INTEGRACJE",
-      "ai": "ASYSTENT AI",
-      "design": "DESIGN I BRANDING",
-      "content": "TREŚCI",
-      "analytics": "ANALITYKA I RAPORTY",
-      "timeline": "REALIZACJA",
-      "requirements": "DODATKOWE WYMAGANIA",
-      "pricing": "CENA I ZAKRES"
+      "company": "COMPANY DATA",
+      "structure": "WEBSITE STRUCTURE",
+      "forms": "FORMS AND INTEGRATIONS",
+      "ai": "AI ASSISTANT",
+      "design": "DESIGN AND BRANDING",
+      "content": "CONTENT",
+      "analytics": "ANALYTICS AND REPORTS",
+      "timeline": "IMPLEMENTATION",
+      "requirements": "ADDITIONAL REQUIREMENTS",
+      "pricing": "PRICE AND SCOPE"
     },
-    "employees": "pracowników",
-    "subpages": "Podstrony",
-    "goal": "Główny cel",
-    "actions": "Akcje CTA",
-    "tone": "Ton komunikacji",
-    "availability": "Dostępność",
-    "questions": "Pytania AI",
-    "forms": "formularze",
-    "integrations": "integracji",
-    "responsiveDesign": "Nowoczesny, responsywny design",
-    "aiAssistant": "Asystent AI 24/7",
-    "backups": "Automatyczne backupy",
-    "submit": "Potwierdź i wyślij zamówienie za"
+    "employees": "employees",
+    "subpages": "Subpages",
+    "goal": "Main goal",
+    "actions": "CTA actions",
+    "tone": "Communication tone",
+    "availability": "Availability",
+    "questions": "AI questions",
+    "forms": "forms",
+    "integrations": "integrations",
+    "responsiveDesign": "Modern, responsive design",
+    "aiAssistant": "24/7 AI Assistant",
+    "backups": "Automatic backups",
+    "submit": "Confirm and submit order for"
   },
   "success": {
-    "title": "Zamówienie wysłane!",
-    "description": "Skontaktujemy się z Tobą w ciągu 24h."
+    "title": "Order sent!",
+    "description": "We will contact you within 24 hours."
   },
   "error": {
-    "title": "Błąd",
-    "description": "Nie udało się wysłać formularza. Spróbuj ponownie."
+    "title": "Error",
+    "description": "Failed to submit form. Please try again."
   }
 }

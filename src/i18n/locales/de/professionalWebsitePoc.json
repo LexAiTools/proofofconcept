@@ -1,820 +1,820 @@
 {
-  "title": "PAKIET PoC - Profesjonalna Strona Internetowa z AI",
-  "subtitle": "Strona internetowa z wbudowanym Asystentem AI",
-  "price": "16 400 zł / 3 814 EUR",
+  "title": "PoC PAKET - Professionelle Website mit KI",
+  "subtitle": "Website mit integriertem KI-Assistenten",
+  "price": "16.400 PLN / 3.814 EUR",
   "steps": {
     "contact": "Kontakt",
-    "company": "Firma",
-    "clients": "Klienci",
-    "subpages": "Podstrony",
-    "goal": "Cel",
-    "actions": "Akcje",
-    "forms": "Formularze",
-    "integrations": "Integracje",
-    "aiLanguage": "AI - Język",
-    "aiQuestions": "AI - Pytania",
-    "aiActions": "AI - Akcje",
-    "aiAvailability": "AI - Dostępność",
-    "colors": "Kolory",
-    "materials": "Materiały",
-    "inspirations": "Inspiracje",
-    "content": "Treści",
-    "analytics": "Analityka",
-    "reports": "Raporty",
-    "timeline": "Termin",
-    "additional": "Dodatkowe",
+    "company": "Unternehmen",
+    "clients": "Kunden",
+    "subpages": "Unterseiten",
+    "goal": "Ziel",
+    "actions": "Aktionen",
+    "forms": "Formulare",
+    "integrations": "Integrationen",
+    "aiLanguage": "KI - Sprache",
+    "aiQuestions": "KI - Fragen",
+    "aiActions": "KI - Aktionen",
+    "aiAvailability": "KI - Verfügbarkeit",
+    "colors": "Farben",
+    "materials": "Materialien",
+    "inspirations": "Inspirationen",
+    "content": "Inhalte",
+    "analytics": "Analytics",
+    "reports": "Berichte",
+    "timeline": "Zeitplan",
+    "additional": "Zusätzlich",
     "projectContact": "Kontakt",
-    "summary": "Podsumowanie"
+    "summary": "Zusammenfassung"
   },
   "step1": {
-    "title": "Jak się nazywasz i jak możemy się z Tobą skontaktować?",
-    "description": "Potrzebujemy Twoich danych kontaktowych oraz informacji o firmie, aby stworzyć stronę dopasowaną do Twojej marki.",
-    "sectionTitle": "Dane kontaktowe",
+    "title": "Wie heißen Sie und wie können wir Sie kontaktieren?",
+    "description": "Wir benötigen Ihre Kontaktdaten und Unternehmensinformationen, um eine auf Ihre Marke zugeschnittene Website zu erstellen.",
+    "sectionTitle": "Kontaktdaten",
     "fields": {
-      "name": "Imię i nazwisko",
-      "company": "Nazwa firmy",
-      "currentWebsite": "Obecna strona internetowa (jeśli posiadasz)",
-      "email": "Email",
-      "phone": "Numer telefonu"
+      "name": "Vor- und Nachname",
+      "company": "Unternehmensname",
+      "currentWebsite": "Aktuelle Website (falls vorhanden)",
+      "email": "E-Mail",
+      "phone": "Telefonnummer"
     },
     "placeholders": {
-      "name": "Jan Kowalski",
-      "company": "Firma XYZ Sp. z o.o.",
-      "currentWebsite": "www.firma.pl",
-      "email": "jan@firma.pl",
-      "phone": "+48 123 456 789"
+      "name": "Max Mustermann",
+      "company": "Firma XYZ GmbH",
+      "currentWebsite": "www.firma.de",
+      "email": "max@firma.de",
+      "phone": "+49 123 456 789"
     }
   },
   "step2": {
-    "title": "Czym zajmuje się Twoja firma?",
-    "description": "Opisz swoją działalność, główne produkty lub usługi oraz branżę.",
-    "sectionTitle": "Profil firmy",
+    "title": "Womit beschäftigt sich Ihr Unternehmen?",
+    "description": "Beschreiben Sie Ihr Geschäft, Hauptprodukte oder Dienstleistungen sowie Ihre Branche.",
+    "sectionTitle": "Unternehmensprofil",
     "fields": {
-      "industry": "Branża",
-      "mainProducts": "Główne produkty/usługi",
-      "businessDescription": "Krótki opis działalności",
-      "yearsOnMarket": "Ile lat na rynku?",
-      "companySize": "Wielkość firmy"
+      "industry": "Branche",
+      "mainProducts": "Hauptprodukte/Dienstleistungen",
+      "businessDescription": "Kurze Geschäftsbeschreibung",
+      "yearsOnMarket": "Wie viele Jahre am Markt?",
+      "companySize": "Unternehmensgröße"
     },
     "placeholders": {
-      "industry": "np. IT, E-commerce, Consulting",
-      "mainProducts": "Co oferujesz? Wymień 3-5 głównych produktów...",
-      "businessDescription": "Kim jesteście? Co robicie?",
-      "yearsOnMarket": "np. 5 lat, od 2019 roku"
+      "industry": "z.B. IT, E-Commerce, Beratung",
+      "mainProducts": "Was bieten Sie an? Nennen Sie 3-5 Hauptprodukte...",
+      "businessDescription": "Wer sind Sie? Was machen Sie?",
+      "yearsOnMarket": "z.B. 5 Jahre, seit 2019"
     },
     "labels": {
-      "employees": "pracowników"
+      "employees": "Mitarbeiter"
     }
   },
   "step3": {
-    "title": "Kim są Twoi klienci?",
-    "description": "Określ dokładnie, kto jest Twoją grupą docelową.",
-    "sectionTitle": "Twoi klienci",
+    "title": "Wer sind Ihre Kunden?",
+    "description": "Definieren Sie genau, wer Ihre Zielgruppe ist.",
+    "sectionTitle": "Ihre Kunden",
     "fields": {
-      "clientType": "Typ klientów",
-      "clientCharacteristics": "Charakterystyka klientów",
-      "frequentQuestions": "Ich najczęstsze pytania",
-      "clientNeeds": "Ich główne potrzeby/problemy"
+      "clientType": "Kundentyp",
+      "clientCharacteristics": "Kundenmerkmale",
+      "frequentQuestions": "Ihre häufigsten Fragen",
+      "clientNeeds": "Ihre Hauptbedürfnisse/Probleme"
     },
     "placeholders": {
-      "clientCharacteristics": "Kim są Twoi klienci? Jaka branża, wielkość firm?",
-      "frequentQuestions": "Jakie pytania najczęściej zadają?",
-      "clientNeeds": "Jakie problemy mają Twoi klienci?"
+      "clientCharacteristics": "Wer sind Ihre Kunden? Welche Branche, Unternehmensgröße?",
+      "frequentQuestions": "Welche Fragen stellen sie am häufigsten?",
+      "clientNeeds": "Welche Probleme haben Ihre Kunden?"
     },
     "labels": {
-      "businesses": "firmy",
-      "consumers": "konsumenci",
-      "mixed": "Mieszany (B2B + B2C)"
+      "businesses": "Unternehmen",
+      "consumers": "Verbraucher",
+      "mixed": "Gemischt (B2B + B2C)"
     }
   },
   "step4": {
-    "title": "Jakie podstrony mają być na stronie?",
-    "description": "Wybierz podstrony, które mają znaleźć się na Twojej stronie internetowej.",
-    "sectionTitle": "Podstrony witryny",
+    "title": "Welche Unterseiten soll die Website haben?",
+    "description": "Wählen Sie die Unterseiten aus, die auf Ihrer Website enthalten sein sollen.",
+    "sectionTitle": "Website-Unterseiten",
     "pages": {
-      "home": "Strona główna (OBOWIĄZKOWA)",
-      "contact": "Kontakt (OBOWIĄZKOWA)",
-      "about": "O nas / O firmie",
-      "offer": "Oferta / Usługi / Produkty",
-      "portfolio": "Realizacje / Portfolio",
-      "blog": "Blog / Aktualności",
-      "pricing": "Cennik",
+      "home": "Startseite (ERFORDERLICH)",
+      "contact": "Kontakt (ERFORDERLICH)",
+      "about": "Über uns / Über das Unternehmen",
+      "offer": "Angebot / Dienstleistungen / Produkte",
+      "portfolio": "Projekte / Portfolio",
+      "blog": "Blog / Neuigkeiten",
+      "pricing": "Preise",
       "faq": "FAQ",
-      "career": "Kariera / Praca",
-      "privacy": "Polityka prywatności",
-      "terms": "Regulamin"
+      "career": "Karriere / Jobs",
+      "privacy": "Datenschutzerklärung",
+      "terms": "AGB"
     },
     "fields": {
-      "customSubpage": "Inna podstrona"
+      "customSubpage": "Andere Unterseite"
     },
     "placeholders": {
-      "customSubpage": "Nazwa podstrony",
-      "customContent": "Co ma zawierać?"
+      "customSubpage": "Name der Unterseite",
+      "customContent": "Was soll sie enthalten?"
     },
-    "selected": "Wybrane podstrony"
+    "selected": "Ausgewählte Unterseiten"
   },
   "step5": {
-    "title": "Jaki jest główny cel strony?",
-    "description": "Określ, co ma osiągnąć Twoja strona internetowa.",
-    "sectionTitle": "Główny cel witryny",
+    "title": "Was ist das Hauptziel der Website?",
+    "description": "Definieren Sie, was Ihre Website erreichen soll.",
+    "sectionTitle": "Hauptziel der Website",
     "goals": {
       "leads": {
-        "title": "Generowanie leadów",
-        "description": "Zbieranie kontaktów potencjalnych klientów"
+        "title": "Lead-Generierung",
+        "description": "Sammlung potenzieller Kundenkontakte"
       },
       "sales": {
-        "title": "Sprzedaż produktów/usług online",
-        "description": "Bezpośrednia sprzedaż przez stronę"
+        "title": "Online-Verkauf von Produkten/Dienstleistungen",
+        "description": "Direktverkauf über die Website"
       },
       "branding": {
-        "title": "Budowanie wizerunku marki",
-        "description": "Profesjonalna prezentacja firmy"
+        "title": "Markenbildung",
+        "description": "Professionelle Unternehmenspräsentation"
       },
       "information": {
-        "title": "Informowanie o usługach",
-        "description": "Edukacja klientów, prezentacja oferty"
+        "title": "Information über Dienstleistungen",
+        "description": "Kundenbildung, Angebotspräsentation"
       },
       "recruitment": {
-        "title": "Rekrutacja pracowników",
-        "description": "Przyciąganie talentów"
+        "title": "Mitarbeiterrekrutierung",
+        "description": "Talente anziehen"
       },
       "support": {
-        "title": "Wsparcie klientów",
-        "description": "Baza wiedzy, pomoc techniczna"
+        "title": "Kundensupport",
+        "description": "Wissensdatenbank, technische Hilfe"
       },
       "other": {
-        "title": "Inne",
-        "description": "Opisz swój cel"
+        "title": "Andere",
+        "description": "Beschreiben Sie Ihr Ziel"
       }
     },
     "fields": {
-      "additionalGoals": "Dodatkowe cele"
+      "additionalGoals": "Zusätzliche Ziele"
     },
     "placeholders": {
-      "other": "Opisz cel",
-      "additionalGoals": "Czy są jakieś dodatkowe cele?"
+      "other": "Ziel beschreiben",
+      "additionalGoals": "Gibt es zusätzliche Ziele?"
     }
   },
   "step6": {
-    "title": "Jakie działania mają podejmować odwiedzający?",
-    "description": "Określ najważniejsze call-to-action na stronie.",
+    "title": "Welche Aktionen sollen Besucher durchführen?",
+    "description": "Definieren Sie die wichtigsten Call-to-Actions auf der Website.",
     "sectionTitle": "Call to Action (CTA)",
     "actions": {
       "contact_form": {
-        "title": "Wypełnienie formularza kontaktowego",
-        "description": "Standardowy formularz zapytania"
+        "title": "Kontaktformular ausfüllen",
+        "description": "Standard-Anforderungsformular"
       },
       "newsletter": {
-        "title": "Zapis na newsletter",
-        "description": "Budowanie bazy mailingowej"
+        "title": "Newsletter-Anmeldung",
+        "description": "Aufbau einer Mailingliste"
       },
       "download": {
-        "title": "Pobranie materiałów",
-        "description": "E-book, cennik, case study"
+        "title": "Materialien herunterladen",
+        "description": "E-Book, Preisliste, Fallstudie"
       },
       "consultation": {
-        "title": "Umówienie konsultacji/demo",
-        "description": "Rezerwacja spotkania"
+        "title": "Beratung/Demo vereinbaren",
+        "description": "Terminreservierung"
       },
       "purchase": {
-        "title": "Zakup online",
-        "description": "Bezpośrednia sprzedaż"
+        "title": "Online-Kauf",
+        "description": "Direktverkauf"
       },
       "ai_chat": {
-        "title": "Rozmowa z Asystentem AI",
-        "description": "Interakcja z chatem AI"
+        "title": "Chat mit KI-Assistent",
+        "description": "KI-Chat-Interaktion"
       },
       "call": {
-        "title": "Zadzwonienie",
-        "description": "Click-to-call"
+        "title": "Anrufen",
+        "description": "Click-to-Call"
       },
       "application": {
-        "title": "Aplikacja o pracę",
-        "description": "Formularz rekrutacyjny"
+        "title": "Bewerbung",
+        "description": "Bewerbungsformular"
       },
       "event_signup": {
-        "title": "Zapis na webinar/event",
-        "description": "Rejestracja na wydarzenie"
+        "title": "Webinar/Event-Anmeldung",
+        "description": "Eventregistrierung"
       }
     },
     "fields": {
-      "otherActions": "Inne akcje",
-      "priority": "Priorytet akcji"
+      "otherActions": "Andere Aktionen",
+      "priority": "Aktionspriorität"
     },
     "placeholders": {
-      "otherActions": "Inne działania...",
-      "priority": "Które akcje są NAJWAŻNIEJSZE?"
+      "otherActions": "Andere Aktionen...",
+      "priority": "Welche Aktionen sind AM WICHTIGSTEN?"
     }
   },
   "step7": {
-    "title": "Jakie formularze kontaktowe potrzebujesz?",
-    "description": "Określ, jakie formularze mają być na stronie.",
-    "sectionTitle": "Formularze na stronie",
+    "title": "Welche Kontaktformulare benötigen Sie?",
+    "description": "Definieren Sie, welche Formulare auf der Website sein sollen.",
+    "sectionTitle": "Formulare auf der Website",
     "forms": {
       "simple": {
-        "title": "Prosty formularz kontaktowy",
-        "description": "Imię, Email, Wiadomość"
+        "title": "Einfaches Kontaktformular",
+        "description": "Name, E-Mail, Nachricht"
       },
       "quote": {
-        "title": "Formularz zapytania ofertowego",
-        "description": "+ Firma, Telefon, Budżet"
+        "title": "Angebotsanfrageformular",
+        "description": "+ Firma, Telefon, Budget"
       },
       "consultation": {
-        "title": "Formularz zapisu na konsultację",
-        "description": "+ Preferowany termin"
+        "title": "Beratungsanmeldeformular",
+        "description": "+ Bevorzugter Termin"
       },
       "calculator": {
-        "title": "Kalkulator/Wycena online",
-        "description": "Interaktywny formularz"
+        "title": "Rechner/Online-Angebot",
+        "description": "Interaktives Formular"
       },
       "recruitment": {
-        "title": "Formularz rekrutacyjny",
-        "description": "+ CV upload"
+        "title": "Bewerbungsformular",
+        "description": "+ CV-Upload"
       },
       "newsletter": {
-        "title": "Formularz zapisu na newsletter",
-        "description": "Tylko email"
+        "title": "Newsletter-Anmeldeformular",
+        "description": "Nur E-Mail"
       },
       "booking": {
-        "title": "Formularz rezerwacji",
-        "description": "+ Data, Godzina"
+        "title": "Buchungsformular",
+        "description": "+ Datum, Uhrzeit"
       }
     },
     "fields": {
-      "additionalFields": "Dodatkowe pola w formularzach",
-      "destination": "Gdzie mają trafiać zgłoszenia?"
+      "additionalFields": "Zusätzliche Felder in Formularen",
+      "destination": "Wohin sollen Anfragen gehen?"
     },
     "placeholders": {
-      "additionalFields": "Jakie specyficzne pola?",
-      "destination": "Na jaki email? Do CRM?"
+      "additionalFields": "Welche spezifischen Felder?",
+      "destination": "An welche E-Mail? An CRM?"
     }
   },
   "step8": {
-    "title": "Jakie integracje są potrzebne?",
-    "description": "Określ, z jakimi zewnętrznymi systemami ma się łączyć Twoja strona.",
-    "sectionTitle": "Integracje zewnętrzne",
+    "title": "Welche Integrationen werden benötigt?",
+    "description": "Definieren Sie, mit welchen externen Systemen sich Ihre Website verbinden soll.",
+    "sectionTitle": "Externe Integrationen",
     "integrations": {
-      "analytics": "Google Analytics (STANDARDOWO)",
+      "analytics": "Google Analytics (STANDARD)",
       "crm": "CRM (HubSpot, Salesforce, Pipedrive)",
-      "email_marketing": "Email Marketing (MailChimp, GetResponse)",
+      "email_marketing": "E-Mail-Marketing (MailChimp, GetResponse)",
       "facebook_pixel": "Facebook Pixel",
       "google_tag_manager": "Google Tag Manager",
       "linkedin_tag": "LinkedIn Insight Tag",
-      "calendar": "Kalendarz rezerwacji (Calendly, Cal.com)",
-      "live_chat": "Live Chat (Intercom, Drift, Tidio)",
-      "payments": "Płatności online (Stripe, PayU)",
-      "accounting": "Systemy księgowe (Fakturownia)"
+      "calendar": "Buchungskalender (Calendly, Cal.com)",
+      "live_chat": "Live-Chat (Intercom, Drift, Tidio)",
+      "payments": "Online-Zahlungen (Stripe, PayU)",
+      "accounting": "Buchhaltungssysteme (Lexoffice)"
     },
     "fields": {
-      "other": "Inne integracje"
+      "other": "Andere Integrationen"
     },
     "placeholders": {
-      "system": "Jaki system?",
-      "other": "Jakie integracje?"
+      "system": "Welches System?",
+      "other": "Welche Integrationen?"
     }
   },
   "step9": {
-    "title": "Jaki ma być \"język firmy\" Asystenta AI?",
-    "description": "Asystent AI będzie rozmawiał z Twoimi klientami w stylu, który wybierzesz.",
-    "sectionTitle": "Ton komunikacji Asystenta AI",
+    "title": "Wie soll die Unternehmenssprache des KI-Assistenten sein?",
+    "description": "Der KI-Assistent wird mit Ihren Kunden in dem von Ihnen gewählten Stil sprechen.",
+    "sectionTitle": "Kommunikationston des KI-Assistenten",
     "tones": {
       "formal": {
-        "title": "Formalny / Profesjonalny",
-        "for": "Dla: kancelarie, banki, korporacje",
-        "example": "Przykład: 'Dzień dobry, w czym mogę Panu/Pani pomóc?'"
+        "title": "Förmlich / Professionell",
+        "for": "Für: Kanzleien, Banken, Konzerne",
+        "example": "Beispiel: 'Guten Tag, wie kann ich Ihnen helfen?'"
       },
       "friendly": {
-        "title": "Przyjazny / Swobodny",
-        "for": "Dla: startupy, małe firmy, e-commerce",
-        "example": "Przykład: 'Cześć! Jak mogę Ci dzisiaj pomóc?'"
+        "title": "Freundlich / Locker",
+        "for": "Für: Startups, kleine Unternehmen, E-Commerce",
+        "example": "Beispiel: 'Hallo! Wie kann ich dir heute helfen?'"
       },
       "expert": {
-        "title": "Ekspercki / Techniczny",
-        "for": "Dla: IT, tech, agencje",
-        "example": "Przykład: 'Witam! Jakie rozwiązanie Cię interesuje?'"
+        "title": "Fachkundig / Technisch",
+        "for": "Für: IT, Tech, Agenturen",
+        "example": "Beispiel: 'Hallo! Welche Lösung interessiert Sie?'"
       },
       "motivating": {
-        "title": "Motywujący / Inspirujący",
-        "for": "Dla: coaching, edukacja, wellness",
-        "example": "Przykład: 'Super, że tu jesteś!'"
+        "title": "Motivierend / Inspirierend",
+        "for": "Für: Coaching, Bildung, Wellness",
+        "example": "Beispiel: 'Super, dass du hier bist!'"
       },
       "direct": {
-        "title": "Bezpośredni / Konkretny",
-        "for": "Dla: usługi lokalne, handel",
-        "example": "Przykład: 'Dzień dobry. Czego potrzebujesz?'"
+        "title": "Direkt / Konkret",
+        "for": "Für: Lokale Dienstleistungen, Handel",
+        "example": "Beispiel: 'Guten Tag. Was brauchen Sie?'"
       }
     },
     "fields": {
-      "guidelines": "Dodatkowe wskazówki",
-      "values": "Wartości firmy w komunikacji"
+      "guidelines": "Zusätzliche Richtlinien",
+      "values": "Unternehmenswerte in der Kommunikation"
     },
     "placeholders": {
-      "guidelines": "Czy są słowa/zwroty, których AI ma używać lub unikać?",
-      "values": "Co jest ważne w Waszej komunikacji?"
+      "guidelines": "Gibt es Wörter/Phrasen, die die KI verwenden oder vermeiden soll?",
+      "values": "Was ist wichtig in Ihrer Kommunikation?"
     }
   },
   "step10": {
-    "title": "Na jakie pytania ma odpowiadać Asystent AI?",
-    "description": "Wymień 5-10 najczęstszych pytań od klientów.",
-    "sectionTitle": "Najczęstsze pytania klientów",
+    "title": "Auf welche Fragen soll der KI-Assistent antworten?",
+    "description": "Nennen Sie 5-10 häufigste Kundenfragen.",
+    "sectionTitle": "Häufigste Kundenfragen",
     "fields": {
-      "question": "Pytanie",
-      "answer": "Jak AI ma odpowiedzieć?",
-      "additionalTopics": "Dodatkowe tematy"
+      "question": "Frage",
+      "answer": "Wie soll die KI antworten?",
+      "additionalTopics": "Zusätzliche Themen"
     },
     "placeholders": {
-      "question1": "np. Ile kosztują Wasze usługi?",
-      "question2": "np. Jak długo trwa realizacja?",
-      "question3": "np. Czy oferujecie wsparcie?",
-      "answer": "Krótka odpowiedź...",
-      "additionalTopics": "Inne tematy, o których AI powinien wiedzieć..."
+      "question1": "z.B. Wie viel kosten Ihre Dienstleistungen?",
+      "question2": "z.B. Wie lange dauert die Umsetzung?",
+      "question3": "z.B. Bieten Sie Support an?",
+      "answer": "Kurze Antwort...",
+      "additionalTopics": "Andere Themen, über die die KI Bescheid wissen sollte..."
     },
-    "addQuestion": "Dodaj kolejne pytanie",
-    "tip": "AI będzie również uczył się z treści na stronie."
+    "addQuestion": "Weitere Frage hinzufügen",
+    "tip": "Die KI wird auch aus den Inhalten auf der Website lernen."
   },
   "step11": {
-    "title": "Jakie akcje ma wykonywać Asystent AI?",
-    "description": "Określ, co AI ma robić poza udzielaniem odpowiedzi.",
-    "sectionTitle": "Funkcje Asystenta AI",
+    "title": "Welche Aktionen soll der KI-Assistent ausführen?",
+    "description": "Definieren Sie, was die KI außer der Beantwortung von Fragen tun soll.",
+    "sectionTitle": "Funktionen des KI-Assistenten",
     "functions": {
       "answer_questions": {
-        "title": "Odpowiadanie na pytania o produkty/usługi",
-        "description": "Podstawowa funkcja"
+        "title": "Fragen zu Produkten/Dienstleistungen beantworten",
+        "description": "Grundfunktion"
       },
       "help_choose": {
-        "title": "Pomoc w wyborze oferty",
-        "description": "Rekomendacje"
+        "title": "Bei der Auswahl des Angebots helfen",
+        "description": "Empfehlungen"
       },
       "collect_data": {
-        "title": "Zbieranie danych kontaktowych",
-        "description": "Generowanie leadów"
+        "title": "Kontaktdaten sammeln",
+        "description": "Lead-Generierung"
       },
       "schedule_meetings": {
-        "title": "Umawianie spotkań/konsultacji",
-        "description": "Integracja z kalendarzem"
+        "title": "Termine/Beratungen vereinbaren",
+        "description": "Kalenderintegration"
       },
       "qualify_leads": {
-        "title": "Kwalifikacja leadów",
-        "description": "Pytania sprawdzające"
+        "title": "Leads qualifizieren",
+        "description": "Qualifizierende Fragen"
       },
       "redirect_support": {
-        "title": "Przekierowywanie do działu obsługi",
-        "description": "Gdy wymaga interwencji"
+        "title": "An Support-Team weiterleiten",
+        "description": "Wenn Eingreifen erforderlich"
       },
       "send_materials": {
-        "title": "Wysyłanie materiałów",
-        "description": "Dostarczanie PDF"
+        "title": "Materialien senden",
+        "description": "PDFs bereitstellen"
       },
       "handle_faq": {
-        "title": "Obsługa FAQ",
-        "description": "Popularne pytania"
+        "title": "FAQ bearbeiten",
+        "description": "Beliebte Fragen"
       },
       "help_navigation": {
-        "title": "Pomoc w nawigacji",
-        "description": "Kierowanie użytkowników"
+        "title": "Bei Navigation helfen",
+        "description": "Benutzer leiten"
       },
       "collect_feedback": {
-        "title": "Zbieranie feedbacku",
-        "description": "Ankieta po rozmowie"
+        "title": "Feedback sammeln",
+        "description": "Umfrage nach Gespräch"
       }
     },
     "fields": {
-      "specialCases": "Szczególne przypadki",
-      "limits": "Granice AI"
+      "specialCases": "Besondere Fälle",
+      "limits": "KI-Grenzen"
     },
     "placeholders": {
-      "specialCases": "Czy są sytuacje specjalne?",
-      "limits": "Czego AI NIE POWINIEN robić?"
+      "specialCases": "Gibt es besondere Situationen?",
+      "limits": "Was soll die KI NICHT tun?"
     }
   },
   "step12": {
-    "title": "Kiedy Asystent AI ma być aktywny?",
-    "description": "Określ, kiedy chatbot ma być dostępny dla klientów.",
-    "sectionTitle": "Godziny pracy Asystenta AI",
+    "title": "Wann soll der KI-Assistent aktiv sein?",
+    "description": "Definieren Sie, wann der Chatbot für Kunden verfügbar sein soll.",
+    "sectionTitle": "Arbeitszeiten des KI-Assistenten",
     "availability": {
       "24/7": {
-        "title": "24/7 (zawsze dostępny) REKOMENDOWANE",
-        "description": "AI dostępny zawsze"
+        "title": "24/7 (immer verfügbar) EMPFOHLEN",
+        "description": "KI immer verfügbar"
       },
       "business": {
-        "title": "W godzinach pracy firmy",
-        "description": "Określ godziny"
+        "title": "Während der Geschäftszeiten",
+        "description": "Zeiten festlegen"
       },
       "after": {
-        "title": "Tylko poza godzinami pracy",
-        "description": "AI przejmuje gdy zespół niedostępny"
+        "title": "Nur außerhalb der Geschäftszeiten",
+        "description": "KI übernimmt wenn Team nicht verfügbar"
       },
       "always": {
-        "title": "Zawsze widoczny, ale z informacją",
-        "description": "AI zawsze + info o zespole"
+        "title": "Immer sichtbar, aber mit Information",
+        "description": "KI immer + Team-Info"
       }
     },
     "fields": {
-      "from": "Od",
-      "to": "Do",
-      "days": "Dni tygodnia",
-      "welcomeMessage": "Wiadomość powitalna AI",
-      "outOfHoursMessage": "Wiadomość poza godzinami"
+      "from": "Von",
+      "to": "Bis",
+      "days": "Wochentage",
+      "welcomeMessage": "KI-Begrüßungsnachricht",
+      "outOfHoursMessage": "Nachricht außerhalb der Öffnungszeiten"
     },
     "days": {
-      "mon": "Pn",
-      "tue": "Wt",
-      "wed": "Śr",
-      "thu": "Czw",
-      "fri": "Pt",
-      "sat": "Sb",
-      "sun": "Nd"
+      "mon": "Mo",
+      "tue": "Di",
+      "wed": "Mi",
+      "thu": "Do",
+      "fri": "Fr",
+      "sat": "Sa",
+      "sun": "So"
     },
     "placeholders": {
-      "welcomeMessage": "np. 'Cześć! Jestem AI asistentem...'",
-      "outOfHoursMessage": "Co AI mówi poza godzinami?"
+      "welcomeMessage": "z.B. 'Hallo! Ich bin der KI-Assistent...'",
+      "outOfHoursMessage": "Was sagt die KI außerhalb der Öffnungszeiten?"
     }
   },
   "step13": {
-    "title": "Jakie są kolory Twojej marki?",
-    "description": "Podaj kolory firmowe, które mamy użyć na stronie.",
-    "sectionTitle": "Identyfikacja wizualna",
+    "title": "Was sind Ihre Markenfarben?",
+    "description": "Geben Sie die Unternehmensfarben an, die wir auf der Website verwenden sollen.",
+    "sectionTitle": "Visuelle Identität",
     "fields": {
-      "primaryColor": "Kolor główny (primary)",
-      "secondaryColor": "Kolor dodatkowy (secondary)",
-      "accentColor": "Kolor akcentu/CTA",
-      "colorScheme": "Schemat kolorów",
-      "hasBrandBook": "Mamy księgę znaku - zachowajcie wytyczne"
+      "primaryColor": "Hauptfarbe (Primary)",
+      "secondaryColor": "Sekundärfarbe (Secondary)",
+      "accentColor": "Akzent-/CTA-Farbe",
+      "colorScheme": "Farbschema",
+      "hasBrandBook": "Wir haben ein Markenbuch - bitte Richtlinien beachten"
     },
     "descriptions": {
-      "primary": "Główne przyciski, nagłówki, akcenty",
-      "secondary": "Drugi poziom ważności",
-      "accent": "Call-to-action, alerty"
+      "primary": "Hauptbuttons, Überschriften, Akzente",
+      "secondary": "Zweite Wichtigkeitsebene",
+      "accent": "Call-to-Action, Warnungen"
     },
     "schemes": {
-      "light": "Jasny (light mode)",
-      "dark": "Ciemny (dark mode)",
-      "auto": "Automatyczny"
+      "light": "Hell (Light Mode)",
+      "dark": "Dunkel (Dark Mode)",
+      "auto": "Automatisch"
     }
   },
   "step14": {
-    "title": "Czy masz logo i materiały graficzne?",
-    "description": "Im więcej materiałów przekażesz, tym lepsza spójność wizualna.",
-    "sectionTitle": "Dostępne materiały",
+    "title": "Haben Sie Logo und Grafikmaterialien?",
+    "description": "Je mehr Materialien Sie bereitstellen, desto besser die visuelle Konsistenz.",
+    "sectionTitle": "Verfügbare Materialien",
     "materials": {
-      "logo": "Logo w różnych formatach",
-      "product_photos": "Zdjęcia produktów",
-      "team_photos": "Zdjęcia zespołu",
-      "icons": "Ikony / Grafiki",
-      "videos": "Video / Animacje",
-      "certificates": "Certyfikaty / Nagrody",
-      "infographics": "Infografiki"
+      "logo": "Logo in verschiedenen Formaten",
+      "product_photos": "Produktfotos",
+      "team_photos": "Teamfotos",
+      "icons": "Icons / Grafiken",
+      "videos": "Video / Animationen",
+      "certificates": "Zertifikate / Auszeichnungen",
+      "infographics": "Infografiken"
     },
     "fields": {
-      "links": "Linki do materiałów",
-      "photography": "Nie mam wszystkich - proszę użyć stock photos",
-      "graphics": "Potrzebuję projektów graficznych"
+      "links": "Links zu Materialien",
+      "photography": "Ich habe nicht alles - bitte Stock-Fotos verwenden",
+      "graphics": "Ich benötige Grafikdesigns"
     },
     "placeholders": {
       "links": "Google Drive, Dropbox..."
     }
   },
   "step15": {
-    "title": "Jakie strony są dla Ciebie inspiracją?",
-    "description": "Podaj 2-5 przykładów stron internetowych, które Ci się podobają.",
-    "sectionTitle": "Inspiracje wizualne",
+    "title": "Welche Websites sind Ihre Inspiration?",
+    "description": "Geben Sie 2-5 Beispiele von Websites an, die Ihnen gefallen.",
+    "sectionTitle": "Visuelle Inspirationen",
     "fields": {
-      "website": "Przykładowa strona",
-      "notes": "Co Ci się podoba?",
-      "disliked": "Strony, które NIE podobają się",
-      "style": "Preferowany styl"
+      "website": "Beispiel-Website",
+      "notes": "Was gefällt Ihnen?",
+      "disliked": "Websites, die Ihnen NICHT gefallen",
+      "style": "Bevorzugter Stil"
     },
     "placeholders": {
-      "notes": "np. 'Minimalistyczny design', 'Płynne animacje'...",
-      "disliked": "Co konkretnie przeszkadza?"
+      "notes": "z.B. 'Minimalistisches Design', 'Flüssige Animationen'...",
+      "disliked": "Was stört Sie konkret?"
     },
     "styles": {
       "minimalist": {
-        "title": "Minimalistyczny",
-        "description": "Dużo białej przestrzeni, prostota"
+        "title": "Minimalistisch",
+        "description": "Viel Weißraum, Einfachheit"
       },
       "modern": {
-        "title": "Nowoczesny Tech",
-        "description": "Gradienty, animacje"
+        "title": "Modern Tech",
+        "description": "Verläufe, Animationen"
       },
       "corporate": {
-        "title": "Korporacyjny",
-        "description": "Klasyczny, profesjonalny"
+        "title": "Korporativ",
+        "description": "Klassisch, professionell"
       },
       "creative": {
-        "title": "Kreatywny",
-        "description": "Odważny, kolorowy"
+        "title": "Kreativ",
+        "description": "Mutig, farbenfroh"
       },
       "editorial": {
         "title": "Editorial",
-        "description": "Typografia, magazynowy"
+        "description": "Typografie, Magazin-Stil"
       }
     },
-    "addInspiration": "Dodaj kolejny przykład"
+    "addInspiration": "Weiteres Beispiel hinzufügen"
   },
   "step16": {
-    "title": "Czy masz gotowe teksty na stronę?",
-    "description": "Określ, ile treści możesz dostarczyć.",
-    "sectionTitle": "Teksty i treści",
+    "title": "Haben Sie fertige Texte für die Website?",
+    "description": "Definieren Sie, wie viel Inhalt Sie bereitstellen können.",
+    "sectionTitle": "Texte und Inhalte",
     "status": {
       "complete": {
-        "title": "Tak, wszystkie teksty gotowe",
-        "description": "Kompletne treści"
+        "title": "Ja, alle Texte fertig",
+        "description": "Vollständige Inhalte"
       },
       "partial": {
-        "title": "Częściowo, potrzebuję pomocy",
-        "description": "Niektóre opisy gotowe"
+        "title": "Teilweise, ich brauche Hilfe",
+        "description": "Einige Beschreibungen fertig"
       },
       "needed": {
-        "title": "Nie, potrzebuję pełnego copywritingu",
-        "description": "Napisz wszystkie treści"
+        "title": "Nein, ich benötige vollständiges Copywriting",
+        "description": "Alle Inhalte schreiben"
       },
       "structure": {
-        "title": "Stwórzcie strukturę, ja uzupełnię",
-        "description": "Placeholdery i wytyczne"
+        "title": "Struktur erstellen, ich fülle aus",
+        "description": "Platzhalter und Richtlinien"
       }
     },
     "fields": {
-      "available": "Jakie materiały możesz dostarczyć?",
-      "keyMessages": "Kluczowe komunikaty"
+      "available": "Welche Materialien können Sie bereitstellen?",
+      "keyMessages": "Schlüsselbotschaften"
     },
     "content": {
-      "product_descriptions": "Opisy produktów/usług",
-      "company_info": "Informacje o firmie",
-      "case_studies": "Case studies / Realizacje",
-      "testimonials": "Opinie klientów",
-      "certificates": "Certyfikaty - opisy",
-      "faq": "Teksty do FAQ",
-      "blog_articles": "Artykuły na blog",
-      "privacy_policy": "Polityka prywatności",
-      "terms": "Regulamin"
+      "product_descriptions": "Produkt-/Dienstleistungsbeschreibungen",
+      "company_info": "Unternehmensinformationen",
+      "case_studies": "Fallstudien / Projekte",
+      "testimonials": "Kundenmeinungen",
+      "certificates": "Zertifikate - Beschreibungen",
+      "faq": "FAQ-Texte",
+      "blog_articles": "Blog-Artikel",
+      "privacy_policy": "Datenschutzerklärung",
+      "terms": "AGB"
     },
     "placeholders": {
-      "keyMessages": "Co chcesz, żeby klienci zapamiętali?"
+      "keyMessages": "Was sollen Kunden sich merken?"
     }
   },
   "step17": {
-    "title": "Jakie metryki są dla Ciebie najważniejsze?",
-    "description": "Określ, co chcesz śledzić na stronie.",
-    "sectionTitle": "Kluczowe metryki (KPI)",
+    "title": "Welche Metriken sind für Sie am wichtigsten?",
+    "description": "Definieren Sie, was Sie auf der Website verfolgen möchten.",
+    "sectionTitle": "Key Performance Indicators (KPI)",
     "metrics": {
       "visits": {
-        "title": "Liczba odwiedzin",
-        "description": "Ile osób wchodzi"
+        "title": "Anzahl der Besuche",
+        "description": "Wie viele Personen besuchen"
       },
       "traffic_sources": {
-        "title": "Źródła ruchu",
-        "description": "Skąd przychodzą"
+        "title": "Traffic-Quellen",
+        "description": "Woher sie kommen"
       },
       "time_on_site": {
-        "title": "Czas spędzony na stronie",
-        "description": "Jak długo zostają"
+        "title": "Zeit auf der Website",
+        "description": "Wie lange sie bleiben"
       },
       "bounce_rate": {
-        "title": "Bounce rate",
-        "description": "Współczynnik odrzuceń"
+        "title": "Absprungrate",
+        "description": "Bounce Rate"
       },
       "form_submissions": {
-        "title": "Liczba wypełnionych formularzy",
-        "description": "Konwersje"
+        "title": "Anzahl der Formularübermittlungen",
+        "description": "Konversionen"
       },
       "cta_clicks": {
-        "title": "Kliknięcia w przyciski CTA",
-        "description": "Tracking przycisków"
+        "title": "CTA-Button-Klicks",
+        "description": "Button-Tracking"
       },
       "downloads": {
-        "title": "Pobrania materiałów",
-        "description": "Ile razy pobrano"
+        "title": "Material-Downloads",
+        "description": "Download-Anzahl"
       },
       "ai_conversations": {
-        "title": "Rozmowy z AI",
-        "description": "Użycie chatbota"
+        "title": "KI-Gespräche",
+        "description": "Chatbot-Nutzung"
       },
       "conversions": {
-        "title": "Konwersje",
-        "description": "Finalizacja celów"
+        "title": "Konversionen",
+        "description": "Zielerreichung"
       },
       "scroll_depth": {
-        "title": "Scroll depth",
-        "description": "Jak daleko scrollują"
+        "title": "Scroll-Tiefe",
+        "description": "Wie weit sie scrollen"
       },
       "heatmaps": {
-        "title": "Heatmapy",
-        "description": "Gdzie klikają"
+        "title": "Heatmaps",
+        "description": "Wo sie klicken"
       }
     },
     "fields": {
-      "goals": "Cele konwersji",
-      "value": "Wartość konwersji"
+      "goals": "Konversionsziele",
+      "value": "Konversionswert"
     },
     "placeholders": {
-      "goals": "Zdefiniuj, co jest konwersją...",
-      "value": "Wartość jednego leada?"
+      "goals": "Definieren Sie, was als Konversion gilt...",
+      "value": "Wert eines Leads?"
     }
   },
   "step18": {
-    "title": "Czy potrzebujesz raportowania?",
-    "description": "Możemy wysyłać Ci regularne raporty z analityki.",
-    "sectionTitle": "Raporty i dostęp do danych",
+    "title": "Benötigen Sie Reporting?",
+    "description": "Wir können Ihnen regelmäßige Analytics-Berichte senden.",
+    "sectionTitle": "Berichte und Datenzugriff",
     "frequency": {
       "weekly": {
-        "title": "Tak, cotygodniowe raporty email",
-        "description": "Podsumowania co tydzień"
+        "title": "Ja, wöchentliche E-Mail-Berichte",
+        "description": "Wöchentliche Zusammenfassungen"
       },
       "monthly": {
-        "title": "Tak, comiesięczne raporty email",
-        "description": "Rozbudowane raporty"
+        "title": "Ja, monatliche E-Mail-Berichte",
+        "description": "Umfassende Berichte"
       },
       "none": {
-        "title": "Nie, sam będę sprawdzał w Analytics",
-        "description": "Dostęp do GA"
+        "title": "Nein, ich prüfe Analytics selbst",
+        "description": "GA-Zugriff"
       },
       "dashboard": {
-        "title": "Dashboard z live danymi",
-        "description": "Własny panel"
+        "title": "Dashboard mit Live-Daten",
+        "description": "Eigenes Panel"
       }
     },
     "fields": {
-      "content": "Co ma być w raportach?",
-      "access": "Kto ma dostęp do Analytics?",
-      "training": "Chcę szkolenie z Google Analytics (1h)",
-      "looker": "Chcę dostęp do Looker Studio"
+      "content": "Was soll in Berichten enthalten sein?",
+      "access": "Wer hat Analytics-Zugriff?",
+      "training": "Ich möchte Google Analytics-Schulung (1h)",
+      "looker": "Ich möchte Looker Studio-Zugriff"
     },
     "placeholders": {
-      "content": "Jakie informacje są najważniejsze?",
-      "access": "Adresy email osób"
+      "content": "Welche Informationen sind am wichtigsten?",
+      "access": "E-Mail-Adressen"
     }
   },
   "step19": {
-    "title": "Kiedy potrzebujesz gotowej strony?",
-    "description": "Standardowo realizujemy stronę w ciągu 7 dni roboczych.",
-    "sectionTitle": "Termin realizacji",
+    "title": "Wann benötigen Sie die fertige Website?",
+    "description": "Wir liefern Websites normalerweise innerhalb von 7 Werktagen.",
+    "sectionTitle": "Umsetzungszeitplan",
     "timeline": {
       "express": {
-        "title": "Express (5 dni) - +2000 zł",
-        "description": "Priorytetowa realizacja"
+        "title": "Express (5 Tage) - +2.000 PLN",
+        "description": "Prioritätsumsetzung"
       },
       "standard": {
-        "title": "Standard (7 dni) REKOMENDOWANE",
-        "description": "Optymalny czas"
+        "title": "Standard (7 Tage) EMPFOHLEN",
+        "description": "Optimale Zeit"
       },
       "comfort": {
-        "title": "Komfort (10 dni)",
-        "description": "Więcej czasu na dopracowanie"
+        "title": "Komfort (10 Tage)",
+        "description": "Mehr Zeit für Feinschliff"
       },
       "specific": {
-        "title": "Mam konkretny deadline",
-        "description": "Wybierz datę"
+        "title": "Ich habe eine konkrete Deadline",
+        "description": "Datum wählen"
       }
     },
     "fields": {
-      "date": "Wybierz datę",
-      "keyDates": "Kluczowe daty",
-      "priority": "Priorytet"
+      "date": "Datum wählen",
+      "keyDates": "Wichtige Daten",
+      "priority": "Priorität"
     },
     "placeholders": {
-      "keyDates": "Czy są ważne wydarzenia?"
+      "keyDates": "Gibt es wichtige Ereignisse?"
     },
     "priority": {
-      "speed": "Szybkość",
-      "quality": "Jakość",
-      "balance": "Balans"
+      "speed": "Geschwindigkeit",
+      "quality": "Qualität",
+      "balance": "Balance"
     }
   },
   "step20": {
-    "title": "Czy masz dodatkowe wymagania?",
-    "description": "Specjalne wymagania, które nie zostały uwzględnione.",
-    "sectionTitle": "Specjalne wymagania",
+    "title": "Haben Sie zusätzliche Anforderungen?",
+    "description": "Spezielle Anforderungen, die bisher nicht berücksichtigt wurden.",
+    "sectionTitle": "Besondere Anforderungen",
     "requirements": {
       "gdpr": {
-        "title": "Zgodność z RODO",
-        "description": "Privacy policy, cookies"
+        "title": "DSGVO-Konformität",
+        "description": "Datenschutzerklärung, Cookies"
       },
       "wcag": {
-        "title": "Dostępność WCAG 2.1",
-        "description": "Dla osób niepełnosprawnych"
+        "title": "WCAG 2.1 Barrierefreiheit",
+        "description": "Für Menschen mit Behinderungen"
       },
       "multilingual": {
-        "title": "Wielojęzyczność",
-        "description": "Wiele wersji językowych"
+        "title": "Mehrsprachigkeit",
+        "description": "Mehrere Sprachversionen"
       },
       "mobile_first": {
-        "title": "Wersja mobilna first",
-        "description": "Priorytet na mobile"
+        "title": "Mobile First Version",
+        "description": "Mobile-Priorität"
       },
       "performance": {
-        "title": "Szybkość ładowania < 2s",
-        "description": "Optymalizacja"
+        "title": "Ladegeschwindigkeit < 2s",
+        "description": "Optimierung"
       },
       "seo": {
-        "title": "SEO on-page",
-        "description": "Optymalizacja pod wyszukiwarki"
+        "title": "On-Page SEO",
+        "description": "Suchmaschinenoptimierung"
       }
     },
     "fields": {
-      "languages": "Jakie języki?",
-      "technology": "Specyficzne technologie",
-      "legal": "Ograniczenia lub wymagania prawne",
-      "premium": "Funkcje premium / custom",
-      "hosting": "Hosting w cenie (od 200 zł/rok)",
-      "domain": "Domena w cenie (od 50 zł/rok)"
+      "languages": "Welche Sprachen?",
+      "technology": "Spezifische Technologien",
+      "legal": "Rechtliche Einschränkungen oder Anforderungen",
+      "premium": "Premium / Custom-Funktionen",
+      "hosting": "Hosting inklusive (ab 200 PLN/Jahr)",
+      "domain": "Domain inklusive (ab 50 PLN/Jahr)"
     },
     "placeholders": {
-      "languages": "np. Polski, Angielski, Niemiecki",
-      "technology": "Konkretna technologia?",
-      "legal": "Branżowe regulacje?",
-      "premium": "Specjalne funkcje?"
+      "languages": "z.B. Deutsch, Englisch, Französisch",
+      "technology": "Spezifische Technologie?",
+      "legal": "Branchenvorschriften?",
+      "premium": "Spezielle Funktionen?"
     }
   },
   "step21": {
-    "title": "Kto będzie osobą kontaktową po Twojej stronie?",
-    "description": "Określ, z kim będziemy się kontaktować podczas realizacji.",
-    "sectionTitle": "Kontakt projektowy",
+    "title": "Wer wird Ansprechpartner auf Ihrer Seite sein?",
+    "description": "Definieren Sie, mit wem wir während der Umsetzung kommunizieren werden.",
+    "sectionTitle": "Projektkontakt",
     "fields": {
-      "name": "Osoba kontaktowa - Imię i nazwisko",
-      "role": "Rola w firmie",
-      "email": "Email",
+      "name": "Ansprechpartner - Vor- und Nachname",
+      "role": "Rolle im Unternehmen",
+      "email": "E-Mail",
       "phone": "Telefon",
-      "channel": "Preferowany kanał komunikacji",
-      "decisionMakers": "Kto jeszcze w proces zatwierdzania?",
-      "process": "Proces decyzyjny",
-      "expectations": "Oczekiwania od komunikacji"
+      "channel": "Bevorzugter Kommunikationskanal",
+      "decisionMakers": "Wer ist noch im Genehmigungsprozess?",
+      "process": "Entscheidungsprozess",
+      "expectations": "Kommunikationserwartungen"
     },
     "placeholders": {
-      "name": "Jan Kowalski",
+      "name": "Max Mustermann",
       "role": "CEO / Marketing Manager",
-      "email": "jan@firma.pl",
-      "phone": "+48 123 456 789",
-      "decisionMakers": "Inne osoby do zaakceptowania?",
-      "expectations": "Jak często chcesz update?"
+      "email": "max@firma.de",
+      "phone": "+49 123 456 789",
+      "decisionMakers": "Andere Personen zur Genehmigung?",
+      "expectations": "Wie oft möchten Sie Updates?"
     },
     "channels": {
-      "email": "Email",
+      "email": "E-Mail",
       "phone": "Telefon",
       "slack": "Slack",
       "teams": "Teams",
       "whatsapp": "WhatsApp",
-      "other": "Inne"
+      "other": "Andere"
     },
     "process": {
-      "solo": "Decyduję sam/sama",
-      "duo": "Decydujemy 2 osoby",
-      "team": "Decyduje zespół (3+)",
-      "board": "Wymaga zatwierdzenia zarządu"
+      "solo": "Ich entscheide allein",
+      "duo": "Wir entscheiden zu zweit",
+      "team": "Team entscheidet (3+)",
+      "board": "Erfordert Vorstandsgenehmigung"
     }
   },
   "step22": {
-    "title": "Dodatkowe uwagi lub pytania",
-    "description": "Ostatnia szansa na dodanie ważnych informacji.",
+    "title": "Zusätzliche Anmerkungen oder Fragen",
+    "description": "Letzte Gelegenheit, wichtige Informationen hinzuzufügen.",
     "fields": {
-      "finalNotes": "Wszystko, co powinniśmy wiedzieć",
-      "concerns": "Jakie są Twoje największe obawy?",
-      "important": "Co jest dla Ciebie najważniejsze?",
-      "additionalServices": "Chcę propozycję dodatkowych usług (SEO, reklamy)",
-      "terms": "Zapoznałem się z regulaminem",
-      "gdpr": "Wyrażam zgodę na przetwarzanie danych (RODO)"
+      "finalNotes": "Alles, was wir wissen sollten",
+      "concerns": "Was sind Ihre größten Bedenken?",
+      "important": "Was ist Ihnen am wichtigsten?",
+      "additionalServices": "Ich möchte Vorschläge für zusätzliche Dienstleistungen (SEO, Werbung)",
+      "terms": "Ich habe die AGB gelesen",
+      "gdpr": "Ich stimme der Datenverarbeitung zu (DSGVO)"
     },
     "placeholders": {
-      "finalNotes": "Szczególne oczekiwania, obawy, pytania...",
-      "concerns": "Czego obawiasz się najbardziej?",
-      "important": "1-3 najważniejsze rzeczy?"
+      "finalNotes": "Besondere Erwartungen, Bedenken, Fragen...",
+      "concerns": "Was beunruhigt Sie am meisten?",
+      "important": "1-3 wichtigste Dinge?"
     }
   },
   "summary": {
-    "title": "Podsumowanie zamówienia",
-    "edit": "Edytuj",
+    "title": "Bestellzusammenfassung",
+    "edit": "Bearbeiten",
     "sections": {
-      "company": "DANE FIRMY",
-      "structure": "STRUKTURA STRONY",
-      "forms": "FORMULARZE I INTEGRACJE",
-      "ai": "ASYSTENT AI",
-      "design": "DESIGN I BRANDING",
-      "content": "TREŚCI",
-      "analytics": "ANALITYKA I RAPORTY",
-      "timeline": "REALIZACJA",
-      "requirements": "DODATKOWE WYMAGANIA",
-      "pricing": "CENA I ZAKRES"
+      "company": "UNTERNEHMENSDATEN",
+      "structure": "WEBSITE-STRUKTUR",
+      "forms": "FORMULARE UND INTEGRATIONEN",
+      "ai": "KI-ASSISTENT",
+      "design": "DESIGN UND BRANDING",
+      "content": "INHALTE",
+      "analytics": "ANALYTICS UND BERICHTE",
+      "timeline": "UMSETZUNG",
+      "requirements": "ZUSÄTZLICHE ANFORDERUNGEN",
+      "pricing": "PREIS UND UMFANG"
     },
-    "employees": "pracowników",
-    "subpages": "Podstrony",
-    "goal": "Główny cel",
-    "actions": "Akcje CTA",
-    "tone": "Ton komunikacji",
-    "availability": "Dostępność",
-    "questions": "Pytania AI",
-    "forms": "formularze",
-    "integrations": "integracji",
-    "responsiveDesign": "Nowoczesny, responsywny design",
-    "aiAssistant": "Asystent AI 24/7",
-    "backups": "Automatyczne backupy",
-    "submit": "Potwierdź i wyślij zamówienie za"
+    "employees": "Mitarbeiter",
+    "subpages": "Unterseiten",
+    "goal": "Hauptziel",
+    "actions": "CTA-Aktionen",
+    "tone": "Kommunikationston",
+    "availability": "Verfügbarkeit",
+    "questions": "KI-Fragen",
+    "forms": "Formulare",
+    "integrations": "Integrationen",
+    "responsiveDesign": "Modernes, responsives Design",
+    "aiAssistant": "24/7 KI-Assistent",
+    "backups": "Automatische Backups",
+    "submit": "Bestätigen und Bestellung absenden für"
   },
   "success": {
-    "title": "Zamówienie wysłane!",
-    "description": "Skontaktujemy się z Tobą w ciągu 24h."
+    "title": "Bestellung gesendet!",
+    "description": "Wir werden uns innerhalb von 24 Stunden bei Ihnen melden."
   },
   "error": {
-    "title": "Błąd",
-    "description": "Nie udało się wysłać formularza. Spróbuj ponownie."
+    "title": "Fehler",
+    "description": "Formular konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
   }
 }
