@@ -274,5 +274,8 @@
         "answer": "Pakiety PoC są idealne dla: 1) Startupów, które potrzebują MVP do prezentacji inwestorom bez wydawania dziesiątek tysięcy na pełny development, 2) Przedsiębiorców testujących nowe pomysły biznesowe przed dużą inwestycją, 3) Firm, które chcą szybko zweryfikować nową funkcjonalność lub produkt, 4) Innowatorów potrzebujących szybkiego prototypu do prezentacji na konkursach lub pitchach, 5) Każdego, kto ma pomysł na aplikację lub stronę i chce zobaczyć jak będzie wyglądać w praktyce - bez wiedzy technicznej czy programowania."
       }
     ]
+  },
+  "interestedUsers": {
+    "label": "zainteresowanych użytkowników"
   }
 }

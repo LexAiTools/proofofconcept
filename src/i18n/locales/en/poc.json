@@ -274,5 +274,8 @@
         "answer": "PoC packages are ideal for: 1) Startups that need an MVP for investor presentations without spending tens of thousands on full development, 2) Entrepreneurs testing new business ideas before major investment, 3) Companies that want to quickly verify new functionality or product, 4) Innovators needing a quick prototype for presentations at competitions or pitches, 5) Anyone who has an idea for an app or website and wants to see how it will look in practice - without technical knowledge or programming skills."
       }
     ]
+  },
+  "interestedUsers": {
+    "label": "interested users"
   }
 }
