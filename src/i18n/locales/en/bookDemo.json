@@ -122,5 +122,8 @@
       "alreadyRegistered": "This email is already on the waitlist",
       "failed": "Failed to join waitlist. Please try again."
     }
+  },
+  "activeUsers": {
+    "label": "interested users"
   }
 }
