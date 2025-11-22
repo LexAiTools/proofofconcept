@@ -211,7 +211,7 @@ export const PocInterestedUsers = () => {
   }, []);
 
   return (
-    <div className="flex items-center gap-3 animate-fade-in">
+    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-card/50 border border-border/50 shadow-sm animate-fade-in">
       <div className="flex items-center -space-x-1.5">
         {visibleUsers.slice(0, 2).map((user) => (
           <div key={user.id} className="relative">
@@ -252,9 +252,11 @@ export const PocInterestedUsers = () => {
         ))}
       </div>
       
-      <span className="text-sm text-muted-foreground whitespace-nowrap">
-        {interestedCount}+ {t('interestedUsers.label')}
-      </span>
+      <div className="text-sm text-muted-foreground text-center sm:text-left">
+        <span className="font-semibold text-foreground">{interestedCount}+</span>
+        {' '}
+        {t('interestedUsers.label')}
+      </div>
     </div>
   );
 };
