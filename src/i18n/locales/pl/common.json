@@ -30,7 +30,9 @@
     "viewAll": "Zobacz wszystko",
     "toggleTheme": "Przełącz motyw",
     "lightMode": "Jasny motyw",
-    "darkMode": "Ciemny motyw"
+    "darkMode": "Ciemny motyw",
+    "poc": "POC",
+    "pocTagline": "sprawdź swój pomysł"
   },
   "footer": {
     "solutions": "Rozwiązania",
