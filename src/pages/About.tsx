@@ -246,17 +246,16 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
         <div className="absolute inset-0 bg-gradient-subtle opacity-50"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 max-w-4xl mx-auto">
             {t('cta.title')}
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             {t('cta.subtitle')}
           </p>
           <RequestAccessPopup>
             <Button 
-              variant="glass" 
+              variant="default" 
               size="lg"
-              className="bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30"
             >
               {t('cta.button')}
               <ArrowRight className="ml-2 h-4 w-4" />
