@@ -1,60 +1,60 @@
 {
-  "title": "Order: COMPLETE PoC PACKAGE",
-  "subtitle": "Explainer Video + Landing Page + Copywriting",
+  "title": "Bestellung: KOMPLETTES PoC-PAKET",
+  "subtitle": "Erklärvideo + Landing Page + Copywriting",
   "price": "$710 / €651",
   "steps": {
-    "contact": "Contact",
-    "product": "Product",
-    "client": "Client",
+    "contact": "Kontakt",
+    "product": "Produkt",
+    "client": "Kunde",
     "video": "Video",
-    "videoStyle": "Video Style",
-    "videoContent": "Video Content",
+    "videoStyle": "Video-Stil",
+    "videoContent": "Video-Inhalt",
     "landing": "Landing",
-    "landingGoal": "LP Goal",
-    "sections": "LP Sections",
-    "landingStyle": "LP Style",
-    "tone": "Tone",
-    "benefits": "Benefits",
-    "competition": "Competition",
-    "timeline": "Timeline"
+    "landingGoal": "LP-Ziel",
+    "sections": "LP-Bereiche",
+    "landingStyle": "LP-Stil",
+    "tone": "Tonalität",
+    "benefits": "Vorteile",
+    "competition": "Wettbewerb",
+    "timeline": "Zeitplan"
   },
   "step1": {
-    "title": "What's your name and how can we contact you?",
-    "description": "We need your details to send you the complete presentation package and stay in touch during implementation. Example: John Smith, XYZ Company, john@company.com, +1 234 567 890",
-    "sectionTitle": "Contact details",
+    "title": "Wie ist Ihr Name und wie können wir Sie kontaktieren?",
+    "description": "Wir benötigen Ihre Daten, um Ihnen das komplette Präsentationspaket zu senden und während der Umsetzung in Kontakt zu bleiben. Beispiel: Max Mustermann, XYZ GmbH, max@firma.de, +49 123 456 7890",
+    "sectionTitle": "Kontaktdaten",
     "fields": {
-      "name": "Full name",
-      "company": "Company name",
-      "email": "Email",
-      "phone": "Phone number"
+      "name": "Vollständiger Name",
+      "company": "Firmenname",
+      "email": "E-Mail",
+      "phone": "Telefonnummer"
     },
     "placeholders": {
-      "name": "John Smith",
-      "company": "XYZ Company Inc.",
-      "email": "john@company.com",
-      "phone": "+1 234 567 890"
+      "name": "Max Mustermann",
+      "company": "XYZ GmbH",
+      "email": "max@firma.de",
+      "phone": "+49 123 456 7890"
     }
   },
   "buttons": {
-    "next": "Next",
-    "back": "Back",
-    "submit": "Confirm and submit order",
-    "close": "Close"
+    "next": "Weiter",
+    "back": "Zurück",
+    "submit": "Bestätigen und Bestellung absenden",
+    "close": "Schließen"
   },
   "validation": {
-    "nameRequired": "Name is required",
-    "nameMin": "Minimum 2 characters",
-    "emailRequired": "Email is required",
-    "emailInvalid": "Invalid email address",
-    "phoneRequired": "Phone number is required",
-    "phoneInvalid": "Invalid phone number"
+    "nameRequired": "Name ist erforderlich",
+    "nameMin": "Mindestens 2 Zeichen",
+    "emailRequired": "E-Mail ist erforderlich",
+    "emailInvalid": "Ungültige E-Mail-Adresse",
+    "phoneRequired": "Telefonnummer ist erforderlich",
+    "phoneInvalid": "Ungültige Telefonnummer"
   },
   "success": {
-    "title": "Thank you for your order!",
-    "message": "Your order has been submitted. We will contact you shortly."
+    "title": "Vielen Dank für Ihre Bestellung!",
+    "message": "Ihre Bestellung wurde übermittelt. Wir werden uns in Kürze bei Ihnen melden."
   },
   "error": {
-    "title": "An error occurred",
-    "message": "Failed to submit order. Please try again."
+    "title": "Ein Fehler ist aufgetreten",
+    "message": "Die Bestellung konnte nicht übermittelt werden. Bitte versuchen Sie es erneut."
   }
 }
