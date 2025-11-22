@@ -149,7 +149,7 @@ const About = () => {
                 <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300 border-primary/20">
                   <CardContent className="p-0">
                     <div className="flex items-start gap-6">
-                      <div className="flex-shrink-0">
+                      <div className="flex-shrink-0 hidden md:flex">
                         <div className="w-16 h-16 rounded-lg bg-gradient-primary flex items-center justify-center">
                           <Icon className="h-8 w-8 text-white" />
                         </div>
