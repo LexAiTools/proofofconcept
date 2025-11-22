@@ -822,13 +822,6 @@ export const InteractiveAppPocForm = ({ children }: InteractiveAppPocFormProps) 
       </DialogTrigger>
       <DialogContent className="max-w-7xl w-[95vw] sm:w-[90vw] lg:w-full max-h-[90vh] overflow-y-auto p-0 mx-2 sm:mx-4">
         <div className="relative">
-          <button
-            onClick={handleClose}
-            className="absolute right-2 top-2 sm:right-4 sm:top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100"
-          >
-            <X className="h-5 w-5 sm:h-6 sm:w-6" />
-          </button>
-
           <div className="flex flex-col lg:grid lg:grid-cols-[40%_60%] min-h-[600px]">
             {renderLeftContent()}
 
