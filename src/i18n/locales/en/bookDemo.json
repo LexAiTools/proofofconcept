@@ -16,11 +16,7 @@
     "integration": {
       "title": "Integration Settings",
       "description": "Configure your AI assistant with custom settings including system name, API key integration, and response style preferences.",
-      "items": [
-        "Custom assistant name",
-        "Secure API key management",
-        "Response style customization"
-      ]
+      "items": ["Custom assistant name", "Secure API key management", "Response style customization"]
     },
     "credits": {
       "title": "Credit Management",
@@ -31,11 +27,7 @@
     "knowledgeBase": {
       "title": "Knowledge Base RAG",
       "description": "Upload and manage your knowledge base with support for multiple file formats and intelligent document processing.",
-      "items": [
-        "PDF, TXT, CSV, DOCX, XLSX",
-        "Drag & drop upload",
-        "WordPress data integration"
-      ]
+      "items": ["PDF, TXT, CSV, DOCX, XLSX", "Drag & drop upload", "WordPress data integration"]
     }
   },
   "installation": {
@@ -82,11 +74,7 @@
       }
     },
     "submit": "Request Demo & Proof-of-Concept",
-    "benefits": [
-      "7-day free trial",
-      "Full content access",
-      "SOC II compliant"
-    ],
+    "benefits": ["7-day free trial", "Full content access", "SOC II compliant"],
     "privacy": {
       "text": "By clicking \"Request Demo\", you agree to the processing of your data in accordance with our",
       "link": "Privacy Policy",
@@ -124,6 +112,6 @@
     }
   },
   "activeUsers": {
-    "label": "interested users"
+    "label": "active users"
   }
 }
