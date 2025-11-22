@@ -14,6 +14,198 @@
     "style": "Style",
     "timeline": "Timeline"
   },
+  "step1": {
+    "number": "1",
+    "title": "What's your name and how can we contact you?",
+    "description": "We need your details to send you the finished application and stay in touch during development. Example: John Smith, john@company.com, +1 123 456 789",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone number"
+    },
+    "placeholders": {
+      "name": "John Smith",
+      "email": "john@company.com",
+      "phone": "+1 123 456 789"
+    }
+  },
+  "step2": {
+    "number": "2",
+    "title": "What problem does your app solve?",
+    "description": "Describe in detail what specific user problem you want to solve. The more details, the better we'll understand your needs. Example: \"Entrepreneurs lose an average of 5 hours per week manually creating invoices and tracking payments\"",
+    "field": "Problem description",
+    "placeholder": "My app solves the problem of...",
+    "charCounter": "{{current}}/{{max}} characters",
+    "minChars": "Minimum 100 characters"
+  },
+  "step3": {
+    "number": "3",
+    "title": "Who is your target customer?",
+    "description": "Define exactly who your app is for. What are their characteristics? Example: \"Small businesses with 5-20 employees\" or \"Students preparing for exams\"",
+    "field": "Target audience",
+    "placeholder": "My customers are...",
+    "suggestions": {
+      "title": "Choose from suggestions:",
+      "entrepreneurs": "Entrepreneurs",
+      "students": "Students",
+      "parents": "Parents",
+      "freelancers": "Freelancers",
+      "b2b": "B2B Companies",
+      "b2c": "B2C Consumers"
+    }
+  },
+  "step4": {
+    "number": "4",
+    "title": "What features should the app include?",
+    "description": "List all key functionalities that must be in the app. Check the most important ones. Example: \"User registration\", \"Dashboard with statistics\", \"Export data to PDF\", \"Online payments\", \"Notification system\"",
+    "fields": {
+      "feature": "Feature"
+    },
+    "placeholders": {
+      "feature1": "e.g., User registration",
+      "feature2": "e.g., Data dashboard",
+      "feature3": "e.g., Payment system",
+      "feature4": "e.g., Email notifications",
+      "feature5": "e.g., PDF export"
+    },
+    "importantLabel": "Most important",
+    "addMore": "+ Add another feature",
+    "maxFeatures": "Maximum 6 features"
+  },
+  "step5": {
+    "number": "5",
+    "title": "What type of leads do you want to collect?",
+    "description": "Specify what contact data and customer information you want to collect through the app. This is crucial for later customer contact.",
+    "basicContact": "Basic contact data:",
+    "additionalInfo": "Additional information:",
+    "fields": {
+      "email": "Email",
+      "phone": "Phone number",
+      "company": "Company name",
+      "position": "Position",
+      "budget": "Project budget",
+      "timeline": "Preferred timeline",
+      "requirements": "Specific requirements",
+      "source": "How did you hear about us"
+    },
+    "otherLabel": "Other data to collect",
+    "otherPlaceholder": "Other information you want to collect..."
+  },
+  "step6": {
+    "number": "6",
+    "title": "How should the lead collection process look?",
+    "description": "Choose how the app should collect contacts from users. You can select multiple options.",
+    "types": {
+      "contact": {
+        "title": "Simple contact form",
+        "description": "Basic form with name, email, and message"
+      },
+      "registration": {
+        "title": "User registration",
+        "description": "Full registration with account creation"
+      },
+      "demo": {
+        "title": "Demo/consultation booking",
+        "description": "Schedule a meeting/presentation"
+      },
+      "quote": {
+        "title": "Quote request",
+        "description": "Detailed form with needs and requirements description"
+      },
+      "subscription": {
+        "title": "Subscription/Newsletter",
+        "description": "Newsletter or mailing list signup"
+      },
+      "other": {
+        "title": "Other",
+        "description": "Describe your lead collection method"
+      }
+    },
+    "otherLabel": "Describe the lead collection process",
+    "otherPlaceholder": "Describe in detail how you want to collect leads..."
+  },
+  "step7": {
+    "number": "7",
+    "title": "Should the app be web or mobile?",
+    "description": "Choose the platform your app should run on. Web apps work in browsers, mobile apps require installation.",
+    "types": {
+      "web": {
+        "title": "Web application (browser)",
+        "description": "Works on any device with a browser",
+        "benefit1": "No installation needed",
+        "benefit2": "Access from any device"
+      },
+      "mobile": {
+        "title": "Mobile app (iOS/Android)",
+        "description": "Native look and feel. Requires app store installation"
+      },
+      "both": {
+        "title": "Both versions (web + mobile)",
+        "description": "Maximum user coverage. Higher development cost"
+      }
+    }
+  },
+  "step8": {
+    "number": "8",
+    "title": "What are the main screens/sections of the app?",
+    "description": "List all views that should be in the app. Example: \"Home page\", \"Dashboard\", \"Product list\", \"User profile\", \"Settings\", \"Order history\"",
+    "screenLabel": "Screen",
+    "placeholders": {
+      "screen1": "e.g., Home page / Landing page",
+      "screen2": "e.g., Data dashboard",
+      "screen3": "e.g., User profile",
+      "screen4": "e.g., Product / service list",
+      "screen5": "e.g., Account settings"
+    },
+    "descriptionLabel": "Additional screen description",
+    "descriptionPlaceholder": "Describe in detail what should be on each screen...",
+    "addMore": "+ Add another screen"
+  },
+  "step9": {
+    "number": "9",
+    "title": "Do you have visual preferences?",
+    "description": "Choose the style that best fits your app. If you have brand colors or a logo, provide them below.",
+    "styleLabel": "Visual style",
+    "styles": {
+      "modern": {
+        "title": "Modern",
+        "description": "Clean lines, gradients, animations"
+      },
+      "minimal": {
+        "title": "Minimalist",
+        "description": "Lots of white space, simplicity"
+      },
+      "colorful": {
+        "title": "Colorful",
+        "description": "Vibrant colors, dynamic design"
+      },
+      "professional": {
+        "title": "Professional",
+        "description": "Business-like, elegant, trustworthy"
+      }
+    },
+    "primaryColorLabel": "Primary color",
+    "secondaryColorLabel": "Secondary color",
+    "inspirationLabel": "Inspiration examples (links)",
+    "inspirationPlaceholder": "Provide links to apps you like..."
+  },
+  "step10": {
+    "number": "10",
+    "title": "When do you need the finished app?",
+    "description": "We typically deliver PoC apps within 3-5 business days. If you need it faster or have a specific deadline, let us know.",
+    "options": {
+      "express": "Express (2-3 days)",
+      "standard": "Standard (3-5 days)",
+      "comfort": "Comfort (7-10 days)",
+      "specific": "I have a specific deadline"
+    },
+    "expressDescription": "Priority development",
+    "standardDescription": "Recommended timeline",
+    "comfortDescription": "No rush, more time for consultations",
+    "selectDate": "Select date",
+    "notesLabel": "Additional notes",
+    "notesPlaceholder": "Are there any key dates? (e.g., investor presentation, trade show, conference)"
+  },
   "buttons": {
     "next": "Next",
     "back": "Back",
@@ -24,7 +216,23 @@
     "nameRequired": "Full name is required",
     "nameMin": "Minimum 2 characters",
     "emailRequired": "Email is required",
-    "emailInvalid": "Invalid email address"
+    "emailInvalid": "Invalid email address",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Invalid phone number",
+    "problemRequired": "Problem description is required",
+    "problemMin": "Minimum 100 characters",
+    "problemMax": "Maximum 1000 characters",
+    "audienceRequired": "Target audience is required",
+    "audienceMin": "Minimum 20 characters",
+    "featuresMin": "Provide at least 3 features (min 5 characters each)",
+    "leadsRequired": "Select at least one type of data to collect",
+    "leadTypeRequired": "Select lead collection process type",
+    "leadTypeOtherRequired": "Describe the lead collection process",
+    "appTypeRequired": "Select app type",
+    "screensMin": "Provide at least 3 screens (min 5 characters each)",
+    "styleRequired": "Select visual style",
+    "timelineRequired": "Select preferred timeline",
+    "dateRequired": "Select specific date"
   },
   "success": {
     "title": "Thank you for your order!",
