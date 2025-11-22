@@ -74,9 +74,106 @@
       }
     }
   },
+  "introduction": {
+    "title": "Proof of Concept - wir schaffen Technologien, die Ihre Zeit, Ihr Geld und Ihre Nerven sparen",
+    "subtitle": "Seit 2009 helfen wir Unternehmen, Lösungen zu entwickeln, die vom ersten Tag an funktionieren",
+    "story": [
+      "Als wir anfingen, haben wir Tools für unser eigenes Geschäft entwickelt. Wir haben alle möglichen Fehler gemacht - Budgets verschwendet, Funktionen schlecht gestaltet, zu komplizierte Lösungen gebaut.",
+      "Heute arbeitet diese Erfahrung zu Ihrem Vorteil.",
+      "Wir führen Sie so, dass Sie die gleichen Fallen vermeiden und schneller ein Produkt liefern, das echte Ergebnisse bringt."
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Warum wählen Unternehmen uns und nicht den billigsten Auftragnehmer?",
+    "reasons": [
+      {
+        "number": "1",
+        "title": "Wir sagen Kunden, was sie nicht tun sollten - bevor sie Geld ausgeben",
+        "description": "Wir wissen, wie falsche Design- und Technologieentscheidungen aussehen. Vom ersten Gespräch an zeigen wir Risiken auf, die Sie Monate Arbeit und Zehntausende kosten können. Wir handeln als Partner, der Ihre Interessen schützt."
+      },
+      {
+        "number": "2",
+        "title": "Sie bauen schneller, weil Sie mit einem Team arbeiten, das solche Probleme bereits gelöst hat",
+        "description": "Von B2B/B2C-Transportanwendungen über Web3 und Smart Contracts bis hin zu fortgeschrittenen KI-Systemen - wir experimentieren nicht an Ihrem Projekt. Wir kommen rein und liefern."
+      },
+      {
+        "number": "3",
+        "title": "Technologie für Ihr Geschäftsziel gewählt, nicht für unsere Präferenzen",
+        "description": "Wir arbeiten mit den modernsten Umgebungen",
+        "technologies": [
+          "React",
+          "Vue / Nuxt",
+          "Moderne Backends, API-first, modulare Architekturen",
+          "KI (maschinelles Lernen, Automatisierung, LLM)"
+        ],
+        "conclusion": "So erhalten Sie nicht eine weitere App, sondern ein Tool, das wirklich für Ergebnisse arbeitet."
+      },
+      {
+        "number": "4",
+        "title": "Sie erhalten einen Proof of Concept, den Sie sofort Investoren, Kunden oder dem Vorstand zeigen können",
+        "description": "Wir gehen schnell von der Idee zum funktionierenden Demo über. Das verkürzt den Entscheidungsprozess um bis zu 80%. Statt Folien - präsentieren Sie ein funktionierendes Produkt."
+      },
+      {
+        "number": "5",
+        "title": "Wir minimieren Kosten - maximieren Erfolgschancen",
+        "description": "Dank Erfahrung aus eigenen Projekten: Wir bauen keine Dinge, die keine Bedeutung haben, wir verkomplizieren die Architektur nicht, wir verbrennen keine Stunden und Budgets. Sie zahlen nur für Funktionen, die Wert generieren."
+      }
+    ]
+  },
+  "clientBenefits": {
+    "title": "Was gewinnen Sie als Kunde?",
+    "benefits": [
+      {
+        "title": "Sicherheit, dass das Projekt in die richtige Richtung geht",
+        "icon": "target"
+      },
+      {
+        "title": "Schnellere Implementierung der ersten funktionierenden Version",
+        "icon": "rocket"
+      },
+      {
+        "title": "Kleineres Anfangsbudget dank Fehlerbeseitigung am Start",
+        "icon": "dollar"
+      },
+      {
+        "title": "Technologie an das Geschäft angepasst, nicht umgekehrt",
+        "icon": "puzzle"
+      },
+      {
+        "title": "Einen Partner, der für Sie über Risiken und technische Konsequenzen nachdenkt",
+        "icon": "shield"
+      },
+      {
+        "title": "Produkt bereit zur Präsentation für Investoren und Partner",
+        "icon": "award"
+      }
+    ]
+  },
+  "teamExperience": {
+    "title": "Sie arbeiten mit einem Team, das dies seit 2009 tut",
+    "stats": [
+      {
+        "value": "4",
+        "label": "Full-stack-Entwickler"
+      },
+      {
+        "value": "1M+",
+        "label": "An gesicherten Zuschüssen"
+      },
+      {
+        "value": "100K+",
+        "label": "Benutzer unserer Produkte"
+      }
+    ],
+    "description": "Erfahrung in KI, Web3, Transportanwendungen und Geschäftssystemen.",
+    "conclusion": "Das ist keine Theorie. Das ist Praxis, die für Sie funktioniert.",
+    "ctaTitle": "Möchten Sie Fehler vermeiden, die am meisten kosten?",
+    "ctaSubtitle": "Sprechen wir über Ihren Proof of Concept.",
+    "ctaButton": "Gespräch beginnen"
+  },
   "cta": {
-    "title": "Ready to work with our consortium?",
-    "subtitle": "Let's discuss how our combined expertise can bring your AI and blockchain projects to life.",
-    "button": "Get in Touch"
+    "title": "Bereit für die Zusammenarbeit mit unserem Konsortium?",
+    "subtitle": "Lassen Sie uns besprechen, wie unsere kombinierte Expertise Ihre KI- und Blockchain-Projekte zum Leben erwecken kann.",
+    "button": "Kontakt aufnehmen"
   }
 }

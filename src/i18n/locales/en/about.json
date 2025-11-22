@@ -74,6 +74,103 @@
       }
     }
   },
+  "introduction": {
+    "title": "Proof of Concept – we create technologies that save your time, money, and nerves",
+    "subtitle": "Since 2009, we've been helping companies build solutions that work from day one",
+    "story": [
+      "When we started, we built tools for our own business. We made every possible mistake — wasted budgets, poorly designed features, built overly complex solutions.",
+      "Today, that experience works in your favor.",
+      "We'll guide you to avoid the same pitfalls and deliver a product that brings real results faster."
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Why companies choose us over the cheapest contractor?",
+    "reasons": [
+      {
+        "number": "1",
+        "title": "We tell clients what not to do — before they spend money",
+        "description": "We know what wrong design and technology decisions look like. From the first conversation, we point out risks that could cost you months of work and tens of thousands. We act as a partner who looks after your interests."
+      },
+      {
+        "number": "2",
+        "title": "You build faster because you work with a team that has already solved such problems",
+        "description": "From B2B/B2C transport applications, through Web3 and smart contracts, to advanced AI systems — we don't experiment on your project. We come in and deliver."
+      },
+      {
+        "number": "3",
+        "title": "Technology chosen for your business goal, not our preferences",
+        "description": "We work with the most modern environments",
+        "technologies": [
+          "React",
+          "Vue / Nuxt",
+          "Modern backends, API-first, modular architectures",
+          "AI (machine learning, automation, LLM)"
+        ],
+        "conclusion": "This way you get not \"another app\", but a tool that really works for results."
+      },
+      {
+        "number": "4",
+        "title": "You get a Proof of Concept that you can immediately show to investors, clients, or the board",
+        "description": "We quickly move from idea to working demo. This shortens the decision process by up to 80%. Instead of slides – you present a working product."
+      },
+      {
+        "number": "5",
+        "title": "We minimize costs – maximize chances of success",
+        "description": "Thanks to experience from our own projects: we don't build things that don't matter, we don't complicate architecture, we don't \"burn\" hours and budgets. You only pay for features that generate value."
+      }
+    ]
+  },
+  "clientBenefits": {
+    "title": "What do you gain as a client?",
+    "benefits": [
+      {
+        "title": "Certainty that the project is going in the right direction",
+        "icon": "target"
+      },
+      {
+        "title": "Faster implementation of the first working version",
+        "icon": "rocket"
+      },
+      {
+        "title": "Lower initial budget thanks to eliminating mistakes at the start",
+        "icon": "dollar"
+      },
+      {
+        "title": "Technology tailored to business, not the other way around",
+        "icon": "puzzle"
+      },
+      {
+        "title": "A partner who thinks about risks and technical consequences for you",
+        "icon": "shield"
+      },
+      {
+        "title": "Product ready for presentation to investors and partners",
+        "icon": "award"
+      }
+    ]
+  },
+  "teamExperience": {
+    "title": "You work with a team that has been doing this since 2009",
+    "stats": [
+      {
+        "value": "4",
+        "label": "Full-stack developers"
+      },
+      {
+        "value": "1M+",
+        "label": "In secured grants"
+      },
+      {
+        "value": "100K+",
+        "label": "Users of our products"
+      }
+    ],
+    "description": "Experience in AI, Web3, transport applications, and business systems.",
+    "conclusion": "This is not theory. This is practice that works for you.",
+    "ctaTitle": "Want to avoid mistakes that cost the most?",
+    "ctaSubtitle": "Let's talk about your Proof of Concept.",
+    "ctaButton": "Start the conversation"
+  },
   "cta": {
     "title": "Ready to work with our consortium?",
     "subtitle": "Let's discuss how our combined expertise can bring your AI and blockchain projects to life.",
