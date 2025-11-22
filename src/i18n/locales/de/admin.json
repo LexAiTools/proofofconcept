@@ -1,130 +1,130 @@
 {
   "dashboard": {
-    "welcome": "Welcome to Admin Panel",
-    "subtitle": "Manage leads and users of your platform",
-    "loading": "Loading dashboard..."
+    "welcome": "Willkommen im Admin-Panel",
+    "subtitle": "Verwalten Sie Leads und Nutzer Ihrer Plattform",
+    "loading": "Dashboard wird geladen..."
   },
   "sidebar": {
     "dashboard": "Dashboard",
     "leads": "Leads",
-    "conversations": "Conversations",
-    "documents": "Documents",
+    "conversations": "Konversationen",
+    "documents": "Dokumente",
     "podcasts": "Podcasts",
-    "logout": "Logout"
+    "logout": "Abmelden"
   },
   "stats": {
-    "allLeads": "All Leads",
-    "newLeads": "New Leads",
-    "converted": "Converted",
-    "thisMonth": "This Month",
-    "fromLastMonth": "from last month"
+    "allLeads": "Alle Leads",
+    "newLeads": "Neue Leads",
+    "converted": "Konvertiert",
+    "thisMonth": "Dieser Monat",
+    "fromLastMonth": "vom letzten Monat"
   },
   "leads": {
-    "title": "Recent Leads",
-    "viewAll": "View All Leads",
+    "title": "Aktuelle Leads",
+    "viewAll": "Alle Leads anzeigen",
     "table": {
       "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
+      "email": "E-Mail",
+      "phone": "Telefon",
       "service": "Service",
-      "date": "Date",
-      "time": "Time",
+      "date": "Datum",
+      "time": "Uhrzeit",
       "status": "Status",
-      "comments": "Comments",
-      "actions": "Actions"
+      "comments": "Kommentare",
+      "actions": "Aktionen"
     },
     "status": {
-      "new": "New",
-      "contacted": "Contacted",
-      "qualified": "Qualified",
-      "converted": "Converted",
-      "lost": "Lost"
+      "new": "Neu",
+      "contacted": "Kontaktiert",
+      "qualified": "Qualifiziert",
+      "converted": "Konvertiert",
+      "lost": "Verloren"
     },
-    "empty": "No leads found"
+    "empty": "Keine Leads gefunden"
   },
   "documents": {
-    "title": "Document Management",
-    "upload": "Upload Document",
-    "uploadSuccess": "Document uploaded successfully",
-    "uploadError": "Error uploading document",
-    "deleteSuccess": "Document deleted successfully",
-    "deleteError": "Error deleting document",
+    "title": "Dokumentenverwaltung",
+    "upload": "Dokument hochladen",
+    "uploadSuccess": "Dokument erfolgreich hochgeladen",
+    "uploadError": "Fehler beim Hochladen des Dokuments",
+    "deleteSuccess": "Dokument erfolgreich gelöscht",
+    "deleteError": "Fehler beim Löschen des Dokuments",
     "table": {
-      "title": "Title",
-      "category": "Category",
-      "uploadedAt": "Uploaded",
-      "actions": "Actions"
+      "title": "Titel",
+      "category": "Kategorie",
+      "uploadedAt": "Hochgeladen",
+      "actions": "Aktionen"
     },
     "form": {
-      "title": "Document Title",
-      "category": "Category",
-      "file": "Select File",
-      "selectCategory": "Select a category"
+      "title": "Dokumententitel",
+      "category": "Kategorie",
+      "file": "Datei auswählen",
+      "selectCategory": "Kategorie auswählen"
     },
     "categories": {
       "whitepaper": "Whitepaper",
-      "caseStudy": "Case Study",
-      "guide": "Guide",
-      "technical": "Technical Documentation"
+      "caseStudy": "Fallstudie",
+      "guide": "Leitfaden",
+      "technical": "Technische Dokumentation"
     }
   },
   "podcasts": {
-    "title": "Podcast Management",
-    "upload": "Upload Podcast",
-    "uploadSuccess": "Podcast uploaded successfully",
-    "uploadError": "Error uploading podcast",
-    "deleteSuccess": "Podcast deleted successfully",
-    "deleteError": "Error deleting podcast"
+    "title": "Podcast-Verwaltung",
+    "upload": "Podcast hochladen",
+    "uploadSuccess": "Podcast erfolgreich hochgeladen",
+    "uploadError": "Fehler beim Hochladen des Podcasts",
+    "deleteSuccess": "Podcast erfolgreich gelöscht",
+    "deleteError": "Fehler beim Löschen des Podcasts"
   },
   "conversations": {
-    "title": "Chat Conversations",
+    "title": "Chat-Konversationen",
     "stats": {
-      "total": "Total Conversations",
-      "withLeads": "With Leads",
-      "withoutLeads": "Without Leads",
-      "today": "Today"
+      "total": "Gesamt Konversationen",
+      "withLeads": "Mit Leads",
+      "withoutLeads": "Ohne Leads",
+      "today": "Heute"
     },
     "table": {
-      "date": "Date",
-      "contact": "Contact",
-      "messages": "Messages",
+      "date": "Datum",
+      "contact": "Kontakt",
+      "messages": "Nachrichten",
       "leadStatus": "Lead",
-      "actions": "Actions",
-      "viewTranscript": "View Transcript",
-      "linkToLead": "Link to Lead",
-      "viewLead": "View Lead"
+      "actions": "Aktionen",
+      "viewTranscript": "Transkript anzeigen",
+      "linkToLead": "Mit Lead verknüpfen",
+      "viewLead": "Lead anzeigen"
     },
     "status": {
-      "withLead": "With Lead",
-      "withoutLead": "Without Lead"
+      "withLead": "Mit Lead",
+      "withoutLead": "Ohne Lead"
     },
     "transcript": {
-      "title": "Conversation Transcript",
-      "user": "User",
-      "assistant": "Assistant",
-      "noMessages": "No messages"
+      "title": "Gesprächstranskript",
+      "user": "Nutzer",
+      "assistant": "Assistent",
+      "noMessages": "Keine Nachrichten"
     }
   },
   "waitlist": {
-    "title": "Waitlist",
+    "title": "Warteliste",
     "stats": {
-      "total": "Signed up (DB)",
-      "displayed": "Displayed count",
-      "spotsLeft": "Spots left",
-      "today": "Today"
+      "total": "Angemeldet (DB)",
+      "displayed": "Angezeigte Anzahl",
+      "spotsLeft": "Verbleibende Plätze",
+      "today": "Heute"
     },
     "table": {
-      "email": "Email",
-      "source": "Source",
-      "date": "Signed up",
-      "language": "Language",
-      "actions": "Actions"
+      "email": "E-Mail",
+      "source": "Quelle",
+      "date": "Angemeldet",
+      "language": "Sprache",
+      "actions": "Aktionen"
     },
-    "export": "Export CSV",
-    "deleteConfirm": "Are you sure you want to delete this entry?",
-    "deleteSuccess": "Entry deleted",
-    "deleteError": "Error deleting",
-    "exportSuccess": "List exported",
-    "empty": "No entries"
+    "export": "CSV exportieren",
+    "deleteConfirm": "Möchten Sie diesen Eintrag wirklich löschen?",
+    "deleteSuccess": "Eintrag gelöscht",
+    "deleteError": "Fehler beim Löschen",
+    "exportSuccess": "Liste exportiert",
+    "empty": "Keine Einträge"
   }
 }
