@@ -1,135 +1,135 @@
 {
   "meta": {
-    "title": "Pricing - Flexible AI Solutions for Your Business | Proof of Concept",
-    "description": "Transparent pricing for AI-powered solutions. Custom packages for startups to enterprises. Get your proof of concept without breaking the bank. Contact us for a quote."
+    "title": "Preise - Flexible KI-Lösungen für Ihr Unternehmen | Proof of Concept",
+    "description": "Transparente Preise für KI-gestützte Lösungen. Individuelle Pakete für Startups bis Großunternehmen. Erhalten Sie Ihren Proof of Concept ohne Ihr Budget zu sprengen. Kontaktieren Sie uns für ein Angebot."
   },
   "hero": {
-    "title": "Get started with",
-    "titleHighlight": "CorballyConcepts pricing",
-    "subtitle": "CorballyConcepts' pricing is tailored to your specific team's needs."
+    "title": "Starten Sie mit",
+    "titleHighlight": "CorballyConcepts Preisen",
+    "subtitle": "Die Preisgestaltung von CorballyConcepts ist auf die spezifischen Bedürfnisse Ihres Teams zugeschnitten."
   },
   "benefits": [
-    "AI platform fee based on your needs incl. optional add-ons",
-    "Flexible scaled pricing based on answers per month",
-    "Support and integration with your tools included with every plan"
+    "KI-Plattformgebühr basierend auf Ihren Bedürfnissen inkl. optionaler Add-ons",
+    "Flexible skalierte Preisgestaltung basierend auf Antworten pro Monat",
+    "Support und Integration mit Ihren Tools in jedem Plan enthalten"
   ],
   "form": {
     "email": {
-      "label": "Work Email",
+      "label": "Geschäftliche E-Mail",
       "placeholder": "john@acme.com"
     },
     "problem": {
-      "label": "What problem are you trying to solve?",
-      "placeholder": "Building an AI assistant for my docs, rolling out internal support agent etc."
+      "label": "Welches Problem möchten Sie lösen?",
+      "placeholder": "Aufbau eines KI-Assistenten für meine Dokumentation, Bereitstellung eines internen Support-Agenten usw."
     },
-    "submit": "Request pricing"
+    "submit": "Preise anfordern"
   },
   "trustedBy": {
-    "title": "Trusted by leading teams"
+    "title": "Vertraut von führenden Teams"
   },
   "stats": [
     {
       "number": "10k+",
-      "description": "Monthly questions answered unblocking thousands of developers instantly.",
+      "description": "Monatlich beantwortete Fragen, die Tausende von Entwicklern sofort entlasten.",
       "company": "Docker"
     },
     {
       "number": "24/7",
-      "description": "Global self-help coverage with multi-language tech support.",
+      "description": "Globale Self-Service-Abdeckung mit mehrsprachigem technischen Support.",
       "company": "OpenAI"
     },
     {
       "number": "28%",
-      "description": "Improvement in support response time with AI-Powered Developer Support.",
+      "description": "Verbesserung der Support-Reaktionszeit mit KI-gestütztem Entwickler-Support.",
       "company": "CircleCI"
     },
     {
       "number": "20%",
-      "description": "Decrease in support tickets with instant AI answers.",
+      "description": "Rückgang der Support-Tickets durch sofortige KI-Antworten.",
       "company": "Mapbox"
     }
   ],
   "whyChoose": {
-    "title": "Why companies choose CorballyConcepts"
+    "title": "Warum Unternehmen CorballyConcepts wählen"
   },
   "features": [
     {
-      "title": "Explainable and accurate answers",
-      "description": "Minimal hallucinations with state-of-the-art answer engine grounded in source materials, rigorously tested across 100+ deployments."
+      "title": "Erklärbare und präzise Antworten",
+      "description": "Minimale Halluzinationen mit modernster Antwort-Engine, die auf Quellmaterialien basiert und über 100+ Implementierungen hinweg rigoros getestet wurde."
     },
     {
-      "title": "Comprehensive integrations",
-      "description": "30+ data source integrations that are optimized for LLMs and automatically refresh, ensuring up-to-date information."
+      "title": "Umfassende Integrationen",
+      "description": "30+ Datenquellen-Integrationen, die für LLMs optimiert sind und sich automatisch aktualisieren, um stets aktuelle Informationen zu gewährleisten."
     },
     {
-      "title": "Off-the-shelf deployments",
-      "description": "1-click deployments including website chatbot widgets, Slack bots, Discord bots, and APIs for easy integration."
+      "title": "Sofort einsatzbereite Implementierungen",
+      "description": "1-Klick-Implementierungen einschließlich Website-Chatbot-Widgets, Slack-Bots, Discord-Bots und APIs für einfache Integration."
     },
     {
-      "title": "Actionable analytics suite",
-      "description": "Get insight in to real user intentions by analyzing conversations and use the platform to find gaps in your documentation."
+      "title": "Aussagekräftige Analyse-Suite",
+      "description": "Gewinnen Sie Einblicke in echte Nutzerabsichten durch Analyse von Konversationen und nutzen Sie die Plattform, um Lücken in Ihrer Dokumentation zu finden."
     },
     {
-      "title": "Enterprise-grade security",
-      "description": "Secure by design with SOC II Type II certification and advanced PII detection & masking technology for data security."
+      "title": "Sicherheit auf Unternehmensniveau",
+      "description": "Sicher nach Design mit SOC II Type II Zertifizierung und fortschrittlicher PII-Erkennung & Maskierungstechnologie für Datensicherheit."
     },
     {
-      "title": "End-to-end implementation success",
-      "description": "Full support from our technical team including answer debugging, managed source setup, and custom onboarding to ensure your successful deployment"
+      "title": "Ende-zu-Ende Implementierungserfolg",
+      "description": "Volle Unterstützung von unserem technischen Team einschließlich Antwort-Debugging, verwalteter Quelleneinrichtung und individuellem Onboarding für Ihre erfolgreiche Implementierung"
     }
   ],
   "testimonials": [
     {
-      "quote": "CorballyConcepts selected and implemented the perfect LLM model for us. Thanks to them, we're confident we're showing our customers the best solution for our needs",
+      "quote": "CorballyConcepts hat das perfekte LLM-Modell für uns ausgewählt und implementiert. Dank ihnen sind wir zuversichtlich, dass wir unseren Kunden die beste Lösung für unsere Bedürfnisse zeigen",
       "author": "Rusty Wilson",
       "position": "VP Support @ Sonatype"
     },
     {
-      "quote": "Our team tested various LLMs, but CorballyConcepts consistently proposed better solutions. They knew exactly which model fit our use case",
+      "quote": "Unser Team hat verschiedene LLMs getestet, aber CorballyConcepts schlug konsequent bessere Lösungen vor. Sie wussten genau, welches Modell zu unserem Anwendungsfall passt",
       "author": "Michael Ellis",
       "position": "Developer Lead @ Ionic"
     },
     {
-      "quote": "CorballyConcepts integrated a model for us that answers questions about Prisma much better than standard ChatGPT. It's mastery in selecting the right LLM",
+      "quote": "CorballyConcepts hat ein Modell für uns integriert, das Fragen zu Prisma viel besser beantwortet als Standard-ChatGPT. Es ist Meisterschaft in der Auswahl des richtigen LLM",
       "author": "Soren Schmidt",
       "position": "CEO @ Prisma"
     }
   ],
   "faq": {
-    "title": "Frequently asked questions",
+    "title": "Häufig gestellte Fragen",
     "questions": [
       {
-        "question": "What LLM do you use?",
-        "answer": "We use a combination of state-of-the-art language models optimized for technical documentation and customer support scenarios."
+        "question": "Welches LLM verwenden Sie?",
+        "answer": "Wir verwenden eine Kombination modernster Sprachmodelle, die für technische Dokumentation und Kundenservice-Szenarien optimiert sind."
       },
       {
-        "question": "How accurate is CorballyConcepts?",
-        "answer": "Our platform maintains industry-leading accuracy through rigorous testing across 100+ deployments and continuous improvement of our answer engine."
+        "question": "Wie genau ist CorballyConcepts?",
+        "answer": "Unsere Plattform erreicht branchenführende Genauigkeit durch rigoroses Testen über 100+ Implementierungen hinweg und kontinuierliche Verbesserung unserer Antwort-Engine."
       },
       {
-        "question": "How do you solve hallucinations?",
-        "answer": "We use advanced grounding techniques, source citation, and confidence scoring to minimize hallucinations and ensure reliable answers."
+        "question": "Wie lösen Sie Halluzinationen?",
+        "answer": "Wir verwenden fortschrittliche Grounding-Techniken, Quellenzitation und Konfidenz-Bewertung, um Halluzinationen zu minimieren und zuverlässige Antworten zu gewährleisten."
       },
       {
-        "question": "Do you use fine-tuning or RAG?",
-        "answer": "We use a hybrid approach combining the best of both RAG (Retrieval-Augmented Generation) and fine-tuning for optimal performance."
+        "question": "Verwenden Sie Fine-Tuning oder RAG?",
+        "answer": "Wir verwenden einen hybriden Ansatz, der das Beste aus RAG (Retrieval-Augmented Generation) und Fine-Tuning für optimale Leistung kombiniert."
       },
       {
-        "question": "What support does CorballyConcepts provide?",
-        "answer": "We offer comprehensive support including technical onboarding, answer debugging, managed source setup, and ongoing optimization assistance."
+        "question": "Welche Unterstützung bietet CorballyConcepts?",
+        "answer": "Wir bieten umfassenden Support einschließlich technischem Onboarding, Antwort-Debugging, verwalteter Quelleneinrichtung und fortlaufender Optimierungsunterstützung."
       },
       {
-        "question": "Do you have a special tier for non-commercial OSS?",
-        "answer": "Yes, we offer special pricing for open source projects and non-commercial use cases. Contact our team for details."
+        "question": "Haben Sie eine spezielle Stufe für nicht-kommerzielle OSS?",
+        "answer": "Ja, wir bieten spezielle Preise für Open-Source-Projekte und nicht-kommerzielle Anwendungsfälle. Kontaktieren Sie unser Team für Details."
       },
       {
-        "question": "Who do I reach out to for commercial and billing questions?",
-        "answer": "Please contact our sales team at sales@corballyconcepts.com for all commercial inquiries and billing questions."
+        "question": "An wen wende ich mich bei kommerziellen und Abrechnungsfragen?",
+        "answer": "Bitte kontaktieren Sie unser Vertriebsteam unter sales@corballyconcepts.com für alle kommerziellen Anfragen und Abrechnungsfragen."
       }
     ]
   },
   "messages": {
-    "success": "Thank you! We will contact you shortly.",
-    "error": "An error occurred. Please try again."
+    "success": "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
   }
 }
