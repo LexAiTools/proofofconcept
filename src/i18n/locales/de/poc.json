@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Proof of Concept Service - Quick Prototypes & Demos | NestAi",
+    "description": "Get your proof of concept in an hour: working app prototypes, professional websites, and explainer videos. Show investors, don't explain. Fast, affordable, professional."
+  },
+  "hero": {
+    "title": "Proof of Concept (PoC)",
+    "subtitle": "Turn your idea into a working product in one hour",
+    "watchVideo": "Watch Video"
+  },
+  "cta": {
+    "title": "Start today",
+    "description": "Don't waste time on lengthy development processes. Turn your idea into a working product in one hour and start gathering feedback from real users.",
+    "buttonForm": "Fill Out PoC Form",
+    "buttonContact": "Contact Us"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Order: COMPLETE PoC PACKAGE",
+  "subtitle": "Explainer Video + Landing Page + Copywriting",
+  "price": "$710 / €651",
+  "steps": {
+    "contact": "Contact",
+    "product": "Product",
+    "client": "Client",
+    "video": "Video",
+    "videoStyle": "Video Style",
+    "videoContent": "Video Content",
+    "landing": "Landing",
+    "landingGoal": "LP Goal",
+    "sections": "LP Sections",
+    "landingStyle": "LP Style",
+    "tone": "Tone",
+    "benefits": "Benefits",
+    "competition": "Competition",
+    "timeline": "Timeline"
+  },
+  "step1": {
+    "title": "What's your name and how can we contact you?",
+    "description": "We need your details to send you the complete presentation package and stay in touch during implementation. Example: John Smith, XYZ Company, john@company.com, +1 234 567 890",
+    "sectionTitle": "Contact details",
+    "fields": {
+      "name": "Full name",
+      "company": "Company name",
+      "email": "Email",
+      "phone": "Phone number"
+    },
+    "placeholders": {
+      "name": "John Smith",
+      "company": "XYZ Company Inc.",
+      "email": "john@company.com",
+      "phone": "+1 234 567 890"
+    }
+  },
+  "buttons": {
+    "next": "Next",
+    "back": "Back",
+    "submit": "Confirm and submit order",
+    "close": "Close"
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "nameMin": "Minimum 2 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Invalid phone number"
+  },
+  "success": {
+    "title": "Thank you for your order!",
+    "message": "Your order has been submitted. We will contact you shortly."
+  },
+  "error": {
+    "title": "An error occurred",
+    "message": "Failed to submit order. Please try again."
+  }
+}

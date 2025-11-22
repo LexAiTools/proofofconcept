@@ -1,0 +1,32 @@
+{
+  "title": "Order: Quick Start PoC",
+  "subtitle": "Fill out the form and receive your prototype within 24h",
+  "price": "€349",
+  "steps": {
+    "contact": "Client",
+    "problem": "Problem",
+    "audience": "Audience",
+    "features": "Features",
+    "style": "Style",
+    "timeline": "Timeline"
+  },
+  "buttons": {
+    "next": "Next",
+    "back": "Back",
+    "close": "Close"
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "nameMin": "Minimum 2 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address"
+  },
+  "success": {
+    "title": "Thank you for your order!",
+    "message": "Your order has been submitted. We will contact you shortly."
+  },
+  "error": {
+    "title": "An error occurred",
+    "message": "Failed to submit order. Please try again."
+  }
+}

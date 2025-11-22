@@ -1,0 +1,29 @@
+{
+  "title": "PoC PACKAGE - Professional Website with AI",
+  "subtitle": "Website with built-in AI Assistant",
+  "price": "€3,814 / $4,100",
+  "steps": {
+    "contact": "Contact",
+    "company": "Company",
+    "clients": "Clients",
+    "subpages": "Subpages",
+    "goal": "Goal",
+    "actions": "Actions",
+    "forms": "Forms",
+    "integrations": "Integrations",
+    "aiLanguage": "AI - Language",
+    "aiQuestions": "AI - Questions",
+    "aiActions": "AI - Actions",
+    "aiAvailability": "AI - Availability",
+    "colors": "Colors",
+    "materials": "Materials",
+    "inspirations": "Inspirations",
+    "content": "Content",
+    "analytics": "Analytics",
+    "reports": "Reports",
+    "timeline": "Timeline",
+    "additional": "Additional",
+    "projectContact": "Contact",
+    "summary": "Summary"
+  }
+}
