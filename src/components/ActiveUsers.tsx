@@ -98,13 +98,13 @@ const getUniqueRandomUsers = (currentVisible: UserInfo[]) => {
 
 export const ActiveUsers = () => {
   const { t } = useTranslation('bookDemo');
-  const [activeCount, setActiveCount] = useState(147);
+  const [activeCount, setActiveCount] = useState(850);
   const [visibleUsers, setVisibleUsers] = useState(mockUsers.slice(0, 4));
 
   useEffect(() => {
     const interval = setInterval(() => {
       const change = Math.random() > 0.7 ? (Math.random() > 0.5 ? 1 : -1) : 0;
-      setActiveCount(prev => Math.max(100, prev + change));
+      setActiveCount(prev => Math.max(150, prev + change));
 
       if (Math.random() > 0.8) {
         setVisibleUsers(current => getUniqueRandomUsers(current));
