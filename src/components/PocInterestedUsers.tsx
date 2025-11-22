@@ -9,12 +9,21 @@ import nataliaPawlak from "@/assets/avatars/natalia-pawlak.jpg";
 import krzysztofWitkowski from "@/assets/avatars/krzysztof-witkowski.jpg";
 import joannaKaczmarek from "@/assets/avatars/joanna-kaczmarek.jpg";
 import mateuszZajac from "@/assets/avatars/mateusz-zajac.jpg";
+import aleksandraNowak from "@/assets/avatars/aleksandra-nowak.jpg";
+import mariaKowalczyk from "@/assets/avatars/maria-kowalczyk.jpg";
+import piotrLewandowski from "@/assets/avatars/piotr-lewandowski.jpg";
+import tomaszWojcik from "@/assets/avatars/tomasz-wojcik.jpg";
+import jakubKaminski from "@/assets/avatars/jakub-kaminski.jpg";
 
 // Company logo imports
 import bluewaveVentures from "@/assets/companies/bluewave-ventures.jpg";
 import areSolutions from "@/assets/companies/are-solutions.jpg";
 import romanPictures from "@/assets/companies/roman-pictures.jpg";
 import sbConsulting from "@/assets/companies/sb-consulting.jpg";
+import vcCapital from "@/assets/companies/vc-capital.jpg";
+import skylineGroup from "@/assets/companies/skyline-group.jpg";
+import aspSolutions from "@/assets/companies/asp-solutions.jpg";
+import colourbook from "@/assets/companies/colourbook.jpg";
 
 interface UserInfo {
   id: number;
@@ -75,13 +84,52 @@ const mockUsers: UserInfo[] = [
     initials: "MZ",
     isOnline: false,
   },
+  {
+    id: 7,
+    name: "Aleksandra Nowak",
+    image: aleksandraNowak,
+    initials: "AN",
+    isOnline: true,
+  },
+  {
+    id: 8,
+    name: "Maria Kowalczyk",
+    image: mariaKowalczyk,
+    initials: "MK",
+    isOnline: true,
+  },
+  {
+    id: 9,
+    name: "Piotr Lewandowski",
+    image: piotrLewandowski,
+    initials: "PL",
+    isOnline: false,
+  },
+  {
+    id: 10,
+    name: "Tomasz Wójcik",
+    image: tomaszWojcik,
+    initials: "TW",
+    isOnline: true,
+  },
+  {
+    id: 11,
+    name: "Jakub Kamiński",
+    image: jakubKaminski,
+    initials: "JK",
+    isOnline: true,
+  },
 ];
 
 const mockCompanies: CompanyInfo[] = [
   { id: 1, name: "BlueWave Ventures", initials: "BW", logo: bluewaveVentures, color: "from-blue-500 to-cyan-500" },
   { id: 2, name: "ARE Solutions", initials: "ARE", logo: areSolutions, color: "from-green-500 to-emerald-500" },
   { id: 3, name: "Roman Pictures", initials: "RP", logo: romanPictures, color: "from-purple-500 to-pink-500" },
-  { id: 4, name: "SB Consulting", initials: "SB", logo: sbConsulting, color: "from-orange-500 to-amber-500" }
+  { id: 4, name: "SB Consulting", initials: "SB", logo: sbConsulting, color: "from-orange-500 to-amber-500" },
+  { id: 5, name: "VC Capital", initials: "VC", logo: vcCapital, color: "from-amber-500 to-yellow-500" },
+  { id: 6, name: "Skyline Group", initials: "SG", logo: skylineGroup, color: "from-blue-600 to-indigo-500" },
+  { id: 7, name: "ASP Solutions", initials: "ASP", logo: aspSolutions, color: "from-orange-600 to-red-500" },
+  { id: 8, name: "ColourBook", initials: "CB", logo: colourbook, color: "from-yellow-400 to-blue-500" }
 ];
 
 const getUniqueRandomUsers = (currentVisible: UserInfo[], count: number = 2): UserInfo[] => {
