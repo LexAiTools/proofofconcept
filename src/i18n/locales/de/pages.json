@@ -1,67 +1,67 @@
 {
   "meta": {
     "privacyPolicy": {
-      "title": "Privacy Policy - Data Protection & Security | Proof of Concept",
-      "description": "Our privacy policy explains how we collect, use, and protect your personal data. GDPR compliant. Enterprise-grade security and data protection standards."
+      "title": "Datenschutzerklärung - Datenschutz & Sicherheit | Proof of Concept",
+      "description": "Unsere Datenschutzerklärung erklärt, wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen. DSGVO-konform. Sicherheits- und Datenschutzstandards auf Unternehmensniveau."
     },
     "termsOfService": {
-      "title": "Terms of Service - Legal Terms & Conditions | Proof of Concept",
-      "description": "Read our terms of service covering usage license, intellectual property, liability, and user responsibilities. Clear, transparent legal terms."
+      "title": "Nutzungsbedingungen - Rechtliche Bedingungen | Proof of Concept",
+      "description": "Lesen Sie unsere Nutzungsbedingungen zu Nutzungslizenz, geistigem Eigentum, Haftung und Nutzerverantwortlichkeiten. Klare, transparente rechtliche Bedingungen."
     }
   },
   "about": {
-    "title": "About Us",
-    "subtitle": "Learn more about our mission and team"
+    "title": "Über uns",
+    "subtitle": "Erfahren Sie mehr über unsere Mission und unser Team"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch with our team",
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Nehmen Sie Kontakt mit unserem Team auf",
     "form": {
       "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "send": "Send Message"
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Nachricht senden"
     }
   },
   "pricing": {
-    "title": "Pricing",
-    "subtitle": "Choose the plan that's right for you"
+    "title": "Preise",
+    "subtitle": "Wählen Sie den passenden Plan für Sie"
   },
   "useCases": {
-    "title": "Use Cases",
-    "subtitle": "See how our AI solutions can help your business"
+    "title": "Anwendungsfälle",
+    "subtitle": "Sehen Sie, wie unsere KI-Lösungen Ihrem Unternehmen helfen können"
   },
   "engine": {
-    "title": "AI Engine",
-    "subtitle": "Explore our powerful AI engine capabilities"
+    "title": "KI-Engine",
+    "subtitle": "Entdecken Sie die leistungsstarken Funktionen unserer KI-Engine"
   },
   "chat": {
-    "title": "AI Chat",
-    "subtitle": "Chat with our AI assistant"
+    "title": "KI-Chat",
+    "subtitle": "Chatten Sie mit unserem KI-Assistenten"
   },
   "podcast": {
     "title": "Podcasts",
-    "subtitle": "Listen to our latest episodes"
+    "subtitle": "Hören Sie unsere neuesten Episoden"
   },
   "documents": {
-    "title": "Documents",
-    "subtitle": "Browse our resource library"
+    "title": "Dokumente",
+    "subtitle": "Durchsuchen Sie unsere Ressourcenbibliothek"
   },
   "bookDemo": {
-    "title": "Book a Demo",
-    "subtitle": "Schedule a personalized demonstration"
+    "title": "Demo buchen",
+    "subtitle": "Vereinbaren Sie eine personalisierte Vorführung"
   },
   "signin": {
-    "title": "Sign In",
-    "subtitle": "Access your account",
-    "email": "Email",
-    "password": "Password",
-    "signIn": "Sign In",
-    "forgotPassword": "Forgot Password?"
+    "title": "Anmelden",
+    "subtitle": "Zugriff auf Ihr Konto",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "signIn": "Anmelden",
+    "forgotPassword": "Passwort vergessen?"
   },
   "notFound": {
     "title": "404",
-    "subtitle": "Oops! Page not found",
-    "button": "Return to Home"
+    "subtitle": "Hoppla! Seite nicht gefunden",
+    "button": "Zurück zur Startseite"
   }
 }
