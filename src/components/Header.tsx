@@ -109,24 +109,22 @@ export const Header = () => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  <div className="flex flex-col items-start gap-0.5">
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold">{t('buttons.poc')}</span>
-                      <svg 
-                        className="w-20 h-2" 
-                        viewBox="0 0 120 8" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                          d="M2 6C20 2 40 1 60 3C80 5 100 6 118 4" 
-                          stroke="currentColor" 
-                          strokeWidth="2" 
-                          strokeLinecap="round"
-                          className="text-primary"
-                        />
-                      </svg>
-                    </div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">{t('buttons.poc')}</span>
+                    <svg 
+                      className="w-16 h-2" 
+                      viewBox="0 0 120 8" 
+                      fill="none" 
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path 
+                        d="M2 6C20 2 40 1 60 3C80 5 100 6 118 4" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round"
+                        className="text-primary"
+                      />
+                    </svg>
                     <span className="text-xs text-muted-foreground">
                       {t('buttons.pocTagline')}
                     </span>
