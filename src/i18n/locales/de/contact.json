@@ -1,71 +1,71 @@
 {
   "meta": {
-    "title": "Contact Us - Get in Touch with AI Experts | Proof of Concept",
-    "description": "Contact our team for AI solutions, proof of concepts, and enterprise consulting. Offices in Poland and Ireland. Get answers within 24 hours."
+    "title": "Kontakt - Sprechen Sie mit KI-Experten | Proof of Concept",
+    "description": "Kontaktieren Sie unser Team für KI-Lösungen, Proof of Concepts und Unternehmensberatung. Büros in Polen und Irland. Antwort innerhalb von 24 Stunden."
   },
-  "title": "Start using our",
-  "titleHighlight": "AI solutions",
-  "titleEnd": "for free",
-  "subtitle": "What data sources would you like to integrate with our AI platform?",
+  "title": "Nutzen Sie unsere",
+  "titleHighlight": "KI-Lösungen",
+  "titleEnd": "kostenlos",
+  "subtitle": "Welche Datenquellen möchten Sie mit unserer KI-Plattform integrieren?",
   "form": {
     "dataSources": {
-      "label": "Data sources you want to use",
-      "placeholder": "Documentation, support center, reports, wiki, etc."
+      "label": "Datenquellen, die Sie nutzen möchten",
+      "placeholder": "Dokumentation, Support-Center, Berichte, Wiki, etc."
     },
     "name": {
-      "label": "Full Name",
-      "placeholder": "Your full name"
+      "label": "Vollständiger Name",
+      "placeholder": "Ihr vollständiger Name"
     },
     "company": {
-      "label": "Company",
-      "placeholder": "Your company"
+      "label": "Unternehmen",
+      "placeholder": "Ihr Unternehmen"
     },
     "email": {
-      "label": "Business Email",
-      "placeholder": "your.email@company.com"
+      "label": "Geschäftliche E-Mail",
+      "placeholder": "ihre.email@unternehmen.de"
     },
     "message": {
-      "label": "Additional Message",
-      "placeholder": "Tell us more about your project..."
+      "label": "Zusätzliche Nachricht",
+      "placeholder": "Erzählen Sie uns mehr über Ihr Projekt..."
     },
-    "submit": "Start Free Trial"
+    "submit": "Kostenlose Testversion starten"
   },
   "features": {
-    "consultation": "Free consultation",
-    "solutions": "Custom AI solutions",
-    "support": "Enterprise support",
-    "compliant": "SOC II compliant"
+    "consultation": "Kostenlose Beratung",
+    "solutions": "Maßgeschneiderte KI-Lösungen",
+    "support": "Enterprise-Support",
+    "compliant": "SOC II-konform"
   },
   "testimonial": {
     "company": "AI Consortium",
     "subtitle": "NestAI & CorballyConcepts",
-    "quote": "Our AI solutions demonstrate how advanced artificial intelligence systems can be implemented in real business scenarios, delivering measurable results."
+    "quote": "Unsere KI-Lösungen zeigen, wie fortschrittliche künstliche Intelligenz-Systeme in realen Geschäftsszenarien implementiert werden können und messbare Ergebnisse liefern."
   },
-  "trustedBy": "Trusted by leading companies and startups",
+  "trustedBy": "Vertrauen von führenden Unternehmen und Start-ups",
   "companies": ["OpenAI", "Microsoft", "Google", "Amazon", "Meta", "Apple", "Tesla", "Stripe"],
   "contactInfo": {
-    "title": "Get in Touch",
+    "title": "Kontaktieren Sie uns",
     "polandOffice": {
-      "title": "Poland Office",
-      "location": "Cieszyn, Poland",
-      "description": "NestAI - Engine Development"
+      "title": "Büro Polen",
+      "location": "Cieszyn, Polen",
+      "description": "NestAI - Engine-Entwicklung"
     },
     "irelandOffice": {
-      "title": "Ireland Office",
-      "location": "Dublin, Ireland",
+      "title": "Büro Irland",
+      "location": "Dublin, Irland",
       "description": "CorballyConcepts - Interface & PoCs"
     },
-    "nestaiEmail": "NestAI Email",
-    "corballyEmail": "CorballyConcepts Email"
+    "nestaiEmail": "NestAI E-Mail",
+    "corballyEmail": "CorballyConcepts E-Mail"
   },
   "privacy": {
-    "text": "By clicking \"Start\", you agree to our",
-    "privacyPolicy": "Privacy Policy",
-    "and": "and",
-    "termsOfService": "Terms of Service"
+    "text": "Mit Klick auf „Starten" stimmen Sie unseren",
+    "privacyPolicy": "Datenschutzbestimmungen",
+    "and": "und",
+    "termsOfService": "Nutzungsbedingungen"
   },
   "messages": {
-    "success": "Thank you! We will contact you shortly.",
-    "error": "An error occurred. Please try again."
+    "success": "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
   }
 }
