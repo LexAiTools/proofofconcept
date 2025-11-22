@@ -488,6 +488,7 @@ const AdminPodcasts = () => {
                         >
                           <option value="pl">Polski (PL)</option>
                           <option value="en">English (EN)</option>
+                          <option value="de">Deutsch (DE)</option>
                         </select>
                       </div>
 
