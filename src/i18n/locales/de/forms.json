@@ -1,72 +1,72 @@
 {
   "consultation": {
-    "title": "Schedule Consultation",
-    "subtitle": "Demo of our AI solutions",
+    "title": "Beratungstermin vereinbaren",
+    "subtitle": "Demo unserer KI-Lösungen",
     "steps": {
       "service": "Service",
-      "date": "Date",
-      "time": "Time",
-      "data": "Data"
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "data": "Daten"
     }
   },
   "customer": {
-    "title": "Contact Information",
-    "subtitle": "Please provide your contact details",
+    "title": "Kontaktinformationen",
+    "subtitle": "Bitte geben Sie Ihre Kontaktdaten an",
     "fields": {
-      "firstName": "First Name",
-      "lastName": "Last Name",
-      "phone": "Phone Number",
-      "email": "Email Address",
-      "comments": "Additional Comments",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefonnummer",
+      "email": "E-Mail-Adresse",
+      "comments": "Zusätzliche Anmerkungen",
       "placeholders": {
-        "firstName": "John",
-        "lastName": "Doe",
-        "phone": "+1 123 456 789",
-        "email": "john@company.com",
-        "comments": "Tell us about your needs..."
+        "firstName": "Max",
+        "lastName": "Mustermann",
+        "phone": "+49 123 456 789",
+        "email": "max@firma.de",
+        "comments": "Erzählen Sie uns von Ihren Anforderungen..."
       }
     },
     "validation": {
-      "firstNameRequired": "First name is required",
-      "lastNameRequired": "Last name is required",
-      "phoneRequired": "Phone number is required",
-      "emailRequired": "Email address is required",
-      "emailInvalid": "Please enter a valid email address"
+      "firstNameRequired": "Vorname ist erforderlich",
+      "lastNameRequired": "Nachname ist erforderlich",
+      "phoneRequired": "Telefonnummer ist erforderlich",
+      "emailRequired": "E-Mail-Adresse ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
     }
   },
   "service": {
-    "title": "Choose a Service",
-    "subtitle": "Select the service you're interested in",
+    "title": "Wählen Sie einen Service",
+    "subtitle": "Wählen Sie den Service aus, der Sie interessiert",
     "services": {
       "aiConsulting": {
-        "title": "AI Consulting",
-        "description": "Strategic guidance on AI implementation and optimization for your business"
+        "title": "KI-Beratung",
+        "description": "Strategische Beratung zur KI-Implementierung und Optimierung für Ihr Unternehmen"
       },
       "customDevelopment": {
-        "title": "Custom AI Development",
-        "description": "Tailored AI solutions built specifically for your unique business needs"
+        "title": "Individuelle KI-Entwicklung",
+        "description": "Maßgeschneiderte KI-Lösungen, die speziell für Ihre einzigartigen Geschäftsanforderungen entwickelt wurden"
       },
       "integration": {
-        "title": "System Integration",
-        "description": "Seamless integration of AI tools with your existing infrastructure"
+        "title": "Systemintegration",
+        "description": "Nahtlose Integration von KI-Tools in Ihre bestehende Infrastruktur"
       },
       "training": {
-        "title": "Team Training",
-        "description": "Comprehensive training programs to upskill your team on AI technologies"
+        "title": "Team-Schulung",
+        "description": "Umfassende Schulungsprogramme zur Weiterbildung Ihres Teams in KI-Technologien"
       }
     }
   },
   "date": {
-    "title": "Select Date",
-    "subtitle": "Choose an available date",
-    "selectedDate": "Selected date:"
+    "title": "Datum wählen",
+    "subtitle": "Wählen Sie ein verfügbares Datum",
+    "selectedDate": "Gewähltes Datum:"
   },
   "time": {
-    "title": "Select Time",
-    "subtitle": "Choose an available time slot",
-    "selectedDate": "Selected date:",
-    "availableSlots": "Available time slots:",
-    "selectedMeeting": "Selected meeting:",
-    "at": "at"
+    "title": "Uhrzeit wählen",
+    "subtitle": "Wählen Sie einen verfügbaren Zeitraum",
+    "selectedDate": "Gewähltes Datum:",
+    "availableSlots": "Verfügbare Zeitfenster:",
+    "selectedMeeting": "Gewählter Termin:",
+    "at": "um"
   }
 }
