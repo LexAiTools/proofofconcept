@@ -522,15 +522,6 @@ export const QuickStartPocForm = ({ children }: QuickStartPocFormProps) => {
 
           {/* Right column - Form */}
           <div className="p-3 sm:p-6 lg:p-12 flex flex-col overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[90vh] lg:min-h-0 w-full max-w-full">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-2 top-2 sm:right-4 sm:top-4 z-10"
-              onClick={handleClose}
-            >
-              <X className="w-4 h-4" />
-            </Button>
-
             <div className="flex-1 mt-8">
               {renderStep()}
             </div>
