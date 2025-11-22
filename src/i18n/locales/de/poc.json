@@ -1,277 +1,277 @@
 {
   "meta": {
-    "title": "Proof of Concept Service - Quick Prototypes & Demos | NestAi",
-    "description": "Get your proof of concept in an hour: working app prototypes, professional websites, and explainer videos. Show investors, don't explain. Fast, affordable, professional."
+    "title": "Proof of Concept Service - Schnelle Prototypen & Demos | NestAi",
+    "description": "Erhalten Sie Ihren Proof of Concept in einer Stunde: funktionierende App-Prototypen, professionelle Websites und Erklärvideos. Zeigen Sie Investoren, anstatt zu erklären. Schnell, erschwinglich, professionell."
   },
   "hero": {
     "title": "Proof of Concept (PoC)",
-    "subtitle": "Turn your idea into a working product in one hour",
-    "watchVideo": "Watch Video"
+    "subtitle": "Verwandeln Sie Ihre Idee in ein funktionierendes Produkt in einer Stunde",
+    "watchVideo": "Video ansehen"
   },
   "whyChoose": {
-    "title": "Why choose our PoC?",
+    "title": "Warum unseren PoC wählen?",
     "saveMoney": {
-      "title": "Save time and money on product development",
-      "description": "Instead of waiting months for app development and spending tens of thousands of dollars, you'll receive a working prototype in one hour. Your idea will turn into a clickable demo that you can immediately show to clients or investors."
+      "title": "Sparen Sie Zeit und Geld bei der Produktentwicklung",
+      "description": "Anstatt monatelang auf die App-Entwicklung zu warten und Zehntausende von Dollar auszugeben, erhalten Sie einen funktionierenden Prototypen in einer Stunde. Ihre Idee wird zu einer klickbaren Demo, die Sie sofort Kunden oder Investoren zeigen können."
     },
     "showDontTell": {
-      "title": "Show instead of explain",
-      "description": "Stop wasting time on long PowerPoint presentations and endless explanations. Thanks to a visual presentation of your product, everyone will immediately understand what you mean. An interactive prototype speaks louder than a thousand words."
+      "title": "Zeigen statt erklären",
+      "description": "Verschwenden Sie keine Zeit mehr mit langen PowerPoint-Präsentationen und endlosen Erklärungen. Dank einer visuellen Präsentation Ihres Produkts versteht jeder sofort, was Sie meinen. Ein interaktiver Prototyp sagt mehr als tausend Worte."
     },
     "verify": {
-      "title": "Verify your idea before major investment",
-      "description": "Don't risk large budgets on an uncertain idea. For a fraction of the cost of a traditional MVP, check if your idea makes business sense. Gather feedback from users and potential clients on a real, working product."
+      "title": "Überprüfen Sie Ihre Idee vor großen Investitionen",
+      "description": "Riskieren Sie keine großen Budgets für eine unsichere Idee. Für einen Bruchteil der Kosten eines traditionellen MVP prüfen Sie, ob Ihre Idee geschäftlich sinnvoll ist. Sammeln Sie Feedback von Nutzern und potenziellen Kunden zu einem echten, funktionierenden Produkt."
     }
   },
   "services": {
-    "title": "Our Services",
+    "title": "Unsere Dienstleistungen",
     "quickStart": {
-      "label": "1. Quick Start PoC - Working Prototype (24h)",
-      "title": "Write it, see the result immediately",
+      "label": "1. Quick Start PoC - Funktionierender Prototyp (24h)",
+      "title": "Schreiben Sie es auf, sehen Sie sofort das Ergebnis",
       "price": "€349 / $380",
-      "description": "Fill out a simple form describing your idea, and we'll immediately start working on your prototype.",
-      "subtitle": "What you get:",
-      "feature1": "Clickable React app - ready for presentation",
-      "feature2": "Working prototype - that looks like a real application",
-      "feature3": "Interactive interface - to show investors and first customers",
-      "highlight": "This is the basic package that will allow you to quickly verify your idea and see what your product will look like in practice.",
-      "button": "Order PoC Prototype",
-      "example": "See Example",
+      "description": "Füllen Sie ein einfaches Formular aus, das Ihre Idee beschreibt, und wir beginnen sofort mit der Arbeit an Ihrem Prototypen.",
+      "subtitle": "Was Sie erhalten:",
+      "feature1": "Klickbare React-App - präsentationsbereit",
+      "feature2": "Funktionierender Prototyp - der wie eine echte Anwendung aussieht",
+      "feature3": "Interaktives Interface - um Investoren und erste Kunden zu zeigen",
+      "highlight": "Dies ist das Basispaket, das es Ihnen ermöglicht, Ihre Idee schnell zu überprüfen und zu sehen, wie Ihr Produkt in der Praxis aussehen wird.",
+      "button": "PoC-Prototyp bestellen",
+      "example": "Beispiel ansehen",
       "examples": {
-        "example1": "Example 1: Kolejkowo Corbally Concepts",
-        "example2": "Example 2: Landing Corbally",
-        "example3": "Example 3: LexAI Tools Survey",
-        "example4": "Example 4: Meal Insight Compass"
+        "example1": "Beispiel 1: Kolejkowo Corbally Concepts",
+        "example2": "Beispiel 2: Landing Corbally",
+        "example3": "Beispiel 3: LexAI Tools Survey",
+        "example4": "Beispiel 4: Meal Insight Compass"
       }
     },
     "interactiveApp": {
-      "label": "2. Interactive PoC Application",
-      "title": "Clickable React app - working like a real application (3 days)",
+      "label": "2. Interaktive PoC-Anwendung",
+      "title": "Klickbare React-App - funktioniert wie eine echte Anwendung (3 Tage)",
       "price": "€488 / $532",
-      "description": "You'll create with us:",
-      "feature1": "Web or mobile app interface",
-      "feature2": "Clickable demo that works immediately like a real application",
-      "feature3": "Lead collection system - app accepts submissions and contact data",
-      "feature4": "Prototype ready to show investors and collect real customers",
-      "highlight": "Your product will not only look like a finished application, but will actually work and collect leads from day one.",
-      "button": "Order PoC Application",
-      "example": "See Example",
+      "description": "Sie erstellen mit uns:",
+      "feature1": "Web- oder Mobile-App-Interface",
+      "feature2": "Klickbare Demo, die sofort wie eine echte Anwendung funktioniert",
+      "feature3": "Lead-Erfassungssystem - App akzeptiert Anfragen und Kontaktdaten",
+      "feature4": "Prototyp bereit, um Investoren zu zeigen und echte Kunden zu gewinnen",
+      "highlight": "Ihr Produkt wird nicht nur wie eine fertige Anwendung aussehen, sondern tatsächlich funktionieren und vom ersten Tag an Leads sammeln.",
+      "button": "PoC-Anwendung bestellen",
+      "example": "Beispiel ansehen",
       "examples": {
-        "example1": "Example 1: Developer Corbally Concepts",
-        "example2": "Example 2: Corbally Concepts Lead",
-        "example3": "Example 3: Gestalt Therapy"
+        "example1": "Beispiel 1: Developer Corbally Concepts",
+        "example2": "Beispiel 2: Corbally Concepts Lead",
+        "example3": "Beispiel 3: Gestalt Therapy"
       }
     },
     "completePackage": {
-      "label": "3. COMPLETE PoC PACKAGE - Product Presentation",
-      "title": "Everything you need for an effective presentation (7 days)",
+      "label": "3. KOMPLETTES PoC-PAKET - Produktpräsentation",
+      "title": "Alles, was Sie für eine effektive Präsentation brauchen (7 Tage)",
       "price": "€651 / $710",
-      "subtitle": "Package includes:",
-      "feature1Title": "Explainer Video",
-      "feature1Desc": "professional video presenting your product",
+      "subtitle": "Paket beinhaltet:",
+      "feature1Title": "Erklärvideo",
+      "feature1Desc": "professionelles Video zur Präsentation Ihres Produkts",
       "feature2Title": "Landing Page",
-      "feature2Desc": "website to collect leads",
+      "feature2Desc": "Website zum Sammeln von Leads",
       "feature3Title": "Content",
-      "feature3Desc": "ready-made sales copy",
-      "description": "This is a complete solution for presenting your product to investors, business partners, or first customers.",
-      "button": "Order Complete PoC Package",
-      "example": "See Example",
+      "feature3Desc": "fertige Verkaufstexte",
+      "description": "Dies ist eine komplette Lösung zur Präsentation Ihres Produkts vor Investoren, Geschäftspartnern oder ersten Kunden.",
+      "button": "Komplettes PoC-Paket bestellen",
+      "example": "Beispiel ansehen",
       "examples": {
-        "example1": "Example 1: Artopen PoC",
-        "example2": "Example 2: WRLDS AI Integration",
-        "example3": "Example 3: Live Sales Shop"
+        "example1": "Beispiel 1: Artopen PoC",
+        "example2": "Beispiel 2: WRLDS AI Integration",
+        "example3": "Beispiel 3: Live Sales Shop"
       }
     },
     "custom": {
-      "label": "4. Custom Tailored PoC Project",
-      "title": "Have unusual requirements? Contact us",
-      "description": "Every idea is different. If standard packages don't meet your needs, we'll develop a custom offer tailored to your project.",
-      "button": "Contact Us"
+      "label": "4. Maßgeschneidertes PoC-Projekt",
+      "title": "Haben Sie besondere Anforderungen? Kontaktieren Sie uns",
+      "description": "Jede Idee ist anders. Wenn Standardpakete Ihre Bedürfnisse nicht erfüllen, entwickeln wir ein individuelles Angebot, das auf Ihr Projekt zugeschnitten ist.",
+      "button": "Kontaktieren Sie uns"
     },
     "websitePackage": {
-      "label": "5. PoC PACKAGE - Professional Website with AI",
-      "title": "Your website ready in (14 days)",
-      "price": "€3,814 / $4,160",
-      "subtitle": "What you get:",
-      "feature1": "Modern, responsive interface",
-      "feature2": "Web analytics to track users",
-      "feature3": "Contact forms integrated with your system",
-      "feature4": "3-4 subpages + dedicated contact page",
-      "feature5": "AI Assistant talking to customers \"in your company's language\" - trained in your business specifics, answering customer questions 24/7",
-      "feature6": "Working website ready for publication in 14 days",
-      "highlight": "Forget about months of waiting for a website. Your website with intelligent AI assistant ready in two weeks.",
-      "button": "Order Website with AI",
-      "example": "See Example",
+      "label": "5. PoC-PAKET - Professionelle Website mit KI",
+      "title": "Ihre Website fertig in (14 Tagen)",
+      "price": "€3.814 / $4.160",
+      "subtitle": "Was Sie erhalten:",
+      "feature1": "Modernes, responsives Interface",
+      "feature2": "Web-Analytics zur Nutzerverfolgung",
+      "feature3": "Kontaktformulare integriert mit Ihrem System",
+      "feature4": "3-4 Unterseiten + dedizierte Kontaktseite",
+      "feature5": "KI-Assistent, der mit Kunden \"in Ihrer Unternehmenssprache\" spricht - trainiert auf Ihre Geschäftsspezifika, beantwortet Kundenfragen 24/7",
+      "feature6": "Funktionierende Website bereit zur Veröffentlichung in 14 Tagen",
+      "highlight": "Vergessen Sie monatelanges Warten auf eine Website. Ihre Website mit intelligentem KI-Assistenten ist in zwei Wochen fertig.",
+      "button": "Website mit KI bestellen",
+      "example": "Beispiel ansehen",
       "examples": {
-        "example1": "Example 1: Artopen",
-        "example2": "Example 2: Decentral Art PoC",
-        "example3": "Example 3: Corbally Concepts Course"
+        "example1": "Beispiel 1: Artopen",
+        "example2": "Beispiel 2: Decentral Art PoC",
+        "example3": "Beispiel 3: Corbally Concepts Course"
       }
     }
   },
   "howItWorks": {
-    "title": "How does it work?",
-    "subtitle": "Proposal 3 (without icons)",
+    "title": "Wie funktioniert es?",
+    "subtitle": "Vorschlag 3 (ohne Icons)",
     "payAndHave": {
-      "title": "\"Pay and Have\" Model",
-      "description": "No hidden costs, no surprises. You pay the agreed price and immediately receive a working prototype."
+      "title": "\"Bezahlen und Haben\"-Modell",
+      "description": "Keine versteckten Kosten, keine Überraschungen. Sie zahlen den vereinbarten Preis und erhalten sofort einen funktionierenden Prototypen."
     },
     "whyItWorks": {
-      "title": "Why does it work?",
+      "title": "Warum funktioniert es?",
       "items": {
         "transparency": {
-          "title": "Price Transparency",
-          "description": "You see the exact price before ordering. No \"we'll quote you later\" - you pay exactly what you see on the page."
+          "title": "Preistransparenz",
+          "description": "Sie sehen den genauen Preis vor der Bestellung. Kein \"wir erstellen Ihnen später ein Angebot\" - Sie zahlen genau das, was Sie auf der Seite sehen."
         },
         "immediateStart": {
-          "title": "Immediate Start",
-          "description": "No waiting for quotes, meetings, negotiations. You fill out the form, pay, and we start working right away."
+          "title": "Sofortiger Start",
+          "description": "Kein Warten auf Angebote, Meetings, Verhandlungen. Sie füllen das Formular aus, zahlen, und wir beginnen sofort mit der Arbeit."
         },
         "predictableTimeline": {
-          "title": "Predictable Timeline",
-          "description": "You know exactly when you'll receive the product. Not \"someday\", not \"maybe next week\" - specific dates in the admin panel."
+          "title": "Vorhersehbarer Zeitplan",
+          "description": "Sie wissen genau, wann Sie das Produkt erhalten. Nicht \"irgendwann\", nicht \"vielleicht nächste Woche\" - konkrete Termine im Admin-Panel."
         },
         "projectControl": {
-          "title": "Project Control",
-          "description": "The admin panel gives you full control. You see progress, communicate with the team, submit feedback - everything in one place."
+          "title": "Projektkontrolle",
+          "description": "Das Admin-Panel gibt Ihnen volle Kontrolle. Sie sehen den Fortschritt, kommunizieren mit dem Team, geben Feedback - alles an einem Ort."
         },
         "qualityGuarantee": {
-          "title": "Quality Guarantee",
-          "description": "2 rounds of revisions included in the price. We don't give up until you're satisfied."
+          "title": "Qualitätsgarantie",
+          "description": "2 Überarbeitungsrunden im Preis inbegriffen. Wir geben nicht auf, bis Sie zufrieden sind."
         }
       }
     },
     "howItLooksInPractice": {
-      "title": "How does it look in practice?",
+      "title": "Wie sieht es in der Praxis aus?",
       "timeline": {
         "step1": {
-          "time": "Today at 2:00 PM",
-          "action": "You fill out the form and pay"
+          "time": "Heute um 14:00 Uhr",
+          "action": "Sie füllen das Formular aus und zahlen"
         },
         "step2": {
-          "time": "Today at 2:05 PM",
-          "action": "You receive access to the panel and confirmation"
+          "time": "Heute um 14:05 Uhr",
+          "action": "Sie erhalten Zugang zum Panel und Bestätigung"
         },
         "step3": {
-          "time": "Today at 3:00 PM",
-          "action": "You see the first draft (quick start prototype)"
+          "time": "Heute um 15:00 Uhr",
+          "action": "Sie sehen den ersten Entwurf (Quick-Start-Prototyp)"
         },
         "step4": {
-          "time": "OR in 3-7 days",
-          "action": "You receive the finished product (depending on the package)"
+          "time": "ODER in 3-7 Tagen",
+          "action": "Sie erhalten das fertige Produkt (je nach Paket)"
         },
         "step5": {
           "time": "+24-48h",
-          "action": "You submit feedback, we make corrections"
+          "action": "Sie geben Feedback, wir nehmen Korrekturen vor"
         },
         "step6": {
-          "time": "The End",
-          "action": "You receive and enjoy the finished product"
+          "time": "Das Ende",
+          "action": "Sie erhalten und genießen das fertige Produkt"
         }
       },
-      "footer": "Zero stress. Zero guessing. Zero hidden costs.",
-      "footerMobile": "Zero guessing..."
+      "footer": "Null Stress. Null Rätselraten. Null versteckte Kosten.",
+      "footerMobile": "Null Rätselraten..."
     },
     "adminPanel": {
-      "title": "Admin Panel",
-      "subtitle": "Everything in one place: admin.corballyconcepts.com",
-      "description": "After purchase, you automatically receive:",
+      "title": "Admin-Panel",
+      "subtitle": "Alles an einem Ort: admin.corballyconcepts.com",
+      "description": "Nach dem Kauf erhalten Sie automatisch:",
       "features": {
-        "access": "Access to the panel (login via your email)",
-        "dashboard": "Dashboard with project timeline",
-        "communication": "Direct communication with the team",
-        "notifications": "Progress notifications"
+        "access": "Zugang zum Panel (Login über Ihre E-Mail)",
+        "dashboard": "Dashboard mit Projekt-Zeitplan",
+        "communication": "Direkte Kommunikation mit dem Team",
+        "notifications": "Fortschrittsbenachrichtigungen"
       },
-      "footer": "You don't have to chase us with emails. You see everything in the panel in real-time."
+      "footer": "Sie müssen uns nicht mit E-Mails nachjagen. Sie sehen alles im Panel in Echtzeit."
     }
   },
   "targetAudience": {
-    "title": "Who is PoC for?",
+    "title": "Für wen ist PoC?",
     "startups": {
       "title": "Startups",
-      "description": "that need an MVP to present to investors"
+      "description": "die ein MVP für Investorenpräsentationen benötigen"
     },
     "entrepreneurs": {
-      "title": "Entrepreneurs",
-      "description": "testing new business ideas"
+      "title": "Unternehmer",
+      "description": "die neue Geschäftsideen testen"
     },
     "companies": {
-      "title": "Companies",
-      "description": "wanting to quickly verify new functionality"
+      "title": "Unternehmen",
+      "description": "die neue Funktionen schnell überprüfen möchten"
     },
     "innovators": {
-      "title": "Innovators",
-      "description": "needing a quick prototype for presentation"
+      "title": "Innovatoren",
+      "description": "die einen schnellen Prototypen für Präsentationen benötigen"
     }
   },
   "cta": {
-    "title": "Start today",
-    "description": "Don't waste time on lengthy development processes. Turn your idea into a working product in one hour and start gathering feedback from real users.",
-    "buttonForm": "Fill Out PoC Form",
-    "buttonContact": "Contact Us"
+    "title": "Starten Sie heute",
+    "description": "Verschwenden Sie keine Zeit mit langwierigen Entwicklungsprozessen. Verwandeln Sie Ihre Idee in ein funktionierendes Produkt in einer Stunde und beginnen Sie, Feedback von echten Nutzern zu sammeln.",
+    "buttonForm": "PoC-Formular ausfüllen",
+    "buttonContact": "Kontaktieren Sie uns"
   },
   "faq": {
-    "title": "Frequently Asked Questions (FAQ)",
+    "title": "Häufig gestellte Fragen (FAQ)",
     "items": [
       {
-        "question": "What's the difference between Quick Start PoC and Interactive App PoC?",
-        "answer": "Quick Start PoC (€349) is a basic React prototype ready in 24h - great for quick idea validation. Interactive App PoC (€488) is a full-featured application with lead collection system that works like a real app and is ready in 3 days. Choose Quick Start if you just want to show the concept, and Interactive App if you need a working product to collect your first customers."
+        "question": "Was ist der Unterschied zwischen Quick Start PoC und Interactive App PoC?",
+        "answer": "Quick Start PoC (€349) ist ein grundlegender React-Prototyp, der in 24h fertig ist - ideal für schnelle Ideenvalidierung. Interactive App PoC (€488) ist eine voll funktionsfähige Anwendung mit Lead-Erfassungssystem, die wie eine echte App funktioniert und in 3 Tagen fertig ist. Wählen Sie Quick Start, wenn Sie nur das Konzept zeigen möchten, und Interactive App, wenn Sie ein funktionierendes Produkt benötigen, um Ihre ersten Kunden zu gewinnen."
       },
       {
-        "question": "How much does each PoC package cost and what's included in the price?",
-        "answer": "1) Quick Start PoC - €349 ($380, 24h): clickable React app ready for presentation. 2) Interactive App PoC - €488 ($532, 3 days): working app with lead system. 3) Complete Package - €651 ($710, 7 days): explainer video + landing page + sales content. 4) Custom Project - individually priced. 5) Professional Website with AI - €3,814 ($4,160, 14 days): full website with 24/7 AI assistant. All prices are final - 'Pay and Have' model with no hidden costs."
+        "question": "Wie viel kostet jedes PoC-Paket und was ist im Preis enthalten?",
+        "answer": "1) Quick Start PoC - €349 ($380, 24h): klickbare React-App präsentationsbereit. 2) Interactive App PoC - €488 ($532, 3 Tage): funktionierende App mit Lead-System. 3) Komplettpaket - €651 ($710, 7 Tage): Erklärvideo + Landing Page + Verkaufscontent. 4) Individuelles Projekt - individuell bepreist. 5) Professionelle Website mit KI - €3.814 ($4.160, 14 Tage): vollständige Website mit 24/7 KI-Assistent. Alle Preise sind Endpreise - \"Bezahlen und Haben\"-Modell ohne versteckte Kosten."
       },
       {
-        "question": "How long does each package take to complete?",
-        "answer": "Quick Start PoC - 24 hours, Interactive App PoC - 3 days, Complete Package - 7 days, Professional Website with AI - 14 days. Custom Project depends on scope. Implementation starts immediately after filling out the form and payment. Upon completion, you receive access to the admin panel where you can manage your project."
+        "question": "Wie lange dauert die Fertigstellung jedes Pakets?",
+        "answer": "Quick Start PoC - 24 Stunden, Interactive App PoC - 3 Tage, Komplettpaket - 7 Tage, Professionelle Website mit KI - 14 Tage. Individuelles Projekt hängt vom Umfang ab. Die Umsetzung beginnt sofort nach Ausfüllen des Formulars und Zahlung. Nach Fertigstellung erhalten Sie Zugang zum Admin-Panel, wo Sie Ihr Projekt verwalten können."
       },
       {
-        "question": "What does the Complete PoC Package include?",
-        "answer": "The Complete Package (€651 / $710, 7 days) is a comprehensive product presentation solution containing: 1) Professional explainer video presenting your product, 2) Landing page with lead collection system, 3) Ready-made sales content tailored to your industry. It's the ideal solution for presenting to investors, business partners, or first customers - you get everything you need in one package."
+        "question": "Was beinhaltet das komplette PoC-Paket?",
+        "answer": "Das Komplettpaket (€651 / $710, 7 Tage) ist eine umfassende Lösung zur Produktpräsentation, die enthält: 1) Professionelles Erklärvideo zur Präsentation Ihres Produkts, 2) Landing Page mit Lead-Erfassungssystem, 3) Fertige Verkaufstexte zugeschnitten auf Ihre Branche. Es ist die ideale Lösung für Präsentationen vor Investoren, Geschäftspartnern oder ersten Kunden - Sie erhalten alles, was Sie brauchen, in einem Paket."
       },
       {
-        "question": "Does the Professional Website with AI package include an AI chatbot?",
-        "answer": "Yes! The Professional Website with AI package (€3,814 / $4,160, 14 days) includes an intelligent AI assistant trained in your company's specifics. The chatbot speaks 'your company language', answers customer questions 24/7, knows your products and services. Additionally, you get: modern responsive interface, analytics, contact forms, 3-4 subpages + dedicated contact page. Website ready for publication in 14 days."
+        "question": "Enthält das Paket \"Professionelle Website mit KI\" einen KI-Chatbot?",
+        "answer": "Ja! Das Paket \"Professionelle Website mit KI\" (€3.814 / $4.160, 14 Tage) enthält einen intelligenten KI-Assistenten, der auf die Spezifika Ihres Unternehmens trainiert ist. Der Chatbot spricht \"Ihre Unternehmenssprache\", beantwortet Kundenfragen 24/7 und kennt Ihre Produkte und Dienstleistungen. Zusätzlich erhalten Sie: modernes responsives Interface, Analytics, Kontaktformulare, 3-4 Unterseiten + dedizierte Kontaktseite. Website bereit zur Veröffentlichung in 14 Tagen."
       },
       {
-        "question": "What technologies are used to create PoC prototypes?",
-        "answer": "All our PoC prototypes are created in React - the modern and most popular JavaScript library for building user interfaces. We also use TypeScript for code safety, Tailwind CSS for responsive design, and Vite for fast development. For packages with backend, we use Supabase (database, authentication, storage). Thanks to these technologies, your prototype can be easily expanded into a full production application."
+        "question": "Welche Technologien werden zur Erstellung von PoC-Prototypen verwendet?",
+        "answer": "Alle unsere PoC-Prototypen werden in React erstellt - der modernen und beliebtesten JavaScript-Bibliothek für die Erstellung von Benutzeroberflächen. Wir verwenden auch TypeScript für Code-Sicherheit, Tailwind CSS für responsives Design und Vite für schnelle Entwicklung. Für Pakete mit Backend verwenden wir Supabase (Datenbank, Authentifizierung, Speicher). Dank dieser Technologien kann Ihr Prototyp leicht zu einer vollständigen Produktionsanwendung erweitert werden."
       },
       {
-        "question": "Will I receive the source code of my application or prototype?",
-        "answer": "Yes, you get full access to your prototype's source code through the admin panel (admin.corballyconcepts.com). You can download the code, modify it, expand it, or hand it over to your developer team. The code is written clearly using best practices, making further development easier. Additionally, if you choose to expand to a full application, we can continue working on the same codebase."
+        "question": "Erhalte ich den Quellcode meiner Anwendung oder meines Prototyps?",
+        "answer": "Ja, Sie erhalten vollen Zugang zum Quellcode Ihres Prototyps über das Admin-Panel (admin.corballyconcepts.com). Sie können den Code herunterladen, modifizieren, erweitern oder an Ihr Entwicklerteam übergeben. Der Code ist klar geschrieben und verwendet Best Practices, was die weitere Entwicklung erleichtert. Wenn Sie sich entscheiden, zu einer vollständigen Anwendung zu erweitern, können wir außerdem an derselben Codebasis weiterarbeiten."
       },
       {
-        "question": "Can I test the prototype before final acceptance?",
-        "answer": "Of course! After creating the prototype, you receive a link to the working version that you can test on any device (computer, tablet, phone). You can show the prototype to potential customers, your team, or investors and gather feedback. If something needs improvement, we can make modifications. Our goal is to deliver a prototype that 100% meets your expectations."
+        "question": "Kann ich den Prototypen vor der endgültigen Abnahme testen?",
+        "answer": "Natürlich! Nach Erstellung des Prototyps erhalten Sie einen Link zur funktionierenden Version, die Sie auf jedem Gerät testen können (Computer, Tablet, Telefon). Sie können den Prototyp potenziellen Kunden, Ihrem Team oder Investoren zeigen und Feedback sammeln. Wenn etwas verbessert werden muss, können wir Änderungen vornehmen. Unser Ziel ist es, einen Prototyp zu liefern, der zu 100% Ihren Erwartungen entspricht."
       },
       {
-        "question": "What does the PoC package ordering and implementation process look like?",
-        "answer": "The process is simple: 1) Choose the right package and click 'Order', 2) Fill out the form describing your idea (the more details, the better), 3) Pay for the package, 4) We start work immediately, 5) You receive regular progress updates, 6) Upon completion, you get access to the admin panel with your prototype, 7) You can test and report feedback. The entire process is transparent and fast."
+        "question": "Wie sieht der Bestell- und Implementierungsprozess für PoC-Pakete aus?",
+        "answer": "Der Prozess ist einfach: 1) Wählen Sie das richtige Paket und klicken Sie auf \"Bestellen\", 2) Füllen Sie das Formular aus, das Ihre Idee beschreibt (je mehr Details, desto besser), 3) Zahlen Sie für das Paket, 4) Wir beginnen sofort mit der Arbeit, 5) Sie erhalten regelmäßige Fortschrittsupdates, 6) Nach Fertigstellung erhalten Sie Zugang zum Admin-Panel mit Ihrem Prototyp, 7) Sie können testen und Feedback melden. Der gesamte Prozess ist transparent und schnell."
       },
       {
-        "question": "What does the 'Pay and Have' model mean?",
-        "answer": "The 'Pay and Have' model means you pay a fixed price upfront and immediately receive a working prototype - no hidden costs, no surprises, no additional fees. There are no hourly billings or negotiations. You know exactly how much you'll pay and what you'll get. It's a simple, transparent, and effective approach that eliminates the risk of budget overruns. Pay once, have the product."
+        "question": "Was bedeutet das \"Bezahlen und Haben\"-Modell?",
+        "answer": "Das \"Bezahlen und Haben\"-Modell bedeutet, dass Sie einen Festpreis im Voraus zahlen und sofort einen funktionierenden Prototyp erhalten - keine versteckten Kosten, keine Überraschungen, keine zusätzlichen Gebühren. Es gibt keine Stundenabrechnungen oder Verhandlungen. Sie wissen genau, wie viel Sie zahlen werden und was Sie bekommen. Es ist ein einfacher, transparenter und effektiver Ansatz, der das Risiko von Budgetüberschreitungen eliminiert. Einmal zahlen, Produkt haben."
       },
       {
-        "question": "Can I order a custom package tailored to my needs?",
-        "answer": "Absolutely! If standard packages don't meet your needs, we offer Custom Tailored PoC Projects. Every idea is different - some projects require unusual functionalities, integrations with external systems, specific design, or longer implementation time. Contact us through the form or email, describe your requirements, and we'll develop a custom offer tailored exactly to your project and budget."
+        "question": "Kann ich ein individuelles Paket bestellen, das auf meine Bedürfnisse zugeschnitten ist?",
+        "answer": "Absolut! Wenn Standardpakete Ihre Bedürfnisse nicht erfüllen, bieten wir maßgeschneiderte PoC-Projekte an. Jede Idee ist anders - einige Projekte erfordern ungewöhnliche Funktionalitäten, Integrationen mit externen Systemen, spezifisches Design oder längere Implementierungszeit. Kontaktieren Sie uns über das Formular oder per E-Mail, beschreiben Sie Ihre Anforderungen, und wir entwickeln ein individuelles Angebot, das genau auf Ihr Projekt und Budget zugeschnitten ist."
       },
       {
-        "question": "Can I continue developing and modifying the prototype after delivery?",
-        "answer": "Yes! You have full control over the code and can freely modify it. You receive access to the admin panel and code repository. You can: 1) Make changes yourself if you have a developer team, 2) Commission us for further development - we offer prototype expansion services to full applications, 3) Hand over the code to another company - you own all the code. The prototype is yours and you can do whatever you want with it."
+        "question": "Kann ich den Prototyp nach der Lieferung weiterentwickeln und modifizieren?",
+        "answer": "Ja! Sie haben volle Kontrolle über den Code und können ihn frei modifizieren. Sie erhalten Zugang zum Admin-Panel und Code-Repository. Sie können: 1) Änderungen selbst vornehmen, wenn Sie ein Entwicklerteam haben, 2) Uns mit der Weiterentwicklung beauftragen - wir bieten Dienste zur Erweiterung von Prototypen zu vollständigen Anwendungen an, 3) Den Code an ein anderes Unternehmen übergeben - Sie besitzen den gesamten Code. Der Prototyp gehört Ihnen und Sie können damit machen, was Sie wollen."
       },
       {
-        "question": "Is it possible to expand the PoC into a full production application?",
-        "answer": "Yes, this is one of the main goals of our PoC prototypes! All prototypes are created with expansion in mind. We use professional technologies (React, TypeScript, Supabase) that allow for scaling. After validating the idea on the prototype, we can expand it with: full backend, advanced functionalities, payment integrations, user system, mobile apps, and much more. It's much faster and cheaper than building from scratch."
+        "question": "Ist es möglich, den PoC zu einer vollständigen Produktionsanwendung zu erweitern?",
+        "answer": "Ja, das ist eines der Hauptziele unserer PoC-Prototypen! Alle Prototypen werden mit Blick auf Erweiterung erstellt. Wir verwenden professionelle Technologien (React, TypeScript, Supabase), die Skalierung ermöglichen. Nach Validierung der Idee am Prototyp können wir ihn erweitern mit: vollständigem Backend, erweiterten Funktionalitäten, Zahlungsintegrationen, Benutzersystem, mobilen Apps und vielem mehr. Es ist viel schneller und günstiger als von Grund auf neu zu bauen."
       },
       {
-        "question": "Do you offer technical support after project delivery?",
-        "answer": "Yes, we offer technical support. After prototype delivery: 1) You receive documentation and usage instructions, 2) You have access to the admin panel where you can manage the project, 3) In case of technical problems, you can contact us via email or contact form, 4) We offer paid support packages if you need regular assistance, 5) We can also train your team in system operation. Our goal is to ensure you succeed with our product."
+        "question": "Bieten Sie technischen Support nach Projektlieferung an?",
+        "answer": "Ja, wir bieten technischen Support an. Nach Lieferung des Prototyps: 1) Sie erhalten Dokumentation und Nutzungsanweisungen, 2) Sie haben Zugang zum Admin-Panel, wo Sie das Projekt verwalten können, 3) Bei technischen Problemen können Sie uns per E-Mail oder Kontaktformular kontaktieren, 4) Wir bieten kostenpflichtige Support-Pakete an, wenn Sie regelmäßige Unterstützung benötigen, 5) Wir können auch Ihr Team im Systembetrieb schulen. Unser Ziel ist es sicherzustellen, dass Sie mit unserem Produkt erfolgreich sind."
       },
       {
-        "question": "Who are the PoC packages for? Who can use them?",
-        "answer": "PoC packages are ideal for: 1) Startups that need an MVP for investor presentations without spending tens of thousands on full development, 2) Entrepreneurs testing new business ideas before major investment, 3) Companies that want to quickly verify new functionality or product, 4) Innovators needing a quick prototype for presentations at competitions or pitches, 5) Anyone who has an idea for an app or website and wants to see how it will look in practice - without technical knowledge or programming skills."
+        "question": "Für wen sind die PoC-Pakete? Wer kann sie nutzen?",
+        "answer": "PoC-Pakete sind ideal für: 1) Startups, die ein MVP für Investorenpräsentationen benötigen, ohne Zehntausende für vollständige Entwicklung auszugeben, 2) Unternehmer, die neue Geschäftsideen vor großen Investitionen testen, 3) Unternehmen, die neue Funktionen oder Produkte schnell überprüfen möchten, 4) Innovatoren, die einen schnellen Prototyp für Präsentationen bei Wettbewerben oder Pitches benötigen, 5) Jeden, der eine Idee für eine App oder Website hat und sehen möchte, wie sie in der Praxis aussehen wird - ohne technisches Wissen oder Programmierkenntnisse."
       }
     ]
   }
