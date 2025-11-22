@@ -418,16 +418,17 @@ export default function Chat() {
               </Button>
             </div>
             
-            <div className="flex items-center gap-2 px-4 py-3 border-t border-border/50">
+            <div className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-3 border-t border-border/50 overflow-x-auto">
               <Button
                 type="button"
                 variant="ghost"
                 size="sm"
                 onClick={() => handleSubmit(undefined, t('quickActions.needApp.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+                title={t('quickActions.needApp.label')}
               >
-                <Lightbulb className="h-4 w-4" />
-                <span className="text-sm">{t('quickActions.needApp.label')}</span>
+                <Lightbulb className="h-4 w-4 flex-shrink-0" />
+                <span className="hidden md:inline text-sm">{t('quickActions.needApp.label')}</span>
               </Button>
               <Button
                 type="button"
@@ -435,9 +436,10 @@ export default function Chat() {
                 size="sm"
                 onClick={() => handleSubmit(undefined, t('quickActions.technologies.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+                title={t('quickActions.technologies.label')}
               >
-                <Settings className="h-4 w-4" />
-                <span className="text-sm">{t('quickActions.technologies.label')}</span>
+                <Settings className="h-4 w-4 flex-shrink-0" />
+                <span className="hidden md:inline text-sm">{t('quickActions.technologies.label')}</span>
               </Button>
               <Button
                 type="button"
@@ -445,9 +447,10 @@ export default function Chat() {
                 size="sm"
                 onClick={() => handleSubmit(undefined, t('quickActions.pricing.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+                title={t('quickActions.pricing.label')}
               >
-                <DollarSign className="h-4 w-4" />
-                <span className="text-sm">{t('quickActions.pricing.label')}</span>
+                <DollarSign className="h-4 w-4 flex-shrink-0" />
+                <span className="hidden md:inline text-sm">{t('quickActions.pricing.label')}</span>
               </Button>
               <Button
                 type="button"
@@ -455,9 +458,10 @@ export default function Chat() {
                 size="sm"
                 onClick={() => handleSubmit(undefined, t('quickActions.timeline.message'))}
                 className="h-9 gap-2 text-muted-foreground hover:text-foreground"
+                title={t('quickActions.timeline.label')}
               >
-                <Clock className="h-4 w-4" />
-                <span className="text-sm">{t('quickActions.timeline.label')}</span>
+                <Clock className="h-4 w-4 flex-shrink-0" />
+                <span className="hidden md:inline text-sm">{t('quickActions.timeline.label')}</span>
               </Button>
             </div>
           </div>
