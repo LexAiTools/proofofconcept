@@ -122,5 +122,8 @@
       "alreadyRegistered": "Ten adres e-mail jest już na liście oczekujących",
       "failed": "Nie udało się dołączyć do listy. Spróbuj ponownie."
     }
+  },
+  "activeUsers": {
+    "label": "zainteresowanych użytkowników"
   }
 }

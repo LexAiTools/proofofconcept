@@ -110,5 +110,8 @@
       "alreadyRegistered": "Diese E-Mail ist bereits auf der Warteliste",
       "failed": "Beitritt zur Warteliste fehlgeschlagen. Bitte versuchen Sie es erneut."
     }
+  },
+  "activeUsers": {
+    "label": "interessierte Benutzer"
   }
 }

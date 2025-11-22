@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import { WaitlistPopup } from "@/components/WaitlistPopup";
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import { ActiveUsers } from "@/components/ActiveUsers";
 
 const BookDemo = () => {
   const { t, i18n } = useTranslation(['bookDemo', 'common']);
@@ -121,6 +122,15 @@ const BookDemo = () => {
                 {t('bookDemo:hero.documentationButton')}
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Active Users */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-center">
+            <ActiveUsers />
           </div>
         </div>
       </section>
