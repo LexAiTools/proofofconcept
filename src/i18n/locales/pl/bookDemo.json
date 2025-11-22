@@ -16,11 +16,7 @@
     "integration": {
       "title": "Ustawienia integracji",
       "description": "Skonfiguruj swojego asystenta AI za pomocą niestandardowych ustawień, w tym nazwy systemu, integracji klucza API i preferencji stylu odpowiedzi.",
-      "items": [
-        "Niestandardowa nazwa asystenta",
-        "Bezpieczne zarządzanie kluczem API",
-        "Dostosowanie stylu odpowiedzi"
-      ]
+      "items": ["Niestandardowa nazwa asystenta", "Bezpieczne zarządzanie kluczem API", "Dostosowanie stylu odpowiedzi"]
     },
     "credits": {
       "title": "Zarządzanie kredytami",
@@ -31,11 +27,7 @@
     "knowledgeBase": {
       "title": "Baza wiedzy RAG",
       "description": "Przesyłaj i zarządzaj swoją bazą wiedzy z obsługą wielu formatów plików i inteligentnym przetwarzaniem dokumentów.",
-      "items": [
-        "PDF, TXT, CSV, DOCX, XLSX",
-        "Przesyłanie metodą przeciągnij i upuść",
-        "Integracja danych WordPress"
-      ]
+      "items": ["PDF, TXT, CSV, DOCX, XLSX", "Przesyłanie metodą przeciągnij i upuść", "Integracja danych WordPress"]
     }
   },
   "installation": {
@@ -82,11 +74,7 @@
       }
     },
     "submit": "Zapytaj o demo i proof-of-concept",
-    "benefits": [
-      "7-dniowy bezpłatny okres próbny",
-      "Pełny dostęp do treści",
-      "Zgodność z SOC II"
-    ],
+    "benefits": ["7-dniowy bezpłatny okres próbny", "Pełny dostęp do treści", "Zgodność z SOC II"],
     "privacy": {
       "text": "Klikając \"Zapytaj o demo\", wyrażasz zgodę na przetwarzanie Twoich danych zgodnie z naszą",
       "link": "Polityką prywatności",
@@ -124,6 +112,6 @@
     }
   },
   "activeUsers": {
-    "label": "zainteresowanych użytkowników"
+    "label": "aktywnych użytkowników"
   }
 }
