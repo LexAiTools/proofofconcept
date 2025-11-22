@@ -1,153 +1,153 @@
 {
-  "title": "Order: Quick Start PoC",
-  "subtitle": "Fill out the form and receive your prototype within 24h",
-  "price": "€349",
+  "title": "Bestellung: Quick Start PoC",
+  "subtitle": "Formular ausfüllen und Prototyp innerhalb von 24h erhalten",
+  "price": "349 €",
   "steps": {
-    "contact": "Client",
+    "contact": "Kunde",
     "problem": "Problem",
-    "audience": "Audience",
-    "features": "Features",
-    "style": "Style",
-    "timeline": "Timeline"
+    "audience": "Zielgruppe",
+    "features": "Funktionen",
+    "style": "Stil",
+    "timeline": "Zeitplan"
   },
   "step1": {
     "number": "1",
-    "title": "What's your name and how can we contact you?",
-    "description": "We need your details to send you the finished prototype and stay in touch during development. Example: John Doe, john@company.com, +48 123 456 789",
+    "title": "Wie heißen Sie und wie können wir Sie kontaktieren?",
+    "description": "Wir benötigen Ihre Daten, um Ihnen den fertigen Prototyp zu senden und während der Entwicklung in Kontakt zu bleiben. Beispiel: Max Mustermann, max@firma.de, +49 123 456 789",
     "fields": {
-      "name": "Full name",
-      "email": "Email",
-      "phone": "Phone number"
+      "name": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefonnummer"
     },
     "placeholders": {
-      "name": "John Doe",
-      "email": "john@company.com",
-      "phone": "+48 123 456 789"
+      "name": "Max Mustermann",
+      "email": "max@firma.de",
+      "phone": "+49 123 456 789"
     }
   },
   "step2": {
     "number": "2",
-    "title": "What problem does your application solve?",
-    "description": "Briefly describe the specific user problem you want to solve. Example: \"Entrepreneurs waste time on manual invoicing\" or \"Students don't know how to plan their exam preparation\"",
-    "field": "Problem description",
-    "placeholder": "My application solves the problem of...",
-    "charCounter": "{{current}}/{{max}} characters",
-    "minChars": "Minimum 50 characters"
+    "title": "Welches Problem löst Ihre Anwendung?",
+    "description": "Beschreiben Sie kurz das spezifische Benutzerproblem, das Sie lösen möchten. Beispiel: \"Unternehmer verschwenden Zeit mit manueller Rechnungsstellung\" oder \"Studenten wissen nicht, wie sie ihre Prüfungsvorbereitung planen sollen\"",
+    "field": "Problembeschreibung",
+    "placeholder": "Meine Anwendung löst das Problem...",
+    "charCounter": "{{current}}/{{max}} Zeichen",
+    "minChars": "Mindestens 50 Zeichen"
   },
   "step3": {
     "number": "3",
-    "title": "Who is your target customer?",
-    "description": "Define exactly who your application is for. Example: \"Small businesses employing 5-20 people\" or \"Students preparing for exams\"",
-    "field": "Target audience",
-    "placeholder": "My customers are...",
+    "title": "Wer ist Ihr Zielkunde?",
+    "description": "Definieren Sie genau, für wen Ihre Anwendung gedacht ist. Beispiel: \"Kleine Unternehmen mit 5-20 Mitarbeitern\" oder \"Studenten, die sich auf Prüfungen vorbereiten\"",
+    "field": "Zielgruppe",
+    "placeholder": "Meine Kunden sind...",
     "suggestions": {
-      "title": "Choose from suggestions:",
-      "entrepreneurs": "Entrepreneurs",
-      "students": "Students",
-      "parents": "Parents",
-      "freelancers": "Freelancers",
-      "b2b": "B2B Companies",
-      "b2c": "B2C Consumers"
+      "title": "Aus Vorschlägen wählen:",
+      "entrepreneurs": "Unternehmer",
+      "students": "Studenten",
+      "parents": "Eltern",
+      "freelancers": "Freiberufler",
+      "b2b": "B2B-Unternehmen",
+      "b2c": "B2C-Verbraucher"
     }
   },
   "step4": {
     "number": "4",
-    "title": "What are the 3 most important features of your application?",
-    "description": "List the key functionalities that must be in the prototype. Example: \"User registration\", \"Dashboard with statistics\", \"Export data to PDF\"",
+    "title": "Was sind die 3 wichtigsten Funktionen Ihrer Anwendung?",
+    "description": "Listen Sie die Schlüsselfunktionalitäten auf, die im Prototyp enthalten sein müssen. Beispiel: \"Benutzerregistrierung\", \"Dashboard mit Statistiken\", \"Datenexport als PDF\"",
     "fields": {
-      "feature1": "Feature 1",
-      "feature2": "Feature 2",
-      "feature3": "Feature 3"
+      "feature1": "Funktion 1",
+      "feature2": "Funktion 2",
+      "feature3": "Funktion 3"
     },
     "placeholders": {
-      "feature1": "e.g. User registration",
-      "feature2": "e.g. Data dashboard",
-      "feature3": "e.g. Export to PDF"
+      "feature1": "z.B. Benutzerregistrierung",
+      "feature2": "z.B. Daten-Dashboard",
+      "feature3": "z.B. Export als PDF"
     },
-    "addMore": "+ Add another feature",
-    "maxFeatures": "Maximum 6 features"
+    "addMore": "+ Weitere Funktion hinzufügen",
+    "maxFeatures": "Maximal 6 Funktionen"
   },
   "step5": {
     "number": "5",
-    "title": "How do you envision the application's appearance?",
-    "description": "Choose the style that best fits your application, or provide examples of websites/apps you like.",
+    "title": "Wie stellen Sie sich das Aussehen der Anwendung vor?",
+    "description": "Wählen Sie den Stil, der am besten zu Ihrer Anwendung passt, oder geben Sie Beispiele von Websites/Apps an, die Ihnen gefallen.",
     "styles": {
       "modern": {
         "title": "Modern",
-        "description": "Clean lines, gradients, animations"
+        "description": "Klare Linien, Verläufe, Animationen"
       },
       "minimal": {
-        "title": "Minimalist",
-        "description": "Lots of white space, simplicity"
+        "title": "Minimalistisch",
+        "description": "Viel Weißraum, Einfachheit"
       },
       "colorful": {
-        "title": "Colorful",
-        "description": "Vibrant colors, dynamic design"
+        "title": "Farbenfroh",
+        "description": "Lebendige Farben, dynamisches Design"
       },
       "professional": {
-        "title": "Professional",
-        "description": "Business-like, elegant, trustworthy"
+        "title": "Professionell",
+        "description": "Geschäftlich, elegant, vertrauenswürdig"
       }
     },
-    "inspirationField": "Or provide inspiration links (optional)",
+    "inspirationField": "Oder Inspirations-Links angeben (optional)",
     "inspirationPlaceholder": "https://..."
   },
   "step6": {
     "number": "6",
-    "title": "When do you need the prototype?",
-    "description": "We typically deliver prototypes within 1-2 business days. If you need it faster or have a specific deadline, let us know.",
+    "title": "Wann benötigen Sie den Prototyp?",
+    "description": "Wir liefern Prototypen normalerweise innerhalb von 1-2 Werktagen. Wenn Sie es schneller benötigen oder eine bestimmte Deadline haben, teilen Sie uns dies mit.",
     "options": {
-      "asap": "As soon as possible (1 day)",
-      "standard": "Standard (2-3 days)",
-      "flexible": "I have time (7 days)",
-      "specific": "Specific date:"
+      "asap": "So schnell wie möglich (1 Tag)",
+      "standard": "Standard (2-3 Tage)",
+      "flexible": "Ich habe Zeit (7 Tage)",
+      "specific": "Bestimmtes Datum:"
     },
-    "selectDate": "Select date"
+    "selectDate": "Datum wählen"
   },
   "step7": {
     "number": "7",
-    "title": "Order Summary",
-    "description": "Review your details before submitting the order",
+    "title": "Bestellzusammenfassung",
+    "description": "Überprüfen Sie Ihre Angaben vor dem Absenden der Bestellung",
     "sections": {
-      "contact": "Contact Details",
-      "problem": "Problem to Solve",
-      "audience": "Target Audience",
-      "features": "Key Features",
-      "style": "Visual Style",
-      "timeline": "Timeline"
+      "contact": "Kontaktdaten",
+      "problem": "Zu lösendes Problem",
+      "audience": "Zielgruppe",
+      "features": "Hauptfunktionen",
+      "style": "Visueller Stil",
+      "timeline": "Zeitplan"
     },
-    "editButton": "Edit",
-    "confirmButton": "Confirm and submit order for {{price}}",
-    "submitting": "Submitting..."
+    "editButton": "Bearbeiten",
+    "confirmButton": "Bestätigen und Bestellung absenden für {{price}}",
+    "submitting": "Wird gesendet..."
   },
   "buttons": {
-    "next": "Next",
-    "back": "Back",
-    "close": "Close"
+    "next": "Weiter",
+    "back": "Zurück",
+    "close": "Schließen"
   },
   "validation": {
-    "nameRequired": "Name is required",
-    "nameMin": "Minimum 2 characters",
-    "emailRequired": "Email is required",
-    "emailInvalid": "Invalid email address",
-    "phoneRequired": "Phone number is required",
-    "phoneInvalid": "Invalid phone number",
-    "problemRequired": "Problem description is required",
-    "problemMin": "Minimum 50 characters",
-    "problemMax": "Maximum 500 characters",
-    "audienceRequired": "Target audience is required",
-    "audienceMin": "Minimum 20 characters",
-    "featureRequired": "This feature is required",
-    "featureMin": "Minimum 5 characters",
-    "styleRequired": "Select a visual style",
-    "timelineRequired": "Select preferred timeline"
+    "nameRequired": "Name ist erforderlich",
+    "nameMin": "Mindestens 2 Zeichen",
+    "emailRequired": "E-Mail ist erforderlich",
+    "emailInvalid": "Ungültige E-Mail-Adresse",
+    "phoneRequired": "Telefonnummer ist erforderlich",
+    "phoneInvalid": "Ungültige Telefonnummer",
+    "problemRequired": "Problembeschreibung ist erforderlich",
+    "problemMin": "Mindestens 50 Zeichen",
+    "problemMax": "Maximal 500 Zeichen",
+    "audienceRequired": "Zielgruppe ist erforderlich",
+    "audienceMin": "Mindestens 20 Zeichen",
+    "featureRequired": "Diese Funktion ist erforderlich",
+    "featureMin": "Mindestens 5 Zeichen",
+    "styleRequired": "Wählen Sie einen visuellen Stil",
+    "timelineRequired": "Wählen Sie einen bevorzugten Zeitplan"
   },
   "success": {
-    "title": "Thank you for your order!",
-    "message": "Your order has been submitted. We will contact you shortly."
+    "title": "Vielen Dank für Ihre Bestellung!",
+    "message": "Ihre Bestellung wurde übermittelt. Wir werden uns in Kürze bei Ihnen melden."
   },
   "error": {
-    "title": "An error occurred",
-    "message": "Failed to submit order. Please try again."
+    "title": "Ein Fehler ist aufgetreten",
+    "message": "Bestellung konnte nicht übermittelt werden. Bitte versuchen Sie es erneut."
   }
 }
