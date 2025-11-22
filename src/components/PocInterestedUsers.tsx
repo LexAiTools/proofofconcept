@@ -116,7 +116,7 @@ const mockUsers: UserInfo[] = [
     id: 11,
     name: "Jakub Kamiński",
     image: jakubKaminski,
-    initials: "JK",
+    initials: "JKa",
     isOnline: true,
   },
 ];
@@ -187,7 +187,7 @@ export const PocInterestedUsers = () => {
         setVisibleUsers(current => {
           const removeCount = Math.floor(Math.random() * 2) + 1;
           const remaining = current.slice(0, -removeCount);
-          const newUsers = getUniqueRandomUsers(current, removeCount);
+          const newUsers = getUniqueRandomUsers(remaining, removeCount);
           return [...remaining, ...newUsers];
         });
       }
@@ -197,7 +197,7 @@ export const PocInterestedUsers = () => {
       if (Math.random() > 0.6) {
         setVisibleCompanies(current => {
           const remaining = current.slice(0, -1);
-          const newCompanies = getUniqueRandomCompanies(current, 1);
+          const newCompanies = getUniqueRandomCompanies(remaining, 1);
           return [...remaining, ...newCompanies];
         });
       }
