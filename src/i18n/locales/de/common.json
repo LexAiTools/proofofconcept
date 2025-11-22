@@ -30,7 +30,9 @@
     "viewAll": "Alle anzeigen",
     "toggleTheme": "Design wechseln",
     "lightMode": "Heller Modus",
-    "darkMode": "Dunkler Modus"
+    "darkMode": "Dunkler Modus",
+    "poc": "POC",
+    "pocTagline": "prüfe deine Idee"
   },
   "footer": {
     "solutions": "Lösungen",

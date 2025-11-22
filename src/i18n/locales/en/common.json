@@ -30,7 +30,9 @@
     "viewAll": "View All",
     "toggleTheme": "Toggle theme",
     "lightMode": "Light mode",
-    "darkMode": "Dark mode"
+    "darkMode": "Dark mode",
+    "poc": "POC",
+    "pocTagline": "check your idea"
   },
   "footer": {
     "solutions": "Solutions",
