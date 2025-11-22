@@ -1,26 +1,26 @@
 {
   "success": {
-    "formSubmitted": "Thank you! We will contact you shortly.",
-    "documentUploaded": "Document uploaded successfully",
-    "podcastUploaded": "Podcast uploaded successfully",
-    "saved": "Changes saved successfully",
-    "deleted": "Deleted successfully",
-    "copied": "Copied to clipboard",
-    "updated": "Updated successfully"
+    "formSubmitted": "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.",
+    "documentUploaded": "Dokument erfolgreich hochgeladen",
+    "podcastUploaded": "Podcast erfolgreich hochgeladen",
+    "saved": "Änderungen erfolgreich gespeichert",
+    "deleted": "Erfolgreich gelöscht",
+    "copied": "In die Zwischenablage kopiert",
+    "updated": "Erfolgreich aktualisiert"
   },
   "error": {
-    "general": "An error occurred. Please try again.",
-    "network": "Network error. Please check your connection.",
-    "unauthorized": "Unauthorized access. Please log in.",
-    "notFound": "Resource not found",
-    "validation": "Please check your input and try again",
-    "uploadFailed": "Upload failed. Please try again.",
-    "deleteFailed": "Delete failed. Please try again."
+    "general": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "network": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung.",
+    "unauthorized": "Unbefugter Zugriff. Bitte melden Sie sich an.",
+    "notFound": "Ressource nicht gefunden",
+    "validation": "Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut",
+    "uploadFailed": "Upload fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "deleteFailed": "Löschen fehlgeschlagen. Bitte versuchen Sie es erneut."
   },
   "info": {
-    "loading": "Loading...",
-    "processing": "Processing...",
-    "noData": "No data available",
-    "comingSoon": "Coming soon"
+    "loading": "Lädt...",
+    "processing": "Wird verarbeitet...",
+    "noData": "Keine Daten verfügbar",
+    "comingSoon": "Demnächst verfügbar"
   }
 }
